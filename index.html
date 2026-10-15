@@ -147,7 +147,8 @@ tr:last-child td{border-bottom:0}
 .yrcard .yv{font-family:var(--f-num);font-size:26px;font-weight:600;font-variant-numeric:tabular-nums}
 .yrcard .yl{font-size:12px;color:var(--muted)}
 .flag{font-size:11px;border-radius:999px;padding:1px 7px;border:1px solid var(--line);color:var(--muted);white-space:nowrap}
-.flag.fc{border-color:var(--s2);color:var(--s2)}
+.flag.fc{border-color:var(--s1);color:var(--s1)}
+.flag.unv{border-color:var(--warn);color:var(--warn)}
 .flag.rv{border-color:var(--seal);color:var(--seal)}
 .zoom{font-size:12px}
 
@@ -249,7 +250,7 @@ tr:last-child td{border-bottom:0}
   <header><h2 id="xdlgTitle">下載待遇調整審議參考指標彙整表</h2><button class="btn" type="button" id="xClose">關閉</button></header>
   <form id="xform" novalidate>
     <p class="note" style="margin:0">依本頁最新數據，產製與「軍公教員工待遇調整審議時參酌及相關參考指標彙整表」相同格式之 Excel 檔（含「更新說明」工作表）。</p>
-    <div class="f"><label for="x_since">紅字標示：自此日期起修正或新增之數據</label><input id="x_since" type="date"><span class="hint">預設為 115.10.13 查證日。</span></div>
+    <div class="f"><label for="x_since">標示顏色：自此日期起修正或新增之數據（紅＝以前年度修正、藍＝預測值、橘＝未查證）</label><input id="x_since" type="date"><span class="hint">預設為 115.10.13 查證日。</span></div>
     <div class="f"><label for="x_hide"><input id="x_hide" type="checkbox" checked style="width:auto;margin-right:6px">隱藏76–99年列（與原表相同）</label></div>
     <div class="f"><span class="hint" id="x_info">—</span></div>
   </form>
@@ -493,20 +494,20 @@ tr:last-child td{border-bottom:0}
       let lines=1;
       colLetters.forEach(c=>{
         const cell=ws.getCell(c+r); let v=(d.cells||{})[c];
-        const redDate=(d.red||{})[c]; const isRed=!!(redDate&&redDate>=since);
+        const redDate=(d.red||{})[c]; const isRed=!!(redDate&&redDate>=since); const raw=typeof v==="string"?v:""; const kind=!isRed?"":/預測/.test(raw)?"fc":/未查證|資料不足/.test(raw)?"unv":"rev"; const KCOL={rev:"FFFF0000",fc:"FF0070C0",unv:"FFC65911"}, KNAME={rev:"以前年度數據修正",fc:"預測值新增或變更",unv:"未查證／資料不足"};
         if(v&&typeof v==="object"&&v.auto){
           const base=AUTO[c], prev=rows[i-1];
           const cur=(d.cells||{})[base], pv=prev&&(prev.cells||{})[base];
           if(typeof cur==="number"&&typeof pv==="number"){ cell.value={formula:`(${base}${r}-${base}${r-1})/${base}${r-1}*100`,result:+((cur-pv)/pv*100).toFixed(4)}; }
           else cell.value=v.v;
         } else if(v!==undefined&&v!==null){ cell.value=v; if(typeof v==="string"){ const w=(SPEC.widths[c]||9)-1; lines=Math.max(lines,v.split("\n").reduce((n,seg)=>n+Math.max(1,Math.ceil([...seg].reduce((k,ch)=>k+(/[\x00-\x7f]/.test(ch)?1.3:2.6),0)/w)),0)); } }
-        cell.font={name:FONT,size:14,color:{argb:isRed?"FFFF0000":"FF000000"}};
+        cell.font={name:FONT,size:14,color:{argb:isRed?KCOL[kind]:"FF000000"}};
         cell.alignment={horizontal:"right",vertical:"middle",wrapText:true};
         if(typeof v==="number"||(v&&v.auto)) cell.numFmt=SPEC.numFmt[c]||"General";
         cell.border=box;
         const cm=(d.comments||{})[c];
         if(cm) cell.note={texts:[{text:cm}]};
-        if(isRed){ changes.push([c+r,d.year,COLNAME[c]||c,typeof cell.value==="object"&&cell.value?cell.value.result:cell.value,cm||""]); }
+        if(isRed){ changes.push([c+r,d.year,COLNAME[c]||c,KNAME[kind],typeof cell.value==="object"&&cell.value?cell.value.result:cell.value,cm||""]); }
       });
       row.height=Math.max(23.25,lines*19+6);
       if(hideOld&&d.year<100) row.hidden=true;
@@ -516,19 +517,19 @@ tr:last-child td{border-bottom:0}
     const rels=items.filter(it=>it.releaseDate).map(it=>it.releaseDate).sort();
     const allLines=[...notes,
       `${notes.length+1}.更新日期：${rocToday()}（依據行政院主計總處、國家發展委員會、財政部、台灣經濟發展研究中心等機關最新公布資料${rels.length?"，最近公布日"+roc(rels[rels.length-1]):""}更新）`,
-      `${notes.length+2}.紅色字體為${roc(since)}以後修正之以前年度數據及新增或修正之預測值；當年度已查證之官方數據以黑色字體表示。原值及來源載於儲存格註解及「更新說明」工作表。`];
+      `${notes.length+2}.字體顏色（${roc(since)}以後之異動）：紅色為以前年度數據經官方修正；藍色為預測值或依預測值計算之數據新增或變更；橘色為未查證或資料不足之數據；黑色為已查證之官方數據。原值及來源載於儲存格註解及「更新說明」工作表。`];
     ws.getCell("B"+r).value="註："; ws.getCell("B"+r).font={name:FONT,size:12}; ws.getCell("B"+r).alignment={horizontal:"right",vertical:"top"};
     allLines.forEach((ln,k)=>{const rr=r+k; ws.mergeCells(`C${rr}:Z${rr}`); const c=ws.getCell("C"+rr); c.value=ln; c.font={name:FONT,size:12}; c.alignment={horizontal:"left",vertical:"middle",wrapText:true}; ws.getRow(rr).height=ln.length>110?36:19.5;});
     // 更新說明
     const s2=wb.addWorksheet("更新說明");
-    s2.columns=[{width:10},{width:8},{width:24},{width:26},{width:90}];
-    const h1=s2.addRow([`一、${roc(since)}以後修正／新增之數據（表內以紅色字體標註）`]); h1.font={name:FONT,size:13,bold:true};
-    const hd=s2.addRow(["儲存格","年度","欄位","新值","說明及來源"]); hd.eachCell(c=>{c.font={name:FONT,size:11,bold:true,color:{argb:"FFFFFFFF"}};c.fill={type:"pattern",pattern:"solid",fgColor:{argb:"FF1F4E79"}};c.border=box;});
-    (changes.length?changes:[["—","","","",`${roc(since)}以後無修正或新增`]]).forEach(x=>{const rw=s2.addRow(x); rw.eachCell(c=>{c.font={name:FONT,size:10};c.alignment={wrapText:true,vertical:"top"};c.border=box;});});
+    s2.columns=[{width:10},{width:8},{width:24},{width:18},{width:26},{width:90}];
+    const h1=s2.addRow([`一、${roc(since)}以後修正／新增之數據（表內依異動類別以紅、藍、橘色字體標註）`]); h1.font={name:FONT,size:13,bold:true};
+    const hd=s2.addRow(["儲存格","年度","欄位","異動類別","新值","說明及來源"]); hd.eachCell(c=>{c.font={name:FONT,size:11,bold:true,color:{argb:"FFFFFFFF"}};c.fill={type:"pattern",pattern:"solid",fgColor:{argb:"FF1F4E79"}};c.border=box;});
+    (changes.length?changes:[["—","","","","",`${roc(since)}以後無修正或新增`]]).forEach(x=>{const rw=s2.addRow(x); const kc={"以前年度數據修正":"FFFF0000","預測值新增或變更":"FF0070C0","未查證／資料不足":"FFC65911"}[x[3]]; rw.eachCell((c,ci)=>{c.font={name:FONT,size:10,color:{argb:ci===4&&kc?kc:"FF000000"}};c.alignment={wrapText:true,vertical:"top"};c.border=box;});});
     const todo=(tableNotes&&tableNotes.todo)||[];
     if(todo.length){ s2.addRow([]); const h2=s2.addRow(["二、待確認事項（口徑不一或查無官方來源，未逕行修改）"]); h2.font={name:FONT,size:13,bold:true};
       const hd2=s2.addRow(["範圍","項目","說明"]); hd2.eachCell(c=>{c.font={name:FONT,size:11,bold:true,color:{argb:"FFFFFFFF"}};c.fill={type:"pattern",pattern:"solid",fgColor:{argb:"FF7F6000"}};c.border=box;});
-      todo.forEach(x=>{const rw=s2.addRow([x[0],x[1],x[2]]); s2.mergeCells(`C${rw.number}:E${rw.number}`); rw.eachCell(c=>{c.font={name:FONT,size:10};c.alignment={wrapText:true,vertical:"top"};c.border=box;}); rw.height=Math.max(30,Math.ceil(String(x[2]||"").length/70)*15);});
+      todo.forEach(x=>{const rw=s2.addRow([x[0],x[1],x[2]]); s2.mergeCells(`C${rw.number}:F${rw.number}`); rw.eachCell(c=>{c.font={name:FONT,size:10};c.alignment={wrapText:true,vertical:"top"};c.border=box;}); rw.height=Math.max(30,Math.ceil(String(x[2]||"").length/70)*15);});
     }
     return {buf:await wb.xlsx.writeBuffer(), changes:changes.length, rows:rows.length};
   }
@@ -623,7 +624,7 @@ tr:last-child td{border-bottom:0}
   $("#itemSel").addEventListener("change",e=>{ focusId=e.target.value; metric="cols"; rFrom=rTo=null; saveView(); render(); if(focusId) $("#detail").scrollIntoView({behavior:"smooth",block:"start"}); });
   $("#grid").addEventListener("click",e=>{ const b=e.target.closest("[data-focus]"); if(!b) return; focusId=b.dataset.focus; metric="cols"; rFrom=rTo=null; saveView(); render(); $("#detail").scrollIntoView({behavior:"smooth",block:"start"}); });
 
-  function flagHtml(v){ if(!v) return ""; const f=[]; if(v.fc) f.push('<span class="flag fc">預測值</span>'); else if(v.part) f.push('<span class="flag">部分期間</span>'); else if(v.bud) f.push('<span class="flag">預算數</span>'); if(v.unv) f.push('<span class="flag">未查證</span>'); if(v.red) f.push('<span class="flag rv">已修正</span>'); return f.join(" "); }
+  function flagHtml(v){ if(!v) return ""; const f=[]; if(v.fc) f.push('<span class="flag fc">預測值</span>'); else if(v.part) f.push('<span class="flag">部分期間</span>'); else if(v.bud) f.push('<span class="flag">預算數</span>'); if(v.unv) f.push('<span class="flag unv">未查證</span>'); if(v.red) f.push('<span class="flag rv">已修正</span>'); return f.join(" "); }
   function deltaTxt(cur,prev,unit){
     if(!cur||!prev||cur.n===null||prev.n===null) return "—";
     if(unit==="%"){ const d=cur.n-prev.n; return (d>0?"+":"")+d.toFixed(2)+" 個百分點"; }
