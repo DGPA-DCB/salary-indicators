@@ -294,7 +294,7 @@ tr:last-child td{border-bottom:0}
       <circle cx="${lx.toFixed(1)}" cy="${ly.toFixed(1)}" r="3" fill="var(--accent)"/>
       <text x="${W-pr+6}" y="${Math.min(Math.max(ly+4,12),H-pb)}" font-size="10" fill="var(--fg)" font-family="IBM Plex Mono,monospace">${esc(last.y)}</text>
       <text x="${pl}" y="${H-2}" font-size="9" fill="var(--muted)" font-family="IBM Plex Mono,monospace">${esc(pts[0].x)}</text>
-      <text x="${W-pr}" y="${H-2}" font-size="9" fill="var(--muted)" text-anchor="end" font-family="IBM Plex Mono,monospace">${esc(last.x)}${last.f?"（預測）":""}</text>
+      <text x="${lx.toFixed(1)}" y="${H-2}" font-size="9" fill="var(--muted)" text-anchor="middle" font-family="IBM Plex Mono,monospace">${esc(last.x)}${last.f?"(預)":""}</text>
     </svg>`;
   }
 
