@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>[hidden]{display:none!important}body{margin:0}</style>
+</head>
+<body>
+<title>待遇審議經濟指標</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+/* Layout: 標題列＋分類篩選 → 指標卡片格（摘要在前）→ 總覽表 → 更新紀錄；右側抽屜為編輯表單 */
+:root{
+  --bg:#f3f5f7; --surface:#ffffff; --surface-2:#eaeef2; --fg:#16212b; --muted:#5b6876; --line:#d5dce3;
+  --accent:#1f5673; --accent-soft:#dbe8ef; --seal:#a8322b; --seal-soft:#f6e3e1;
+  --up:#a8322b; --down:#1f6f4a; --warn:#9a6400; --warn-soft:#fbefd6;
+  --sig-red:#c8372d; --sig-yr:#e08a2c; --sig-green:#2f8f4e; --sig-yb:#c9b52b; --sig-blue:#2f64b3;
+  --f-display:"Noto Serif TC","Songti TC","PMingLiU",serif;
+  --f-body:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+  --f-num:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  --r:10px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f151b; --surface:#16202a; --surface-2:#1d2a36; --fg:#e4eaf0; --muted:#9aa8b6; --line:#2a3846;
+  --accent:#7fb6d4; --accent-soft:#1e3442; --seal:#ef8a80; --seal-soft:#3a1f1d;
+  --up:#ef8a80; --down:#6fcf9b; --warn:#f0c062; --warn-soft:#3a2f17; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f151b; --surface:#16202a; --surface-2:#1d2a36; --fg:#e4eaf0; --muted:#9aa8b6; --line:#2a3846;
+  --accent:#7fb6d4; --accent-soft:#1e3442; --seal:#ef8a80; --seal-soft:#3a1f1d;
+  --up:#ef8a80; --down:#6fcf9b; --warn:#f0c062; --warn-soft:#3a2f17; color-scheme:dark}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:14px;line-height:1.55}
+.wrap{max-width:1280px;margin:0 auto;padding-inline:20px;padding-block:20px 48px;display:flex;flex-direction:column;gap:22px}
+header.top{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:flex-end;justify-content:space-between;border-bottom:2px solid var(--fg);padding-bottom:12px}
+.brand{display:flex;flex-direction:column;gap:2px;min-width:0}
+.eyebrow{font-size:12px;letter-spacing:.12em;color:var(--muted)}
+h1{font-family:var(--f-display);font-size:clamp(22px,3.4vw,30px);margin:0;text-wrap:balance;letter-spacing:.04em}
+.meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:13px;color:var(--muted)}
+.meta b{color:var(--fg);font-family:var(--f-num);font-weight:500}
+.btn{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:8px;padding:6px 12px;cursor:pointer}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.btn:focus-visible,.chip:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.btn.primary{background:var(--accent);color:var(--surface);border-color:var(--accent)}
+.btn.primary:hover{color:var(--surface);filter:brightness(1.08)}
+.toolbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font:inherit;font-size:13px;border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:999px;padding:4px 12px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.legend{font-size:12px;color:var(--muted);display:flex;gap:12px;flex-wrap:wrap}
+.legend span::before{content:"";display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:5px;vertical-align:middle;background:var(--c)}
+.notice{background:var(--warn-soft);color:var(--fg);border:1px solid var(--warn);border-radius:var(--r);padding:10px 14px;font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px 12px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.card .head{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}
+.card .grp{font-size:11px;letter-spacing:.1em;color:var(--muted)}
+.card h3{margin:0;font-size:15px;font-weight:700;line-height:1.35}
+.pill{font-size:11px;border-radius:999px;padding:2px 8px;white-space:nowrap;border:1px solid transparent}
+.pill.due{background:var(--warn-soft);color:var(--warn);border-color:var(--warn)}
+.pill.ok{background:var(--accent-soft);color:var(--accent)}
+.pill.chk{background:var(--seal-soft);color:var(--seal);border-color:var(--seal)}
+.valrow{display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
+.val{font-family:var(--f-num);font-size:32px;font-weight:600;letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1.1}
+.unit{color:var(--muted);font-size:13px}
+.sig{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500}
+.sig i{width:12px;height:12px;border-radius:50%;background:var(--c);display:inline-block}
+.period{font-size:12px;color:var(--muted)}
+.cmp{display:grid;grid-template-columns:auto 1fr;gap:3px 10px;font-size:13px;margin:0}
+.cmp dt{color:var(--muted)}
+.cmp dd{margin:0;font-family:var(--f-num);font-variant-numeric:tabular-nums;font-size:12.5px}
+.cmp dd.up{color:var(--up)} .cmp dd.down{color:var(--down)}
+.cmp dd.up::before{content:"▲ "} .cmp dd.down::before{content:"▼ "} .cmp dd.flat::before{content:"＝ ";color:var(--muted)}
+.fc{font-size:12.5px;background:var(--surface-2);border-radius:6px;padding:6px 9px}
+.fc b{font-family:var(--f-num);font-weight:600}
+svg.spark{width:100%;height:58px;display:block}
+.foot{border-top:1px dashed var(--line);padding-top:8px;display:grid;grid-template-columns:auto 1fr;gap:2px 10px;font-size:12px;color:var(--muted)}
+.foot span:nth-child(even){color:var(--fg);min-width:0;overflow-wrap:anywhere}
+.foot a{color:var(--accent)}
+.note{font-size:12px;color:var(--muted);overflow-wrap:anywhere}
+.card .actions{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:11.5px;color:var(--muted)}
+section h2{font-family:var(--f-display);font-size:18px;margin:0 0 10px;letter-spacing:.04em}
+.tablewrap{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--r)}
+table{border-collapse:collapse;width:100%;min-width:1100px;font-size:13px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:var(--surface-2);font-weight:600;font-size:12px;color:var(--muted);white-space:nowrap}
+td.n{font-family:var(--f-num);font-variant-numeric:tabular-nums;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+.log{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px;font-size:13px}
+.log li{display:flex;gap:10px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:6px}
+.log time{font-family:var(--f-num);color:var(--muted);font-size:12px}
+.empty{background:var(--surface);border:1px dashed var(--line);border-radius:var(--r);padding:28px;text-align:center;color:var(--muted)}
+/* drawer */
+.scrim{position:fixed;inset:0;background:rgba(10,15,20,.45);z-index:20}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(560px,100%);background:var(--surface);z-index:21;display:flex;flex-direction:column;border-left:1px solid var(--line);padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.xdlg{width:min(460px,100%)}
+.drawer header{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-bottom:1px solid var(--line)}
+.drawer header h2{margin:0;font-size:16px}
+.drawer form{overflow-y:auto;padding:14px 18px 18px;display:flex;flex-direction:column;gap:12px;flex:1}
+.f{display:flex;flex-direction:column;gap:4px;min-width:0}
+.f label{font-size:12px;color:var(--muted)}
+.f input,.f textarea,.f select{font:inherit;font-size:13.5px;border:1px solid var(--line);border-radius:7px;padding:7px 9px;background:var(--bg);color:var(--fg);width:100%}
+.f textarea{min-height:76px;resize:vertical;font-family:var(--f-num);font-size:12.5px}
+.f .hint{font-size:11.5px;color:var(--muted)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.drawer footer{display:flex;justify-content:flex-end;gap:8px;padding:12px 18px;border-top:1px solid var(--line);align-items:center}
+.drawer footer .msg{margin-right:auto;font-size:12px;color:var(--seal)}
+.syncbar{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;font-size:12.5px;color:var(--muted);background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:8px 14px}
+.syncbar .dot{width:8px;height:8px;border-radius:50%;background:var(--c);display:inline-block;margin-right:6px}
+.syncbar b{color:var(--fg);font-weight:500}
+.syncbar .fail{color:var(--seal)}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(20px + env(safe-area-inset-bottom,0px));background:var(--fg);color:var(--bg);padding:8px 16px;border-radius:8px;font-size:13px;z-index:30}
+@media (max-width:520px){.row2{grid-template-columns:1fr}.val{font-size:28px}.wrap{padding-inline:16px}}
+@media (prefers-reduced-motion:no-preference){.card{transition:border-color .15s}.card:hover{border-color:var(--accent)}}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <span class="eyebrow">軍公教員工待遇調整審議｜參考指標</span>
+      <h1>待遇審議經濟指標</h1>
+    </div>
+    <div class="meta">
+      <span>最近更新 <b id="lastUpd">—</b></span>
+      <span aria-hidden="true">·</span>
+      <span>待更新 <b id="dueCount">—</b> 項</span>
+      <button class="btn" id="syncBtn" type="button" hidden>立即從官方來源更新</button>
+      <button class="btn" id="xlsBtn" type="button" hidden>下載彙整表（Excel）</button>
+      <button class="btn primary" id="addBtn" type="button" hidden>新增指標</button>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <div class="chips" id="chips" role="group" aria-label="分類篩選"></div>
+    <div class="legend">
+      <span style="--c:var(--warn)">已過下次公布日，待更新</span>
+      <span style="--c:var(--seal)">數據待確認／未查證</span>
+    </div>
+  </div>
+
+  <div id="syncBar" class="syncbar"><span><span class="dot" style="--c:var(--accent)"></span>資料更新至：<b id="asof">—</b>。每個工作日依各機關公布資料自動更新；數據取自各機關公開資料，引用請以各機關原始公布為準。</span></div>
+  <div id="status" class="notice" hidden></div>
+  <div id="grid" class="grid" aria-live="polite">
+    <div class="empty" id="emptyState">指標資料載入中…<br>資料存放於本頁共用資料庫，有編輯權限者可按各卡片「更新數據」修改，或按「新增指標」加入。</div>
+  </div>
+
+  <section>
+    <h2>總覽表</h2>
+    <div class="tablewrap"><table>
+      <thead><tr><th>指標</th><th>最新數據</th><th>資料期間</th><th>前期／同期比較</th><th>預測</th><th>公布日期</th><th>更新頻率</th><th>下次公布</th><th>官方資料來源</th></tr></thead>
+      <tbody id="tbody"><tr><td colspan="9" class="note">載入中…</td></tr></tbody>
+    </table></div>
+  </section>
+
+
+  <p class="note">說明：本頁非官方發布。數據取自行政院主計總處、國家發展委員會、財政部、台灣經濟發展研究中心等官方公布資料；各機關會滾動修正前期數字，引用前請以來源網站最新公布為準。日期以民國紀年表示。</p>
+</div>
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" hidden aria-labelledby="drawerTitle" role="dialog" aria-modal="true">
+  <header><h2 id="drawerTitle">更新數據</h2><button class="btn" type="button" id="closeBtn">關閉</button></header>
+  <form id="form" novalidate>
+    <div class="row2">
+      <div class="f"><label for="f_name">指標名稱</label><input id="f_name" required></div>
+      <div class="f"><label for="f_group">分類</label><select id="f_group"></select></div>
+    </div>
+    <div class="row2">
+      <div class="f"><label for="f_value">最新數據</label><input id="f_value" placeholder="例：2.73"></div>
+      <div class="f"><label for="f_unit">單位</label><input id="f_unit" placeholder="例：%、元、億元、分"></div>
+    </div>
+    <div class="row2">
+      <div class="f"><label for="f_period">資料期間</label><input id="f_period" placeholder="例：115年9月"></div>
+      <div class="f"><label for="f_signal">景氣燈號（僅景氣信號用）</label><select id="f_signal"><option value="">—</option><option>紅燈</option><option>黃紅燈</option><option>綠燈</option><option>黃藍燈</option><option>藍燈</option></select></div>
+    </div>
+    <div class="f"><label for="f_cmp">前期／同期比較（每行一項：項目｜數值說明｜up/down/flat）</label>
+      <textarea id="f_cmp" placeholder="前期(115年8月)｜65.01，+3.76點｜up&#10;去年同期(114年9月)｜64.69，+4.08點｜up"></textarea></div>
+    <div class="f"><label for="f_fc">預測／其他重點（每行一項：項目｜數值）</label>
+      <textarea id="f_fc" placeholder="115年預測｜11.05%"></textarea></div>
+    <div class="row2">
+      <div class="f"><label for="f_rel">公布日期</label><input id="f_rel" type="date"></div>
+      <div class="f"><label for="f_next">下次公布日期</label><input id="f_next" type="date"><span class="hint">過了此日期卡片會標「待更新」</span></div>
+    </div>
+    <div class="row2">
+      <div class="f"><label for="f_freq">更新頻率</label><input id="f_freq" placeholder="月／季／年"></div>
+      <div class="f"><label for="f_nextnote">下次公布說明</label><input id="f_nextnote" placeholder="例：依往例約每月10日"></div>
+    </div>
+    <div class="f"><label for="f_src">官方資料來源（每行一項：名稱｜網址）</label>
+      <textarea id="f_src" placeholder="主計總處物價統計｜https://www.stat.gov.tw/"></textarea></div>
+    <div class="f"><label for="f_series">年度數列（趨勢圖用，每行：年度,數值；預測值年度加 f，例：116f,6.04）</label>
+      <textarea id="f_series" placeholder="113,5.27&#10;114,8.76&#10;115f,11.05"></textarea></div>
+    <div class="f"><label for="f_note">備註</label><textarea id="f_note" style="font-family:var(--f-body)"></textarea></div>
+    <div class="row2">
+      <div class="f"><label for="f_order">排序</label><input id="f_order" type="number" step="1"></div>
+      <div class="f"><label for="f_check"><input id="f_check" type="checkbox" style="width:auto;margin-right:6px">標示「數據待確認」</label></div>
+    </div>
+  </form>
+  <footer><span class="msg" id="formMsg"></span><button class="btn" type="button" id="delBtn" hidden>刪除此指標</button><button class="btn" type="button" id="cancelBtn">取消</button><button class="btn primary" type="button" id="saveBtn">儲存</button></footer>
+</aside>
+<aside class="drawer xdlg" id="xdlg" hidden role="dialog" aria-modal="true" aria-labelledby="xdlgTitle">
+  <header><h2 id="xdlgTitle">下載待遇調整審議參考指標彙整表</h2><button class="btn" type="button" id="xClose">關閉</button></header>
+  <form id="xform" novalidate>
+    <p class="note" style="margin:0">依本頁最新數據，產製與「軍公教員工待遇調整審議時參酌及相關參考指標彙整表」相同格式之 Excel 檔（含「更新說明」工作表）。</p>
+    <div class="f"><label for="x_since">紅字標示：自此日期起修正或新增之數據</label><input id="x_since" type="date"><span class="hint">預設為 115.10.13 查證日。</span></div>
+    <div class="f"><label for="x_hide"><input id="x_hide" type="checkbox" checked style="width:auto;margin-right:6px">隱藏76–99年列（與原表相同）</label></div>
+    <div class="f"><span class="hint" id="x_info">—</span></div>
+  </form>
+  <footer><span class="msg" id="xMsg"></span><button class="btn" type="button" id="xCancel">取消</button><button class="btn primary" type="button" id="xGo">產製並下載</button></footer>
+</aside>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+(function(){
+  const GROUPS=["全部","經濟成長","物價","國民所得","薪資","景氣","財政","待遇調整"];
+  const $=s=>document.querySelector(s);
+  const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  let items=[], logs=[], filter="全部", db=null, user=null, canWrite=null, editing=null, myId=null, confirmDel=false;
+  try{ filter=localStorage.getItem("dgpa-ind-filter")||"全部"; }catch(e){}
+  if(!GROUPS.includes(filter)) filter="全部";
+
+  const todayISO=()=>{const d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");};
+  const roc=iso=>{ if(!iso) return "—"; const m=/^(\d{4})-(\d{2})-(\d{2})/.exec(iso); if(!m) return esc(iso); return (m[1]-1911)+"."+(+m[2])+"."+(+m[3]); };
+  const isDue=it=> it.nextDate && it.nextDate < todayISO();
+
+  function sigColor(s){return {"紅燈":"var(--sig-red)","黃紅燈":"var(--sig-yr)","綠燈":"var(--sig-green)","黃藍燈":"var(--sig-yb)","藍燈":"var(--sig-blue)"}[s]||"var(--muted)";}
+
+  function spark(series){
+    if(!Array.isArray(series)||series.length<2) return "";
+    const pts=series.filter(p=>p&&isFinite(+p.y));
+    if(pts.length<2) return "";
+    const W=300,H=58,pl=4,pr=40,pt=8,pb=14;
+    const ys=pts.map(p=>+p.y); let mn=Math.min(...ys), mx=Math.max(...ys);
+    if(mn===mx){mn-=1;mx+=1;}
+    const sx=i=>pl+(W-pl-pr)*i/(pts.length-1), sy=v=>pt+(H-pt-pb)*(1-(v-mn)/(mx-mn));
+    let actual=[],fc=[];
+    pts.forEach((p,i)=>{(p.f?fc:actual).push([sx(i),sy(+p.y)]);});
+    const line=a=>a.map((q,i)=>(i?"L":"M")+q[0].toFixed(1)+" "+q[1].toFixed(1)).join("");
+    let area=actual.length>1?line(actual)+"L"+actual[actual.length-1][0].toFixed(1)+" "+(H-pb)+"L"+actual[0][0].toFixed(1)+" "+(H-pb)+"Z":"";
+    let fcLine=""; if(fc.length){const start=actual.length?[actual[actual.length-1]]:[];fcLine=line(start.concat(fc));}
+    const last=pts[pts.length-1], lx=sx(pts.length-1), ly=sy(+last.y);
+    const zero=(mn<0&&mx>0)?`<line x1="${pl}" x2="${W-pr}" y1="${sy(0).toFixed(1)}" y2="${sy(0).toFixed(1)}" stroke="var(--line)" stroke-dasharray="2 3"/>`:"";
+    return `<svg class="spark" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" role="img" aria-label="年度趨勢 ${esc(pts[0].x)} 至 ${esc(last.x)}">
+      ${zero}<path d="${area}" fill="var(--accent-soft)" stroke="none"/>
+      <path d="${line(actual)}" fill="none" stroke="var(--accent)" stroke-width="1.6" vector-effect="non-scaling-stroke"/>
+      ${fcLine?`<path d="${fcLine}" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-dasharray="3 3" vector-effect="non-scaling-stroke"/>`:""}
+      <circle cx="${lx.toFixed(1)}" cy="${ly.toFixed(1)}" r="3" fill="var(--accent)"/>
+      <text x="${W-pr+6}" y="${Math.min(Math.max(ly+4,12),H-pb)}" font-size="10" fill="var(--fg)" font-family="IBM Plex Mono,monospace">${esc(last.y)}</text>
+      <text x="${pl}" y="${H-2}" font-size="9" fill="var(--muted)" font-family="IBM Plex Mono,monospace">${esc(pts[0].x)}</text>
+      <text x="${W-pr}" y="${H-2}" font-size="9" fill="var(--muted)" text-anchor="end" font-family="IBM Plex Mono,monospace">${esc(last.x)}${last.f?"（預測）":""}</text>
+    </svg>`;
+  }
+
+  function srcLinks(srcs){
+    return (srcs||[]).map(s=>/^https?:\/\//.test(s.url||"")?`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name||s.url)}</a>`:esc(s.name)).join("、")||"—";
+  }
+
+  function renderChips(){
+    $("#chips").innerHTML=GROUPS.map(g=>`<button type="button" class="chip" aria-pressed="${g===filter}" data-g="${g}">${g}</button>`).join("");
+  }
+  $("#chips").addEventListener("click",e=>{const b=e.target.closest(".chip"); if(!b) return; filter=b.dataset.g; try{localStorage.setItem("dgpa-ind-filter",filter);}catch(_){} renderChips(); render();});
+
+  function render(){
+    const list=items.filter(it=>filter==="全部"||it.group===filter);
+    const due=items.filter(isDue).length;
+    $("#dueCount").textContent=items.length?due:"—";
+    const lu=items.map(i=>i.updatedAt||"").sort().pop();
+    $("#lastUpd").textContent=lu?roc(lu.slice(0,10)):"—";
+    if(!items.length){
+      $("#grid").innerHTML=`<div class="empty">${db?"目前沒有指標資料。有編輯權限者可按「新增指標」加入第一筆。":"指標資料存放於本頁共用資料庫，請以已登入、具檢視權限的 claude.ai 帳號開啟本頁。"}</div>`;
+      $("#tbody").innerHTML=`<tr><td colspan="9" class="note">尚無資料</td></tr>`;
+      return;
+    }
+    $("#grid").innerHTML=list.map(it=>{
+      const pills=[isDue(it)?`<span class="pill due">待更新</span>`:`<span class="pill ok">${esc(it.freq||"")}</span>`, it.needsCheck?`<span class="pill chk">待確認</span>`:""].join("");
+      const cmp=(it.compare||[]).map(c=>`<dt>${esc(c.label)}</dt><dd class="${esc(c.dir||"")}">${esc(c.text)}</dd>`).join("");
+      const fc=(it.forecast||[]).map(f=>`<span>${esc(f.label)} <b>${esc(f.value)}</b></span>`).join("　");
+      return `<article class="card" data-id="${esc(it.id)}">
+        <div class="head"><div><div class="grp">${esc(it.group)}</div><h3>${esc(it.name)}</h3></div><div style="display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end">${pills}</div></div>
+        <div><div class="valrow"><span class="val">${esc(it.value??"—")}</span><span class="unit">${esc(it.unit||"")}</span>${it.signal?`<span class="sig" style="--c:${sigColor(it.signal)}"><i></i>${esc(it.signal)}</span>`:""}</div>
+        <div class="period">資料期間：${esc(it.period||"—")}</div></div>
+        ${cmp?`<dl class="cmp">${cmp}</dl>`:""}
+        ${fc?`<div class="fc">${fc}</div>`:""}
+        ${spark(it.series)}
+        <div class="foot"><span>公布日期</span><span>${roc(it.releaseDate)}</span><span>更新頻率</span><span>${esc(it.freq||"—")}</span><span>下次公布</span><span>${it.nextDate?roc(it.nextDate):""}${it.nextNote?(it.nextDate?"（":"")+esc(it.nextNote)+(it.nextDate?"）":""):(it.nextDate?"":"—")}</span><span>官方來源</span><span>${srcLinks(it.sources)}</span></div>
+        ${it.note?`<div class="note">${esc(it.note)}</div>`:""}
+        <div class="actions"><span>${it.updatedAt?"更新於 "+roc(it.updatedAt.slice(0,10)):""}<span class="by" data-uid="${esc(it.updatedBy||"")}"></span></span>${canWrite!==false&&db?`<button class="btn" type="button" data-edit="${esc(it.id)}">更新數據</button>`:""}</div>
+      </article>`;}).join("") || `<div class="empty">此分類沒有指標。</div>`;
+    $("#tbody").innerHTML=items.map(it=>`<tr><td>${esc(it.name)}${it.needsCheck?' <span class="pill chk">待確認</span>':""}</td><td class="n">${esc(it.value??"—")} ${esc(it.unit||"")}${it.signal?"（"+esc(it.signal)+"）":""}</td><td>${esc(it.period||"—")}</td><td>${(it.compare||[]).map(c=>esc(c.label)+"："+esc(c.text)).join("<br>")||"—"}</td><td>${(it.forecast||[]).map(f=>esc(f.label)+" "+esc(f.value)).join("<br>")||"—"}</td><td class="n">${roc(it.releaseDate)}</td><td>${esc(it.freq||"—")}</td><td class="n">${it.nextDate?roc(it.nextDate):esc(it.nextNote||"—")}${isDue(it)?' <span class="pill due">待更新</span>':""}</td><td>${srcLinks(it.sources)}</td></tr>`).join("");
+    resolveNames();
+  }
+
+  function renderLog(){
+    if(!logs.length) return;
+    $("#log").innerHTML=logs.map(l=>`<li><time>${esc((l.at||"").replace("T"," ").slice(0,16))}</time><span>${esc(l.name)}：${esc(l.summary)}</span><span class="by note" data-uid="${esc(l.by||"")}"></span></li>`).join("");
+    resolveNames();
+  }
+
+  async function resolveNames(){
+    if(!user) return;
+    const els=[...document.querySelectorAll(".by[data-uid]")].filter(e=>e.dataset.uid);
+    const ids=[...new Set(els.map(e=>e.dataset.uid))]; if(!ids.length) return;
+    try{ const ps=await user.profiles(ids); els.forEach(e=>{const p=ps[e.dataset.uid]; const n=(p&&p.name)||""; e.textContent=n?"（"+n+"）":"";}); }catch(_){}
+  }
+
+  // ---------- editing ----------
+  $("#f_group").innerHTML=GROUPS.slice(1).map(g=>`<option>${g}</option>`).join("");
+  const parseLines=(t,n)=>t.split("\n").map(l=>l.trim()).filter(Boolean).map(l=>l.split(/[｜|]/).map(s=>s.trim()));
+  function openEdit(it){
+    editing=it||null; confirmDel=false;
+    $("#drawerTitle").textContent=it?"更新數據："+it.name:"新增指標";
+    $("#f_name").value=it?.name||""; $("#f_group").value=it?.group||"經濟成長";
+    $("#f_value").value=it?.value??""; $("#f_unit").value=it?.unit||""; $("#f_period").value=it?.period||"";
+    $("#f_signal").value=it?.signal||"";
+    $("#f_cmp").value=(it?.compare||[]).map(c=>[c.label,c.text,c.dir||""].join("｜")).join("\n");
+    $("#f_fc").value=(it?.forecast||[]).map(f=>f.label+"｜"+f.value).join("\n");
+    $("#f_rel").value=it?.releaseDate||""; $("#f_next").value=it?.nextDate||""; $("#f_nextnote").value=it?.nextNote||"";
+    $("#f_freq").value=it?.freq||""; $("#f_src").value=(it?.sources||[]).map(s=>s.name+"｜"+(s.url||"")).join("\n");
+    $("#f_series").value=(it?.series||[]).map(p=>p.x+(p.f?"f":"")+","+p.y).join("\n");
+    $("#f_note").value=it?.note||""; $("#f_order").value=it?.order??(items.length+1)*10; $("#f_check").checked=!!it?.needsCheck;
+    $("#delBtn").hidden=!it; $("#delBtn").textContent="刪除此指標"; $("#formMsg").textContent="";
+    $("#scrim").hidden=false; $("#drawer").hidden=false; $("#f_value").focus();
+  }
+  function closeEdit(){ $("#scrim").hidden=true; $("#drawer").hidden=true; editing=null; }
+  ["#closeBtn","#cancelBtn","#scrim"].forEach(s=>$(s).addEventListener("click",closeEdit));
+  document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("#drawer").hidden) closeEdit();});
+  $("#grid").addEventListener("click",e=>{const b=e.target.closest("[data-edit]"); if(b) openEdit(items.find(i=>i.id===b.dataset.edit));});
+  $("#addBtn").addEventListener("click",()=>openEdit(null));
+  function toast(t){const el=$("#toast"); el.textContent=t; el.hidden=false; clearTimeout(toast._t); toast._t=setTimeout(()=>el.hidden=true,2600);}
+
+  function collect(){
+    const series=$("#f_series").value.split("\n").map(l=>l.trim()).filter(Boolean).map(l=>{const [x,y]=l.split(/[,，]/).map(s=>s.trim()); const f=/f$/i.test(x); return {x:x.replace(/f$/i,""),y:isFinite(+y)?+y:y,f};}).filter(p=>p.x&&p.y!==""&&p.y!==undefined);
+    return {
+      name:$("#f_name").value.trim(), group:$("#f_group").value, value:$("#f_value").value.trim(), unit:$("#f_unit").value.trim(),
+      period:$("#f_period").value.trim(), signal:$("#f_signal").value,
+      compare:parseLines($("#f_cmp").value).map(([label,text,dir])=>({label:label||"",text:text||"",dir:["up","down","flat"].includes(dir)?dir:""})),
+      forecast:parseLines($("#f_fc").value).map(([label,value])=>({label:label||"",value:value||""})),
+      releaseDate:$("#f_rel").value, nextDate:$("#f_next").value, nextNote:$("#f_nextnote").value.trim(), freq:$("#f_freq").value.trim(),
+      sources:parseLines($("#f_src").value).map(([name,url])=>({name:name||"",url:url||""})),
+      series, note:$("#f_note").value.trim(), order:+$("#f_order").value||0, needsCheck:$("#f_check").checked
+    };
+  }
+  function summarize(a,b){
+    if(!a) return "新增指標，最新數據 "+b.value+" "+b.unit+"（"+b.period+"）";
+    const ch=[]; if(a.value!==b.value) ch.push("數據 "+(a.value||"—")+"→"+b.value);
+    if(a.period!==b.period) ch.push("期間 "+(a.period||"—")+"→"+b.period);
+    if(a.releaseDate!==b.releaseDate) ch.push("公布日期 "+roc(b.releaseDate));
+    return ch.join("；")||"更新說明、來源或數列";
+  }
+  $("#saveBtn").addEventListener("click",async()=>{
+    if(!db) return;
+    const data=collect(); if(!data.name){$("#formMsg").textContent="請填指標名稱";return;}
+    const id=editing?editing.id:("ind-"+Date.now().toString(36));
+    const now=new Date().toISOString();
+    let uid=null; try{uid=myId||(user?await user.id():null);}catch(_){}
+    data.updatedAt=now; if(uid) data.updatedBy=uid;
+    const btn=$("#saveBtn"); btn.disabled=true; $("#formMsg").textContent="";
+    try{
+      await db.doc("indicators/"+id).set(data);
+      const entry={at:new Date().toLocaleString("sv-SE",{hour12:false}).replace(" ","T"),name:data.name,summary:summarize(editing,data),indicatorId:id};
+      if(uid) entry.by=uid;
+      try{ await db.collection("changelog").doc().set(entry); }catch(_){}
+      closeEdit(); toast("已儲存");
+    }catch(e){
+      $("#formMsg").textContent = e&&e.code==="invalid_argument" ? "無法儲存：您的權限僅能檢視，請洽本頁擁有者開放編輯權限。" : "儲存失敗，請稍後再試（"+(e&&e.code||"錯誤")+"）。";
+      if(e&&e.code==="invalid_argument"){canWrite=false; render();}
+    }finally{btn.disabled=false;}
+  });
+  $("#delBtn").addEventListener("click",async()=>{
+    if(!editing||!db) return;
+    if(!confirmDel){confirmDel=true; $("#delBtn").textContent="再按一次確認刪除"; return;}
+    try{ await db.doc("indicators/"+editing.id).delete(); closeEdit(); toast("已刪除"); }catch(e){ $("#formMsg").textContent="刪除失敗（"+(e&&e.code||"錯誤")+"）"; }
+  });
+
+  renderChips(); render();
+
+  // ---------- data（讀取同一網站之 data.json）----------
+  (async()=>{
+    let SNAP=null;
+    try{ const r=await fetch("data.json?ts="+Date.now(),{cache:"no-store"}); if(!r.ok) throw new Error(r.status); SNAP=await r.json(); }
+    catch(e){ showStatus("無法讀取數據檔（data.json），請稍後重新整理。"); render(); return; }
+    items=SNAP.indicators||[]; tableRows=SNAP.rows||[]; tableNotes=SNAP.notes||{lines:[],todo:[]}; canWrite=false;
+    $("#asof").textContent=roc(SNAP.asof)+(SNAP.lastCheck?"（最近查核 "+roc(SNAP.lastCheck)+"）":"");
+    downloads=null;
+    $("#xlsBtn").hidden=!tableRows.length;
+    render();
+  })();
+  let meta=null, mcp=null, isOwner=false;
+  function fmtTime(iso){ if(!iso) return "—"; const d=new Date(iso); if(isNaN(d)) return esc(iso); const t=d.toLocaleString("sv-SE",{timeZone:"Asia/Taipei",hour12:false}); return roc(t.slice(0,10))+" "+t.slice(11,16); }
+  function renderSync(){
+    const bar=$("#syncBar");
+    return;
+    const st={ok:["var(--down)","完成"],partial:["var(--warn)","部分完成"],failed:["var(--seal)","失敗"]}[meta.status]||["var(--muted)",meta.status||""];
+    const fails=(meta.items||[]).filter(i=>i.result==="failed");
+    const ups=(meta.items||[]).filter(i=>i.result==="updated");
+    const nm=id=>{const it=items.find(x=>x.id===id); return it?it.name:id;};
+    bar.innerHTML=`<span><span class="dot" style="--c:${st[0]}"></span>最近自動更新 <b>${fmtTime(meta.lastRun)}</b>（${esc(st[1])}）</span>`+
+      (ups.length?`<span>本次更新：${ups.map(i=>esc(nm(i.id))).join("、")}</span>`:`<span>${esc(meta.summary||"官方資料無新公布")}</span>`)+
+      (fails.length?`<span class="fail">未能取得：${fails.map(i=>esc(nm(i.id))+(i.detail?"（"+esc(i.detail)+"）":"")).join("、")}</span>`:"")+
+      `<span>排程：每個工作日 17:52</span>`;
+    $("#syncBtn").hidden=!(isOwner&&mcp&&meta.triggerId);
+  }
+  $("#syncBtn").addEventListener("click",async()=>{
+    if(!mcp||!meta||!meta.triggerId) return;
+    const b=$("#syncBtn"); b.disabled=true; b.textContent="已送出，更新中…";
+    try{
+      await mcp.callTool("Claude Code Remote","fire_trigger",{trigger_id:meta.triggerId},{cache:false});
+      toast("已啟動更新，約需數分鐘；完成後本頁會自動顯示新數據");
+      setTimeout(()=>{b.disabled=false;b.textContent="立即從官方來源更新";},120000);
+    }catch(e){
+      b.disabled=false; b.textContent="立即從官方來源更新";
+      toast(e&&e.code==="denied"?"未取得連接器使用許可，無法啟動更新":"啟動更新失敗（"+(e&&e.code||"錯誤")+"）");
+    }
+  });
+  // ---------- Excel 彙整表 ----------
+  const SPEC={"cells": {"B1": "軍公教員工待遇調整審議時參酌及相關參考指標彙整表", "B2": "年度", "C2": "通案待遇調整比率(%)", "D2": "各項財經指標", "P2": "政府財政狀況", "D3": "經濟成長率(%)", "E3": "消費者物價指數年增率(%)", "F3": "平均國民所得(GDP)及增加率(%)", "J3": "民間企業薪資水準(工業及服務業)平均薪資(元)及增加率(％)", "N3": "景氣對策信號\n(年平均)", "O3": "消費者\n信心指數\n(年平均)", "P3": "人事費占歲出比率(%)", "R3": "全國各類賦稅實徵淨額(億元)", "S3": "歲入歲出餘絀\n(億元)", "W3": "中央政府債務舉借概況(含不列債限)\n(億元)", "X3": "中央政府債務舉借概況(億元)", "F5": "美元", "H5": "新臺幣(元)", "J5": "總薪資", "L5": "經常性薪資", "P5": "中央政府", "Q5": "地方政府", "F6": "統計值", "G6": "年增率", "H6": "統計值", "I6": "年增率", "J6": "統計值", "K6": "年增率", "L6": "統計值", "M6": "年增率", "S6": "中央政府總預算", "T6": "各級政府", "U6": "餘絀", "V6": "餘絀占GDP比率(%)", "X6": "列入債限", "Y6": "歲出\n(列入債限補分)", "Z6": "列入債限占歲出之比率(%)"}, "merges": ["C2:C6", "Q5:Q6", "D2:O2", "J5:K5", "O3:O6", "F3:I4", "X3:Z5", "P3:Q4", "N3:N6", "F5:G5", "L5:M5", "P2:W2", "S3:V5", "W3:W6", "D3:D6", "J3:M4", "R3:R6", "B2:B6", "P5:P6", "B1:Z1", "E3:E6", "H5:I5"], "widths": {"A": 5.44, "B": 7.44, "C": 7.78, "D": 8.89, "E": 9.33, "F": 11.78, "G": 9.33, "H": 15.0, "I": 9.33, "J": 11.78, "K": 12.33, "L": 12.0, "M": 11.89, "N": 12.33, "O": 12.66, "P": 13.22, "R": 14.0, "S": 12.33, "U": 9.89, "V": 9.66, "W": 12.44, "X": 10.44, "Z": 9.66, "Q": 13.22, "T": 12.33, "Y": 10.44}, "heights": {"1": 42.6, "2": 24.0, "3": 33.75, "4": 14.25, "5": 22.95, "6": 40.2}, "numFmt": {"B": "_-* #,##0_-;\\-* #,##0_-;_-* \"-\"??_-;_-@_-", "C": "0_);\\(0\\)", "D": "0.00_ ;\\-0.00\\ ", "E": "0.00_ ;\\-0.00\\ ", "F": "_-* #,##0_-;\\-* #,##0_-;_-* \"-\"??_-;_-@_-", "G": "0.00", "H": "_-* #,##0_-;\\-* #,##0_-;_-* \"-\"??_-;_-@_-", "I": "0.00", "J": "#,##0_ ;\\-#,##0\\ ", "K": "0.00", "L": "#,##0_ ;\\-#,##0\\ ", "M": "0.00", "N": "#,##0.00_ ;\\-#,##0.00\\ ", "O": "#,##0.00_ ;\\-#,##0.00\\ ", "P": "#,##0.00_ ;\\-#,##0.00\\ ", "Q": "#,##0.00_ ;\\-#,##0.00\\ ", "R": "#,##0", "S": "#,##0_ ;\\-#,##0\\ ", "T": "#,##0_ ;\\-#,##0\\ ", "U": "#,##0_ ;\\-#,##0\\ ", "V": "#,##0.0_ ;\\-#,##0.0\\ ", "W": "#,##0_ ;\\-#,##0\\ ", "X": "#,##0_ ;\\-#,##0\\ ", "Y": "#,##0_ ;\\-#,##0\\ ", "Z": "0.00_);\\(0.00\\)"}, "hiddenCols": ["U", "V", "X", "Y", "Z"]};
+  const COLNAME={C:"通案待遇調整比率",D:"經濟成長率",E:"CPI年增率",F:"平均國民所得(美元)",G:"美元年增率",H:"平均國民所得(新臺幣)",I:"新臺幣年增率",J:"總薪資",K:"總薪資年增率",L:"經常性薪資",M:"經常性薪資年增率",N:"景氣對策信號",O:"消費者信心指數",P:"人事費占歲出比率-中央",Q:"人事費占歲出比率-地方",R:"全國賦稅實徵淨額",S:"餘絀-中央政府總預算",T:"餘絀-各級政府",U:"餘絀(舊欄)",V:"餘絀占GDP比率",W:"中央政府債務舉借(含不列債限)",X:"列入債限",Y:"歲出(列入債限部分)",Z:"列入債限占歲出比率"};
+  const AUTO={G:"F",I:"H",K:"J",M:"L"};
+  let tableRows=[], tableNotes=null, downloads=null, xlsLib=null;
+  const colLetters=[]; for(let c=67;c<=90;c++) colLetters.push(String.fromCharCode(c));
+  function loadExcelJS(){
+    if(window.ExcelJS) return Promise.resolve(window.ExcelJS);
+    if(xlsLib) return xlsLib;
+    xlsLib=new Promise((res,rej)=>{const sc=document.createElement("script"); sc.src="https://cdn.jsdelivr.net/npm/exceljs@4.4.0/dist/exceljs.min.js"; sc.onload=()=>res(window.ExcelJS); sc.onerror=()=>{xlsLib=null;rej(new Error("load"));}; document.head.appendChild(sc);});
+    return xlsLib;
+  }
+  const rocToday=()=>{const t=todayISO(); return roc(t);};
+  async function buildXlsx(since, hideOld){
+    const ExcelJS=await loadExcelJS();
+    const wb=new ExcelJS.Workbook(); wb.creator="行政院人事行政總處給與福利處"; wb.calcProperties.fullCalcOnLoad=true;
+    const ws=wb.addWorksheet("彙整表",{views:[{state:"frozen",xSplit:2,ySplit:6}],pageSetup:{paperSize:8,orientation:"landscape",fitToPage:true,fitToWidth:1,fitToHeight:1,margins:{left:0.12,right:0.12,top:0.35,bottom:0.35,header:0.2,footer:0.2}}});
+    const FONT="微軟正黑體", thin={style:"thin",color:{argb:"FF000000"}}, box={top:thin,left:thin,bottom:thin,right:thin};
+    Object.entries(SPEC.widths).forEach(([c,w])=>{ws.getColumn(c).width=w;});
+    SPEC.hiddenCols.forEach(c=>{ws.getColumn(c).hidden=true;});
+    for(let r=2;r<=6;r++) for(let ci=2;ci<=26;ci++){const cell=ws.getCell(r,ci); cell.border=box; cell.fill={type:"pattern",pattern:"solid",fgColor:{argb:"FFF2F2F2"}}; cell.font={name:FONT,size:14,bold:true}; cell.alignment={horizontal:"center",vertical:"middle",wrapText:true};}
+    SPEC.merges.forEach(m=>ws.mergeCells(m));
+    Object.entries(SPEC.cells).forEach(([a,v])=>{ws.getCell(a).value=v;});
+    const t=ws.getCell("B1"); t.font={name:FONT,size:20,bold:true}; t.alignment={horizontal:"center",vertical:"middle"};
+    Object.entries(SPEC.heights).forEach(([r,h])=>{ws.getRow(+r).height=h;});
+    const rows=[...tableRows].sort((a,b)=>a.year-b.year);
+    const changes=[];
+    rows.forEach((d,i)=>{
+      const r=7+i, row=ws.getRow(r);
+      const yc=ws.getCell(r,2); yc.value=d.year; yc.font={name:FONT,size:14}; yc.alignment={horizontal:"center",vertical:"middle",wrapText:true}; yc.border=box;
+      let lines=1;
+      colLetters.forEach(c=>{
+        const cell=ws.getCell(c+r); let v=(d.cells||{})[c];
+        const redDate=(d.red||{})[c]; const isRed=!!(redDate&&redDate>=since);
+        if(v&&typeof v==="object"&&v.auto){
+          const base=AUTO[c], prev=rows[i-1];
+          const cur=(d.cells||{})[base], pv=prev&&(prev.cells||{})[base];
+          if(typeof cur==="number"&&typeof pv==="number"){ cell.value={formula:`(${base}${r}-${base}${r-1})/${base}${r-1}*100`,result:+((cur-pv)/pv*100).toFixed(4)}; }
+          else cell.value=v.v;
+        } else if(v!==undefined&&v!==null){ cell.value=v; if(typeof v==="string"){ const w=(SPEC.widths[c]||9)-1; lines=Math.max(lines,v.split("\n").reduce((n,seg)=>n+Math.max(1,Math.ceil([...seg].reduce((k,ch)=>k+(/[\x00-\x7f]/.test(ch)?1.3:2.6),0)/w)),0)); } }
+        cell.font={name:FONT,size:14,color:{argb:isRed?"FFFF0000":"FF000000"}};
+        cell.alignment={horizontal:"right",vertical:"middle",wrapText:true};
+        if(typeof v==="number"||(v&&v.auto)) cell.numFmt=SPEC.numFmt[c]||"General";
+        cell.border=box;
+        const cm=(d.comments||{})[c];
+        if(cm) cell.note={texts:[{text:cm}]};
+        if(isRed){ changes.push([c+r,d.year,COLNAME[c]||c,typeof cell.value==="object"&&cell.value?cell.value.result:cell.value,cm||""]); }
+      });
+      row.height=Math.max(23.25,lines*19+6);
+      if(hideOld&&d.year<100) row.hidden=true;
+    });
+    let r=7+rows.length;
+    const notes=(tableNotes&&tableNotes.lines)||[];
+    const rels=items.filter(it=>it.releaseDate).map(it=>it.releaseDate).sort();
+    const allLines=[...notes,
+      `${notes.length+1}.更新日期：${rocToday()}（依據行政院主計總處、國家發展委員會、財政部、台灣經濟發展研究中心等機關最新公布資料${rels.length?"，最近公布日"+roc(rels[rels.length-1]):""}更新）`,
+      `${notes.length+2}.紅色字體為${roc(since)}以後修正之以前年度數據及新增或修正之預測值；當年度已查證之官方數據以黑色字體表示。原值及來源載於儲存格註解及「更新說明」工作表。`];
+    ws.getCell("B"+r).value="註："; ws.getCell("B"+r).font={name:FONT,size:12}; ws.getCell("B"+r).alignment={horizontal:"right",vertical:"top"};
+    allLines.forEach((ln,k)=>{const rr=r+k; ws.mergeCells(`C${rr}:Z${rr}`); const c=ws.getCell("C"+rr); c.value=ln; c.font={name:FONT,size:12}; c.alignment={horizontal:"left",vertical:"middle",wrapText:true}; ws.getRow(rr).height=ln.length>110?36:19.5;});
+    // 更新說明
+    const s2=wb.addWorksheet("更新說明");
+    s2.columns=[{width:10},{width:8},{width:24},{width:26},{width:90}];
+    const h1=s2.addRow([`一、${roc(since)}以後修正／新增之數據（表內以紅色字體標註）`]); h1.font={name:FONT,size:13,bold:true};
+    const hd=s2.addRow(["儲存格","年度","欄位","新值","說明及來源"]); hd.eachCell(c=>{c.font={name:FONT,size:11,bold:true,color:{argb:"FFFFFFFF"}};c.fill={type:"pattern",pattern:"solid",fgColor:{argb:"FF1F4E79"}};c.border=box;});
+    (changes.length?changes:[["—","","","",`${roc(since)}以後無修正或新增`]]).forEach(x=>{const rw=s2.addRow(x); rw.eachCell(c=>{c.font={name:FONT,size:10};c.alignment={wrapText:true,vertical:"top"};c.border=box;});});
+    const todo=(tableNotes&&tableNotes.todo)||[];
+    if(todo.length){ s2.addRow([]); const h2=s2.addRow(["二、待確認事項（口徑不一或查無官方來源，未逕行修改）"]); h2.font={name:FONT,size:13,bold:true};
+      const hd2=s2.addRow(["範圍","項目","說明"]); hd2.eachCell(c=>{c.font={name:FONT,size:11,bold:true,color:{argb:"FFFFFFFF"}};c.fill={type:"pattern",pattern:"solid",fgColor:{argb:"FF7F6000"}};c.border=box;});
+      todo.forEach(x=>{const rw=s2.addRow([x[0],x[1],x[2]]); s2.mergeCells(`C${rw.number}:E${rw.number}`); rw.eachCell(c=>{c.font={name:FONT,size:10};c.alignment={wrapText:true,vertical:"top"};c.border=box;}); rw.height=Math.max(30,Math.ceil(String(x[2]||"").length/70)*15);});
+    }
+    return {buf:await wb.xlsx.writeBuffer(), changes:changes.length, rows:rows.length};
+  }
+  function openX(){
+    let since="2026-10-13"; try{ since=localStorage.getItem("dgpa-xls-since")||since; }catch(_){}
+    $("#x_since").value=since; $("#xMsg").textContent="";
+    const ys=tableRows.map(d=>d.year); $("#x_info").textContent=ys.length?`資料年度：${Math.min(...ys)}–${Math.max(...ys)}年，共${ys.length}列。`:"尚未載入表格資料。";
+    $("#scrim").hidden=false; $("#xdlg").hidden=false; loadExcelJS().catch(()=>{});
+  }
+  function closeX(){ $("#xdlg").hidden=true; $("#scrim").hidden=true; }
+  $("#xlsBtn").addEventListener("click",openX);
+  ["#xClose","#xCancel"].forEach(s=>$(s).addEventListener("click",closeX));
+  $("#scrim").addEventListener("click",closeX);
+  $("#xGo").addEventListener("click",async()=>{
+    const b=$("#xGo"); if(!tableRows.length){$("#xMsg").textContent="表格資料尚未載入";return;}
+    const since=$("#x_since").value||"2026-10-13";
+    b.disabled=true; b.textContent="產製中…"; $("#xMsg").textContent="";
+    try{
+      const {buf,changes}=await buildXlsx(since,$("#x_hide").checked);
+      const t=todayISO(), fn=`軍公教員工待遇調整審議參考指標彙整表_${(+t.slice(0,4)-1911)}${t.slice(5,7)}${t.slice(8,10)}.xlsx`;
+      const blob=new Blob([buf],{type:"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"});
+      if(downloads){ await downloads.save({filename:fn,data:blob}); }
+      else { const u=URL.createObjectURL(blob); const a=document.createElement("a"); a.href=u; a.setAttribute("download",fn); a.rel="noopener"; a.style.display="none"; document.body.appendChild(a); a.click(); setTimeout(()=>{a.remove(); URL.revokeObjectURL(u);},10000); }
+      try{ localStorage.setItem("dgpa-xls-since",t); }catch(_){}
+      closeX(); toast(`已產製（紅字 ${changes} 格）`);
+    }catch(e){
+      const code=e&&e.code;
+      $("#xMsg").textContent= code==="declined"?"已取消下載": code==="rate_limited"?"下載視窗已開啟，請稍候再試": e&&e.message==="load"?"無法載入 Excel 元件，請重新整理後再試":"產製失敗（"+(code||e&&e.message||"錯誤")+"）";
+    }finally{ b.disabled=false; b.textContent="產製並下載"; }
+  });
+  function showStatus(t){ const el=$("#status"); el.textContent=t; el.hidden=false; }
+})();
+</script>
+
+</body>
+</html>
