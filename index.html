@@ -251,6 +251,7 @@ tr:last-child td{border-bottom:0}
   <form id="xform" novalidate>
     <p class="note" style="margin:0">依本頁最新數據，產製與「軍公教員工待遇調整審議時參酌及相關參考指標彙整表」相同格式之 Excel 檔（含「更新說明」工作表）。</p>
     <div class="f"><label for="x_since">標示顏色：自此日期起修正或新增之數據（紅＝以前年度修正、藍＝預測值、橘＝未查證）</label><input id="x_since" type="date"><span class="hint">預設為 115.10.13 查證日。</span></div>
+    <div class="f"><label for="x_pw">下載密碼</label><input id="x_pw" type="password" inputmode="numeric" autocomplete="off" maxlength="8" placeholder="請輸入下載密碼"><span class="hint">本功能僅供業務使用，密碼請洽承辦單位。</span></div>
     <div class="f"><label for="x_hide"><input id="x_hide" type="checkbox" checked style="width:auto;margin-right:6px">隱藏76–99年列（與原表相同）</label></div>
     <div class="f"><span class="hint" id="x_info">—</span></div>
   </form>
@@ -535,7 +536,7 @@ tr:last-child td{border-bottom:0}
   }
   function openX(){
     let since="2026-10-13"; try{ since=localStorage.getItem("dgpa-xls-since")||since; }catch(_){}
-    $("#x_since").value=since; $("#xMsg").textContent="";
+    $("#x_since").value=since; $("#xMsg").textContent=""; $("#x_pw").value="";
     const ys=tableRows.map(d=>d.year); $("#x_info").textContent=ys.length?`資料年度：${Math.min(...ys)}–${Math.max(...ys)}年，共${ys.length}列。`:"尚未載入表格資料。";
     $("#scrim").hidden=false; $("#xdlg").hidden=false; loadExcelJS().catch(()=>{});
   }
@@ -545,6 +546,8 @@ tr:last-child td{border-bottom:0}
   $("#scrim").addEventListener("click",closeX);
   $("#xGo").addEventListener("click",async()=>{
     const b=$("#xGo"); if(!tableRows.length){$("#xMsg").textContent="表格資料尚未載入";return;}
+    const tp=new Date().toLocaleString("sv-SE",{timeZone:"Asia/Taipei"}); const key=tp.slice(5,7)+tp.slice(8,10);
+    if(($("#x_pw").value||"").trim()!==key){ $("#xMsg").textContent="下載密碼不正確"; $("#x_pw").select(); return; }
     const since=$("#x_since").value||"2026-10-13";
     b.disabled=true; b.textContent="產製中…"; $("#xMsg").textContent="";
     try{
