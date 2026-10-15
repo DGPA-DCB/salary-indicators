@@ -109,6 +109,48 @@ tr:last-child td{border-bottom:0}
 .syncbar .dot{width:8px;height:8px;border-radius:50%;background:var(--c);display:inline-block;margin-right:6px}
 .syncbar b{color:var(--fg);font-weight:500}
 .syncbar .fail{color:var(--seal)}
+
+/* ---- 年度／項目檢視 ---- */
+:root{--s1:#1a6a9a;--s2:#b5651d;--raise:#8b97a4;--grid:#e3e8ed}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--s1:#3f97cf;--s2:#c27a30;--raise:#6f7d8b;--grid:#26323e}}
+:root[data-theme="dark"]{--s1:#3f97cf;--s2:#c27a30;--raise:#6f7d8b;--grid:#26323e}
+.viewbar{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:10px 14px}
+.viewbar label{font-size:12.5px;color:var(--muted);display:flex;align-items:center;gap:6px}
+.viewbar select{font:inherit;font-size:13.5px;border:1px solid var(--line);border-radius:7px;padding:5px 8px;background:var(--bg);color:var(--fg);max-width:100%}
+.viewbar .hint{font-size:12px;color:var(--muted)}
+.detail{background:var(--surface);border:1px solid var(--accent);border-radius:var(--r);padding:16px 18px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.detail .dh{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;align-items:flex-start}
+.detail h2{margin:0;font-family:var(--f-display);font-size:19px}
+.detail .sub{font-size:12.5px;color:var(--muted)}
+.ctrls{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:13px}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.seg button{font:inherit;font-size:13px;border:0;background:transparent;color:var(--muted);padding:5px 12px;cursor:pointer}
+.seg button+button{border-left:1px solid var(--line)}
+.seg button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
+.ctrls select{font:inherit;font-size:13px;border:1px solid var(--line);border-radius:7px;padding:4px 6px;background:var(--bg);color:var(--fg)}
+.chartbox{position:relative;min-width:0}
+.chartbox svg{display:block;width:100%;height:auto;overflow:visible}
+.chartbox svg text{font-family:var(--f-num);font-size:11px;fill:var(--muted)}
+.chartbox .lab{fill:var(--fg)}
+.tip{position:absolute;pointer-events:none;background:var(--fg);color:var(--bg);font-size:12px;line-height:1.5;padding:6px 9px;border-radius:6px;white-space:nowrap;transform:translate(-50%,-100%);z-index:3}
+.tip b{font-family:var(--f-num)}
+.dlegend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12.5px;color:var(--muted)}
+.dlegend span{display:inline-flex;align-items:center;gap:6px}
+.dlegend i{display:inline-block;width:14px;height:3px;border-radius:2px;background:var(--c)}
+.dlegend i.o{width:9px;height:9px;border-radius:50%;background:transparent;border:2px solid var(--c)}
+.dnotes{font-size:12px;color:var(--muted);display:flex;flex-direction:column;gap:2px}
+.dtable{overflow-x:auto;border:1px solid var(--line);border-radius:8px}
+.dtable table{min-width:0;width:100%;font-size:13px}
+.dtable td.n,.dtable th.n{text-align:right}
+.dtable tr.sel td{background:var(--accent-soft)}
+.yrcard .big2{display:flex;gap:16px;flex-wrap:wrap}
+.yrcard .yv{font-family:var(--f-num);font-size:26px;font-weight:600;font-variant-numeric:tabular-nums}
+.yrcard .yl{font-size:12px;color:var(--muted)}
+.flag{font-size:11px;border-radius:999px;padding:1px 7px;border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+.flag.fc{border-color:var(--s2);color:var(--s2)}
+.flag.rv{border-color:var(--seal);color:var(--seal)}
+.zoom{font-size:12px}
+
 .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(20px + env(safe-area-inset-bottom,0px));background:var(--fg);color:var(--bg);padding:8px 16px;border-radius:8px;font-size:13px;z-index:30}
 @media (max-width:520px){.row2{grid-template-columns:1fr}.val{font-size:28px}.wrap{padding-inline:16px}}
 @media (prefers-reduced-motion:no-preference){.card{transition:border-color .15s}.card:hover{border-color:var(--accent)}}
@@ -140,12 +182,19 @@ tr:last-child td{border-bottom:0}
 
   <div id="syncBar" class="syncbar"><span><span class="dot" style="--c:var(--accent)"></span>資料更新至：<b id="asof">—</b>。每個工作日依各機關公布資料自動更新；數據取自各機關公開資料，引用請以各機關原始公布為準。</span></div>
   <div id="status" class="notice" hidden></div>
+  <div class="viewbar" id="viewbar">
+    <label for="yearSel">年度<select id="yearSel"><option value="">最新</option></select></label>
+    <label for="itemSel">項目<select id="itemSel"><option value="">全部（卡片）</option></select></label>
+    <span class="hint">選年度可看該年各項數值；選項目或按卡片「放大」可看歷年比較。</span>
+  </div>
+  <section class="detail" id="detail" hidden aria-live="polite"></section>
   <div id="grid" class="grid" aria-live="polite">
     <div class="empty" id="emptyState">指標資料載入中…<br>資料存放於本頁共用資料庫，有編輯權限者可按各卡片「更新數據」修改，或按「新增指標」加入。</div>
   </div>
 
   <section>
     <h2>總覽表</h2>
+    <p class="note" style="margin:-4px 0 8px">總覽表固定顯示各指標最新數據；選擇年度只影響上方卡片。</p>
     <div class="tablewrap"><table>
       <thead><tr><th>指標</th><th>最新數據</th><th>資料期間</th><th>前期／同期比較</th><th>預測</th><th>公布日期</th><th>更新頻率</th><th>下次公布</th><th>官方資料來源</th></tr></thead>
       <tbody id="tbody"><tr><td colspan="9" class="note">載入中…</td></tr></tbody>
@@ -269,12 +318,13 @@ tr:last-child td{border-bottom:0}
       $("#tbody").innerHTML=`<tr><td colspan="9" class="note">尚無資料</td></tr>`;
       return;
     }
-    $("#grid").innerHTML=list.map(it=>{
+    if(viewYear){ $("#grid").innerHTML=list.map(yearCard).join("")||`<div class="empty">此分類沒有指標。</div>`; }
+    else $("#grid").innerHTML=list.map(it=>{
       const pills=[isDue(it)?`<span class="pill due">待更新</span>`:`<span class="pill ok">${esc(it.freq||"")}</span>`, it.needsCheck?`<span class="pill chk">待確認</span>`:""].join("");
       const cmp=(it.compare||[]).map(c=>`<dt>${esc(c.label)}</dt><dd class="${esc(c.dir||"")}">${esc(c.text)}</dd>`).join("");
       const fc=(it.forecast||[]).map(f=>`<span>${esc(f.label)} <b>${esc(f.value)}</b></span>`).join("　");
       return `<article class="card" data-id="${esc(it.id)}">
-        <div class="head"><div><div class="grp">${esc(it.group)}</div><h3>${esc(it.name)}</h3></div><div style="display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end">${pills}</div></div>
+        <div class="head"><div><div class="grp">${esc(it.group)}</div><h3>${esc(it.name)}</h3></div><div style="display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end">${pills}<button class="btn zoom" type="button" data-focus="${esc(it.id)}">放大</button></div></div>
         <div><div class="valrow"><span class="val">${esc(it.value??"—")}</span><span class="unit">${esc(it.unit||"")}</span>${it.signal?`<span class="sig" style="--c:${sigColor(it.signal)}"><i></i>${esc(it.signal)}</span>`:""}</div>
         <div class="period">資料期間：${esc(it.period||"—")}</div></div>
         ${cmp?`<dl class="cmp">${cmp}</dl>`:""}
@@ -285,7 +335,7 @@ tr:last-child td{border-bottom:0}
         <div class="actions"><span>${it.updatedAt?"更新於 "+roc(it.updatedAt.slice(0,10)):""}<span class="by" data-uid="${esc(it.updatedBy||"")}"></span></span>${canWrite!==false&&db?`<button class="btn" type="button" data-edit="${esc(it.id)}">更新數據</button>`:""}</div>
       </article>`;}).join("") || `<div class="empty">此分類沒有指標。</div>`;
     $("#tbody").innerHTML=items.map(it=>`<tr><td>${esc(it.name)}${it.needsCheck?' <span class="pill chk">待確認</span>':""}</td><td class="n">${esc(it.value??"—")} ${esc(it.unit||"")}${it.signal?"（"+esc(it.signal)+"）":""}</td><td>${esc(it.period||"—")}</td><td>${(it.compare||[]).map(c=>esc(c.label)+"："+esc(c.text)).join("<br>")||"—"}</td><td>${(it.forecast||[]).map(f=>esc(f.label)+" "+esc(f.value)).join("<br>")||"—"}</td><td class="n">${roc(it.releaseDate)}</td><td>${esc(it.freq||"—")}</td><td class="n">${it.nextDate?roc(it.nextDate):esc(it.nextNote||"—")}${isDue(it)?' <span class="pill due">待更新</span>':""}</td><td>${srcLinks(it.sources)}</td></tr>`).join("");
-    resolveNames();
+    resolveNames(); fillSelects(); renderDetail();
   }
 
   function renderLog(){
@@ -370,7 +420,7 @@ tr:last-child td{border-bottom:0}
     try{ await db.doc("indicators/"+editing.id).delete(); closeEdit(); toast("已刪除"); }catch(e){ $("#formMsg").textContent="刪除失敗（"+(e&&e.code||"錯誤")+"）"; }
   });
 
-  renderChips(); render();
+  renderChips(); setTimeout(render,0);
 
   // ---------- data（讀取同一網站之 data.json）----------
   (async()=>{
@@ -509,6 +559,209 @@ tr:last-child td{border-bottom:0}
       $("#xMsg").textContent= code==="declined"?"已取消下載": code==="rate_limited"?"下載視窗已開啟，請稍候再試": e&&e.message==="load"?"無法載入 Excel 元件，請重新整理後再試":"產製失敗（"+(code||e&&e.message||"錯誤")+"）";
     }finally{ b.disabled=false; b.textContent="產製並下載"; }
   });
+
+  // ---------- 年度／項目檢視 ----------
+  const MAP={
+    "gdp-growth":{cols:[["D","經濟成長率","%"]]},
+    "cpi":{cols:[["E","CPI年增率","%"]]},
+    "gdppc-usd":{cols:[["F","平均每人GDP","美元"]],alt:[["G","較上年增減","%"]]},
+    "gdppc-twd":{cols:[["H","平均每人GDP","元"]],alt:[["I","較上年增減","%"]]},
+    "wage-total":{cols:[["J","總薪資（每人每月）","元"]],alt:[["K","較上年增減","%"]]},
+    "wage-regular":{cols:[["L","經常性薪資（每人每月）","元"]],alt:[["M","較上年增減","%"]]},
+    "signal":{cols:[["N","景氣對策信號（年平均）","分"]]},
+    "cci":{cols:[["O","消費者信心指數（年平均）","點"]]},
+    "personnel":{cols:[["P","中央政府","%"],["Q","地方政府","%"]]},
+    "tax":{cols:[["R","全國賦稅實徵淨額","億元"]]},
+    "balance":{cols:[["S","中央政府總預算","億元"],["T","各級政府","億元"]]},
+    "debt":{cols:[["W","中央政府債務舉借（含不列債限）","億元"]]},
+    "pay":{cols:[["C","通案待遇調整比率","%"]]}
+  };
+  const CAVEAT={
+    "tax":"99年以前原表以千元列示，圖表已換算為億元。",
+    "personnel":"地方政府比率112年起數值驟降，口徑可能與以前年度不同；中央政府110年以後數值引用前請核對。",
+    "gdppc-usd":"美元值自100年起列示。",
+    "balance":"中央政府總預算餘絀自100年起列示，口徑（預算數或決算數）各年不一。",
+    "debt":"自100年起列示，各年口徑（預算數或決算數）不一。",
+    "signal":"自100年起列示。","cci":"自106年起列示。","pay":"「－」表示當年度未調整。"
+  };
+  let viewYear="", focusId="", chartType="line", showRaise=true, metric="cols", rFrom=null, rTo=null;
+  try{ const s=JSON.parse(localStorage.getItem("dgpa-view")||"{}"); viewYear=s.y||""; focusId=s.f||""; chartType=s.t||"line"; showRaise=s.r!==false; }catch(_){}
+  function saveView(){ try{ localStorage.setItem("dgpa-view",JSON.stringify({y:viewYear,f:focusId,t:chartType,r:showRaise})); }catch(_){} }
+  const rowOf=y=>tableRows.find(r=>r.year===y);
+  function cellVal(row,col){
+    if(!row) return null;
+    let v=(row.cells||{})[col]; const red=!!(row.red||{})[col];
+    if(v===undefined||v===null||v==="") return null;
+    if(typeof v==="object"&&v.auto) v=v.v;
+    if(typeof v==="number"){ let n=v; if(col==="R"&&row.year<100) n=v/100000; return {n, text:fmtN(n,col), fc:false, part:false, bud:false, red}; }
+    const s=String(v).trim();
+    if(/^[－\-—]$/.test(s)) return col==="C"?{n:0,text:"－",fc:false,part:false,bud:false,red,none:true}:null;
+    if(/未查證/.test(s)&&!/\d/.test(s.split("\n")[0])) return {n:null,text:s.replace(/\n/g," "),fc:false,part:false,bud:false,red,unv:true};
+    const m=s.replace(/,/g,"").match(/-?\d+(\.\d+)?/);
+    if(!m) return null;
+    const fc=/預測/.test(s); return {n:+m[0], text:s.replace(/\n+/g," "), fc, part:/月/.test(s), bud:/預算/.test(s), red:red&&!fc};
+  }
+  function fmtN(n,col){ if(n===null||n===undefined||!isFinite(n)) return "—"; if(Math.abs(n)>=1000) return Math.round(n).toLocaleString("en-US"); if(col==="C") return (+n.toFixed(2)).toString(); return n.toFixed(2); }
+  const years=()=>tableRows.map(r=>r.year).sort((a,b)=>a-b);
+  function seriesFor(id,which){
+    const m=MAP[id]; if(!m) return [];
+    const defs=(which==="alt"&&m.alt)?m.alt:m.cols;
+    return defs.map(([col,label,unit],k)=>({col,label,unit,k,pts:years().map(y=>({y,v:cellVal(rowOf(y),col)}))}));
+  }
+  function fillSelects(){
+    const ys=years().slice().reverse();
+    const ysel=$("#yearSel"), isel=$("#itemSel");
+    const yh='<option value="">最新</option>'+ys.map(y=>`<option value="${y}">${y}年</option>`).join("");
+    if(ysel.dataset.sig!==yh){ ysel.innerHTML=yh; ysel.dataset.sig=yh; }
+    ysel.value=viewYear?String(viewYear):"";
+    const ih='<option value="">全部（卡片）</option>'+items.filter(it=>MAP[it.id]).map(it=>`<option value="${esc(it.id)}">${esc(it.name)}</option>`).join("");
+    if(isel.dataset.sig!==ih){ isel.innerHTML=ih; isel.dataset.sig=ih; }
+    isel.value=focusId||"";
+    $("#viewbar").hidden=!tableRows.length;
+  }
+  $("#yearSel").addEventListener("change",e=>{ viewYear=e.target.value?+e.target.value:""; saveView(); render(); });
+  $("#itemSel").addEventListener("change",e=>{ focusId=e.target.value; metric="cols"; rFrom=rTo=null; saveView(); render(); if(focusId) $("#detail").scrollIntoView({behavior:"smooth",block:"start"}); });
+  $("#grid").addEventListener("click",e=>{ const b=e.target.closest("[data-focus]"); if(!b) return; focusId=b.dataset.focus; metric="cols"; rFrom=rTo=null; saveView(); render(); $("#detail").scrollIntoView({behavior:"smooth",block:"start"}); });
+
+  function flagHtml(v){ if(!v) return ""; const f=[]; if(v.fc) f.push('<span class="flag fc">預測值</span>'); else if(v.part) f.push('<span class="flag">部分期間</span>'); else if(v.bud) f.push('<span class="flag">預算數</span>'); if(v.unv) f.push('<span class="flag">未查證</span>'); if(v.red) f.push('<span class="flag rv">已修正</span>'); return f.join(" "); }
+  function deltaTxt(cur,prev,unit){
+    if(!cur||!prev||cur.n===null||prev.n===null) return "—";
+    if(unit==="%"){ const d=cur.n-prev.n; return (d>0?"+":"")+d.toFixed(2)+" 個百分點"; }
+    if(unit==="分"||unit==="點"){ const d=cur.n-prev.n; return (d>0?"+":"")+d.toFixed(2)+" "+unit; }
+    if(!prev.n) return "—"; const p=(cur.n-prev.n)/Math.abs(prev.n)*100; return (p>0?"+":"")+p.toFixed(2)+"%";
+  }
+  function yearCard(it){
+    const m=MAP[it.id], y=+viewYear;
+    if(!m) return `<article class="card"><div class="grp">${esc(it.group)}</div><h3>${esc(it.name)}</h3><div class="note">此項目無年度資料。</div></article>`;
+    const row=rowOf(y), prow=rowOf(y-1);
+    const vals=m.cols.map(([col,label,unit])=>{ const v=cellVal(row,col), p=cellVal(prow,col);
+      return `<div><div class="yl">${esc(m.cols.length>1?label:"")}</div><div class="valrow"><span class="yv">${v?(v.n===null?"—":esc(fmtN(v.n,col))):"—"}</span><span class="unit">${esc(unit)}</span></div>
+        <div class="yl">${flagHtml(v)}</div>
+        <dl class="cmp"><dt>較${y-1}年</dt><dd>${deltaTxt(v,p,unit)}</dd>${v&&v.text&&!/^-?[\d.,]+$/.test(v.text)?`<dt>原表內容</dt><dd style="font-family:var(--f-body)">${esc(v.text)}</dd>`:""}</dl></div>`; }).join("");
+    const alt=(m.alt||[]).map(([col,label,unit])=>{ const v=cellVal(row,col); return v&&v.n!==null?`<div class="fc">${esc(label)} <b>${esc(fmtN(v.n,col))}${esc(unit)}</b> ${flagHtml(v)}</div>`:""; }).join("");
+    const s=seriesFor(it.id,"cols")[0];
+    const sp=s?spark(s.pts.filter(p=>p.v&&p.v.n!==null&&p.y<=y).slice(-12).map(p=>({x:String(p.y),y:+p.v.n.toFixed(2),f:p.v.fc}))):"";
+    return `<article class="card yrcard" data-id="${esc(it.id)}">
+      <div class="head"><div><div class="grp">${esc(it.group)}</div><h3>${esc(it.name)}</h3></div><div style="display:flex;gap:4px"><span class="pill ok">${y}年</span><button class="btn zoom" type="button" data-focus="${esc(it.id)}">放大</button></div></div>
+      <div class="big2">${vals}</div>${alt}${sp}
+      <div class="foot"><span>資料來源</span><span>${srcLinks(it.sources)}</span></div>
+      ${CAVEAT[it.id]?`<div class="note">${esc(CAVEAT[it.id])}</div>`:""}
+    </article>`;
+  }
+
+  // ---- detail chart ----
+  function niceTicks(lo,hi,n){ if(lo===hi){lo-=1;hi+=1;} const span=hi-lo, step0=span/n, mag=Math.pow(10,Math.floor(Math.log10(step0))); const step=[1,2,2.5,5,10].map(x=>x*mag).find(s=>span/s<=n)||10*mag; const a=Math.floor(lo/step)*step, b=Math.ceil(hi/step)*step; const t=[]; for(let v=a;v<=b+step/2;v+=step) t.push(+v.toFixed(10)); return t; }
+  function fmtAxis(v){ const a=Math.abs(v); return a>=10000?(v/10000).toFixed(a>=100000?0:1)+"萬":a>=1000?Math.round(v).toLocaleString("en-US"):(+v.toFixed(2)).toString(); }
+  let ro=null;
+  function renderDetail(){
+    const box=$("#detail");
+    const it=items.find(i=>i.id===focusId);
+    if(!focusId||!it||!MAP[focusId]||!tableRows.length){ box.hidden=true; box.innerHTML=""; return; }
+    box.hidden=false;
+    const m=MAP[focusId]; if(metric==="alt"&&!m.alt) metric="cols";
+    const ser=seriesFor(focusId,metric);
+    const ys=years();
+    const avail=ys.filter(y=>ser.some(s=>{const p=s.pts.find(q=>q.y===y); return p&&p.v&&p.v.n!==null;}));
+    const minY=avail[0]||ys[0], maxY=avail[avail.length-1]||ys[ys.length-1];
+    let f=rFrom||minY, t=rTo||maxY; if(f>t){const x=f;f=t;t=x;}
+    const unit=ser[0]?ser[0].unit:"";
+    const opt=(sel)=>ys.filter(y=>y>=minY&&y<=maxY).map(y=>`<option value="${y}"${y===sel?" selected":""}>${y}</option>`).join("");
+    box.innerHTML=`<div class="dh"><div><h2>${esc(it.name)}</h2><div class="sub">歷年比較（${f}–${t}年）・單位：${esc(unit)}・資料取自參考指標彙整表${viewYear?`・已標示${viewYear}年`:""}</div></div>
+      <button class="btn" type="button" id="dClose">關閉放大</button></div>
+      <div class="ctrls">
+        <span class="seg" role="group" aria-label="呈現方式">${[["line","折線圖"],["bar","長條圖"],["table","表格"]].map(([k,l])=>`<button type="button" data-ct="${k}" aria-pressed="${chartType===k}">${l}</button>`).join("")}</span>
+        ${m.alt?`<span class="seg" role="group" aria-label="數值">${[["cols","金額"],["alt","年增率"]].map(([k,l])=>`<button type="button" data-mt="${k}" aria-pressed="${metric===k}">${l}</button>`).join("")}</span>`:""}
+        ${focusId!=="pay"?`<label><input type="checkbox" id="dRaise" ${showRaise?"checked":""}> 疊上通案待遇調整比率</label>`:""}
+        <label>期間 <select id="dFrom" aria-label="起年">${opt(f)}</select> 至 <select id="dTo" aria-label="迄年">${opt(t)}</select></label>
+      </div>
+      <div id="dBody"></div>
+      <div class="dnotes">${CAVEAT[focusId]?`<span>※ ${esc(CAVEAT[focusId])}</span>`:""}<span>※ 空心點／淺色長條為預測值；紅框為以前年度經官方修正之數值；「部分期間」為當年累計至最新月份之數值。</span></div>`;
+    $("#dClose").onclick=()=>{ focusId=""; saveView(); render(); };
+    box.querySelectorAll("[data-ct]").forEach(b=>b.onclick=()=>{ chartType=b.dataset.ct; saveView(); renderDetail(); });
+    box.querySelectorAll("[data-mt]").forEach(b=>b.onclick=()=>{ metric=b.dataset.mt; renderDetail(); });
+    const rc=$("#dRaise"); if(rc) rc.onchange=()=>{ showRaise=rc.checked; saveView(); renderDetail(); };
+    $("#dFrom").onchange=e=>{ rFrom=+e.target.value; renderDetail(); };
+    $("#dTo").onchange=e=>{ rTo=+e.target.value; renderDetail(); };
+    const yr=ys.filter(y=>y>=f&&y<=t);
+    const raiseOn=showRaise&&focusId!=="pay";
+    if(chartType==="table"){ drawTable(ser,yr,raiseOn); return; }
+    const draw=()=>drawChart(ser,yr,raiseOn);
+    draw();
+    if(ro) ro.disconnect();
+    if(window.ResizeObserver){ let w=box.clientWidth; ro=new ResizeObserver(()=>{ if(Math.abs(box.clientWidth-w)>8){ w=box.clientWidth; draw(); } }); ro.observe(box); }
+  }
+  function drawTable(ser,yr,raiseOn){
+    const head=`<tr><th>年度</th>${ser.map(s=>`<th class="n">${esc(s.label)}（${esc(s.unit)}）</th>`).join("")}${raiseOn?'<th class="n">通案調整（%）</th>':""}<th>註記</th></tr>`;
+    const body=yr.map(y=>{ const vs=ser.map(s=>s.pts.find(p=>p.y===y).v); const r=cellVal(rowOf(y),"C");
+      const notes=vs.filter(Boolean).map(v=>v.text&&!/^-?[\d.,]+$/.test(v.text)?v.text:"").filter(Boolean).join("；");
+      return `<tr class="${+viewYear===y?"sel":""}"><td>${y}</td>${vs.map(v=>`<td class="n">${v&&v.n!==null?esc(fmtN(v.n))+(v.fc?"<sup>預</sup>":""):"—"}${v&&v.red?' <span class="flag rv">修正</span>':""}</td>`).join("")}${raiseOn?`<td class="n">${r?esc(r.none?"－":fmtN(r.n,"C")):"—"}</td>`:""}<td class="note">${esc(notes)}</td></tr>`; }).reverse().join("");
+    $("#dBody").innerHTML=`<div class="dtable"><table><thead>${head}</thead><tbody>${body}</tbody></table></div>`;
+  }
+  function drawChart(ser,yr,raiseOn){
+    const host=$("#dBody"); const W=Math.max(320,host.clientWidth||$("#detail").clientWidth-36);
+    const narrow=W<560, padL=narrow?44:58, padR=(ser.length>1&&chartType!=="bar")?(narrow?14:96):(narrow?14:20), padT=14, H=narrow?220:290, padB=26;
+    const iw=W-padL-padR, ih=H-padT-padB, n=yr.length;
+    const vals=[]; ser.forEach(s=>yr.forEach(y=>{const v=s.pts.find(p=>p.y===y).v; if(v&&v.n!==null) vals.push(v.n);}));
+    if(!vals.length){ host.innerHTML='<div class="empty">此期間沒有數值。</div>'; return; }
+    let lo=Math.min(...vals), hi=Math.max(...vals);
+    if(chartType==="bar"||lo>0&&(hi-lo)/hi>0.6){ lo=Math.min(0,lo); hi=Math.max(0,hi); }
+    const ticks=niceTicks(lo,hi,narrow?4:5); lo=ticks[0]; hi=ticks[ticks.length-1];
+    const band=iw/n, xC=i=>padL+band*(i+0.5), yS=v=>padT+ih*(1-(v-lo)/(hi-lo));
+    const col=k=>k===0?"var(--s1)":"var(--s2)";
+    let g="";
+    ticks.forEach(tv=>{ g+=`<line x1="${padL}" x2="${W-padR}" y1="${yS(tv)}" y2="${yS(tv)}" stroke="${tv===0?"var(--muted)":"var(--grid)"}" stroke-width="1"/><text x="${padL-6}" y="${yS(tv)+4}" text-anchor="end">${fmtAxis(tv)}</text>`; });
+    const every=Math.max(1,Math.ceil(n/(narrow?6:12)));
+    yr.forEach((y,i)=>{ if(i%every===0||i===n-1) g+=`<text x="${xC(i)}" y="${H-8}" text-anchor="middle">${y}</text>`; });
+    const selI=yr.indexOf(+viewYear);
+    if(selI>=0) g+=`<rect x="${xC(selI)-band/2}" y="${padT}" width="${band}" height="${ih}" fill="var(--accent-soft)"/>`;
+    if(chartType==="bar"){
+      const k=ser.length, gap=2, bw=Math.max(2,Math.min(28,(band-4)/k-gap));
+      ser.forEach((s,si)=>yr.forEach((y,i)=>{ const v=s.pts.find(p=>p.y===y).v; if(!v||v.n===null) return;
+        const x=xC(i)-(k*bw+(k-1)*gap)/2+si*(bw+gap), y0=yS(Math.max(0,Math.min(v.n,0))+0), yv=yS(v.n), top=Math.min(y0,yv), h=Math.max(1,Math.abs(yv-yS(0)));
+        const yTop=v.n>=0?yS(v.n):yS(0), r=Math.min(4,bw/2,h/2);
+        const path=v.n>=0?`M${x},${yS(0)}V${yTop+r}Q${x},${yTop} ${x+r},${yTop}H${x+bw-r}Q${x+bw},${yTop} ${x+bw},${yTop+r}V${yS(0)}Z`:`M${x},${yS(0)}V${yS(v.n)-r}Q${x},${yS(v.n)} ${x+r},${yS(v.n)}H${x+bw-r}Q${x+bw},${yS(v.n)} ${x+bw},${yS(v.n)-r}V${yS(0)}Z`;
+        g+=`<path d="${path}" fill="${col(si)}" fill-opacity="${v.fc?0.38:1}" ${v.red?'stroke="var(--seal)" stroke-width="2"':""}/>`; }));
+    } else {
+      ser.forEach((s,si)=>{
+        let d="", dd="", prev=null;
+        yr.forEach((y,i)=>{ const v=s.pts.find(p=>p.y===y).v; if(!v||v.n===null){prev=null;return;} const pt=[xC(i),yS(v.n)];
+          if(prev){ if(v.fc) dd+=`M${prev[0]},${prev[1]}L${pt[0]},${pt[1]}`; else d+=`L${pt[0]},${pt[1]}`; } else if(!v.fc) d+=`M${pt[0]},${pt[1]}`;
+          if(!prev&&v.fc) d+=``; prev=pt; });
+        g+=`<path d="${d}" fill="none" stroke="${col(si)}" stroke-width="2" stroke-linejoin="round"/>`;
+        if(dd) g+=`<path d="${dd}" fill="none" stroke="${col(si)}" stroke-width="2" stroke-dasharray="4 4"/>`;
+        yr.forEach((y,i)=>{ const v=s.pts.find(p=>p.y===y).v; if(!v||v.n===null) return; const show=v.fc||v.red||i===n-1||i===selI||n<=16;
+          if(show) g+=`<circle cx="${xC(i)}" cy="${yS(v.n)}" r="4" fill="${v.fc?"var(--surface)":col(si)}" stroke="${v.red?"var(--seal)":col(si)}" stroke-width="2"/>`; });
+      });
+    }
+    // end labels for multi-series
+    if(ser.length>1&&!narrow&&chartType!=="bar") ser.forEach((s,si)=>{ const last=[...yr].reverse().map(y=>s.pts.find(p=>p.y===y).v).find(v=>v&&v.n!==null); if(last){ const i=yr.length-1-[...yr].reverse().findIndex(y=>{const v=s.pts.find(p=>p.y===y).v; return v&&v.n!==null;}); g+=`<text class="lab" x="${W-padR+8}" y="${yS(last.n)+4+(si?8:-2)}">${esc(s.label)}</text>`; } });
+    g+=`<line id="xh" x1="0" x2="0" y1="${padT}" y2="${padT+ih}" stroke="var(--muted)" stroke-dasharray="3 3" visibility="hidden"/>`;
+    g+=`<rect id="hit" x="${padL}" y="${padT}" width="${iw}" height="${ih}" fill="transparent"/>`;
+    let strip="";
+    if(raiseOn){
+      const SH=narrow?68:78, rv=yr.map(y=>cellVal(rowOf(y),"C")), rmax=Math.max(4,...rv.filter(v=>v&&v.n!==null).map(v=>v.n));
+      let sg=`<text x="${padL}" y="12" class="lab">通案待遇調整比率（%）</text><line x1="${padL}" x2="${W-padR}" y1="${SH-14}" y2="${SH-14}" stroke="var(--grid)"/>`;
+      const bw=Math.max(3,Math.min(22,band-6));
+      rv.forEach((v,i)=>{ if(!v||v.n===null) return; const x=xC(i)-bw/2;
+        if(v.n>0){ const h=(SH-44)*v.n/rmax, top=SH-14-h; sg+=`<path d="M${x},${SH-14}V${top+2}Q${x},${top} ${x+2},${top}H${x+bw-2}Q${x+bw},${top} ${x+bw},${top+2}V${SH-14}Z" fill="var(--raise)" ${v.fc?'fill-opacity="0.45"':""}><title>${yr[i]}年 調整${fmtN(v.n,"C")}%</title></path>`; if(!narrow||n<=20) sg+=`<text x="${xC(i)}" y="${top-3}" text-anchor="middle" class="lab">${fmtN(v.n,"C")}</text>`; }
+      });
+      strip=`<svg viewBox="0 0 ${W} ${SH}" width="${W}" height="${SH}" role="img" aria-label="各年度通案待遇調整比率">${sg}</svg>`;
+    }
+    const legend=ser.length>1?`<div class="dlegend">${ser.map((s,si)=>`<span><i style="--c:${col(si)}"></i>${esc(s.label)}</span>`).join("")}<span><i class="o" style="--c:var(--muted)"></i>預測值</span></div>`:`<div class="dlegend"><span><i class="o" style="--c:var(--s1)"></i>預測值</span><span><i class="o" style="--c:var(--seal)"></i>已修正</span></div>`;
+    host.innerHTML=`${legend}<div class="chartbox"><svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${esc(ser.map(s=>s.label).join("、"))}歷年趨勢">${g}</svg>${strip}<div class="tip" id="dTip" hidden></div></div>`;
+    const svg=host.querySelector("svg"), tip=$("#dTip"), xh=svg.querySelector("#xh");
+    const move=ev=>{ const r=svg.getBoundingClientRect(), sx=(ev.clientX-r.left)*W/r.width; const i=Math.max(0,Math.min(n-1,Math.floor((sx-padL)/band))); const y=yr[i];
+      const lines=ser.map((s,si)=>{const v=s.pts.find(p=>p.y===y).v; return `${ser.length>1?esc(s.label)+"：":""}<b>${v&&v.n!==null?esc(fmtN(v.n)):"—"}</b> ${esc(s.unit)}${v&&v.fc?"（預測）":v&&v.part?"（部分期間）":v&&v.bud?"（預算）":""}${v&&v.red?"・已修正":""}`;});
+      const rv=cellVal(rowOf(y),"C"); if(raiseOn) lines.push(`通案調整：<b>${rv?(rv.none?"未調整":esc(fmtN(rv.n,"C"))+"%"):"—"}</b>`);
+      tip.innerHTML=`<div>${y}年</div>${lines.map(l=>`<div>${l}</div>`).join("")}`; tip.hidden=false;
+      tip.style.left=(xC(i)*r.width/W)+"px"; tip.style.top=((padT+ih*0.35)*r.height/H)+"px";
+      xh.setAttribute("x1",xC(i)); xh.setAttribute("x2",xC(i)); xh.setAttribute("visibility","visible"); };
+    const hitEl=svg.querySelector("#hit");
+    hitEl.addEventListener("pointermove",move); hitEl.addEventListener("pointerdown",move);
+    hitEl.addEventListener("pointerleave",()=>{ tip.hidden=true; xh.setAttribute("visibility","hidden"); });
+    hitEl.addEventListener("click",ev=>{ const r=svg.getBoundingClientRect(), sx=(ev.clientX-r.left)*W/r.width; const i=Math.max(0,Math.min(n-1,Math.floor((sx-padL)/band))); viewYear=yr[i]; saveView(); render(); });
+  }
+
   function showStatus(t){ const el=$("#status"); el.textContent=t; el.hidden=false; }
 })();
 </script>
