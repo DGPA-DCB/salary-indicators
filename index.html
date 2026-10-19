@@ -154,6 +154,9 @@ tr:last-child td{border-bottom:0}
 
 .sechead{grid-column:1/-1;margin:10px 0 -2px;font-family:var(--f-display);font-size:17px;letter-spacing:.04em;padding-bottom:6px;border-bottom:1px solid var(--line)}
 .sechead:first-child{margin-top:0}
+.parts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.part .val{font-size:26px}
+.part .yl{font-size:12px;color:var(--muted)}
 .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(20px + env(safe-area-inset-bottom,0px));background:var(--fg);color:var(--bg);padding:8px 16px;border-radius:8px;font-size:13px;z-index:30}
 @media (max-width:520px){.row2{grid-template-columns:1fr}.val{font-size:28px}.wrap{padding-inline:16px}}
 @media (prefers-reduced-motion:no-preference){.card{transition:border-color .15s}.card:hover{border-color:var(--accent)}}
@@ -331,8 +334,8 @@ tr:last-child td{border-bottom:0}
       const fc=(it.forecast||[]).map(f=>`<span>${esc(f.label)} <b>${esc(f.value)}</b></span>`).join("　");
       return `<article class="card" data-id="${esc(it.id)}">
         <div class="head"><div><div class="grp">${esc(it.group)}</div><h3>${esc(it.name)}</h3></div><div style="display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end">${pills}<button class="btn zoom" type="button" data-focus="${esc(it.id)}">放大</button></div></div>
-        <div><div class="valrow"><span class="val">${esc(it.value??"—")}</span><span class="unit">${esc(it.unit||"")}</span>${it.signal?`<span class="sig" style="--c:${sigColor(it.signal)}"><i></i>${esc(it.signal)}</span>`:""}</div>
-        <div class="period">資料期間：${esc(it.period||"—")}</div></div>
+        ${Array.isArray(it.parts)&&it.parts.length?`<div class="parts">${it.parts.map(pt=>`<div class="part"><div class="yl">${esc(pt.label)}</div><div class="valrow"><span class="val">${esc(pt.value??"—")}</span><span class="unit">${esc(pt.unit||it.unit||"")}</span></div><div class="period">${esc(pt.period||"")}</div></div>`).join("")}</div>`:`<div><div class="valrow"><span class="val">${esc(it.value??"—")}</span><span class="unit">${esc(it.unit||"")}</span>${it.signal?`<span class="sig" style="--c:${sigColor(it.signal)}"><i></i>${esc(it.signal)}</span>`:""}</div>
+        <div class="period">資料期間：${esc(it.period||"—")}</div></div>`}
         ${cmp?`<dl class="cmp">${cmp}</dl>`:""}
         ${fc?`<div class="fc">${fc}</div>`:""}
         ${spark(it.series)}
@@ -340,7 +343,7 @@ tr:last-child td{border-bottom:0}
         ${it.note?`<div class="note">${esc(it.note)}</div>`:""}
         <div class="actions"><span>${it.updatedAt?"更新於 "+roc(it.updatedAt.slice(0,10)):""}<span class="by" data-uid="${esc(it.updatedBy||"")}"></span></span>${canWrite!==false&&db?`<button class="btn" type="button" data-edit="${esc(it.id)}">更新數據</button>`:""}</div>
       </article>`;}) || `<div class="empty">此分類沒有指標。</div>`;
-    $("#tbody").innerHTML=items.slice().sort((a,b)=>(SECS.indexOf(secOf(a))+1||9)-(SECS.indexOf(secOf(b))+1||9)||(a.order||0)-(b.order||0)).map(it=>`<tr><td>${esc(it.name)}${it.needsCheck?' <span class="pill chk">待確認</span>':""}</td><td class="n">${esc(it.value??"—")} ${esc(it.unit||"")}${it.signal?"（"+esc(it.signal)+"）":""}</td><td>${esc(it.period||"—")}</td><td>${(it.compare||[]).map(c=>esc(c.label)+"："+esc(c.text)).join("<br>")||"—"}</td><td>${(it.forecast||[]).map(f=>esc(f.label)+" "+esc(f.value)).join("<br>")||"—"}</td><td class="n">${roc(it.releaseDate)}</td><td>${esc(it.freq||"—")}</td><td class="n">${it.nextDate?roc(it.nextDate):esc(it.nextNote||"—")}${isDue(it)?' <span class="pill due">待更新</span>':""}</td><td>${srcLinks(it.sources)}</td></tr>`).join("");
+    $("#tbody").innerHTML=items.slice().sort((a,b)=>(SECS.indexOf(secOf(a))+1||9)-(SECS.indexOf(secOf(b))+1||9)||(a.order||0)-(b.order||0)).map(it=>`<tr><td>${esc(it.name)}${it.needsCheck?' <span class="pill chk">待確認</span>':""}</td><td class="n">${Array.isArray(it.parts)&&it.parts.length?it.parts.map(pt=>esc(pt.label)+"："+esc(pt.value)+" "+esc(pt.unit||it.unit||"")).join("<br>"):esc(it.value??"—")+" "+esc(it.unit||"")}${it.signal?"（"+esc(it.signal)+"）":""}</td><td>${Array.isArray(it.parts)&&it.parts.length?it.parts.map(pt=>esc(pt.period||"")).join("<br>"):esc(it.period||"—")}</td><td>${(it.compare||[]).map(c=>esc(c.label)+"："+esc(c.text)).join("<br>")||"—"}</td><td>${(it.forecast||[]).map(f=>esc(f.label)+" "+esc(f.value)).join("<br>")||"—"}</td><td class="n">${roc(it.releaseDate)}</td><td>${esc(it.freq||"—")}</td><td class="n">${it.nextDate?roc(it.nextDate):esc(it.nextNote||"—")}${isDue(it)?' <span class="pill due">待更新</span>':""}</td><td>${srcLinks(it.sources)}</td></tr>`).join("");
     resolveNames(); fillSelects(); renderDetail();
   }
 
@@ -404,6 +407,7 @@ tr:last-child td{border-bottom:0}
   $("#saveBtn").addEventListener("click",async()=>{
     if(!db) return;
     const data=collect(); if(!data.name){$("#formMsg").textContent="請填指標名稱";return;}
+    if(editing&&Array.isArray(editing.parts)) data.parts=editing.parts;
     const id=editing?editing.id:("ind-"+Date.now().toString(36));
     const now=new Date().toISOString();
     let uid=null; try{uid=myId||(user?await user.id():null);}catch(_){}
