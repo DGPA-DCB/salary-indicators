@@ -152,6 +152,8 @@ tr:last-child td{border-bottom:0}
 .flag.rv{border-color:var(--seal);color:var(--seal)}
 .zoom{font-size:12px}
 
+.sechead{grid-column:1/-1;margin:10px 0 -2px;font-family:var(--f-display);font-size:17px;letter-spacing:.04em;padding-bottom:6px;border-bottom:1px solid var(--line)}
+.sechead:first-child{margin-top:0}
 .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(20px + env(safe-area-inset-bottom,0px));background:var(--fg);color:var(--bg);padding:8px 16px;border-radius:8px;font-size:13px;z-index:30}
 @media (max-width:520px){.row2{grid-template-columns:1fr}.val{font-size:28px}.wrap{padding-inline:16px}}
 @media (prefers-reduced-motion:no-preference){.card{transition:border-color .15s}.card:hover{border-color:var(--accent)}}
@@ -261,7 +263,7 @@ tr:last-child td{border-bottom:0}
 
 <script>
 (function(){
-  const GROUPS=["全部","經濟成長","物價","國民所得","薪資","景氣","財政","待遇調整"];
+  const GROUPS=["全部","通案待遇調整比率","各項財經指標","政府財政狀況"];
   const $=s=>document.querySelector(s);
   const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   let items=[], logs=[], filter="全部", db=null, user=null, canWrite=null, editing=null, myId=null, confirmDel=false;
@@ -310,7 +312,9 @@ tr:last-child td{border-bottom:0}
   $("#chips").addEventListener("click",e=>{const b=e.target.closest(".chip"); if(!b) return; filter=b.dataset.g; try{localStorage.setItem("dgpa-ind-filter",filter);}catch(_){} renderChips(); render();});
 
   function render(){
-    const list=items.filter(it=>filter==="全部"||it.group===filter);
+    const SECS=GROUPS.slice(1); const secOf=it=>SECS.includes(it.group)?it.group:"其他";
+    const list=items.filter(it=>filter==="全部"||it.group===filter).slice().sort((a,b)=>(SECS.indexOf(secOf(a))+1||9)-(SECS.indexOf(secOf(b))+1||9)||(a.order||0)-(b.order||0));
+    const withHeads=(fn)=>{ let out="",cur=null; list.forEach(it=>{ const g=secOf(it); if(g!==cur){ cur=g; out+=`<h2 class="sechead">${esc(g)}</h2>`; } out+=fn(it); }); return out; };
     const due=items.filter(isDue).length;
     $("#dueCount").textContent=items.length?due:"—";
     const lu=items.map(i=>i.updatedAt||"").sort().pop();
@@ -320,8 +324,8 @@ tr:last-child td{border-bottom:0}
       $("#tbody").innerHTML=`<tr><td colspan="9" class="note">尚無資料</td></tr>`;
       return;
     }
-    if(viewYear){ $("#grid").innerHTML=list.map(yearCard).join("")||`<div class="empty">此分類沒有指標。</div>`; }
-    else $("#grid").innerHTML=list.map(it=>{
+    if(viewYear){ $("#grid").innerHTML=withHeads(yearCard)||`<div class="empty">此分類沒有指標。</div>`; }
+    else $("#grid").innerHTML=withHeads(it=>{
       const pills=[isDue(it)?`<span class="pill due">待更新</span>`:`<span class="pill ok">${esc(it.freq||"")}</span>`, it.needsCheck?`<span class="pill chk">待確認</span>`:""].join("");
       const cmp=(it.compare||[]).map(c=>`<dt>${esc(c.label)}</dt><dd class="${esc(c.dir||"")}">${esc(c.text)}</dd>`).join("");
       const fc=(it.forecast||[]).map(f=>`<span>${esc(f.label)} <b>${esc(f.value)}</b></span>`).join("　");
@@ -335,8 +339,8 @@ tr:last-child td{border-bottom:0}
         <div class="foot"><span>公布日期</span><span>${roc(it.releaseDate)}</span><span>更新頻率</span><span>${esc(it.freq||"—")}</span><span>下次公布</span><span>${it.nextDate?roc(it.nextDate):""}${it.nextNote?(it.nextDate?"（":"")+esc(it.nextNote)+(it.nextDate?"）":""):(it.nextDate?"":"—")}</span><span>官方來源</span><span>${srcLinks(it.sources)}</span></div>
         ${it.note?`<div class="note">${esc(it.note)}</div>`:""}
         <div class="actions"><span>${it.updatedAt?"更新於 "+roc(it.updatedAt.slice(0,10)):""}<span class="by" data-uid="${esc(it.updatedBy||"")}"></span></span>${canWrite!==false&&db?`<button class="btn" type="button" data-edit="${esc(it.id)}">更新數據</button>`:""}</div>
-      </article>`;}).join("") || `<div class="empty">此分類沒有指標。</div>`;
-    $("#tbody").innerHTML=items.map(it=>`<tr><td>${esc(it.name)}${it.needsCheck?' <span class="pill chk">待確認</span>':""}</td><td class="n">${esc(it.value??"—")} ${esc(it.unit||"")}${it.signal?"（"+esc(it.signal)+"）":""}</td><td>${esc(it.period||"—")}</td><td>${(it.compare||[]).map(c=>esc(c.label)+"："+esc(c.text)).join("<br>")||"—"}</td><td>${(it.forecast||[]).map(f=>esc(f.label)+" "+esc(f.value)).join("<br>")||"—"}</td><td class="n">${roc(it.releaseDate)}</td><td>${esc(it.freq||"—")}</td><td class="n">${it.nextDate?roc(it.nextDate):esc(it.nextNote||"—")}${isDue(it)?' <span class="pill due">待更新</span>':""}</td><td>${srcLinks(it.sources)}</td></tr>`).join("");
+      </article>`;}) || `<div class="empty">此分類沒有指標。</div>`;
+    $("#tbody").innerHTML=items.slice().sort((a,b)=>(SECS.indexOf(secOf(a))+1||9)-(SECS.indexOf(secOf(b))+1||9)||(a.order||0)-(b.order||0)).map(it=>`<tr><td>${esc(it.name)}${it.needsCheck?' <span class="pill chk">待確認</span>':""}</td><td class="n">${esc(it.value??"—")} ${esc(it.unit||"")}${it.signal?"（"+esc(it.signal)+"）":""}</td><td>${esc(it.period||"—")}</td><td>${(it.compare||[]).map(c=>esc(c.label)+"："+esc(c.text)).join("<br>")||"—"}</td><td>${(it.forecast||[]).map(f=>esc(f.label)+" "+esc(f.value)).join("<br>")||"—"}</td><td class="n">${roc(it.releaseDate)}</td><td>${esc(it.freq||"—")}</td><td class="n">${it.nextDate?roc(it.nextDate):esc(it.nextNote||"—")}${isDue(it)?' <span class="pill due">待更新</span>':""}</td><td>${srcLinks(it.sources)}</td></tr>`).join("");
     resolveNames(); fillSelects(); renderDetail();
   }
 
