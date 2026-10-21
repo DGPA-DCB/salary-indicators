@@ -255,7 +255,7 @@ tr:last-child td{border-bottom:0}
   <header><h2 id="xdlgTitle">下載待遇調整審議參考指標彙整表</h2><button class="btn" type="button" id="xClose">關閉</button></header>
   <form id="xform" novalidate>
     <p class="note" style="margin:0">依本頁最新數據，產製與「軍公教員工待遇調整審議時參酌及相關參考指標彙整表」相同格式之 Excel 檔（含「更新說明」工作表）。</p>
-    <div class="f"><label for="x_since">標示顏色：自此日期起修正或新增之數據（紅＝以前年度修正、藍＝預測值、橘＝未查證）</label><input id="x_since" type="date"><span class="hint">預設為 115.10.13 查證日。</span></div>
+    <div class="f"><label for="x_since">標示顏色：自此日期起修正或新增之數據（紅＝以前年度修正、藍＝預測值、橘＝未查證）</label><input id="x_since" type="date"><span class="hint">預設為您上次下載的日期；只有此日期以後異動的儲存格會上色，較早的異動恢復黑字，但完整歷程列於 Excel「異動紀錄」工作表。</span></div><div class="f"><span class="hint">快速選擇：</span><div class="chips" id="x_chips"></div></div>
     <div class="f"><label for="x_pw">下載密碼</label><input id="x_pw" type="password" inputmode="numeric" autocomplete="off" maxlength="8" placeholder="請輸入下載密碼"><span class="hint">本功能僅供業務使用，密碼請洽承辦單位。</span></div>
     <div class="f"><label for="x_hide"><input id="x_hide" type="checkbox" checked style="width:auto;margin-right:6px">隱藏76–99年列（與原表相同）</label></div>
     <div class="f"><span class="hint" id="x_info">—</span></div>
@@ -483,7 +483,21 @@ tr:last-child td{border-bottom:0}
     return xlsLib;
   }
   const rocToday=()=>{const t=todayISO(); return roc(t);};
+
+  const KINDNAME={rev:"以前年度數據修正",fc:"預測值新增或變更",unv:"未查證／資料不足",ver:"更新為已查證官方數據",add:"新增"};
+  function allHist(){ const out=[]; tableRows.forEach(d=>(d.hist||[]).forEach(h=>out.push(Object.assign({year:d.year},h)))); return out.sort((a,b)=>(b.d||"").localeCompare(a.d||"")||a.year-b.year||(a.col||"").localeCompare(b.col||"")); }
+  function histVal(v){ if(v===null||v===undefined||v==="") return "—"; if(typeof v==="object") return v.v!==undefined?String(v.v):"—"; return String(v).replace(/\n+/g," "); }
+  function renderXChips(last){
+    const by={}; allHist().forEach(h=>{ if(h.d&&!h.est) by[h.d]=(by[h.d]||0)+1; });
+    const ds=Object.keys(by).sort().reverse().slice(0,6);
+    const opts=[]; if(last) opts.push([last,`上次下載 ${roc(last)}`]);
+    ds.forEach(d=>opts.push([d,`${roc(d)}更新（${by[d]}格）`]));
+    opts.push(["1900-01-01","與原始表（115.5.29）比較"]);
+    const box=$("#x_chips"); box.innerHTML=opts.map(([d,t])=>`<button type="button" class="chip" data-d="${d}" aria-pressed="${$("#x_since").value===d}">${esc(t)}</button>`).join("");
+    box.querySelectorAll(".chip").forEach(b=>b.addEventListener("click",()=>{ $("#x_since").value=b.dataset.d; box.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed",String(x===b))); }));
+  }
   async function buildXlsx(since, hideOld){
+    const sinceTxt=since<"2000"?"原始表（115.5.29資料）":roc(since);
     const ExcelJS=await loadExcelJS();
     const wb=new ExcelJS.Workbook(); wb.creator="行政院人事行政總處給與福利處"; wb.calcProperties.fullCalcOnLoad=true;
     const ws=wb.addWorksheet("彙整表",{views:[{state:"frozen",xSplit:2,ySplit:6}],pageSetup:{paperSize:8,orientation:"landscape",fitToPage:true,fitToWidth:1,fitToHeight:1,margins:{left:0.12,right:0.12,top:0.35,bottom:0.35,header:0.2,footer:0.2}}});
@@ -526,25 +540,39 @@ tr:last-child td{border-bottom:0}
     const rels=items.filter(it=>it.releaseDate).map(it=>it.releaseDate).sort();
     const allLines=[...notes,
       `${notes.length+1}.更新日期：${rocToday()}（依據行政院主計總處、國家發展委員會、財政部、台灣經濟發展研究中心等機關最新公布資料${rels.length?"，最近公布日"+roc(rels[rels.length-1]):""}更新）`,
-      `${notes.length+2}.字體顏色（${roc(since)}以後之異動）：紅色為以前年度數據經官方修正；藍色為預測值或依預測值計算之數據新增或變更；橘色為未查證或資料不足之數據；黑色為已查證之官方數據。原值及來源載於儲存格註解及「更新說明」工作表。`];
+      `${notes.length+2}.字體顏色（${sinceTxt}以後之異動）：紅色為以前年度數據經官方修正；藍色為預測值或依預測值計算之數據新增或變更；橘色為未查證或資料不足之數據；黑色為已查證之官方數據。原值及來源載於儲存格註解及「更新說明」工作表；各次更新之完整歷程載於「異動紀錄」工作表。`];
     ws.getCell("B"+r).value="註："; ws.getCell("B"+r).font={name:FONT,size:12}; ws.getCell("B"+r).alignment={horizontal:"right",vertical:"top"};
     allLines.forEach((ln,k)=>{const rr=r+k; ws.mergeCells(`C${rr}:Z${rr}`); const c=ws.getCell("C"+rr); c.value=ln; c.font={name:FONT,size:12}; c.alignment={horizontal:"left",vertical:"middle",wrapText:true}; ws.getRow(rr).height=ln.length>110?36:19.5;});
     // 更新說明
     const s2=wb.addWorksheet("更新說明");
     s2.columns=[{width:10},{width:8},{width:24},{width:18},{width:26},{width:90}];
-    const h1=s2.addRow([`一、${roc(since)}以後修正／新增之數據（表內依異動類別以紅、藍、橘色字體標註）`]); h1.font={name:FONT,size:13,bold:true};
+    const h1=s2.addRow([`一、${sinceTxt}以後修正／新增之數據（表內依異動類別以紅、藍、橘色字體標註）`]); h1.font={name:FONT,size:13,bold:true};
     const hd=s2.addRow(["儲存格","年度","欄位","異動類別","新值","說明及來源"]); hd.eachCell(c=>{c.font={name:FONT,size:11,bold:true,color:{argb:"FFFFFFFF"}};c.fill={type:"pattern",pattern:"solid",fgColor:{argb:"FF1F4E79"}};c.border=box;});
-    (changes.length?changes:[["—","","","","",`${roc(since)}以後無修正或新增`]]).forEach(x=>{const rw=s2.addRow(x); const kc={"以前年度數據修正":"FFFF0000","預測值新增或變更":"FF0070C0","未查證／資料不足":"FFC65911"}[x[3]]; rw.eachCell((c,ci)=>{c.font={name:FONT,size:10,color:{argb:ci===4&&kc?kc:"FF000000"}};c.alignment={wrapText:true,vertical:"top"};c.border=box;});});
+    (changes.length?changes:[["—","","","","",`${sinceTxt}以後無修正或新增`]]).forEach(x=>{const rw=s2.addRow(x); const kc={"以前年度數據修正":"FFFF0000","預測值新增或變更":"FF0070C0","未查證／資料不足":"FFC65911"}[x[3]]; rw.eachCell((c,ci)=>{c.font={name:FONT,size:10,color:{argb:ci===4&&kc?kc:"FF000000"}};c.alignment={wrapText:true,vertical:"top"};c.border=box;});});
     const todo=(tableNotes&&tableNotes.todo)||[];
     if(todo.length){ s2.addRow([]); const h2=s2.addRow(["二、待確認事項（口徑不一或查無官方來源，未逕行修改）"]); h2.font={name:FONT,size:13,bold:true};
       const hd2=s2.addRow(["範圍","項目","說明"]); hd2.eachCell(c=>{c.font={name:FONT,size:11,bold:true,color:{argb:"FFFFFFFF"}};c.fill={type:"pattern",pattern:"solid",fgColor:{argb:"FF7F6000"}};c.border=box;});
       todo.forEach(x=>{const rw=s2.addRow([x[0],x[1],x[2]]); s2.mergeCells(`C${rw.number}:F${rw.number}`); rw.eachCell(c=>{c.font={name:FONT,size:10};c.alignment={wrapText:true,vertical:"top"};c.border=box;}); rw.height=Math.max(30,Math.ceil(String(x[2]||"").length/70)*15);});
     }
+    // 異動紀錄（完整歷程）
+    const s3=wb.addWorksheet("異動紀錄");
+    s3.columns=[{width:12},{width:9},{width:7},{width:22},{width:16},{width:16},{width:18},{width:80},{width:10}];
+    const h3=s3.addRow(["全部異動紀錄（依日期由新到舊）。「本次標示」✓＝比較基準日以後之異動：紅、藍、橘類已於彙整表上色，更新為已查證官方數據者依規則為黑字；日期註「以前」者為建檔前之異動，確切日期未記錄。"]); h3.font={name:FONT,size:13,bold:true};
+    const hd3=s3.addRow(["異動日期","儲存格","年度","欄位","原值","新值","異動類別","說明及來源","本次標示"]); hd3.eachCell(c=>{c.font={name:FONT,size:11,bold:true,color:{argb:"FFFFFFFF"}};c.fill={type:"pattern",pattern:"solid",fgColor:{argb:"FF1F4E79"}};c.border=box;});
+    const HL=allHist();
+    (HL.length?HL:[{d:"",col:"",year:"",old:"",new:"",kind:"",note:"尚無異動紀錄"}]).forEach(h=>{
+      const inP=!!(h.d&&!h.est&&h.d>=since);
+      const rw=s3.addRow([h.d?(h.est?roc(h.d)+"以前":roc(h.d)):"—", h.col?h.col+(h.year-69):"", h.year, COLNAME[h.col]||h.col||"", histVal(h.old), histVal(h.new), KINDNAME[h.kind]||h.kind||"", h.note||"", inP?"✓":""]);
+      const kc={rev:"FFFF0000",fc:"FF0070C0",unv:"FFC65911"}[h.kind];
+      rw.eachCell((c,ci)=>{c.font={name:FONT,size:10,bold:inP&&ci<=7,color:{argb:ci===7&&kc?kc:"FF000000"}};c.alignment={wrapText:true,vertical:"top"};c.border=box;});
+    });
+    s3.views=[{state:"frozen",ySplit:2}];
     return {buf:await wb.xlsx.writeBuffer(), changes:changes.length, rows:rows.length};
   }
+  const LASTDL=()=>{ try{ return localStorage.getItem("dgpa-xls-since")||""; }catch(_){ return ""; } };
   function openX(){
     let since="2026-10-13"; try{ since=localStorage.getItem("dgpa-xls-since")||since; }catch(_){}
-    $("#x_since").value=since; $("#xMsg").textContent=""; $("#x_pw").value="";
+    $("#x_since").value=since; renderXChips(LASTDL()); $("#xMsg").textContent=""; $("#x_pw").value="";
     const ys=tableRows.map(d=>d.year); $("#x_info").textContent=ys.length?`資料年度：${Math.min(...ys)}–${Math.max(...ys)}年，共${ys.length}列。`:"尚未載入表格資料。";
     $("#scrim").hidden=false; $("#xdlg").hidden=false; loadExcelJS().catch(()=>{});
   }

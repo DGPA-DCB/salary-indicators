@@ -34,6 +34,8 @@ for f in glob.glob(os.path.join(src, "table", "*.json")):
     if not isinstance(d.get("year"), int):
         continue
     d["comments"] = {k: clean(v) for k, v in (d.get("comments") or {}).items() if clean(v)}
+    for h in d.get("hist") or []:
+        h["note"] = clean(h.get("note") or "")
     rows.append(d)
 rows.sort(key=lambda d: d["year"])
 
