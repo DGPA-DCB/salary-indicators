@@ -1,0 +1,27 @@
+name: 下載開放資料（預算）
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 1 1 * *"   # 每月1日 臺北時間 09:17
+  push:
+    branches: [main]
+    paths: ["opendata/catalog_ids.txt", "opendata/resources.json", "scripts/fetch_opendata.py"]
+permissions:
+  contents: write
+concurrency: { group: fetch-opendata, cancel-in-progress: false }
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: python scripts/fetch_opendata.py
+      - name: 存回儲存庫
+        run: |
+          git config user.name "DGPA 給與福利處（自動下載）"
+          git config user.email "drw@dgpa.gov.tw"
+          git add opendata raw 2>/dev/null || git add opendata
+          git diff --cached --quiet || git commit -m "開放資料下載 $(TZ=Asia/Taipei date +%F)"
+          git pull --rebase origin main && git push origin main
