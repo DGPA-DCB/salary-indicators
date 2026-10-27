@@ -1,5 +1,5 @@
 {
- "run": "2026-10-27T07:18:23.314974Z",
+ "run": "2026-10-27T09:37:42.208281Z",
  "catalog": [
   {
    "id": "175201",
@@ -84,34 +84,31 @@
   {
    "id": "175200",
    "ok": true
+  },
+  {
+   "id": "173411",
+   "ok": true
+  },
+  {
+   "id": "162153",
+   "ok": true
+  },
+  {
+   "id": "168518",
+   "ok": true
+  },
+  {
+   "id": "168394",
+   "ok": true
+  },
+  {
+   "id": "158988",
+   "ok": true
+  },
+  {
+   "id": "173424",
+   "ok": true
   }
  ],
- "download": [
-  {
-   "name": "110_總決算_歲出用途別決算分析總表",
-   "ok": false,
-   "error": "<HTTPError 403: 'Forbidden'>"
-  },
-  {
-   "name": "113_總預算案_簡明表",
-   "ok": true,
-   "changed": true,
-   "bytes": 5999,
-   "type": "application/x-zip-compressed"
-  },
-  {
-   "name": "115_總預算案_參考表",
-   "ok": true,
-   "changed": true,
-   "bytes": 34899,
-   "type": "application/x-zip-compressed"
-  },
-  {
-   "name": "115_總預算案_預算表",
-   "ok": true,
-   "changed": true,
-   "bytes": 575344,
-   "type": "application/x-zip-compressed"
-  }
- ]
+ "download": []
 }
