@@ -1,5 +1,5 @@
 {
- "run": "2026-10-27T07:16:50.186867Z",
+ "run": "2026-10-27T07:18:23.314974Z",
  "catalog": [
   {
    "id": "175201",
@@ -90,22 +90,28 @@
   {
    "name": "110_總決算_歲出用途別決算分析總表",
    "ok": false,
-   "error": "UnicodeEncodeError('ascii', 'GET /public/data/open/AccFR/110歲出用途別決算分析總表.xml HTTP/1.1', 31, 42, 'ordinal not in range(128)')"
+   "error": "<HTTPError 403: 'Forbidden'>"
   },
   {
    "name": "113_總預算案_簡明表",
-   "ok": false,
-   "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)'))"
+   "ok": true,
+   "changed": true,
+   "bytes": 5999,
+   "type": "application/x-zip-compressed"
   },
   {
    "name": "115_總預算案_參考表",
-   "ok": false,
-   "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)'))"
+   "ok": true,
+   "changed": true,
+   "bytes": 34899,
+   "type": "application/x-zip-compressed"
   },
   {
    "name": "115_總預算案_預算表",
-   "ok": false,
-   "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)'))"
+   "ok": true,
+   "changed": true,
+   "bytes": 575344,
+   "type": "application/x-zip-compressed"
   }
  ]
 }
