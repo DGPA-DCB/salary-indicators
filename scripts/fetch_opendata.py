@@ -4,16 +4,50 @@
 1. catalog：讀 opendata/catalog_ids.txt，取各資料集後設資料，寫入 opendata/catalog.json。
 2. download：讀 opendata/resources.json（[{"name":"113_總預算案簡明表","url":"..."}]），
    下載檔案至 raw/<name>/，ZIP 自動解壓；內容未變則不改檔。結果記錄於 opendata/fetch_log.json。"""
-import json, os, sys, time, hashlib, zipfile, io, urllib.request, datetime
+import json, os, sys, time, hashlib, zipfile, io, urllib.request, urllib.parse, urllib.error, datetime, ssl
 
 UA = {"User-Agent": "DGPA-salary-indicators/1.0 (+https://github.com/DGPA-DCB/salary-indicators)"}
 API = "https://data.gov.tw/api/v2/rest/dataset/{}"
 log = {"run": datetime.datetime.utcnow().isoformat() + "Z", "catalog": [], "download": []}
 
+_CTX = {}
+def _aia_context(host):
+    """伺服器未附中繼憑證時，依憑證 AIA 欄位下載中繼憑證後再驗證（仍完整驗證至受信任根憑證，不關閉驗證）。"""
+    from cryptography import x509
+    from cryptography.hazmat.primitives.serialization import Encoding
+    from cryptography.x509.oid import AuthorityInformationAccessOID as A, ExtensionOID as E
+    extra = []
+    cert = x509.load_pem_x509_certificate(ssl.get_server_certificate((host, 443)).encode())
+    for _ in range(3):
+        try:
+            aia = cert.extensions.get_extension_for_oid(E.AUTHORITY_INFORMATION_ACCESS).value
+        except x509.ExtensionNotFound:
+            break
+        urls = [d.access_location.value for d in aia if d.access_method == A.CA_ISSUERS]
+        if not urls: break
+        with urllib.request.urlopen(urllib.request.Request(urls[0], headers=UA), timeout=30) as r:
+            b = r.read()
+        try: cert = x509.load_der_x509_certificate(b)
+        except Exception: cert = x509.load_pem_x509_certificate(b)
+        extra.append(cert.public_bytes(Encoding.PEM).decode())
+        if cert.issuer == cert.subject: break
+    ctx = ssl.create_default_context()
+    ctx.load_verify_locations(cadata="".join(extra))
+    return ctx
+
 def get(url, timeout=60):
+    u = urllib.parse.urlsplit(url)
+    url = urllib.parse.urlunsplit((u.scheme, u.netloc, urllib.parse.quote(u.path, safe="/%"), u.query, u.fragment))
     req = urllib.request.Request(url, headers=UA)
-    with urllib.request.urlopen(req, timeout=timeout) as r:
-        return r.status, r.headers.get("Content-Type", ""), r.read()
+    try:
+        with urllib.request.urlopen(req, timeout=timeout, context=_CTX.get(u.hostname)) as r:
+            return r.status, r.headers.get("Content-Type", ""), r.read()
+    except urllib.error.URLError as e:
+        if not isinstance(getattr(e, "reason", None), ssl.SSLCertVerificationError) or u.hostname in _CTX:
+            raise
+        _CTX[u.hostname] = _aia_context(u.hostname)
+        with urllib.request.urlopen(req, timeout=timeout, context=_CTX[u.hostname]) as r:
+            return r.status, r.headers.get("Content-Type", ""), r.read()
 
 def catalog():
     ids = [l.strip() for l in open("opendata/catalog_ids.txt", encoding="utf-8") if l.strip() and not l.startswith("#")]
