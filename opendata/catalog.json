@@ -520,5 +520,47 @@
     "encoding": "UTF-8"
    }
   ]
+ },
+ "161268": {
+  "title": "112年度中央政府總預算－人工表",
+  "agency": null,
+  "description": "提供112年度中央政府總預算相關人工表",
+  "updated": "2023-07-27 11:08:24",
+  "files": [
+   {
+    "desc": "",
+    "format": "ZIP",
+    "url": "https://ws.dgbas.gov.tw/001/Upload/461/relfile/11525/231024/112c-1.zip",
+    "encoding": "UTF-8"
+   }
+  ]
+ },
+ "151622": {
+  "title": "111年度中央政府總預算－人工表",
+  "agency": null,
+  "description": "提供111年度中央政府總預算相關人工表",
+  "updated": "2023-07-27 15:51:43",
+  "files": [
+   {
+    "desc": "",
+    "format": "ZIP",
+    "url": "https://ws.dgbas.gov.tw/001/Upload/461/relfile/11525/231027/111c%E2%80%931.zip",
+    "encoding": "UTF-8"
+   }
+  ]
+ },
+ "10887": {
+  "title": "各直轄市及縣(市)總預算彙編",
+  "agency": null,
+  "description": "直轄市及縣(市)總預算彙編係依各直轄市、縣(市)總預算書、各縣政府編製之鄉(鎮、市)總預算彙編本及各原住民區總預算書予以彙核整理編成",
+  "updated": "2026-07-27 09:52:24",
+  "files": [
+   {
+    "desc": "115直轄市及縣(市)總預算彙編",
+    "format": "XML",
+    "url": "https://ws.dgbas.gov.tw/001/Upload/461/relfile/11525/231429/115直轄市及縣市總預算.xml",
+    "encoding": "UTF-8"
+   }
+  ]
  }
 }

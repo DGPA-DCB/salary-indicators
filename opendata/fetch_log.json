@@ -1,5 +1,5 @@
 {
- "run": "2026-10-27T09:39:49.531370Z",
+ "run": "2026-10-28T07:30:07.343624Z",
  "catalog": [
   {
    "id": "175201",
@@ -108,71 +108,19 @@
   {
    "id": "173424",
    "ok": true
+  },
+  {
+   "id": "161268",
+   "ok": true
+  },
+  {
+   "id": "151622",
+   "ok": true
+  },
+  {
+   "id": "10887",
+   "ok": true
   }
  ],
- "download": [
-  {
-   "name": "111_總決算_111收支簡明比較分析表",
-   "ok": true,
-   "changed": true,
-   "bytes": 2608,
-   "type": "text/xml"
-  },
-  {
-   "name": "111_總決算_111歲入歲出簡明比較分析表",
-   "ok": true,
-   "changed": true,
-   "bytes": 7855,
-   "type": "text/xml"
-  },
-  {
-   "name": "111_總決算_111歲出用途別決算分析總表",
-   "ok": true,
-   "changed": true,
-   "bytes": 24219,
-   "type": "text/xml"
-  },
-  {
-   "name": "112_總決算_112收支簡明表",
-   "ok": true,
-   "changed": true,
-   "bytes": 2612,
-   "type": "text/xml"
-  },
-  {
-   "name": "112_總決算_112歲入歲出簡明表",
-   "ok": true,
-   "changed": true,
-   "bytes": 7863,
-   "type": "text/xml"
-  },
-  {
-   "name": "112_總決算_112-用途分析表",
-   "ok": true,
-   "changed": true,
-   "bytes": 24242,
-   "type": "text/xml"
-  },
-  {
-   "name": "113_總決算_113收支簡明",
-   "ok": true,
-   "changed": true,
-   "bytes": 2632,
-   "type": "text/xml"
-  },
-  {
-   "name": "113_總決算_113歲入歲出簡明",
-   "ok": true,
-   "changed": true,
-   "bytes": 7868,
-   "type": "text/xml"
-  },
-  {
-   "name": "113_總決算_113歲出用途別決",
-   "ok": true,
-   "changed": true,
-   "bytes": 24214,
-   "type": "text/xml"
-  }
- ]
+ "download": []
 }
