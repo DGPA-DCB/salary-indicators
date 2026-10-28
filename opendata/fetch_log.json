@@ -1,5 +1,5 @@
 {
- "run": "2026-10-28T07:31:40.309006Z",
+ "run": "2026-10-28T07:33:23.317063Z",
  "catalog": [
   {
    "id": "175201",
@@ -124,11 +124,11 @@
  ],
  "download": [
   {
-   "name": "115_直轄市及縣市總預算彙編",
+   "name": "115_直轄市及縣市總預算彙編_全文",
    "ok": true,
    "changed": true,
-   "bytes": 835,
-   "type": "text/xml"
+   "bytes": 3351015,
+   "type": "application/pdf"
   }
  ]
 }
