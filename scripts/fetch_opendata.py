@@ -94,7 +94,7 @@ def download():
                         if not safe: continue
                         open(os.path.join(d, safe), "wb").write(z.read(m))
             else:
-                ext = os.path.splitext(url.split("?")[0])[1] or ".bin"
+                ext = ".pdf" if b[:4] == b"%PDF" else (os.path.splitext(url.split("?")[0])[1] or ".bin")
                 open(os.path.join(d, "data" + ext), "wb").write(b)
             open(hp, "w").write(h)
             log["download"].append({"name": name, "ok": True, "changed": True, "bytes": len(b), "type": ct})
