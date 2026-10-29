@@ -56,3 +56,4 @@ for q in ["中央政府總決算","中央政府債務","各級政府歲入歲出
         txt=b.decode("utf-8","replace"); ids=re.findall(r'/dataset/(\d+)"[^>]*>([^<]{3,80})<',txt)
         step(search=q,bytes=len(b),found=ids[:30])
 
+# rerun 1793243682
