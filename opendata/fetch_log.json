@@ -1,5 +1,5 @@
 {
- "run": "2026-10-29T03:00:51.458791Z",
+ "run": "2026-10-29T05:33:56.731152Z",
  "catalog": [
   {
    "id": "175201",
@@ -156,6 +156,10 @@
   {
    "id": "177589",
    "ok": true
+  },
+  {
+   "id": "130489",
+   "ok": true
   }
  ],
  "download": [
@@ -167,9 +171,7 @@
   {
    "name": "探測_財政部統計資料庫",
    "ok": true,
-   "changed": true,
-   "bytes": 1181,
-   "type": "text/html; charset=utf-8"
+   "changed": false
   },
   {
    "name": "探測_國庫署債務統計",

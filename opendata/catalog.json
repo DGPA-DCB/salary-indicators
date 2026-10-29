@@ -1012,5 +1012,31 @@
     "encoding": "UTF-8"
    }
   ]
+ },
+ "130489": {
+  "title": "年度國內主要經濟指標",
+  "agency": null,
+  "description": "提供每年國內主要經濟指標(如經濟成長率、儲蓄率、失業率等等)",
+  "updated": "2026-10-01 14:14:21",
+  "files": [
+   {
+    "desc": "年度國內主要經濟指標",
+    "format": "CSV",
+    "url": "https://apiservice.mol.gov.tw/OdService/download/A17000000J-030243-zbf",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "年度國內主要經濟指標",
+    "format": "JSON",
+    "url": "https://apiservice.mol.gov.tw/OdService/download/A17000000J-030243-YTl",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "年度國內主要經濟指標",
+    "format": "WEBSERVICES",
+    "url": "https://apiservice.mol.gov.tw/OdService/rest/datastore/A17000000J-030243-XXL",
+    "encoding": "UTF-8"
+   }
+  ]
  }
 }
