@@ -43,10 +43,17 @@ with sync_playwright() as p:
             if s["h"] in seen or not s["h"].startswith("http"): continue
             seen.add(s["h"]); sub2 = grab(s["h"], "L2:" + s["t"][:20]); links += [dict(x, src=s["t"][:20]) for x in sub2]
 
+    hits = [x for x in links if re.search(r"(地方決算審核結果年報|鄉鎮縣轄市財務審核結果年報)", unicodedata.normalize("NFKC", x["t"]))]
     # ---- 下載指定年度年報並擷取「人事費負擔」相關頁 ----
     try: targets = json.load(open(f"{OUT}/targets.json", encoding="utf-8"))
     except Exception: targets = []
     allL = links
+    # 自動納入新年度：直轄市及縣市地方決算審核結果年報中，尚未處理且年度較已處理者新者
+    done = {t["year"] for t in targets}
+    for x in hits:
+        m = re.search(r"(\d{3})年度直轄市及縣市地方決算審核結果年報", unicodedata.normalize("NFKC", x["t"]))
+        if m and int(m.group(1)) > max(done or {0}) and int(m.group(1)) not in done:
+            targets.append({"year": int(m.group(1)), "kind": "直轄市及縣市地方決算審核結果年報", "auto": True}); done.add(int(m.group(1)))
     for t in targets:
         y, kind = t["year"], t["kind"]; d = f"{OUT}/{y}_{kind[:6]}"; os.makedirs(d, exist_ok=True)
         if os.path.exists(f"{d}/excerpt.txt"): step(target=y, skipped="already done"); continue
