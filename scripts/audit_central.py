@@ -28,7 +28,7 @@ with sync_playwright() as p:
         try: pg.goto(url, wait_until="domcontentloaded", timeout=90000); pg.wait_for_timeout(6000)
         except Exception as e: step(page=label, error=repr(e)[:200]); return None
         html = pg.content()
-        if "Incapsula" in html or "Request unsuccessful" in html: step(page=label, blocked="bot protection; stop"); return None
+        if "Request unsuccessful" in html: step(page=label, blocked="bot protection; stop"); return None
         return pg.eval_on_selector_all("a", "els=>els.map(a=>({t:(a.innerText||a.title||'').trim(),h:a.href||''}))")
     for t in targets:
         y = t["year"]; d = f"{OUT}/{y}"; os.makedirs(d, exist_ok=True)
