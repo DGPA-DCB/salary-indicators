@@ -1,69 +1,513 @@
 {
- "err": [],
- "mof_debt": [
+ "err": [
   [
-   "/debt/multiplehtml/f65f4fbbfd8a42679251f9047be20528",
-   "債務觀念"
+   "yb_htm/yearmenu.htm",
+   "^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py\", line 492, in _call_chain\n    result = func(*args)\n             ^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py\", line 639, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 404: Not Found\n"
   ],
   [
-   "/debt/multiplehtml/24de606fe36848e3947611d2603a3fbf",
-   "舉債規範"
+   "yb_yearmenu.htm",
+   "^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py\", line 492, in _call_chain\n    result = func(*args)\n             ^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py\", line 639, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 404: Not Found\n"
   ],
   [
-   "/debt/multiplehtml/5a2037cb22e54674b9de89fa7265c510",
-   "債務控管"
+   "yb_index.htm",
+   "^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py\", line 492, in _call_chain\n    result = func(*args)\n             ^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py\", line 639, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 404: Not Found\n"
+  ],
+  [
+   "yb_htm/index.htm",
+   "^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py\", line 492, in _call_chain\n    result = func(*args)\n             ^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py\", line 639, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 404: Not Found\n"
+  ],
+  [
+   "yb_htm/menu.htm",
+   "^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py\", line 492, in _call_chain\n    result = func(*args)\n             ^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py\", line 639, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 404: Not Found\n"
+  ],
+  [
+   "yb_htm/yearmenu.html",
+   "^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py\", line 492, in _call_chain\n    result = func(*args)\n             ^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py\", line 639, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 404: Not Found\n"
+  ],
+  [
+   "yb_dir",
+   "^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py\", line 492, in _call_chain\n    result = func(*args)\n             ^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py\", line 639, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 403: Forbidden\n"
+  ],
+  [
+   "yb_htm_dir",
+   "^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py\", line 492, in _call_chain\n    result = func(*args)\n             ^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py\", line 639, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 403: Forbidden\n"
   ]
  ],
- "mof_debt_home": [
+ "nta_news": " 最新國債訊息(截至115年10月16日止)-財政部國庫署全球資訊網 您的瀏覽器不支援或未開啟JavaScript功能，將無法正常使用本系統，請開啟瀏覽器JavaScript功能，以利系統順利執行。 X 訊息 關閉 ::: 跳到主要內容 回首頁 網站導覽 English 常用問答 意見信箱 雙語詞彙 RSS :: 熱門搜尋： 優質酒類認證 出納管理手冊 自購住宅貸款利息補貼 字級大小 小 中 大 x 機關簡介 歷史沿革 署長簡介 組織架構及業務職掌 交通資訊 公告訊息 最新消息 新聞稿 業務導覽 庫政管理及歲入籌編 國庫支付業務 公共債務業務 財務規劃管理 公股股權、特種基金及規費管理 菸酒管理 政策績效 目標方針 重大政策 重要措施 重大績效 服務園地 署長信箱 數位資源 檔案應用服務專區 資訊公開 廉政專區 表單下載 退休人員專區 常用問答集 影音專區 聯絡資訊 性別平等專區 相關連結 安全及衛生防護專區 首頁 > 業務導覽 > 公共債務業務 > 中央政府債務 > 最新國債訊息(截至115年10月16日止) ::: --> 最新國債訊息(截至115年10月16日止) 截至 115 年 10 月16日止，中央政府 1 年以上債務未償餘額新臺幣 ( 下同 )5 兆8 ,664 億元，未滿 1 年債務未償餘額700億元；平均每人負擔債 務 25.6 萬元。 &nbsp; 聯絡人: 賴科長佳華 聯絡電話: 2322-8352 發布單位：債務管理組 發布日期：115-10-21 更新日期：115-10-21 點閱次數：58977 關閉 機關簡介 歷史沿革 署長簡介 組織架構及業務職掌 交通資訊 公告訊息 最新消息 新聞稿 業務導覽 庫政管理及歲入籌編 國庫支付業務 公共債務業務 財務規劃管理 公股股權、特種基金及規費管理 菸酒管理 政策績效 目標方針 重大政策 重要措施 重大績效 服務園地 署長信箱 數位資源 檔案應用服務專區 資訊公開 廉政專區 表單下載 退休人員專區 常用問答集 影音專區 聯絡資訊 性別平等專區 相關連結 安全及衛生防護專區 ::: 如何到國庫署 | 網站安全政策 | 網站隱私權政策 | 資料開放宣告 ● 服務時間：星期一至星期五 08:30 ~ 12:30 & 13:30 ~ 17:30 ● 機關地址：116055 臺北市文山區羅斯福路六段142巷1號 ● 機關總機：(02)2322-8000 / 機關傳真：(02)2392-9209 版權所有：財政部國庫署 為提供更為穩定的瀏覽品質與使用體驗，建議使用：最新版本Edge、最新版本Chrome、最新版本Firefox 最佳解析度1024*768 以上 更新日期:115-10-29 ",
+ "nta_1617_links": [
   [
-   "/debt/multiplehtml/f65f4fbbfd8a42679251f9047be20528",
+   "javascript:void(0)",
+   "X"
+  ],
+  [
+   "#a_U",
+   ":::"
+  ],
+  [
+   "#a_C",
+   "跳到主要內容"
+  ],
+  [
+   "/",
+   "回首頁"
+  ],
+  [
+   "/sitemap/sitemap",
+   "網站導覽"
+  ],
+  [
+   "/eng",
+   "English"
+  ],
+  [
+   "/multiplehtml/296",
+   "常用問答"
+  ],
+  [
+   "/mailbox/47/WebMail/0d1b0f17dfe04ec4b57037f272f67163",
+   "意見信箱"
+  ],
+  [
+   "/bilingual/eb95976b3b9b430296e13f146b51f8c0",
+   "雙語詞彙"
+  ],
+  [
+   "/Rss",
+   "RSS"
+  ],
+  [
+   "/",
    ""
   ],
   [
-   "/debt/multiplehtml/24de606fe36848e3947611d2603a3fbf",
+   "javascript:void(0);",
    ""
   ],
   [
-   "/debt/multiplehtml/5a2037cb22e54674b9de89fa7265c510",
-   ""
-  ]
- ],
- "nta_debt": [
+   "#a_S",
+   "::"
+  ],
+  [
+   "javascript:void(0)",
+   "優質酒類認證"
+  ],
+  [
+   "javascript:void(0)",
+   "出納管理手冊"
+  ],
+  [
+   "javascript:void(0)",
+   "自購住宅貸款利息補貼"
+  ],
+  [
+   "javascript:void(0);",
+   "小"
+  ],
+  [
+   "javascript:void(0);",
+   "中"
+  ],
+  [
+   "javascript:void(0);",
+   "大"
+  ],
+  [
+   "#",
+   "x"
+  ],
+  [
+   "/htmlList/5",
+   "機關簡介"
+  ],
+  [
+   "/singlehtml/12",
+   "歷史沿革"
+  ],
+  [
+   "/singlehtml/13",
+   "署長簡介"
+  ],
+  [
+   "/singlehtml/14",
+   "組織架構及業務職掌"
+  ],
+  [
+   "/singlehtml/16",
+   "交通資訊"
+  ],
+  [
+   "/htmlList/6",
+   "公告訊息"
+  ],
+  [
+   "/multiplehtml/17",
+   "最新消息"
+  ],
+  [
+   "/htmlList/18",
+   "新聞稿"
+  ],
+  [
+   "/htmlList/7",
+   "業務導覽"
+  ],
+  [
+   "/htmlList/386",
+   "庫政管理及歲入籌編"
+  ],
+  [
+   "/link/f489dc16dd4c48fe84b692c3e65c6f3a",
+   "國庫支付業務"
+  ],
   [
    "/htmlList/70",
    "公共債務業務"
   ],
   [
-   "https://www.nta.gov.tw/htmlList/70",
-   ""
+   "/htmlList/1548",
+   "財務規劃管理"
   ],
   [
-   "/singlehtml/17?cntId=692d125cd5a84cf4bd559837aeee0fd9",
-   "115年度公債發行公告 115-10-27"
+   "/htmlList/1552",
+   "公股股權、特種基金及規費管理"
   ],
   [
-   "/singlehtml/17?cntId=46c30ccc22844fe98ee02123e8f261ad",
-   "最新各級政府公共債務統計表 115-10-27"
+   "/htmlList/1554",
+   "菸酒管理"
   ],
   [
-   "/singlehtml/17?cntId=nta_7906_17",
-   "國債鐘資料 115-10-21"
+   "/htmlList/9",
+   "政策績效"
   ],
   [
-   "/singlehtml/17?cntId=e5b1a05e373b4b3c8c259fa2b69e9c16",
-   "115年度公債標售結果(截至115年10月14日標售結果) 115-10-21"
+   "/singlehtml/28",
+   "目標方針"
   ],
   [
-   "/multiplehtml/1617",
-   "中央政府債務"
+   "/htmlList/26",
+   "重大政策"
   ],
   [
-   "/multiplehtml/1618",
-   "各級政府債務"
+   "/multiplehtml/25",
+   "重要措施"
+  ],
+  [
+   "/multiplehtml/27",
+   "重大績效"
+  ],
+  [
+   "/htmlList/4",
+   "服務園地"
+  ],
+  [
+   "/link/f15cf7cf1b25450ea45dd54da1f56681",
+   "署長信箱"
+  ],
+  [
+   "/htmlList/1605",
+   "數位資源"
+  ],
+  [
+   "/link/0bd276bf790d4d8a82970da5b061800f",
+   "檔案應用服務專區"
+  ],
+  [
+   "/htmlList/10",
+   "資訊公開"
+  ],
+  [
+   "/htmlList/450",
+   "廉政專區"
+  ],
+  [
+   "/multiplehtml/292",
+   "表單下載"
+  ],
+  [
+   "/htmlList/417",
+   "退休人員專區"
+  ],
+  [
+   "/multiplehtml/296",
+   "常用問答集"
+  ],
+  [
+   "/video/53",
+   "影音專區"
+  ],
+  [
+   "/singlehtml/291",
+   "聯絡資訊"
+  ],
+  [
+   "/multiplehtml/1519",
+   "性別平等專區"
+  ],
+  [
+   "/multiplehtml/11",
+   "相關連結"
+  ],
+  [
+   "/multiplehtml/dca73aa6fe744908a101d5157d13b189",
+   "安全及衛生防護專區"
+  ],
+  [
+   "/htmlList/7",
+   "業務導覽"
   ],
   [
    "/htmlList/70",
    "公共債務業務"
+  ],
+  [
+   "#a_C",
+   ":::"
+  ],
+  [
+   "javascript:void(0);",
+   ""
+  ],
+  [
+   "javascript:void(0);",
+   ""
+  ],
+  [
+   "javascript:void(0);",
+   ""
+  ],
+  [
+   "javascript:void(0);",
+   ""
+  ],
+  [
+   "javascript:void(0);",
+   ""
+  ],
+  [
+   "javascript:void(0);",
+   ""
+  ],
+  [
+   "javascript:void(0);",
+   ""
+  ],
+  [
+   "javascript:void(0);",
+   ""
+  ],
+  [
+   "/singlehtml/1617?cntId=de83153e99c24aedac59b3a6c05923fc",
+   "最新國債訊息(截至115年10月16日止)"
+  ],
+  [
+   "https://www.nta.gov.tw/singlehtml/67?cntId=b7b62a9617064d888eb007878a5a8119",
+   "中央政府建設公債標售概況表"
+  ],
+  [
+   "/singlehtml/1617?cntId=3898992fd32847d0adeca84eef685e0a",
+   "依據財政紀律法第16條規定公布事項"
+  ],
+  [
+   "/singlehtml/1617?cntId=nta_17283_1617",
+   "109年度至115年度債務管理關鍵績效指標一覽表"
+  ],
+  [
+   "/singlehtml/1617?cntId=nta_3037_1617",
+   "中央政府債務基金之運作管理"
+  ],
+  [
+   "https://www.nta.gov.tw/singlehtml/251?cntId=nta_711_251",
+   "賡續推動公債及國庫券定期適量發行制度"
+  ],
+  [
+   "https://www.cbc.gov.tw/tw/np-401-1.html",
+   "經辦公債還本付息業務之承轉行及清算銀行(連結至中央銀行)"
+  ],
+  [
+   "javascript:pagechange(1);",
+   "第一頁"
+  ],
+  [
+   "javascript:void(0);",
+   "上一頁"
+  ],
+  [
+   "javascript:pagechange(1);",
+   "1"
+  ],
+  [
+   "javascript:void(0);",
+   "下一頁"
+  ],
+  [
+   "javascript:pagechange(1);",
+   "最後一頁"
+  ],
+  [
+   "javascript:void()",
+   "關閉"
+  ],
+  [
+   "/singlehtml/12",
+   "歷史沿革"
+  ],
+  [
+   "/singlehtml/13",
+   "署長簡介"
+  ],
+  [
+   "/singlehtml/14",
+   "組織架構及業務職掌"
+  ],
+  [
+   "/singlehtml/16",
+   "交通資訊"
+  ],
+  [
+   "/multiplehtml/17",
+   "最新消息"
+  ],
+  [
+   "/htmlList/18",
+   "新聞稿"
+  ],
+  [
+   "/htmlList/386",
+   "庫政管理及歲入籌編"
+  ],
+  [
+   "/link/f489dc16dd4c48fe84b692c3e65c6f3a",
+   "國庫支付業務"
+  ],
+  [
+   "/htmlList/70",
+   "公共債務業務"
+  ],
+  [
+   "/htmlList/1548",
+   "財務規劃管理"
+  ],
+  [
+   "/htmlList/1552",
+   "公股股權、特種基金及規費管理"
+  ],
+  [
+   "/htmlList/1554",
+   "菸酒管理"
+  ],
+  [
+   "/singlehtml/28",
+   "目標方針"
+  ],
+  [
+   "/htmlList/26",
+   "重大政策"
+  ],
+  [
+   "/multiplehtml/25",
+   "重要措施"
+  ],
+  [
+   "/multiplehtml/27",
+   "重大績效"
+  ],
+  [
+   "/link/f15cf7cf1b25450ea45dd54da1f56681",
+   "署長信箱"
+  ],
+  [
+   "/htmlList/1605",
+   "數位資源"
+  ],
+  [
+   "/link/0bd276bf790d4d8a82970da5b061800f",
+   "檔案應用服務專區"
+  ],
+  [
+   "/htmlList/10",
+   "資訊公開"
+  ],
+  [
+   "/htmlList/450",
+   "廉政專區"
+  ],
+  [
+   "/multiplehtml/292",
+   "表單下載"
+  ],
+  [
+   "/htmlList/417",
+   "退休人員專區"
+  ],
+  [
+   "/multiplehtml/296",
+   "常用問答集"
+  ],
+  [
+   "/video/53",
+   "影音專區"
+  ],
+  [
+   "/singlehtml/291",
+   "聯絡資訊"
+  ],
+  [
+   "/multiplehtml/1519",
+   "性別平等專區"
+  ],
+  [
+   "/multiplehtml/11",
+   "相關連結"
+  ],
+  [
+   "/multiplehtml/dca73aa6fe744908a101d5157d13b189",
+   "安全及衛生防護專區"
+  ],
+  [
+   "#a_Z",
+   ":::"
+  ],
+  [
+   "https://www.nta.gov.tw/singlehtml/16",
+   "如何到國庫署"
+  ],
+  [
+   "https://www.nta.gov.tw/singlehtml/56",
+   "網站安全政策"
+  ],
+  [
+   "https://www.nta.gov.tw/singlehtml/57",
+   "網站隱私權政策"
+  ],
+  [
+   "https://www.nta.gov.tw/singlehtml/232",
+   "資料開放宣告"
+  ],
+  [
+   "https://twitter.com/nta_web",
+   ""
+  ],
+  [
+   "https://www.facebook.com/mofnta",
+   ""
+  ],
+  [
+   "https://www.youtube.com/channel/UCUoU5UE04vBe_ev63WR7f7w?disable_polymer=true",
+   ""
+  ],
+  [
+   "https://www.nta.gov.tw/mailbox/47/WebMail/0d1b0f17dfe04ec4b57037f272f67163",
+   ""
+  ],
+  [
+   "https://accessibility.moda.gov.tw/Applications/Detail?category=20231123172127",
+   ""
+  ]
+ ],
+ "mof_stat": [
+  [
+   "https://www.nta.gov.tw/",
+   "國庫 菸酒管理、公共債務、庫政管理歲入籌編、公益彩券、地方財政、國庫支付、公股股權管理"
   ]
  ]
 }
