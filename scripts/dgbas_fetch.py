@@ -36,7 +36,9 @@ def raw(u,timeout=120):
         raise
 rps={}
 def allowed(u):
-    host=re.match(r"https?://[^/]+/",u).group(0)
+    m=re.match(r"https?://[^/]+/",u)
+    if not m: raise RuntimeError("not absolute url: "+u)
+    host=m.group(0)
     if host not in rps:
         rp=urllib.robotparser.RobotFileParser()
         try: rp.parse(raw(host+"robots.txt",30).decode("utf-8","replace").splitlines())
@@ -66,7 +68,7 @@ log={"run":time.strftime("%Y-%m-%d"),"wages":{},"forecast":{}}
 # ---------- A. 薪資 ----------
 try:
     lst=get("https://www.dgbas.gov.tw/News.aspx?n=3602&sms=10980").decode("utf-8","replace")
-    items=re.findall(r'href="(News_Content\.aspx\?n=3602&amp;s=\d+|News_Content\.aspx\?n=3602&s=\d+)"[^>]*>([^<]*總薪資平均[^<]*)<',lst)
+    items=[(h,t) for h,t in re.findall(r'href="(News_Content\.aspx\?n=3602&(?:amp;)?s=\d+)"[^>]*>([^<]{5,160})<',lst) if re.search(r"\d{3}年\d{1,2}月.*工業及服務業.*薪資",t)]
     if not items: raise RuntimeError("找不到薪資新聞稿")
     h,title=items[0]; url="https://www.dgbas.gov.tw/"+h.replace("&amp;","&")
     page=get(url).decode("utf-8","replace")
@@ -90,8 +92,26 @@ try:
             if len(nums)>=14: W["ytd"]={"year":int(m2.group(1)),"to_month":int(m2.group(2)),"regular":nums[-4],"regular_yoy":nums[-3]}
     log["wages"]=W
 except Exception as e: log["wages"]={"error":repr(e)[:300]}
-# 總薪資累計平均（表1為經常性薪資；總薪資累計在表2/表3，另抓含「總薪資」之表）
+# 總薪資累計平均：表2「○年累計」列÷月數；年增率以上年同期各月加總比較
 try:
+    if "ods" in log["wages"] and log["wages"].get("ytd"):
+        y=log["wages"]["ytd"]["year"]; m=log["wages"]["ytd"]["to_month"]
+        rows=ods_rows(get(log["wages"]["ods"].rsplit("/",1)[0]+"/表2.ods"))
+        cur=None; months={}; cum={}
+        for r in rows:
+            c=[x for x in r if x!=""]
+            if not c: continue
+            mm=re.match(r"(\d{3})年累計",c[0].replace(" ",""))
+            if mm: cur=int(mm.group(1)); cum[cur]=num(c[1]); continue
+            mm=re.match(r"(\d{1,2})月$",c[0].replace(" ",""))
+            if mm and cur: months[(cur,int(mm.group(1)))]=num(c[1])
+        prev=[months.get((y-1,i)) for i in range(1,m+1)]
+        if cum.get(y) and all(prev):
+            log["wages"]["ytd_total"]={"year":y,"to_month":m,"cum":cum[y],"avg":round(cum[y]/m),"yoy":round((cum[y]/sum(prev)-1)*100,2),"prev_cum":sum(prev)}
+        log["wages"]["annual_total"]={yy:round(v/12) for yy,v in cum.items() if yy<y}
+except Exception as e: log["wages"]["ytd_total_error"]=repr(e)[:200]
+try:
+  if False:
     if "ods" in log["wages"]:
         base=log["wages"]["ods"].rsplit("/",1)[0]
         for t in ["表2.ods","表3.ods","表4.ods"]:
@@ -115,9 +135,27 @@ try:
     h,title=items[0]; url="https://www.dgbas.gov.tw/"+h.replace("&amp;","&")
     page=get(url).decode("utf-8","replace")
     ods=re.findall(r'href="([^"]+/t1-1\.ods)"',page)
-    if not ods: raise RuntimeError("找不到t1-1.ods")
-    rows=ods_rows(get(ods[0]))
-    F={"source":url,"title":title.strip(),"ods":ods[0],"rows":[r for r in rows if any(c for c in r)][:60]}
+    F={"source":url,"title":title.strip(),"growth":{}}
+    if ods:
+        for r in ods_rows(get(ods[0])):
+            c=[x for x in r if x!=""]
+            mm=re.match(r"(\d{3})年(\(f\)|\(p\)|\(r\))?$",c[0].replace(" ","")) if c else None
+            if mm and len(c)>=6 and num(c[5]) is not None: F["growth"][int(mm.group(1))]={"v":num(c[5]),"flag":(mm.group(2) or "").strip("()")}
+    pdf=re.findall(r'href="([^"]+/news\d+\.pdf)"',page)
+    if pdf:
+        import subprocess,tempfile
+        fn=tempfile.mktemp(suffix=".pdf"); open(fn,"wb").write(get(pdf[0]))
+        t=subprocess.run(["pdftotext","-layout",fn,"-"],capture_output=True,text=True).stdout
+        F["pdf"]=pdf[0]
+        # 文字摘要：預測115年…每人GDP 4萬5,332美元，CPI上漲2.07％
+        for mm in re.finditer(r"(\d{3})年(?:經濟成長|全年經濟成長率)\s*([\d.]+)％[^。]*?每人GDP\s*([\d萬,]+)美元[^。]*?CPI上漲\s*([\d.]+)％",t.replace("\n","")):
+            yy=int(mm.group(1)); usd=mm.group(3).replace(",","")
+            usd=int(usd.split("萬")[0])*10000+int(usd.split("萬")[1]) if "萬" in usd else int(usd)
+            F.setdefault("text",{})[yy]={"growth":float(mm.group(2)),"gdp_usd":usd,"cpi":float(mm.group(4))}
+        # 重要經濟指標表：抓含「年(f)」列
+        seg=t[t.find("重要經濟指標表"):] if "重要經濟指標表" in t else ""
+        F["table_lines"]=[l.strip() for l in seg.splitlines() if re.search(r"\d{3}\s*年?\s*\(?[fprFPR]\)?",l) and re.search(r"\d",l)][:30]
+        F["table_head"]=[l.strip() for l in seg.splitlines()[:25] if l.strip()]
     log["forecast"]=F
 except Exception as e: log["forecast"]={"error":repr(e)[:300]}
 json.dump(log,open(f"{OUT}/latest.json","w"),ensure_ascii=False,indent=1)
