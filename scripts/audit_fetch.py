@@ -26,7 +26,7 @@ with sync_playwright() as p:
     def grab(url, label):
         if not allowed(url): step(page=label, url=url, skipped="robots disallow"); return []
         try:
-            pg.goto(url, wait_until="networkidle", timeout=60000)
+            pg.goto(url, wait_until="domcontentloaded", timeout=90000); pg.wait_for_timeout(8000)
         except Exception as e:
             step(page=label, url=url, error=repr(e)[:200]); return []
         items = pg.eval_on_selector_all("a", "els=>els.map(a=>({t:(a.innerText||a.title||'').trim(),h:a.href}))")
