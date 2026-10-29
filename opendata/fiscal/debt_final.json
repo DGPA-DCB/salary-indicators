@@ -18,8 +18,8 @@
    "value": 1934.0,
    "basis": "決算審定",
    "unit": "億元",
-   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/107%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
-   "detail": "107年財政統計年報提要分析（103年為決算審定數）；歲出為預算數19,162"
+   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/106%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
+   "detail": "106年財政統計年報提要分析（103年為決算審定數）；歲出為預算數19,162"
   },
   "104": {
    "value": 868.0,
@@ -36,32 +36,18 @@
    "detail": "108年財政統計年報提要分析（105年為決算審定數）；歲出為預算數19,759"
   },
   "106": {
-   "value": 2226.0,
+   "value": 882.0,
    "basis": "決算審定",
    "unit": "億元",
-   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/110%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
-   "detail": "110年財政統計年報提要分析（106年為決算審定數）；歲出為預算數19,740"
+   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/108%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
+   "detail": "108年財政統計年報提要分析（106年為決算審定數）；歲出為預算數19,740"
   },
   "107": {
-   "value": 2281.0,
+   "value": 1018.0,
    "basis": "決算審定",
    "unit": "億元",
-   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/111%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
-   "detail": "111年財政統計年報提要分析（107年為決算審定數）；歲出為預算數19,669"
-  },
-  "108": {
-   "value": 1937.0,
-   "basis": "決算審定",
-   "unit": "億元",
-   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/111%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
-   "detail": "111年財政統計年報提要分析（108年為決算審定數）；歲出為預算數19,980"
-  },
-  "109": {
-   "value": 4653.0,
-   "basis": "決算審定",
-   "unit": "億元",
-   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/111%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
-   "detail": "111年財政統計年報提要分析（109年為決算審定數）；歲出為預算數20,776"
+   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/108%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
+   "detail": "108年財政統計年報提要分析（107年為決算審定數）；歲出為預算數19,669"
   }
  },
  "X": {
@@ -83,8 +69,8 @@
    "value": 1920.0,
    "basis": "決算審定",
    "unit": "億元",
-   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/107%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
-   "detail": "107年財政統計年報提要分析（103年為決算審定數）；歲出為預算數19,162"
+   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/106%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
+   "detail": "106年財政統計年報提要分析（103年為決算審定數）；歲出為預算數19,162"
   },
   "104": {
    "value": 763.0,
@@ -101,32 +87,18 @@
    "detail": "108年財政統計年報提要分析（105年為決算審定數）；歲出為預算數19,759"
   },
   "106": {
-   "value": 2065.0,
+   "value": 833.0,
    "basis": "決算審定",
    "unit": "億元",
-   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/110%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
-   "detail": "110年財政統計年報提要分析（106年為決算審定數）；歲出為預算數19,740"
+   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/108%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
+   "detail": "108年財政統計年報提要分析（106年為決算審定數）；歲出為預算數19,740"
   },
   "107": {
-   "value": 1267.0,
+   "value": 0.0,
    "basis": "決算審定",
    "unit": "億元",
-   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/111%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
-   "detail": "111年財政統計年報提要分析（107年為決算審定數）；歲出為預算數19,669"
-  },
-  "108": {
-   "value": 889.0,
-   "basis": "決算審定",
-   "unit": "億元",
-   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/111%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
-   "detail": "111年財政統計年報提要分析（108年為決算審定數）；歲出為預算數19,980"
-  },
-  "109": {
-   "value": 555.0,
-   "basis": "決算審定",
-   "unit": "億元",
-   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/111%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
-   "detail": "111年財政統計年報提要分析（109年為決算審定數）；歲出為預算數20,776"
+   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/108%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
+   "detail": "108年財政統計年報提要分析（107年為決算審定數）；歲出為預算數19,669"
   }
  },
  "Z": {
@@ -148,8 +120,8 @@
    "value": 10.0,
    "basis": "決算審定",
    "unit": "%",
-   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/107%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
-   "detail": "107年財政統計年報提要分析（103年為決算審定數）；歲出為預算數19,162"
+   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/106%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
+   "detail": "106年財政統計年報提要分析（103年為決算審定數）；歲出為預算數19,162"
   },
   "104": {
    "value": 3.9,
@@ -166,32 +138,18 @@
    "detail": "108年財政統計年報提要分析（105年為決算審定數）；歲出為預算數19,759"
   },
   "106": {
-   "value": 10.5,
+   "value": 4.2,
    "basis": "決算審定",
    "unit": "%",
-   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/110%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
-   "detail": "110年財政統計年報提要分析（106年為決算審定數）；歲出為預算數19,740"
+   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/108%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
+   "detail": "108年財政統計年報提要分析（106年為決算審定數）；歲出為預算數19,740"
   },
   "107": {
-   "value": 6.4,
+   "value": 0.0,
    "basis": "決算審定",
    "unit": "%",
-   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/111%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
-   "detail": "111年財政統計年報提要分析（107年為決算審定數）；歲出為預算數19,669"
-  },
-  "108": {
-   "value": 4.5,
-   "basis": "決算審定",
-   "unit": "%",
-   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/111%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
-   "detail": "111年財政統計年報提要分析（108年為決算審定數）；歲出為預算數19,980"
-  },
-  "109": {
-   "value": 2.7,
-   "basis": "決算審定",
-   "unit": "%",
-   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/111%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
-   "detail": "111年財政統計年報提要分析（109年為決算審定數）；歲出為預算數20,776"
+   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/108%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
+   "detail": "108年財政統計年報提要分析（107年為決算審定數）；歲出為預算數19,669"
   }
  },
  "editions": {
@@ -222,14 +180,7 @@
    ]
   },
   "107": {
-   "cutoff": 106,
-   "years": [
-    103,
-    104,
-    105,
-    106,
-    107
-   ]
+   "error": "TimeoutError('The read operation timed out')"
   },
   "108": {
    "cutoff": 107,
@@ -245,7 +196,7 @@
    "error": "table not found"
   },
   "110": {
-   "cutoff": 109,
+   "cutoff": null,
    "years": [
     106,
     107,
@@ -255,7 +206,7 @@
    ]
   },
   "111": {
-   "cutoff": 109,
+   "cutoff": null,
    "years": [
     107,
     108,
