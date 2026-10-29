@@ -16,7 +16,7 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: pip install cryptography && sudo apt-get install -y poppler-utils >/dev/null
-      - run: python scripts/dgbas_fetch.py
+      - run: python scripts/dgbas_fetch.py && python scripts/dgbas_probe.py
         continue-on-error: true
       - run: |
           git config user.name "DGPA 給與福利處（自動下載）"
