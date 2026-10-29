@@ -1,21 +1,22 @@
-import re,json,sys
-sys.argv=['x']; src=open('scripts/dgbas_fetch.py').read().split('log={"run"')[0]
-exec(src)
+import re,json,sys,subprocess,os
+src=open('scripts/dgbas_fetch.py').read().split('log={"run"')[0]; exec(src)
 out={}
-lst=get("https://www.dgbas.gov.tw/News.aspx?n=3602&sms=10980").decode("utf-8","replace")
-out["list"]=re.findall(r'href="(News_Content\.aspx\?n=3602&(?:amp;)?s=\d+)"[^>]*>([^<]{5,120})<',lst)[:40]
-out["dates"]=re.findall(r'(\d{3}-\d{2}-\d{2}|\d{4}/\d{2}/\d{2}|\d{3}/\d{2}/\d{2})',lst)[:40]
 page=get("https://www.dgbas.gov.tw/News_Content.aspx?n=3602&s=236591").decode("utf-8","replace")
-files=re.findall(r'href="([^"]+\.(?:ods|xlsx))"',page); out["gdp_files"]=files
-for f in files:
+out["titles"]={}
+for f in re.findall(r'href="([^"]+\.ods)"',page):
     try:
-        rows=ods_rows(get(f)) if f.endswith(".ods") else None
-        if rows is None: continue
-        flat="|".join("|".join(c for c in r if c) for r in rows)
-        if "每人GDP" in flat or "消費者物價" in flat or "每人國內生產毛額" in flat:
-            out.setdefault("hits",{})[f]=[[c for c in r if c][:14] for r in rows if any(r)][:45]
-    except Exception as e: out.setdefault("err",[]).append([f,repr(e)[:100]])
-# 表2 header
-base="https://ws.dgbas.gov.tw/001/Upload/463/relfile/10980/236702"
-rows=ods_rows(get(base+"/表2.ods")); out["t2"]=[[c for c in r if c][:16] for r in rows if any(r)][:12]
+        rows=ods_rows(get(f)); out["titles"][f.rsplit("/",1)[1]]=[" ".join(c for c in r if c)[:80] for r in rows if any(r)][:3]
+    except Exception as e: out["titles"][f]=repr(e)[:80]
+pdfs=re.findall(r'href="([^"]+\.pdf)"',page); out["pdfs"]=pdfs
+os.makedirs("/tmp/p",exist_ok=True)
+for u in pdfs[:3]:
+    b=get(u); open("/tmp/p/x.pdf","wb").write(b)
+    t=subprocess.run(["pdftotext","-layout","/tmp/p/x.pdf","-"],capture_output=True,text=True).stdout
+    lines=[l for l in t.splitlines() if re.search(r"每人GDP|每人國內生產毛額|消費者物價|重要經濟指標|經濟成長率",l)]
+    out.setdefault("pdf_hits",{})[u.rsplit("/",1)[1]]=lines[:40]
+# 8月薪資新聞稿
+page=get("https://www.dgbas.gov.tw/News_Content.aspx?n=3602&s=236785").decode("utf-8","replace")
+fs=re.findall(r'href="([^"]+\.(?:ods|pdf))"',page); out["aug_files"]=fs
+for f in [x for x in fs if x.endswith(".ods")][:4]:
+    rows=ods_rows(get(f)); out.setdefault("aug",{})[f.rsplit("/",1)[1]]=[[c for c in r if c][:10] for r in rows if any(r)][:14]
 json.dump(out,open("opendata/dgbas/probe.json","w"),ensure_ascii=False,indent=1)
