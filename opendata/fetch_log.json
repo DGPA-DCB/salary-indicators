@@ -1,5 +1,5 @@
 {
- "run": "2026-10-29T05:33:56.731152Z",
+ "run": "2026-10-29T07:44:34.564251Z",
  "catalog": [
   {
    "id": "175201",
@@ -184,8 +184,76 @@
    "name": "探測_國庫署首頁",
    "ok": true,
    "changed": true,
-   "bytes": 145886,
+   "bytes": 145775,
    "type": "text/html;charset=UTF-8"
+  },
+  {
+   "name": "114_總預算案_預算表",
+   "ok": true,
+   "changed": true,
+   "bytes": 432619,
+   "type": "application/x-zip-compressed"
+  },
+  {
+   "name": "112_總預算案_簡明表",
+   "ok": false,
+   "error": "<HTTPError 403: 'Forbidden'>"
+  },
+  {
+   "name": "113_總預算案_簡明表",
+   "ok": true,
+   "changed": false
+  },
+  {
+   "name": "109_總預算案_簡明表",
+   "ok": false,
+   "error": "<HTTPError 403: 'Forbidden'>"
+  },
+  {
+   "name": "113_總決算_113收支簡明",
+   "ok": true,
+   "changed": false
+  },
+  {
+   "name": "113_總決算_113歲入歲出簡明",
+   "ok": true,
+   "changed": false
+  },
+  {
+   "name": "113_總決算_113歲出用途別決",
+   "ok": true,
+   "changed": false
+  },
+  {
+   "name": "114_總決算_114歲入歲出簡明",
+   "ok": true,
+   "changed": true,
+   "bytes": 7858,
+   "type": "text/xml"
+  },
+  {
+   "name": "114_總決算_114收支簡明",
+   "ok": true,
+   "changed": true,
+   "bytes": 2577,
+   "type": "text/xml"
+  },
+  {
+   "name": "114_總決算_114歲出用途",
+   "ok": true,
+   "changed": true,
+   "bytes": 24193,
+   "type": "text/xml"
+  },
+  {
+   "name": "nta/D3-16F",
+   "ok": true,
+   "period": "11508"
+  },
+  {
+   "name": "nta/D3-17F",
+   "ok": true,
+   "period": "115"
   }
  ]
 }

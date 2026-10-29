@@ -237,7 +237,7 @@ $('.search-google .gsc-control-cse table.gsc-search-box tbody tr td.gsc-search-b
                 data : { 
                     "query" : $(this).text(),
                     "type" : 'google_keyword',
-                    "csrfToken" : '3ee42d2a-6914-4006-bfd9-0be7e1b41aa9'
+                    "csrfToken" : '1aeb189d-da53-4219-85f2-e5a260f12d54'
                 },
                 success : function (result) {
                     
@@ -258,7 +258,7 @@ $('.search-google .gsc-control-cse table.gsc-search-box tbody tr td.gsc-search-b
                         data : { 
                             "query" : inputText,
                             "type" : 'google_keyword',
-                            "csrfToken" : '3ee42d2a-6914-4006-bfd9-0be7e1b41aa9'
+                            "csrfToken" : '1aeb189d-da53-4219-85f2-e5a260f12d54'
                         },
                         success: function(data){
                             $('input.gsc-search-button:button').trigger('click');
@@ -903,6 +903,86 @@ ImgTextCarouselModule.carousel({
                         <li>
                         
                             <a
+                                href="/singlehtml/238?cntId=b529d4c6157f43389d937ad47631cf1b"
+                                title='青年安心成家購屋優惠貸款配合民眾購屋資金需求，協助無自有住宅家庭安居'
+                                
+                                
+                                 title='青年安心成家購屋優惠貸款配合民眾購屋資金需求，協助無自有住宅家庭安居'>
+                         
+                             
+                            
+                                <h3>
+                                    
+                                    青年安心成家購屋優惠貸款配合民眾購屋資金需求，協助無自有住宅家庭安居
+                                </h3> 
+                                 
+                                <span class="time">115-10-29</span> 
+                            </a>
+                        </li>
+                    
+                        <li>
+                        
+                            <a
+                                href="/singlehtml/238?cntId=d87f57359f5b49118c93e0db04f03792"
+                                title='青安協助無自有住宅家庭購宅安居'
+                                
+                                
+                                 title='青安協助無自有住宅家庭購宅安居'>
+                         
+                             
+                            
+                                <h3>
+                                    
+                                    青安協助無自有住宅家庭購宅安居
+                                </h3> 
+                                 
+                                <span class="time">115-10-29</span> 
+                            </a>
+                        </li>
+                    
+                        <li>
+                        
+                            <a
+                                href="/singlehtml/238?cntId=85ce66d4a1b14862b2261b2f49141066"
+                                title='延長青年安心成家貸款實施期間至111年底及將一段式機動利率調降至1.40％'
+                                
+                                
+                                 title='延長青年安心成家貸款實施期間至111年底及將一段式機動利率調降至1.40％'>
+                         
+                             
+                            
+                                <h3>
+                                    
+                                    延長青年安心成家貸款實施期間至111年底及將一段式機動利率調降至1.40％
+                                </h3> 
+                                 
+                                <span class="time">115-10-29</span> 
+                            </a>
+                        </li>
+                    
+                        <li>
+                        
+                            <a
+                                href="/singlehtml/238?cntId=4f03ccbdf1ea4806b946be8ecf892275"
+                                title='財政部青安貸款自112年8月1日起放寬條件，貸款利率補貼提高至1.5碼至115年7月31日止'
+                                
+                                
+                                 title='財政部青安貸款自112年8月1日起放寬條件，貸款利率補貼提高至1.5碼至115年7月31日止'>
+                         
+                             
+                            
+                                <h3>
+                                    
+                                    財政部青安貸款自112年8月1日起放寬條件，貸款利率補貼提高至1.5碼至115年7月31日止
+                                </h3> 
+                                 
+                                <span class="time">115-10-29</span> 
+                            </a>
+                        </li>
+                    
+                        <li>
+                        
+                            <a
                                 href="/singlehtml/238?cntId=3459b098f92e41b7a99c4f488de253fe"
                                 title='財政部首次頒獎鼓勵營銷績效卓越及國際競賽成績優異之優質酒類認證業者'
                                 
@@ -917,86 +997,6 @@ ImgTextCarouselModule.carousel({
                                 </h3> 
                                  
                                 <span class="time">115-10-27</span> 
-                            </a>
-                        </li>
-                    
-                        <li>
-                        
-                            <a
-                                href="/singlehtml/238?cntId=44dc8f5b779843849f9ccf76da092e63"
-                                title='財政部原訂115年10月23日發行 「115甲9期」10年期公債，因遇天然災害(薔琵颱風)延後發行'
-                                
-                                
-                                 title='財政部原訂115年10月23日發行 「115甲9期」10年期公債，因遇天然災害(薔琵颱風)延後發行'>
-                         
-                             
-                            
-                                <h3>
-                                    
-                                    財政部原訂115年10月23日發行 「115甲9期」10年期公債，因遇天然災害(薔琵颱風)延後發行
-                                </h3> 
-                                 
-                                <span class="time">115-10-22</span> 
-                            </a>
-                        </li>
-                    
-                        <li>
-                        
-                            <a
-                                href="/singlehtml/238?cntId=e59c3166d91f43a9ab75b77a6d2d7b46"
-                                title='公益彩券發行成果良好，115年截至9月已創造盈餘318億餘元，並助益弱勢就業逾7.5萬人'
-                                
-                                
-                                 title='公益彩券發行成果良好，115年截至9月已創造盈餘318億餘元，並助益弱勢就業逾7.5萬人'>
-                         
-                             
-                            
-                                <h3>
-                                    
-                                    公益彩券發行成果良好，115年截至9月已創造盈餘318億餘元，並助益弱勢就業逾7.5萬人
-                                </h3> 
-                                 
-                                <span class="time">115-10-21</span> 
-                            </a>
-                        </li>
-                    
-                        <li>
-                        
-                            <a
-                                href="/singlehtml/238?cntId=62f548296043490f9468b62890aa68c8"
-                                title='財政部發行「115甲10期」30年期公債'
-                                
-                                
-                                 title='財政部發行「115甲10期」30年期公債'>
-                         
-                             
-                            
-                                <h3>
-                                    
-                                    財政部發行「115甲10期」30年期公債
-                                </h3> 
-                                 
-                                <span class="time">115-10-20</span> 
-                            </a>
-                        </li>
-                    
-                        <li>
-                        
-                            <a
-                                href="/singlehtml/238?cntId=8664ba9a371c4f8f8c8b80e6c84bf724"
-                                title='「AI紅利 全民共享」普發現金1萬元將於116年度中央政府總預算案完成法定程序後儘速發放'
-                                
-                                
-                                 title='「AI紅利 全民共享」普發現金1萬元將於116年度中央政府總預算案完成法定程序後儘速發放'>
-                         
-                             
-                            
-                                <h3>
-                                    
-                                    「AI紅利 全民共享」普發現金1萬元將於116年度中央政府總預算案完成法定程序後儘速發放
-                                </h3> 
-                                 
-                                <span class="time">115-10-08</span> 
                             </a>
                         </li>
                     
@@ -2144,10 +2144,10 @@ ImgTextCarouselModule.carousel({
   
                   <div class="other">
                       
-                          <span>更新日期:115-10-28</span>
+                          <span>更新日期:115-10-29</span>
                       
                       
-                          <span>瀏覽次數:5931443</span>
+                          <span>瀏覽次數:5931506</span>
                       
                   </div>
               </div>
