@@ -6,7 +6,8 @@ UA="DGPA-salary-indicators/1.0 (+https://github.com/DGPA-DCB/salary-indicators)"
 API="https://data.gov.tw/api/v2/rest/dataset/{}"
 PAT=re.compile(r"(\d{3})年度中央政府(總決算表?$|總決算$|總預算案?[－-](預算表|簡明表|參考表))")
 try: st=json.load(open("opendata/discover.json",encoding="utf-8"))
-except Exception: st={"found":{},"scanned_to":175205}
+except Exception: st={}
+st.setdefault("found",{}); st.setdefault("scanned_to",175205)
 known=[int(l.strip()) for l in open("opendata/catalog_ids.txt",encoding="utf-8") if l.strip().isdigit()]
 start=max(st.get("scanned_to",0),max(known)); end=start+600; n=0
 for i in range(start+1,end+1):
