@@ -1,6 +1,9 @@
-import re,json,traceback,html
-src=open('scripts/dgbas_fetch.py').read().split('log={"run"')[0]; exec(src)
+import re,json,traceback,html,os
+os.makedirs('opendata/probe',exist_ok=True)
 out={"err":[]}
+try:
+    src=open('scripts/dgbas_fetch.py').read().split('log={"run"')[0]; exec(src)
+except Exception: out['err'].append(['exec',traceback.format_exc()[-800:]])
 def sec(n,fn):
     try: out[n]=fn()
     except Exception: out["err"].append([n,traceback.format_exc()[-600:]])
