@@ -1,5 +1,5 @@
 {
- "run": "2026-10-29T01:54:54Z",
+ "run": "2026-10-29T01:58:44Z",
  "steps": [
   {
    "robots": "ok",
@@ -64,32 +64,8 @@
    "skipped": "already done"
   },
   {
-   "page": "detail:111",
-   "url": "https://www.audit.gov.tw/p/405-1000-9378,c107.php?Lang=zh-tw",
-   "title": "民國111年度直轄市及縣市地方決算審核結果年報 - 中華民國審計部全球資訊網　",
-   "links": 83
-  },
-  {
    "target": 111,
-   "detail": "https://www.audit.gov.tw/p/405-1000-9378,c107.php?Lang=zh-tw",
-   "files": [
-    "民國111年度直轄市及縣市地方決算審核結果年報.pdf",
-    "2022_AnnualReport_電子書.zip"
-   ]
-  },
-  {
-   "target": 111,
-   "pdf": "民國111年度直轄市及縣市地方決算審核結果年報.pdf",
-   "bytes": 7023387,
-   "status": 200
-  },
-  {
-   "target": 111,
-   "keyword_pages": [
-    9,
-    84,
-    85
-   ]
+   "skipped": "already done"
   },
   {
    "total_links": 745,
