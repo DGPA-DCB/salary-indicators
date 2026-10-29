@@ -71,7 +71,7 @@ if os.path.exists(f):
         R.setdefault("DG_M", {})[y] = {"value": yt["regular_yoy"], "basis": "累計年增率", "ym": [y, m], "source": wsrc, "detail": f"表1 {y}年1至{m}月"}
     if tt:
         y, m = tt["year"], tt["to_month"]
-        R.setdefault("DG_J", {})[y] = {"value": tt["avg"], "basis": "累計平均", "ym": [y, m], "source": wsrc, "detail": f"表2 {y}年累計{tt['cum']:,}÷{m}"}
-        R.setdefault("DG_K", {})[y] = {"value": tt["yoy"], "basis": "累計年增率", "ym": [y, m], "source": wsrc, "detail": f"表2 {y}年累計{tt['cum']:,}／{y-1}年同期{tt['prev_cum']:,}"}
+        R.setdefault("DG_J", {})[y] = {"value": tt["avg"], "basis": "累計平均", "ym": [y, m], "source": wsrc, "detail": (f"表2 {y}年累計{tt['cum']:,}÷{m}" if tt.get('prev_cum') else f"新聞稿：{tt.get('text','')}")}
+        R.setdefault("DG_K", {})[y] = {"value": tt["yoy"], "basis": "累計年增率", "ym": [y, m], "source": wsrc, "detail": (f"表2 {y}年累計{tt['cum']:,}／{y-1}年同期{tt['prev_cum']:,}" if tt.get('prev_cum') else f"新聞稿：{tt.get('text','')}")}
 json.dump(R, open(sys.argv[1], "w"), ensure_ascii=False, indent=1)
 print({k: (len(v) if isinstance(v, dict) else v) for k, v in R.items()})

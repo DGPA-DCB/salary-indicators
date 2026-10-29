@@ -107,6 +107,17 @@ try:
             if mm and cur: months[(cur,int(mm.group(1)))]=num(c[1])
         log["wages"]["t2_labels"]=[f"{a}-{b}" for a,b in months if a>=y-1]
         prev=[months.get((y-1,i)) for i in range(1,m+1)]
+        if cum.get(y) and not all(prev):
+            # 表2僅列最近14個月，上年同期各月不足 → 改抓新聞稿PDF文字「1至○月…總薪資平均…年增」
+            import subprocess,tempfile
+            pdfu=re.findall(r'href="([^"]+/[^"/]*薪資[^"/]*\.pdf)"',page)
+            if pdfu:
+                fn=tempfile.mktemp(suffix=".pdf"); open(fn,"wb").write(get(pdfu[0]))
+                t=subprocess.run(["pdftotext","-layout",fn,"-"],capture_output=True,text=True).stdout.replace("\n","").replace(" ","")
+                mm=re.search(rf"1至{m}月[^。]*?總薪資平均(?:為|數為)?([\d,]+)元[^。]*?年增([\d.]+)[％%]",t)
+                if mm:
+                    log["wages"]["ytd_total"]={"year":y,"to_month":m,"cum":cum[y],"avg":int(mm.group(1).replace(",","")),"yoy":float(mm.group(2)),"prev_cum":None,"from":"pdf:"+pdfu[0],"text":mm.group(0)[:120]}
+                else: log["wages"]["ytd_total_text_miss"]=t[t.find("總薪資"):t.find("總薪資")+200]
         if cum.get(y) and all(prev):
             log["wages"]["ytd_total"]={"year":y,"to_month":m,"cum":cum[y],"avg":round(cum[y]/m),"yoy":round((cum[y]/sum(prev)-1)*100,2),"prev_cum":sum(prev)}
         log["wages"]["annual_total"]={yy:round(v/12) for yy,v in cum.items() if yy<y}
