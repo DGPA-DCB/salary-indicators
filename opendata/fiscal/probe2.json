@@ -1,0 +1,116 @@
+{
+ "run": "2026-10-29T03:15:00Z",
+ "steps": [
+  {
+   "yearbook": "提要分析及專載",
+   "pages": 29,
+   "hits": [
+    3,
+    4,
+    5,
+    8,
+    9,
+    10,
+    28
+   ]
+  },
+  {
+   "url": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/114%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/1-1.pdf",
+   "error": "<HTTPError 404: 'Not Found'>"
+  },
+  {
+   "url": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/114%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/1-2.pdf",
+   "error": "<HTTPError 404: 'Not Found'>"
+  },
+  {
+   "url": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/114%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/1-3.pdf",
+   "error": "<HTTPError 404: 'Not Found'>"
+  },
+  {
+   "url": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/114%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/1-4.pdf",
+   "error": "<HTTPError 404: 'Not Found'>"
+  },
+  {
+   "try_": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/114%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E7%9B%AE%E9%8C%84.pdf",
+   "bytes": 994119,
+   "kind": "PDF"
+  },
+  {
+   "url": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/114%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/index.htm",
+   "error": "<HTTPError 404: 'Not Found'>"
+  },
+  {
+   "url": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/114%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/index.html",
+   "error": "<HTTPError 404: 'Not Found'>"
+  },
+  {
+   "url": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/114%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/",
+   "error": "<HTTPError 403: 'Forbidden'>"
+  },
+  {
+   "url": "https://www.nta.gov.tw/multiplehtml/1617",
+   "links": [
+    [
+     "公共債務業務",
+     "/htmlList/70"
+    ],
+    [
+     "公共債務業務",
+     "/htmlList/70"
+    ],
+    [
+     "109年度至115年度債務管理關鍵績效指標一覽表",
+     "/singlehtml/1617?cntId=nta_17283_1617"
+    ],
+    [
+     "中央政府債務基金之運作管理",
+     "/singlehtml/1617?cntId=nta_3037_1617"
+    ],
+    [
+     "公共債務業務",
+     "/htmlList/70"
+    ]
+   ]
+  },
+  {
+   "url": "https://www.nta.gov.tw/htmlList/70",
+   "links": [
+    [
+     "公共債務業務",
+     "/htmlList/70"
+    ],
+    [
+     "公共債務業務",
+     "/htmlList/70"
+    ],
+    [
+     "中央政府債務",
+     "/multiplehtml/1617"
+    ],
+    [
+     "各級政府債務",
+     "/multiplehtml/1618"
+    ],
+    [
+     "公共債務業務",
+     "/htmlList/70"
+    ]
+   ]
+  },
+  {
+   "search": "中央政府總決算",
+   "bytes": 748931,
+   "found": []
+  },
+  {
+   "search": "中央政府債務",
+   "bytes": 748922,
+   "found": []
+  },
+  {
+   "search": "各級政府歲入歲出",
+   "bytes": 748940,
+   "found": []
+  }
+ ]
+}
