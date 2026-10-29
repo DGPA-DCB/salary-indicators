@@ -562,5 +562,69 @@
     "encoding": "UTF-8"
    }
   ]
+ },
+ "13973": {
+  "title": "中央政府總決算歲入歲出決算審定資料",
+  "agency": null,
+  "description": "中央政府-總決算歲入歲出決算審定資料",
+  "updated": "2025-02-04 16:27:17",
+  "files": [
+   {
+    "desc": "中央政府總決算歲入歲出決算審定資料",
+    "format": "JSON",
+    "url": "https://odap.audit.gov.tw/api/AuditedItem_N/FiscalYear=105/Government=中央政府",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "機關",
+    "format": "JSON",
+    "url": "https://odap.audit.gov.tw/api/AuditedItem_N/AuditedItemOrgan/FiscalYear=105",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "政府別",
+    "format": "JSON",
+    "url": "https://odap.audit.gov.tw/api/AuditedItem_N/AuditedItemGovernment",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "來源別及政事別大分類代碼",
+    "format": "JSON",
+    "url": "https://odap.audit.gov.tw/api/AuditedItem_N/FundCode/FiscalYear=105",
+    "encoding": "UTF-8"
+   }
+  ]
+ },
+ "13976": {
+  "title": "中央政府以前年度總決算歲入歲出決算審定資料",
+  "agency": null,
+  "description": "中央政府-以前年度總決算歲入歲出決算審定資料",
+  "updated": "2025-02-04 16:25:55",
+  "files": [
+   {
+    "desc": "中央政府以前年度總決算歲入歲出決算審定資料",
+    "format": "JSON",
+    "url": "https://odap.audit.gov.tw/api/AuditedItem_O/FiscalYear=105/Government=中央政府",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "機關",
+    "format": "JSON",
+    "url": "https://odap.audit.gov.tw/api/AuditedItem_O/AuditedItemOrgan/FiscalYear=105",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "政府別",
+    "format": "JSON",
+    "url": "https://odap.audit.gov.tw/api/AuditedItem_O/AuditedItemGovernment",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "來源別及政事別大分類代碼",
+    "format": "JSON",
+    "url": "https://odap.audit.gov.tw/api/AuditedItem_O/FundCode/FiscalYear=105",
+    "encoding": "UTF-8"
+   }
+  ]
  }
 }
