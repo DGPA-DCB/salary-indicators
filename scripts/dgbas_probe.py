@@ -54,8 +54,35 @@ def get(u,timeout=90):
     if not allowed(u): step(url=u,skipped="robots disallow"); return None
     try: return raw(u,timeout)
     except Exception as e: step(url=u[:120],error=repr(e)[:200]); return None
-for u in ["https://www.stat.gov.tw/cl.aspx?n=3680","https://www.stat.gov.tw/cp.aspx?n=2679","https://www.stat.gov.tw/News.aspx?n=3602","https://www.dgbas.gov.tw/News.aspx?n=3602","https://www.dgbas.gov.tw/cl.aspx?n=3680"]:
-    b=get(u)
-    if b:
-        t=b.decode("utf-8","replace"); links=re.findall(r'href="([^"]+)"[^>]*>([^<]{2,80})<',t)
-        step(url=u,bytes=len(b),links=[(x.strip(),h[:100]) for h,x in links if re.search(r"預測|展望|重要經濟指標|薪資|xls|ods|csv|新聞稿",x+h)][:30])
+
+import subprocess
+# 1. 薪資新聞稿內容頁 + 附件
+b=get("https://www.dgbas.gov.tw/News_Content.aspx?n=3602&s=236702")
+if b:
+    t=b.decode("utf-8","replace")
+    att=re.findall(r'href="([^"]+)"[^>]*>([^<]*(?:pdf|xls|ods|csv|xlsx|附表|附件)[^<]*)<',t,re.I)
+    step(page="薪資新聞稿115年7月",bytes=len(b),attachments=[(x.strip(),h[:120]) for h,x in att][:15])
+    # 文字中的累計
+    m=re.findall(r"[^。]*累計[^。]*。",re.sub(r"<[^>]+>"," ",t))
+    step(page="薪資新聞稿累計句",sentences=[x.strip()[:160] for x in m][:6])
+    for h,x in att[:6]:
+        if re.search(r"pdf|xls|ods|csv",h+x,re.I):
+            u=h if h.startswith("http") else "https://www.dgbas.gov.tw/"+h.lstrip("/")
+            f=get(u)
+            if f:
+                kind="PDF" if f[:4]==b"%PDF" else ("ZIP/XLSX" if f[:2]==b"PK" else f[:30].decode("utf-8","replace"))
+                step(attachment=x.strip()[:40],url=u[:120],bytes=len(f),kind=kind)
+                if f[:4]==b"%PDF":
+                    open("/tmp/a.pdf","wb").write(f); tx=subprocess.run(["pdftotext","-layout","/tmp/a.pdf","-"],capture_output=True,text=True).stdout
+                    hit=[l for l in tx.splitlines() if "累計" in l or "經常性薪資平均數" in l]
+                    step(attachment=x.strip()[:40],lines=hit[:8])
+# 2. 經濟預測頁
+b=get("https://www.stat.gov.tw/News.aspx?n=2680&sms=11024")
+if b:
+    t=b.decode("utf-8","replace"); links=re.findall(r'href="([^"]+)"[^>]*>([^<]{2,100})<',t)
+    step(page="經濟預測",links=[(x.strip(),h[:110]) for h,x in links if re.search(r"國民所得|預測|展望|重要經濟指標|xls|ods|pdf",x+h,re.I)][:20])
+# 3. 國民所得新聞稿列表
+b=get("https://www.dgbas.gov.tw/News.aspx?n=3602&sms=10980&_CSN=134")
+if b:
+    t=b.decode("utf-8","replace"); links=re.findall(r'href="(News_Content[^"]+)"[^>]*>([^<]{5,120})<',t)
+    step(page="新聞稿列表",links=[(x.strip()[:60],h) for h,x in links if "國民所得" in x or "經濟成長" in x][:8])
