@@ -1,0 +1,22 @@
+name: 通用探勘
+on:
+  workflow_dispatch:
+  push:
+    paths: ["scripts/probe.py"]
+permissions: { contents: write }
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install cryptography && sudo apt-get install -y poppler-utils >/dev/null
+      - run: python scripts/probe.py
+        continue-on-error: true
+      - run: |
+          git config user.name "DGPA 給與福利處（自動下載）"
+          git config user.email "drw@dgpa.gov.tw"
+          git add opendata/probe
+          git diff --cached --quiet || git commit -m "探勘 $(TZ=Asia/Taipei date +%F)"
+          git pull --rebase origin main && git push origin main
