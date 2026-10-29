@@ -1,18 +1,14 @@
-import re,json,traceback,os
+import re,json,traceback,os,subprocess,tempfile
 os.makedirs('opendata/probe',exist_ok=True)
 out={"err":[]}
 try:
     src=open('scripts/dgbas_fetch.py').read().split('log={"run"')[0]; exec(src)
 except Exception: out['err'].append(['exec',traceback.format_exc()[-800:]])
-for ds in list(range(30948,30962))+[13761,13760,13762,13763,13764]:
+for y in [104,106,108,110,112]:
+    u=f"https://service.mof.gov.tw/public/Data/statistic/Year_Fin/{y}%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf"
     try:
-        j=json.loads(get(f"https://data.gov.tw/api/v2/rest/dataset/{ds}").decode("utf-8")); r=j.get("result",j)
-        if not r.get("title"): continue
-        out[str(ds)]={"title":r.get("title"),"desc":(r.get("description") or "")[:200],"f":[(d.get("resourceDescription"),d.get("resourceFormat"),d.get("resourceDownloadUrl")) for d in (r.get("distribution") or [])][:6]}
-        if "債務" in (r.get("title") or ""):
-            for d in (r.get("distribution") or [])[:2]:
-                try:
-                    b=get(d.get("resourceDownloadUrl")); out[str(ds)].setdefault("samples",[]).append([len(b),b[:3000].decode("utf-8","replace")])
-                except Exception as e: out[str(ds)].setdefault("samples",[]).append([repr(e)[:120]])
-    except Exception as e: out["err"].append([ds,repr(e)[:100]])
+        b=get(u); fn=tempfile.mktemp(suffix=".pdf"); open(fn,"wb").write(b)
+        t=subprocess.run(["pdftotext","-layout",fn,"-"],capture_output=True,text=True).stdout
+        i=t.find("舉借、還本及餘額"); out[str(y)]=t[i-200:i+2600] if i>0 else "no table"
+    except Exception as e: out["err"].append([y,repr(e)[:100]])
 json.dump(out,open("opendata/probe/out.json","w"),ensure_ascii=False,indent=1)
