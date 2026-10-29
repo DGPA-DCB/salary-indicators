@@ -1,0 +1,22 @@
+name: 財政部來源探勘
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["scripts/fiscal_probe.py"]
+permissions: { contents: write }
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: python scripts/fiscal_probe.py
+      - run: |
+          git config user.name "DGPA 給與福利處（自動下載）"
+          git config user.email "drw@dgpa.gov.tw"
+          git add opendata/fiscal
+          git diff --cached --quiet || git commit -m "財政部來源探勘 $(TZ=Asia/Taipei date +%F)"
+          git pull --rebase origin main && git push origin main
