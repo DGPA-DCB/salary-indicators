@@ -1,0 +1,36 @@
+{
+"log": [
+{
+"robots": "error",
+"error": "<HTTPError 500: 'Internal Server Error'>"
+},
+{
+"url": "https://data.gov.tw/sitemap.xml",
+"error": "<HTTPError 500: 'Internal Server Error'>"
+},
+{
+"url": "https://data.gov.tw/sitemap_index.xml",
+"error": "<HTTPError 500: 'Internal Server Error'>"
+},
+{
+"url": "https://data.gov.tw/sitemaps.xml",
+"error": "<HTTPError 500: 'Internal Server Error'>"
+},
+{
+"dataset_urls": 0
+},
+{
+"url": "https://data.gov.tw/datasets/search?p=1&size=100&s=_score_desc&qs=%E4%B8%AD%E5%A4%AE%E6%94%BF%E5%BA%9C%E7%B8%BD%E6%B1%BA%E7%AE%97",
+"ids": 0
+},
+{
+"url": "https://data.gov.tw/datasets/search?p=2&size=100&s=_score_desc&qs=%E4%B8%AD%E5%A4%AE%E6%94%BF%E5%BA%9C%E7%B8%BD%E6%B1%BA%E7%AE%97",
+"ids": 0
+},
+{
+"url": "https://data.gov.tw/datasets/search?p=3&size=100&s=_score_desc&qs=%E4%B8%AD%E5%A4%AE%E6%94%BF%E5%BA%9C%E7%B8%BD%E6%B1%BA%E7%AE%97",
+"ids": 0
+}
+],
+"dataset_urls": []
+}
