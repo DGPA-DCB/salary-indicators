@@ -13,6 +13,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
+      - run: pip install cryptography
       - run: python scripts/dgbas_probe.py
         continue-on-error: true
       - run: |
