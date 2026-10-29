@@ -45,7 +45,7 @@ for d in sorted(glob.glob("opendata/audit_central/*")):
     m = re.search(r"歲入歲出相抵[，,]?審定(?:歲入歲出)?(賸餘|差短)為?([\d,]+)億", tx)
     if m:
         v = num(m.group(2)) * (1 if m.group(1) == "賸餘" else -1)
-        R["S"][y] = {"value": v, "basis": "決算審定", "source": f, "detail": m.group(0)[:60]}
+        R["S"][y] = {"value": v, "basis": "決算審定", "truncated": True, "source": f, "detail": m.group(0)[:60]}
 # ---- T/V：財政統計年報（若已下載並解析）----
 for f in glob.glob("opendata/fiscal/yearbook_table1-1*.json"):
     R.update(json.load(open(f, encoding="utf-8")))
