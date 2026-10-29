@@ -103,9 +103,9 @@ try:
             if not c: continue
             mm=re.match(r"(\d{3})年(?:1至\d{1,2}月)?累計",c[0].replace(" ",""))
             if mm: cur=int(mm.group(1)); cum[cur]=num(c[1]); continue
-            mm=re.match(r"(\d{1,2})月$",c[0].replace(" ",""))
+            mm=re.match(r"(\d{1,2})月[ⓅⓇｐｒpr]?$",c[0].replace(" ",""))
             if mm and cur: months[(cur,int(mm.group(1)))]=num(c[1])
-        log["wages"]["t2_labels"]=[k for k in cum]+[f"{a}-{b}" for a,b in list(months)[-14:]]
+        log["wages"]["t2_labels"]=[f"{a}-{b}" for a,b in months if a>=y-1]
         prev=[months.get((y-1,i)) for i in range(1,m+1)]
         if cum.get(y) and all(prev):
             log["wages"]["ytd_total"]={"year":y,"to_month":m,"cum":cum[y],"avg":round(cum[y]/m),"yoy":round((cum[y]/sum(prev)-1)*100,2),"prev_cum":sum(prev)}
