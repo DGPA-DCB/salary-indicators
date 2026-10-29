@@ -1,12 +1,20 @@
-import re,json,traceback,os
+import re,json,traceback,os,html
 os.makedirs('opendata/probe',exist_ok=True)
 out={"err":[]}
 try:
     src=open('scripts/dgbas_fetch.py').read().split('log={"run"')[0]; exec(src)
 except Exception: out['err'].append(['exec',traceback.format_exc()[-800:]])
-for ds in [166502,173426,170600,170599,172964,173425,173427,173428,173429,173430,170601,170602,170603,166501,166503,166504,166505,166506,166507,166508,172960,172961,172962,172963,172965,172966,172967]:
-    try:
-        j=json.loads(get(f"https://data.gov.tw/api/v2/rest/dataset/{ds}").decode("utf-8")); r=j.get("result",j)
-        out[str(ds)]={"title":r.get("title"),"n":len(r.get("distribution") or []),"f":[(d.get("resourceDescription"),d.get("resourceDownloadUrl","")[-60:]) for d in (r.get("distribution") or [])][:6]}
-    except Exception as e: out["err"].append([ds,repr(e)[:100]])
+def links(u,pat):
+    p=get(u).decode("utf-8","replace")
+    return [(html.unescape(h),re.sub(r"\s+"," ",re.sub(r"<[^>]+>","",t)).strip()[:70]) for h,t in re.findall(r'<a[^>]+href="([^"]+)"[^>]*>(.*?)</a>',p,re.S) if re.search(pat,t)]
+for k,u in {"sitemap":"https://www.dgbas.gov.tw/sitemap.aspx","home":"https://www.dgbas.gov.tw/"}.items():
+    try: out[k]=links(u,r"決算|預算")
+    except Exception: out["err"].append([k,traceback.format_exc()[-200:]])
+# 追到「決算」頁
+try:
+    cands=[h for h,t in out.get("sitemap",[])+out.get("home",[]) if "決算" in t]
+    for h in cands[:4]:
+        u=h if h.startswith("http") else "https://www.dgbas.gov.tw/"+h.lstrip("/")
+        out["page:"+u]=links(u,r"特別|決算")[:60]
+except Exception: out["err"].append(["follow",traceback.format_exc()[-200:]])
 json.dump(out,open("opendata/probe/out.json","w"),ensure_ascii=False,indent=1)
