@@ -1,5 +1,1 @@
-Traceback (most recent call last):
-  File "/home/runner/work/salary-indicators/salary-indicators/scripts/opendata_discover.py", line 23, in <module>
-    new=[k for k in st["found"] if int(k) not in known]
-                    ~~^^^^^^^^^
-KeyError: 'found'
+{'scanned': 600, 'range': [178190, 178789], 'found_total': 0, 'new': []}
