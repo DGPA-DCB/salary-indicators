@@ -1,0 +1,229 @@
+{
+ "T": {
+  "110": {
+   "value": -391,
+   "basis": "決算",
+   "unit": "億元",
+   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/114%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
+   "detail": "各級政府歲入歲出淨額及餘絀"
+  },
+  "111": {
+   "value": 383,
+   "basis": "決算",
+   "unit": "億元",
+   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/114%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
+   "detail": "各級政府歲入歲出淨額及餘絀"
+  },
+  "112": {
+   "value": -1448,
+   "basis": "決算",
+   "unit": "億元",
+   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/114%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
+   "detail": "各級政府歲入歲出淨額及餘絀"
+  },
+  "113": {
+   "value": 1108,
+   "basis": "決算",
+   "unit": "億元",
+   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/114%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
+   "detail": "各級政府歲入歲出淨額及餘絀"
+  },
+  "114": {
+   "value": 771,
+   "basis": "決算",
+   "unit": "億元",
+   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/114%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
+   "detail": "各級政府歲入歲出淨額及餘絀"
+  }
+ },
+ "V": {
+  "110": {
+   "value": -0.2,
+   "basis": "決算/GDP",
+   "unit": "%",
+   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/114%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
+   "detail": "各級政府歲入歲出淨額及餘絀占GDP比率"
+  },
+  "111": {
+   "value": 0.2,
+   "basis": "決算/GDP",
+   "unit": "%",
+   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/114%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
+   "detail": "各級政府歲入歲出淨額及餘絀占GDP比率"
+  },
+  "112": {
+   "value": -0.6,
+   "basis": "決算/GDP",
+   "unit": "%",
+   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/114%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
+   "detail": "各級政府歲入歲出淨額及餘絀占GDP比率"
+  },
+  "113": {
+   "value": 0.4,
+   "basis": "決算/GDP",
+   "unit": "%",
+   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/114%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
+   "detail": "各級政府歲入歲出淨額及餘絀占GDP比率"
+  },
+  "114": {
+   "value": 0.3,
+   "basis": "決算/GDP",
+   "unit": "%",
+   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/114%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
+   "detail": "各級政府歲入歲出淨額及餘絀占GDP比率"
+  }
+ },
+ "W": {
+  "110": {
+   "value": 6025.0,
+   "basis": "預算數",
+   "unit": "億元",
+   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/114%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
+   "detail": "當年舉借數合計"
+  },
+  "111": {
+   "value": 4635.0,
+   "basis": "預算數",
+   "unit": "億元",
+   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/114%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
+   "detail": "當年舉借數合計"
+  },
+  "112": {
+   "value": 3858.0,
+   "basis": "預算數",
+   "unit": "億元",
+   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/114%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
+   "detail": "當年舉借數合計"
+  },
+  "113": {
+   "value": 3566.0,
+   "basis": "預算數",
+   "unit": "億元",
+   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/114%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
+   "detail": "當年舉借數合計"
+  },
+  "114": {
+   "value": 2837.0,
+   "basis": "預算數",
+   "unit": "億元",
+   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/114%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
+   "detail": "當年舉借數合計"
+  }
+ },
+ "X": {
+  "110": {
+   "value": 1674.0,
+   "basis": "預算數",
+   "unit": "億元",
+   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/114%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
+   "detail": "當年舉借數 列入債限"
+  },
+  "111": {
+   "value": 439.0,
+   "basis": "預算數",
+   "unit": "億元",
+   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/114%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
+   "detail": "當年舉借數 列入債限"
+  },
+  "112": {
+   "value": 1732.0,
+   "basis": "預算數",
+   "unit": "億元",
+   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/114%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
+   "detail": "當年舉借數 列入債限"
+  },
+  "113": {
+   "value": 1568.0,
+   "basis": "預算數",
+   "unit": "億元",
+   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/114%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
+   "detail": "當年舉借數 列入債限"
+  },
+  "114": {
+   "value": 0,
+   "basis": "預算數",
+   "unit": "億元",
+   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/114%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
+   "detail": "當年舉借數 列入債限"
+  }
+ },
+ "Y": {
+  "110": {
+   "value": 21359.0,
+   "basis": "預算數",
+   "unit": "億元",
+   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/114%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
+   "detail": "歲出（總預算及未排除債限之特別預算）"
+  },
+  "111": {
+   "value": 22511.0,
+   "basis": "預算數",
+   "unit": "億元",
+   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/114%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
+   "detail": "歲出（總預算及未排除債限之特別預算）"
+  },
+  "112": {
+   "value": 29659.0,
+   "basis": "預算數",
+   "unit": "億元",
+   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/114%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
+   "detail": "歲出（總預算及未排除債限之特別預算）"
+  },
+  "113": {
+   "value": 29158.0,
+   "basis": "預算數",
+   "unit": "億元",
+   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/114%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
+   "detail": "歲出（總預算及未排除債限之特別預算）"
+  },
+  "114": {
+   "value": 30460.0,
+   "basis": "預算數",
+   "unit": "億元",
+   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/114%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
+   "detail": "歲出（總預算及未排除債限之特別預算）"
+  }
+ },
+ "Z": {
+  "110": {
+   "value": 7.8,
+   "basis": "預算數",
+   "unit": "%",
+   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/114%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
+   "detail": "列入債限占歲出比率"
+  },
+  "111": {
+   "value": 2.0,
+   "basis": "預算數",
+   "unit": "%",
+   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/114%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
+   "detail": "列入債限占歲出比率"
+  },
+  "112": {
+   "value": 5.8,
+   "basis": "預算數",
+   "unit": "%",
+   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/114%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
+   "detail": "列入債限占歲出比率"
+  },
+  "113": {
+   "value": 5.4,
+   "basis": "預算數",
+   "unit": "%",
+   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/114%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
+   "detail": "列入債限占歲出比率"
+  },
+  "114": {
+   "value": 0,
+   "basis": "預算數",
+   "unit": "%",
+   "source": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/114%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
+   "detail": "列入債限占歲出比率"
+  }
+ },
+ "meta": {
+  "yearbook": 114,
+  "url": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/114%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf",
+  "fetched": "2026-10-29"
+ }
+}
