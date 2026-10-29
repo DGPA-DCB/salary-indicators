@@ -1,1 +1,18 @@
-[]
+[
+{
+"name": "探測_財政統計年報目錄",
+"url": "https://service.mof.gov.tw/public/Data/statistic/Year_Fin/"
+},
+{
+"name": "探測_財政部統計資料庫",
+"url": "https://web02.mof.gov.tw/njswww/WebMain.aspx?sys=100&funid=defjspf2"
+},
+{
+"name": "探測_國庫署債務統計",
+"url": "https://www.nta.gov.tw/singlehtml/67?cntId=nta_840_67"
+},
+{
+"name": "探測_國庫署首頁",
+"url": "https://www.nta.gov.tw/"
+}
+]
