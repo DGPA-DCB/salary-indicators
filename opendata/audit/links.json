@@ -1,1 +1,3727 @@
-[]
+[
+{
+"t": "跳到主要內容區",
+"h": "https://www.audit.gov.tw/#start-C",
+"src": "home"
+},
+{
+"t": "回首頁",
+"h": "http://www.audit.gov.tw/",
+"src": "home"
+},
+{
+"t": ":::",
+"h": "https://www.audit.gov.tw/#",
+"src": "home"
+},
+{
+"t": "首頁",
+"h": "https://www.audit.gov.tw/",
+"src": "home"
+},
+{
+"t": "網站導覽",
+"h": "https://www.audit.gov.tw/p/17-1000.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "English",
+"h": "https://www.audit.gov.tw/?Lang=en",
+"src": "home"
+},
+{
+"t": "×",
+"h": "javascript:void(0)",
+"src": "home"
+},
+{
+"t": "進階搜尋",
+"h": "https://www.google.com.tw/advanced_search?hl=zh-TW&as_q=&num=100&as_sitesearch=*.audit.gov.tw&cof=FORID%3A10&ie=UTF-8&sa=%E6%90%9C%E5%B0%8B&siteurl=www",
+"src": "home"
+},
+{
+"t": "審計",
+"h": "https://cse.google.com/cse?cx=011342461998102075089:5ovsnhf_tke&q=%E5%AF%A9%E8%A8%88&oq=%E5%AF%A9%E8%A8%88&gs_l=partner.12...2583.2583.0.3357.1.1.0.0.0.0.40.40.1.1.0.gsnos%2Cn%3D13...0.40j1600j2..1ac.1.25.partner..1.0.0.FpmpVUSRe7s#gsc.tab=0&gsc.q=%E5%AF%A9%E8%A8%88&gsc.page=1",
+"src": "home"
+},
+{
+"t": "審核",
+"h": "https://www.google.com.tw/search?hl=zh-TW&as_q=%E5%AF%A9%E6%A0%B8&as_epq=&as_oq=&as_eq=&as_nlo=&as_nhi=&lr=&cr=&as_qdr=all&as_sitesearch=*.audit.gov.tw&as_occt=any&safe=images&as_filetype=&tbs=",
+"src": "home"
+},
+{
+"t": "總決算",
+"h": "https://www.google.com.tw/search?hl=zh-TW&as_q=%E7%B8%BD%E6%B1%BA%E7%AE%97&as_epq=&as_oq=&as_eq=&as_nlo=&as_nhi=&lr=&cr=&as_qdr=all&as_sitesearch=*.audit.gov.tw&as_occt=any&safe=images&as_filetype=&tbs=",
+"src": "home"
+},
+{
+"t": "認識審計部",
+"h": "javascript:void(0);",
+"src": "home"
+},
+{
+"t": "審計長",
+"h": "http://www.audit.gov.tw/p/412-1000-138.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "審計制度簡介",
+"h": "http://www.audit.gov.tw/p/412-1000-139.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "使命及願景",
+"h": "https://www.audit.gov.tw/p/412-1000-140.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "審計機關地址電話",
+"h": "http://www.audit.gov.tw/p/412-1000-141.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "審計部位置圖",
+"h": "http://www.audit.gov.tw/p/412-1000-168.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "中華民國政府審計史記續編",
+"h": "http://www.audit.gov.tw/p/412-1000-271.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "人才招募",
+"h": "http://www.audit.gov.tw/p/412-1000-272.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "新聞與公告",
+"h": "javascript:void(0);",
+"src": "home"
+},
+{
+"t": "新聞稿",
+"h": "http://www.audit.gov.tw/p/412-1000-104.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "重要政府審計資訊",
+"h": "http://www.audit.gov.tw/p/412-1000-103.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "立法院決議查核案件",
+"h": "https://www.audit.gov.tw/p/412-1000-489.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "政府重大政策重複缺失追蹤",
+"h": "https://www.audit.gov.tw/p/412-1000-558.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "一般公告",
+"h": "https://www.audit.gov.tw/p/412-1000-492.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "徵才訊息",
+"h": "https://www.audit.gov.tw/p/412-1000-347.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "審計報告",
+"h": "javascript:void(0);",
+"src": "home"
+},
+{
+"t": "總決算審核報告",
+"h": "https://auditreport.audit.gov.tw/",
+"src": "home"
+},
+{
+"t": "特別決算審核報告",
+"h": "https://auditreport.audit.gov.tw/",
+"src": "home"
+},
+{
+"t": "半年結算查核報告",
+"h": "http://www.audit.gov.tw/p/412-1000-98.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "政府審計年報",
+"h": "http://www.audit.gov.tw/p/412-1000-105.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "財務審核結果年報",
+"h": "http://www.audit.gov.tw/p/412-1000-107.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "鄉鎮市財務之審核",
+"h": "http://www.audit.gov.tw/p/412-1000-106.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "專案審計報告",
+"h": "http://www.audit.gov.tw/p/412-1000-158.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "永續發展審計報告",
+"h": "https://www.audit.gov.tw/p/412-1000-528.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "資訊公開",
+"h": "javascript:void(0);",
+"src": "home"
+},
+{
+"t": "永續發展",
+"h": "https://www.audit.gov.tw/p/412-1000-445.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "檔案下載",
+"h": "http://www.audit.gov.tw/p/412-1000-110.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "政府資訊公開",
+"h": "http://www.audit.gov.tw/p/412-1000-109.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "政府審計季刊",
+"h": "https://press.audit.gov.tw/journal/",
+"src": "home"
+},
+{
+"t": "審計機關創新專區",
+"h": "http://www.audit.gov.tw/p/412-1000-274.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "內部控制制度聲明書",
+"h": "http://www.audit.gov.tw/p/412-1000-187.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "數位審計",
+"h": "https://www.audit.gov.tw/p/412-1000-472.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "核心人權公約專區",
+"h": "https://www.audit.gov.tw/p/412-1000-433.php",
+"src": "home"
+},
+{
+"t": "行政機關優良實務案例專區",
+"h": "https://www.audit.gov.tw/p/412-1000-548.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "安全及衛生防護措施年度書面報告專區",
+"h": "https://www.audit.gov.tw/p/412-1000-553.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "審計統計",
+"h": "javascript:void(0);",
+"src": "home"
+},
+{
+"t": "審計統計資料查詢系統",
+"h": "https://statq.audit.gov.tw/",
+"src": "home"
+},
+{
+"t": "視覺化專區",
+"h": "https://www.audit.gov.tw/p/412-1000-403.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "公務統計",
+"h": "https://www.audit.gov.tw/p/412-1000-455.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "性別統計",
+"h": "https://www.audit.gov.tw/p/412-1000-459.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "預告統計資料發布",
+"h": "https://www.stat.gov.tw/News_NoticeCalendar.aspx?n=3717&IsControl=0&_Hide=1&Dept=701000000A",
+"src": "home"
+},
+{
+"t": "重要統計事項變更",
+"h": "https://www.audit.gov.tw/p/412-1000-418.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "公務統計方案",
+"h": "https://www.audit.gov.tw/p/404-1000-11841.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "統計名詞",
+"h": "https://www.audit.gov.tw/var/file/0/1000/img/776511008.odt",
+"src": "home"
+},
+{
+"t": "公民參與",
+"h": "javascript:void(0);",
+"src": "home"
+},
+{
+"t": "公民參與審計",
+"h": "https://www.audit.gov.tw/p/412-1000-467.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "審計建言信箱",
+"h": "https://www.audit.gov.tw/p/423-1000-7.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "全民監督信箱",
+"h": "https://www.audit.gov.tw/p/423-1000-6.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "審計法規",
+"h": "http://www.audit.gov.tw/p/412-1000-92.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "原頁面開啟",
+"h": "https://www.audit.gov.tw/app/index.php?Plugin=mobile&Action=mobileads&Lang=zh-tw&ad=4",
+"src": "home"
+},
+{
+"t": "原頁面開啟",
+"h": "https://www.audit.gov.tw/app/index.php?Plugin=mobile&Action=mobileads&Lang=zh-tw&ad=7",
+"src": "home"
+},
+{
+"t": "原頁面開啟",
+"h": "https://www.audit.gov.tw/app/index.php?Plugin=mobile&Action=mobileads&Lang=zh-tw&ad=3",
+"src": "home"
+},
+{
+"t": "原頁面開啟",
+"h": "https://www.audit.gov.tw/app/index.php?Plugin=mobile&Action=mobileads&Lang=zh-tw&ad=15",
+"src": "home"
+},
+{
+"t": "原頁面開啟",
+"h": "https://www.audit.gov.tw/app/index.php?Plugin=mobile&Action=mobileads&Lang=zh-tw&ad=4",
+"src": "home"
+},
+{
+"t": "原頁面開啟",
+"h": "https://www.audit.gov.tw/app/index.php?Plugin=mobile&Action=mobileads&Lang=zh-tw&ad=7",
+"src": "home"
+},
+{
+"t": "原頁面開啟",
+"h": "https://www.audit.gov.tw/app/index.php?Plugin=mobile&Action=mobileads&Lang=zh-tw&ad=3",
+"src": "home"
+},
+{
+"t": "原頁面開啟",
+"h": "https://www.audit.gov.tw/app/index.php?Plugin=mobile&Action=mobileads&Lang=zh-tw&ad=15",
+"src": "home"
+},
+{
+"t": "",
+"h": "https://auditreport.audit.gov.tw/",
+"src": "home"
+},
+{
+"t": "總決算審核報告查詢平台[另開新視窗]",
+"h": "https://auditreport.audit.gov.tw/",
+"src": "home"
+},
+{
+"t": ":::",
+"h": "https://www.audit.gov.tw/#start-C",
+"src": "home"
+},
+{
+"t": "",
+"h": "https://www.audit.gov.tw/p/406-1000-11980,r12.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "政府積極推動育嬰留職停薪津貼及薪資補助政策，惟近年津貼初次核付人數未有明顯成長，審計部促請改善，勞動部已檢討研修就業保險法，使津貼更貼近勞工實質薪資",
+"h": "https://www.audit.gov.tw/p/406-1000-11980,r12.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "",
+"h": "https://www.audit.gov.tw/p/406-1000-11978,r12.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "臺南市部分偏鄉學校未落實上傳數據至熟食運送管理平臺或餐食到校溫度未達標準，審計機關促請改善，已正確測量及上傳，確保師生用餐衛生與安全",
+"h": "https://www.audit.gov.tw/p/406-1000-11978,r12.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "",
+"h": "https://www.audit.gov.tw/p/406-1000-11981,r12.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "交通部民用航空局所屬機場無人機偵測系統及應變暨查處作業要點未臻完備，審計機關促請改善，已增設偵測系統並修正相關作業要點",
+"h": "https://www.audit.gov.tw/p/406-1000-11981,r12.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "",
+"h": "https://www.audit.gov.tw/p/406-1000-11979,r12.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "國立聯合大學國鼎圖書館尚未取得空氣品質自主管理標章，審計機關促請改善，已取得優良級標章，維護師生及讀者健康",
+"h": "https://www.audit.gov.tw/p/406-1000-11979,r12.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "",
+"h": "https://www.audit.gov.tw/p/406-1000-11977,r12.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "新北市政府警察局因應員警防彈衣缺口及不合身問題，推動「衣隨人走」政策，惟防彈衣數量及適穿規格未符需求，審計機關促請改善，已獲增配裝備並強化調撥機制",
+"h": "https://www.audit.gov.tw/p/406-1000-11977,r12.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "",
+"h": "https://www.audit.gov.tw/p/406-1000-11976,r12.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "花蓮縣部分避難收容處所位處風險區位，甚有標示適用水災、土石流或震災者位於相應災害風險區域，審計機關促請改善，已採取因應措施，並完成適用災害類別修正",
+"h": "https://www.audit.gov.tw/p/406-1000-11976,r12.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "",
+"h": "https://www.audit.gov.tw/p/406-1000-11975,r12.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "臺北自來水事業處智慧水表入庫作業時程控管未臻周妥，審計機關促請改善，已修訂作業規範，完備作業時程管控機制",
+"h": "https://www.audit.gov.tw/p/406-1000-11975,r12.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "",
+"h": "https://www.audit.gov.tw/p/406-1000-11974,r12.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "本部臺灣省嘉義縣審計室甄選會計審計職系稽察員1名，有意願者請於民國115年11月23日前報名",
+"h": "https://www.audit.gov.tw/p/406-1000-11974,r12.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "更多公告訊息",
+"h": "https://www.audit.gov.tw/p/403-1000-12-1.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "",
+"h": "https://www.audit.gov.tw/p/406-1000-10800,r30.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "政府推動人工智慧發展與應用情形",
+"h": "https://www.audit.gov.tw/p/406-1000-10800,r30.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "",
+"h": "https://www.audit.gov.tw/p/406-1000-11638,r30.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "政府推動少子女化對策執行情形",
+"h": "https://www.audit.gov.tw/p/406-1000-11638,r30.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "",
+"h": "https://www.audit.gov.tw/p/406-1000-10801,r30.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "政府推動毒品防制政策執行情形",
+"h": "https://www.audit.gov.tw/p/406-1000-10801,r30.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "",
+"h": "https://www.audit.gov.tw/p/406-1000-11639,r30.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "政府推動溫室氣體減量及淨零策略情形",
+"h": "https://www.audit.gov.tw/p/406-1000-11639,r30.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "",
+"h": "https://www.audit.gov.tw/p/406-1000-11640,r30.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "政府推動縮減貧富差距與經濟弱勢扶助執行情形",
+"h": "https://www.audit.gov.tw/p/406-1000-11640,r30.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "",
+"h": "https://www.audit.gov.tw/p/406-1000-11641,r30.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "政府推動交通安全改善執行情形",
+"h": "https://www.audit.gov.tw/p/406-1000-11641,r30.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "",
+"h": "https://www.audit.gov.tw/p/406-1000-11642,r30.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "政府推動強化社會安全網執行情形",
+"h": "https://www.audit.gov.tw/p/406-1000-11642,r30.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "",
+"h": "https://www.audit.gov.tw/p/406-1000-10798,r30.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "政府推動風電光電政策執行情形",
+"h": "https://www.audit.gov.tw/p/406-1000-10798,r30.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "更多議題",
+"h": "https://www.audit.gov.tw/p/403-1000-30-1.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "原頁面開啟",
+"h": "https://www.audit.gov.tw/p/423-1000-7.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "審計建言信箱",
+"h": "https://www.audit.gov.tw/p/423-1000-7.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "原頁面開啟",
+"h": "https://www.audit.gov.tw/p/423-1000-6.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "全民監督信箱",
+"h": "https://www.audit.gov.tw/p/423-1000-6.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "審計部數位審計發展委員會榮獲115年公務人員傑出貢獻獎團體獎",
+"h": "https://www.audit.gov.tw/p/406-1000-11983,r15.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "嘉義市部分高風險場所住警器設置比率未達預計目標，審計機關促請改善，已提高設置比率，維護高風險場所住宅消防安全",
+"h": "https://www.audit.gov.tw/p/406-1000-11973,r15.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "雲林縣口湖鄉幼兒園室內活動空間尚乏安全監視設備，審計機關促請改善，已全面檢視安裝，完善幼兒活動安全保障",
+"h": "https://www.audit.gov.tw/p/406-1000-11946,r15.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "花蓮縣部分未合法旅宿業者持續於網路刊登訂房廣告，花蓮縣政府未通報訂房平台下架前開業者，審計機關促請改善，該府已建立定期通報訂房平台下架機制，從源頭阻絕未合法旅宿營業行為",
+"h": "https://www.audit.gov.tw/p/406-1000-11921,r15.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "更多...",
+"h": "https://www.audit.gov.tw/p/403-1000-15-1.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "另開新視窗",
+"h": "https://auditreport.audit.gov.tw/",
+"src": "home"
+},
+{
+"t": "總決算審核報告",
+"h": "https://auditreport.audit.gov.tw/",
+"src": "home"
+},
+{
+"t": "原頁面開啟",
+"h": "https://www.audit.gov.tw/p/412-1000-374.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "特別決算審計報告",
+"h": "https://www.audit.gov.tw/p/412-1000-374.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "原頁面開啟",
+"h": "https://www.audit.gov.tw/p/412-1000-98.php",
+"src": "home"
+},
+{
+"t": "半年結算查核報告",
+"h": "https://www.audit.gov.tw/p/412-1000-98.php",
+"src": "home"
+},
+{
+"t": "原頁面開啟",
+"h": "https://www.audit.gov.tw/p/412-1000-105.php",
+"src": "home"
+},
+{
+"t": "政府審計年報",
+"h": "https://www.audit.gov.tw/p/412-1000-105.php",
+"src": "home"
+},
+{
+"t": "原頁面開啟",
+"h": "https://www.audit.gov.tw/p/412-1000-107.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "財務審核成果年報",
+"h": "https://www.audit.gov.tw/p/412-1000-107.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "原頁面開啟",
+"h": "https://www.audit.gov.tw/p/412-1000-106.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "鄉鎮市財務審核",
+"h": "https://www.audit.gov.tw/p/412-1000-106.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "原頁面開啟",
+"h": "https://www.audit.gov.tw/p/412-1000-158.php",
+"src": "home"
+},
+{
+"t": "專案審計報告",
+"h": "https://www.audit.gov.tw/p/412-1000-158.php",
+"src": "home"
+},
+{
+"t": "原頁面開啟",
+"h": "https://www.audit.gov.tw/p/412-1000-274.php",
+"src": "home"
+},
+{
+"t": "原頁面開啟",
+"h": "http://www.audit.gov.tw/p/412-1000-187.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "原頁面開啟",
+"h": "https://www.audit.gov.tw/p/412-1000-272.php",
+"src": "home"
+},
+{
+"t": "原頁面開啟",
+"h": "https://www.audit.gov.tw/p/404-1000-240.php",
+"src": "home"
+},
+{
+"t": "另開新視窗",
+"h": "https://press.audit.gov.tw/journal/",
+"src": "home"
+},
+{
+"t": "原頁面開啟",
+"h": "https://www.audit.gov.tw/p/412-1000-548.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "另開新視窗",
+"h": "https://www.cy.gov.tw/mp.asp?mp=1",
+"src": "home"
+},
+{
+"t": "另開新視窗",
+"h": "http://www.iia.org.tw/",
+"src": "home"
+},
+{
+"t": "另開新視窗",
+"h": "https://www.dgbas.gov.tw/",
+"src": "home"
+},
+{
+"t": "另開新視窗",
+"h": "https://near.archives.gov.tw/home",
+"src": "home"
+},
+{
+"t": "審計長",
+"h": "https://www.audit.gov.tw/p/412-1000-138.php",
+"src": "home"
+},
+{
+"t": "審計制度簡介",
+"h": "https://www.audit.gov.tw/p/412-1000-139.php",
+"src": "home"
+},
+{
+"t": "使命及願景",
+"h": "https://www.audit.gov.tw/p/412-1000-140.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "審計機關地址電話",
+"h": "https://www.audit.gov.tw/p/412-1000-141.php",
+"src": "home"
+},
+{
+"t": "審計部位置圖",
+"h": "https://www.audit.gov.tw/p/412-1000-168.php",
+"src": "home"
+},
+{
+"t": "中華民國政府審計史記續編",
+"h": "https://www.audit.gov.tw/p/405-1000-3136,c271.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "人才招募",
+"h": "http://www.audit.gov.tw/p/412-1000-272.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "新聞稿",
+"h": "https://www.audit.gov.tw/p/412-1000-104.php",
+"src": "home"
+},
+{
+"t": "重要政府審計資訊",
+"h": "https://www.audit.gov.tw/p/412-1000-103.php",
+"src": "home"
+},
+{
+"t": "公民參與審計",
+"h": "https://www.audit.gov.tw/p/412-1000-467.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "立法院決議查核案件",
+"h": "https://www.audit.gov.tw/p/412-1000-489.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "政府重大政策重複缺失追蹤",
+"h": "https://www.audit.gov.tw/p/412-1000-558.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "一般公告",
+"h": "https://www.audit.gov.tw/p/412-1000-492.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "徵才訊息",
+"h": "https://www.audit.gov.tw/p/412-1000-347.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "總決算審核報告",
+"h": "https://auditreport.audit.gov.tw/",
+"src": "home"
+},
+{
+"t": "特別決算審核報告",
+"h": "https://www.audit.gov.tw/p/412-1000-374.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "半年結算查核",
+"h": "https://www.audit.gov.tw/p/412-1000-98.php",
+"src": "home"
+},
+{
+"t": "政府審計年報",
+"h": "https://www.audit.gov.tw/p/412-1000-105.php",
+"src": "home"
+},
+{
+"t": "財務審核結果年報",
+"h": "https://www.audit.gov.tw/p/412-1000-107.php",
+"src": "home"
+},
+{
+"t": "鄉鎮市財務審核",
+"h": "https://www.audit.gov.tw/p/412-1000-106.php",
+"src": "home"
+},
+{
+"t": "專案審計報告",
+"h": "https://www.audit.gov.tw/p/412-1000-158.php",
+"src": "home"
+},
+{
+"t": "永續發展",
+"h": "https://www.audit.gov.tw/p/412-1000-445.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "檔案下載",
+"h": "https://www.audit.gov.tw/p/412-1000-110.php",
+"src": "home"
+},
+{
+"t": "政府資訊公開",
+"h": "http://www.audit.gov.tw/p/412-1000-109.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "政府審計季刊",
+"h": "https://press.audit.gov.tw/journal/",
+"src": "home"
+},
+{
+"t": "審計機關創新專區",
+"h": "https://www.audit.gov.tw/p/412-1000-274.php",
+"src": "home"
+},
+{
+"t": "內部控制制度聲明書",
+"h": "https://www.audit.gov.tw/p/412-1000-187.php",
+"src": "home"
+},
+{
+"t": "數位審計",
+"h": "https://www.audit.gov.tw/p/412-1000-472.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "兩公約人權專區",
+"h": "https://www.audit.gov.tw/p/412-1000-433.php",
+"src": "home"
+},
+{
+"t": "行政機關優良實務案例專區",
+"h": "https://www.audit.gov.tw/p/412-1000-548.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "安全及衛生防護措施年度書面報告專區",
+"h": "https://www.audit.gov.tw/p/412-1000-553.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "審計統計資料查詢系統",
+"h": "https://statq.audit.gov.tw/",
+"src": "home"
+},
+{
+"t": "視覺化專區",
+"h": "https://www.audit.gov.tw/p/412-1000-403.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "公務統計",
+"h": "https://www.audit.gov.tw/p/412-1000-455.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "性別統計",
+"h": "https://www.audit.gov.tw/p/412-1000-459.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "預告統計資料發布",
+"h": "https://www.stat.gov.tw/News_NoticeCalendar.aspx?n=3717&IsControl=0&_Hide=1&Dept=701000000A",
+"src": "home"
+},
+{
+"t": "重要統計事項變更",
+"h": "https://www.audit.gov.tw/p/412-1000-418.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "公務統計方案",
+"h": "https://www.audit.gov.tw/p/404-1000-11841.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "統計名詞",
+"h": "https://www.audit.gov.tw/var/file/0/1000/img/25/234780588.pdf",
+"src": "home"
+},
+{
+"t": "公職人員利益衝突迴避身分揭露專區",
+"h": "https://www.audit.gov.tw/p/404-1000-7020.php?Lang=zh-tw",
+"src": "home"
+},
+{
+"t": "公益揭弊者保護法專區",
+"h": "https://www.audit.gov.tw/p/404-1000-353.php",
+"src": "home"
+},
+{
+"t": "廉政諮詢專線",
+"h": "https://www.audit.gov.tw/p/404-1000-349.php",
+"src": "home"
+},
+{
+"t": "廉政宣導",
+"h": "https://www.audit.gov.tw/p/405-1000-352,c94.php",
+"src": "home"
+},
+{
+"t": "陽光法案",
+"h": "https://www.audit.gov.tw/p/404-1000-351.php",
+"src": "home"
+},
+{
+"t": "廉政會報專區",
+"h": "https://www.audit.gov.tw/p/404-1000-350.php",
+"src": "home"
+},
+{
+"t": "請託關說事件登錄",
+"h": "https://www.audit.gov.tw/p/404-1000-4363.php",
+"src": "home"
+},
+{
+"t": "繁體",
+"h": "",
+"src": "home"
+},
+{
+"t": "English",
+"h": "https://www.audit.gov.tw/#",
+"src": "home"
+},
+{
+"t": ":::",
+"h": "https://www.audit.gov.tw/#",
+"src": "home"
+},
+{
+"t": "隱私權保護措施",
+"h": "https://www.audit.gov.tw/p/405-1000-893,c166.php",
+"src": "home"
+},
+{
+"t": "網路安全措施",
+"h": "https://www.audit.gov.tw/p/405-1000-894,c166.php",
+"src": "home"
+},
+{
+"t": "網站資料開放宣告",
+"h": "https://www.audit.gov.tw/p/405-1000-895,c166.php",
+"src": "home"
+},
+{
+"t": "地圖",
+"h": "https://www.audit.gov.tw/p/412-1000-168.php",
+"src": "home"
+},
+{
+"t": "無障礙網站",
+"h": "https://accessibility.moda.gov.tw/Applications/Detail?category=20251013091442",
+"src": "home"
+},
+{
+"t": "審計部youtube頻道",
+"h": "https://www.youtube.com/channel/UCvcDjpz3sEz4YQQZ5Df-qUg",
+"src": "home"
+},
+{
+"t": "審計部網站qrcode",
+"h": "https://www.audit.gov.tw/",
+"src": "home"
+},
+{
+"t": "我的e政府",
+"h": "http://www.gov.tw/",
+"src": "home"
+},
+{
+"t": "top",
+"h": "https://www.audit.gov.tw/#",
+"src": "home"
+},
+{
+"t": "跳到主要內容區",
+"h": "https://www.audit.gov.tw/p/412-1000-107.php?Lang=zh-tw#start-C",
+"src": "財務審核結果年報"
+},
+{
+"t": "回首頁",
+"h": "http://www.audit.gov.tw/",
+"src": "財務審核結果年報"
+},
+{
+"t": ":::",
+"h": "https://www.audit.gov.tw/p/412-1000-107.php?Lang=zh-tw#",
+"src": "財務審核結果年報"
+},
+{
+"t": "首頁",
+"h": "https://www.audit.gov.tw/",
+"src": "財務審核結果年報"
+},
+{
+"t": "網站導覽",
+"h": "https://www.audit.gov.tw/p/17-1000.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "English",
+"h": "https://www.audit.gov.tw/?Lang=en",
+"src": "財務審核結果年報"
+},
+{
+"t": "×",
+"h": "javascript:void(0)",
+"src": "財務審核結果年報"
+},
+{
+"t": "進階搜尋",
+"h": "https://www.google.com.tw/advanced_search?hl=zh-TW&as_q=&num=100&as_sitesearch=*.audit.gov.tw&cof=FORID%3A10&ie=UTF-8&sa=%E6%90%9C%E5%B0%8B&siteurl=www",
+"src": "財務審核結果年報"
+},
+{
+"t": "審計",
+"h": "https://cse.google.com/cse?cx=011342461998102075089:5ovsnhf_tke&q=%E5%AF%A9%E8%A8%88&oq=%E5%AF%A9%E8%A8%88&gs_l=partner.12...2583.2583.0.3357.1.1.0.0.0.0.40.40.1.1.0.gsnos%2Cn%3D13...0.40j1600j2..1ac.1.25.partner..1.0.0.FpmpVUSRe7s#gsc.tab=0&gsc.q=%E5%AF%A9%E8%A8%88&gsc.page=1",
+"src": "財務審核結果年報"
+},
+{
+"t": "審核",
+"h": "https://www.google.com.tw/search?hl=zh-TW&as_q=%E5%AF%A9%E6%A0%B8&as_epq=&as_oq=&as_eq=&as_nlo=&as_nhi=&lr=&cr=&as_qdr=all&as_sitesearch=*.audit.gov.tw&as_occt=any&safe=images&as_filetype=&tbs=",
+"src": "財務審核結果年報"
+},
+{
+"t": "總決算",
+"h": "https://www.google.com.tw/search?hl=zh-TW&as_q=%E7%B8%BD%E6%B1%BA%E7%AE%97&as_epq=&as_oq=&as_eq=&as_nlo=&as_nhi=&lr=&cr=&as_qdr=all&as_sitesearch=*.audit.gov.tw&as_occt=any&safe=images&as_filetype=&tbs=",
+"src": "財務審核結果年報"
+},
+{
+"t": "認識審計部",
+"h": "javascript:void(0);",
+"src": "財務審核結果年報"
+},
+{
+"t": "審計長",
+"h": "http://www.audit.gov.tw/p/412-1000-138.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "審計制度簡介",
+"h": "http://www.audit.gov.tw/p/412-1000-139.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "使命及願景",
+"h": "https://www.audit.gov.tw/p/412-1000-140.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "審計機關地址電話",
+"h": "http://www.audit.gov.tw/p/412-1000-141.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "審計部位置圖",
+"h": "http://www.audit.gov.tw/p/412-1000-168.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "中華民國政府審計史記續編",
+"h": "http://www.audit.gov.tw/p/412-1000-271.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "人才招募",
+"h": "http://www.audit.gov.tw/p/412-1000-272.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "新聞與公告",
+"h": "javascript:void(0);",
+"src": "財務審核結果年報"
+},
+{
+"t": "新聞稿",
+"h": "http://www.audit.gov.tw/p/412-1000-104.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "重要政府審計資訊",
+"h": "http://www.audit.gov.tw/p/412-1000-103.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "立法院決議查核案件",
+"h": "https://www.audit.gov.tw/p/412-1000-489.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "政府重大政策重複缺失追蹤",
+"h": "https://www.audit.gov.tw/p/412-1000-558.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "一般公告",
+"h": "https://www.audit.gov.tw/p/412-1000-492.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "徵才訊息",
+"h": "https://www.audit.gov.tw/p/412-1000-347.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "審計報告",
+"h": "javascript:void(0);",
+"src": "財務審核結果年報"
+},
+{
+"t": "總決算審核報告",
+"h": "https://auditreport.audit.gov.tw/",
+"src": "財務審核結果年報"
+},
+{
+"t": "特別決算審核報告",
+"h": "https://auditreport.audit.gov.tw/",
+"src": "財務審核結果年報"
+},
+{
+"t": "半年結算查核報告",
+"h": "http://www.audit.gov.tw/p/412-1000-98.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "政府審計年報",
+"h": "http://www.audit.gov.tw/p/412-1000-105.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "財務審核結果年報",
+"h": "http://www.audit.gov.tw/p/412-1000-107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "鄉鎮市財務之審核",
+"h": "http://www.audit.gov.tw/p/412-1000-106.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "專案審計報告",
+"h": "http://www.audit.gov.tw/p/412-1000-158.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "永續發展審計報告",
+"h": "https://www.audit.gov.tw/p/412-1000-528.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "資訊公開",
+"h": "javascript:void(0);",
+"src": "財務審核結果年報"
+},
+{
+"t": "永續發展",
+"h": "https://www.audit.gov.tw/p/412-1000-445.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "檔案下載",
+"h": "http://www.audit.gov.tw/p/412-1000-110.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "政府資訊公開",
+"h": "http://www.audit.gov.tw/p/412-1000-109.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "政府審計季刊",
+"h": "https://press.audit.gov.tw/journal/",
+"src": "財務審核結果年報"
+},
+{
+"t": "審計機關創新專區",
+"h": "http://www.audit.gov.tw/p/412-1000-274.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "內部控制制度聲明書",
+"h": "http://www.audit.gov.tw/p/412-1000-187.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "數位審計",
+"h": "https://www.audit.gov.tw/p/412-1000-472.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "核心人權公約專區",
+"h": "https://www.audit.gov.tw/p/412-1000-433.php",
+"src": "財務審核結果年報"
+},
+{
+"t": "行政機關優良實務案例專區",
+"h": "https://www.audit.gov.tw/p/412-1000-548.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "安全及衛生防護措施年度書面報告專區",
+"h": "https://www.audit.gov.tw/p/412-1000-553.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "審計統計",
+"h": "javascript:void(0);",
+"src": "財務審核結果年報"
+},
+{
+"t": "審計統計資料查詢系統",
+"h": "https://statq.audit.gov.tw/",
+"src": "財務審核結果年報"
+},
+{
+"t": "視覺化專區",
+"h": "https://www.audit.gov.tw/p/412-1000-403.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "公務統計",
+"h": "https://www.audit.gov.tw/p/412-1000-455.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "性別統計",
+"h": "https://www.audit.gov.tw/p/412-1000-459.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "預告統計資料發布",
+"h": "https://www.stat.gov.tw/News_NoticeCalendar.aspx?n=3717&IsControl=0&_Hide=1&Dept=701000000A",
+"src": "財務審核結果年報"
+},
+{
+"t": "重要統計事項變更",
+"h": "https://www.audit.gov.tw/p/412-1000-418.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "公務統計方案",
+"h": "https://www.audit.gov.tw/p/p/404-1000-11841.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "統計名詞",
+"h": "https://www.audit.gov.tw/var/file/0/1000/img/776511008.odt",
+"src": "財務審核結果年報"
+},
+{
+"t": "公民參與",
+"h": "javascript:void(0);",
+"src": "財務審核結果年報"
+},
+{
+"t": "公民參與審計",
+"h": "https://www.audit.gov.tw/p/412-1000-467.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "審計建言信箱",
+"h": "https://www.audit.gov.tw/p/423-1000-7.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "全民監督信箱",
+"h": "https://www.audit.gov.tw/p/423-1000-6.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "審計法規",
+"h": "http://www.audit.gov.tw/p/412-1000-92.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": ":::",
+"h": "https://www.audit.gov.tw/p/412-1000-107.php?Lang=zh-tw#start-C",
+"src": "財務審核結果年報"
+},
+{
+"t": "首頁",
+"h": "https://www.audit.gov.tw/index.php",
+"src": "財務審核結果年報"
+},
+{
+"t": "審計報告",
+"h": "https://www.audit.gov.tw/p/412-1000-90.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "財務審核結果年報",
+"h": "https://www.audit.gov.tw/p/412-1000-107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國111年度直轄市及縣市地方決算審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-9378,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國111年度鄉鎮縣轄市財務審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-9377,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國110年度直轄市及縣市地方決算審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-8499,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國110年度鄉鎮縣轄市財務審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-8498,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國109年度直轄市及縣市地方決算審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-7523,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國109年度鄉鎮縣轄市財務審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-7522,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國108年度直轄市及縣市地方決算審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-6716,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國108年度鄉鎮縣轄市財務審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-6713,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國107年度直轄市及縣市地方決算審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-5919,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國107年度鄉鎮縣轄市財務審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-5918,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國106年度直轄市及縣市地方決算審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-5150,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國106年度鄉鎮縣轄市財務審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-5151,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國105年度直轄市及縣市地方決算審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-3959,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國105年度鄉鎮縣轄市財務審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-3958,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國104年度直轄市及縣市地方決算審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-3104,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國104年度鄉鎮縣轄市財務審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-3103,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國103年度直轄市及縣市地方決算審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-2420,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國103年度鄉鎮縣轄市財務審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-2419,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國102年度直轄市及縣市地方決算審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-1771,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國102年度鄉鎮縣轄市財務審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-1770,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "1",
+"h": "javascript:void(0)",
+"src": "財務審核結果年報"
+},
+{
+"t": "2",
+"h": "javascript:void(0)",
+"src": "財務審核結果年報"
+},
+{
+"t": ">",
+"h": "javascript:void(0)",
+"src": "財務審核結果年報"
+},
+{
+"t": ">>",
+"h": "javascript:void(0)",
+"src": "財務審核結果年報"
+},
+{
+"t": "繁體",
+"h": "",
+"src": "財務審核結果年報"
+},
+{
+"t": "English",
+"h": "https://www.audit.gov.tw/p/412-1000-107.php?Lang=zh-tw#",
+"src": "財務審核結果年報"
+},
+{
+"t": ":::",
+"h": "https://www.audit.gov.tw/p/412-1000-107.php?Lang=zh-tw#",
+"src": "財務審核結果年報"
+},
+{
+"t": "隱私權保護措施",
+"h": "https://www.audit.gov.tw/p/405-1000-893,c166.php",
+"src": "財務審核結果年報"
+},
+{
+"t": "網路安全措施",
+"h": "https://www.audit.gov.tw/p/405-1000-894,c166.php",
+"src": "財務審核結果年報"
+},
+{
+"t": "網站資料開放宣告",
+"h": "https://www.audit.gov.tw/p/405-1000-895,c166.php",
+"src": "財務審核結果年報"
+},
+{
+"t": "地圖",
+"h": "https://www.audit.gov.tw/p/412-1000-168.php",
+"src": "財務審核結果年報"
+},
+{
+"t": "無障礙網站",
+"h": "https://accessibility.moda.gov.tw/Applications/Detail?category=20251013091442",
+"src": "財務審核結果年報"
+},
+{
+"t": "審計部youtube頻道",
+"h": "https://www.youtube.com/channel/UCvcDjpz3sEz4YQQZ5Df-qUg",
+"src": "財務審核結果年報"
+},
+{
+"t": "審計部網站qrcode",
+"h": "https://www.audit.gov.tw/",
+"src": "財務審核結果年報"
+},
+{
+"t": "我的e政府",
+"h": "http://www.gov.tw/",
+"src": "財務審核結果年報"
+},
+{
+"t": "top",
+"h": "https://www.audit.gov.tw/p/412-1000-107.php?Lang=zh-tw#",
+"src": "財務審核結果年報"
+},
+{
+"t": "跳到主要內容區",
+"h": "https://www.audit.gov.tw/p/412-1000-107.php?Lang=zh-tw#start-C",
+"src": "財務審核結果年報"
+},
+{
+"t": "回首頁",
+"h": "http://www.audit.gov.tw/",
+"src": "財務審核結果年報"
+},
+{
+"t": ":::",
+"h": "https://www.audit.gov.tw/p/412-1000-107.php?Lang=zh-tw#",
+"src": "財務審核結果年報"
+},
+{
+"t": "首頁",
+"h": "https://www.audit.gov.tw/",
+"src": "財務審核結果年報"
+},
+{
+"t": "網站導覽",
+"h": "https://www.audit.gov.tw/p/17-1000.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "English",
+"h": "https://www.audit.gov.tw/?Lang=en",
+"src": "財務審核結果年報"
+},
+{
+"t": "×",
+"h": "javascript:void(0)",
+"src": "財務審核結果年報"
+},
+{
+"t": "進階搜尋",
+"h": "https://www.google.com.tw/advanced_search?hl=zh-TW&as_q=&num=100&as_sitesearch=*.audit.gov.tw&cof=FORID%3A10&ie=UTF-8&sa=%E6%90%9C%E5%B0%8B&siteurl=www",
+"src": "財務審核結果年報"
+},
+{
+"t": "審計",
+"h": "https://cse.google.com/cse?cx=011342461998102075089:5ovsnhf_tke&q=%E5%AF%A9%E8%A8%88&oq=%E5%AF%A9%E8%A8%88&gs_l=partner.12...2583.2583.0.3357.1.1.0.0.0.0.40.40.1.1.0.gsnos%2Cn%3D13...0.40j1600j2..1ac.1.25.partner..1.0.0.FpmpVUSRe7s#gsc.tab=0&gsc.q=%E5%AF%A9%E8%A8%88&gsc.page=1",
+"src": "財務審核結果年報"
+},
+{
+"t": "審核",
+"h": "https://www.google.com.tw/search?hl=zh-TW&as_q=%E5%AF%A9%E6%A0%B8&as_epq=&as_oq=&as_eq=&as_nlo=&as_nhi=&lr=&cr=&as_qdr=all&as_sitesearch=*.audit.gov.tw&as_occt=any&safe=images&as_filetype=&tbs=",
+"src": "財務審核結果年報"
+},
+{
+"t": "總決算",
+"h": "https://www.google.com.tw/search?hl=zh-TW&as_q=%E7%B8%BD%E6%B1%BA%E7%AE%97&as_epq=&as_oq=&as_eq=&as_nlo=&as_nhi=&lr=&cr=&as_qdr=all&as_sitesearch=*.audit.gov.tw&as_occt=any&safe=images&as_filetype=&tbs=",
+"src": "財務審核結果年報"
+},
+{
+"t": "認識審計部",
+"h": "javascript:void(0);",
+"src": "財務審核結果年報"
+},
+{
+"t": "審計長",
+"h": "http://www.audit.gov.tw/p/412-1000-138.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "審計制度簡介",
+"h": "http://www.audit.gov.tw/p/412-1000-139.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "使命及願景",
+"h": "https://www.audit.gov.tw/p/412-1000-140.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "審計機關地址電話",
+"h": "http://www.audit.gov.tw/p/412-1000-141.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "審計部位置圖",
+"h": "http://www.audit.gov.tw/p/412-1000-168.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "中華民國政府審計史記續編",
+"h": "http://www.audit.gov.tw/p/412-1000-271.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "人才招募",
+"h": "http://www.audit.gov.tw/p/412-1000-272.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "新聞與公告",
+"h": "javascript:void(0);",
+"src": "財務審核結果年報"
+},
+{
+"t": "新聞稿",
+"h": "http://www.audit.gov.tw/p/412-1000-104.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "重要政府審計資訊",
+"h": "http://www.audit.gov.tw/p/412-1000-103.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "立法院決議查核案件",
+"h": "https://www.audit.gov.tw/p/412-1000-489.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "政府重大政策重複缺失追蹤",
+"h": "https://www.audit.gov.tw/p/412-1000-558.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "一般公告",
+"h": "https://www.audit.gov.tw/p/412-1000-492.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "徵才訊息",
+"h": "https://www.audit.gov.tw/p/412-1000-347.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "審計報告",
+"h": "javascript:void(0);",
+"src": "財務審核結果年報"
+},
+{
+"t": "總決算審核報告",
+"h": "https://auditreport.audit.gov.tw/",
+"src": "財務審核結果年報"
+},
+{
+"t": "特別決算審核報告",
+"h": "https://auditreport.audit.gov.tw/",
+"src": "財務審核結果年報"
+},
+{
+"t": "半年結算查核報告",
+"h": "http://www.audit.gov.tw/p/412-1000-98.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "政府審計年報",
+"h": "http://www.audit.gov.tw/p/412-1000-105.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "財務審核結果年報",
+"h": "http://www.audit.gov.tw/p/412-1000-107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "鄉鎮市財務之審核",
+"h": "http://www.audit.gov.tw/p/412-1000-106.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "專案審計報告",
+"h": "http://www.audit.gov.tw/p/412-1000-158.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "永續發展審計報告",
+"h": "https://www.audit.gov.tw/p/412-1000-528.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "資訊公開",
+"h": "javascript:void(0);",
+"src": "財務審核結果年報"
+},
+{
+"t": "永續發展",
+"h": "https://www.audit.gov.tw/p/412-1000-445.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "檔案下載",
+"h": "http://www.audit.gov.tw/p/412-1000-110.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "政府資訊公開",
+"h": "http://www.audit.gov.tw/p/412-1000-109.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "政府審計季刊",
+"h": "https://press.audit.gov.tw/journal/",
+"src": "財務審核結果年報"
+},
+{
+"t": "審計機關創新專區",
+"h": "http://www.audit.gov.tw/p/412-1000-274.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "內部控制制度聲明書",
+"h": "http://www.audit.gov.tw/p/412-1000-187.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "數位審計",
+"h": "https://www.audit.gov.tw/p/412-1000-472.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "核心人權公約專區",
+"h": "https://www.audit.gov.tw/p/412-1000-433.php",
+"src": "財務審核結果年報"
+},
+{
+"t": "行政機關優良實務案例專區",
+"h": "https://www.audit.gov.tw/p/412-1000-548.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "安全及衛生防護措施年度書面報告專區",
+"h": "https://www.audit.gov.tw/p/412-1000-553.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "審計統計",
+"h": "javascript:void(0);",
+"src": "財務審核結果年報"
+},
+{
+"t": "審計統計資料查詢系統",
+"h": "https://statq.audit.gov.tw/",
+"src": "財務審核結果年報"
+},
+{
+"t": "視覺化專區",
+"h": "https://www.audit.gov.tw/p/412-1000-403.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "公務統計",
+"h": "https://www.audit.gov.tw/p/412-1000-455.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "性別統計",
+"h": "https://www.audit.gov.tw/p/412-1000-459.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "預告統計資料發布",
+"h": "https://www.stat.gov.tw/News_NoticeCalendar.aspx?n=3717&IsControl=0&_Hide=1&Dept=701000000A",
+"src": "財務審核結果年報"
+},
+{
+"t": "重要統計事項變更",
+"h": "https://www.audit.gov.tw/p/412-1000-418.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "公務統計方案",
+"h": "https://www.audit.gov.tw/p/p/404-1000-11841.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "統計名詞",
+"h": "https://www.audit.gov.tw/var/file/0/1000/img/776511008.odt",
+"src": "財務審核結果年報"
+},
+{
+"t": "公民參與",
+"h": "javascript:void(0);",
+"src": "財務審核結果年報"
+},
+{
+"t": "公民參與審計",
+"h": "https://www.audit.gov.tw/p/412-1000-467.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "審計建言信箱",
+"h": "https://www.audit.gov.tw/p/423-1000-7.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "全民監督信箱",
+"h": "https://www.audit.gov.tw/p/423-1000-6.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "審計法規",
+"h": "http://www.audit.gov.tw/p/412-1000-92.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": ":::",
+"h": "https://www.audit.gov.tw/p/412-1000-107.php?Lang=zh-tw#start-C",
+"src": "財務審核結果年報"
+},
+{
+"t": "首頁",
+"h": "https://www.audit.gov.tw/index.php",
+"src": "財務審核結果年報"
+},
+{
+"t": "審計報告",
+"h": "https://www.audit.gov.tw/p/412-1000-90.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "財務審核結果年報",
+"h": "https://www.audit.gov.tw/p/412-1000-107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國111年度直轄市及縣市地方決算審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-9378,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國111年度鄉鎮縣轄市財務審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-9377,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國110年度直轄市及縣市地方決算審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-8499,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國110年度鄉鎮縣轄市財務審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-8498,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國109年度直轄市及縣市地方決算審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-7523,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國109年度鄉鎮縣轄市財務審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-7522,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國108年度直轄市及縣市地方決算審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-6716,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國108年度鄉鎮縣轄市財務審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-6713,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國107年度直轄市及縣市地方決算審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-5919,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國107年度鄉鎮縣轄市財務審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-5918,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國106年度直轄市及縣市地方決算審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-5150,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國106年度鄉鎮縣轄市財務審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-5151,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國105年度直轄市及縣市地方決算審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-3959,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國105年度鄉鎮縣轄市財務審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-3958,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國104年度直轄市及縣市地方決算審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-3104,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國104年度鄉鎮縣轄市財務審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-3103,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國103年度直轄市及縣市地方決算審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-2420,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國103年度鄉鎮縣轄市財務審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-2419,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國102年度直轄市及縣市地方決算審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-1771,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國102年度鄉鎮縣轄市財務審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-1770,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "1",
+"h": "javascript:void(0)",
+"src": "財務審核結果年報"
+},
+{
+"t": "2",
+"h": "javascript:void(0)",
+"src": "財務審核結果年報"
+},
+{
+"t": ">",
+"h": "javascript:void(0)",
+"src": "財務審核結果年報"
+},
+{
+"t": ">>",
+"h": "javascript:void(0)",
+"src": "財務審核結果年報"
+},
+{
+"t": "繁體",
+"h": "",
+"src": "財務審核結果年報"
+},
+{
+"t": "English",
+"h": "https://www.audit.gov.tw/p/412-1000-107.php?Lang=zh-tw#",
+"src": "財務審核結果年報"
+},
+{
+"t": ":::",
+"h": "https://www.audit.gov.tw/p/412-1000-107.php?Lang=zh-tw#",
+"src": "財務審核結果年報"
+},
+{
+"t": "隱私權保護措施",
+"h": "https://www.audit.gov.tw/p/405-1000-893,c166.php",
+"src": "財務審核結果年報"
+},
+{
+"t": "網路安全措施",
+"h": "https://www.audit.gov.tw/p/405-1000-894,c166.php",
+"src": "財務審核結果年報"
+},
+{
+"t": "網站資料開放宣告",
+"h": "https://www.audit.gov.tw/p/405-1000-895,c166.php",
+"src": "財務審核結果年報"
+},
+{
+"t": "地圖",
+"h": "https://www.audit.gov.tw/p/412-1000-168.php",
+"src": "財務審核結果年報"
+},
+{
+"t": "無障礙網站",
+"h": "https://accessibility.moda.gov.tw/Applications/Detail?category=20251013091442",
+"src": "財務審核結果年報"
+},
+{
+"t": "審計部youtube頻道",
+"h": "https://www.youtube.com/channel/UCvcDjpz3sEz4YQQZ5Df-qUg",
+"src": "財務審核結果年報"
+},
+{
+"t": "審計部網站qrcode",
+"h": "https://www.audit.gov.tw/",
+"src": "財務審核結果年報"
+},
+{
+"t": "我的e政府",
+"h": "http://www.gov.tw/",
+"src": "財務審核結果年報"
+},
+{
+"t": "top",
+"h": "https://www.audit.gov.tw/p/412-1000-107.php?Lang=zh-tw#",
+"src": "財務審核結果年報"
+},
+{
+"t": "跳到主要內容區",
+"h": "https://www.audit.gov.tw/p/405-1000-9377,c107.php?Lang=zh-tw#start-C",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "回首頁",
+"h": "http://www.audit.gov.tw/",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": ":::",
+"h": "https://www.audit.gov.tw/p/405-1000-9377,c107.php?Lang=zh-tw#",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "首頁",
+"h": "https://www.audit.gov.tw/",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "網站導覽",
+"h": "https://www.audit.gov.tw/p/17-1000.php?Lang=zh-tw",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "English",
+"h": "https://www.audit.gov.tw/?Lang=en",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "×",
+"h": "javascript:void(0)",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "進階搜尋",
+"h": "https://www.google.com.tw/advanced_search?hl=zh-TW&as_q=&num=100&as_sitesearch=*.audit.gov.tw&cof=FORID%3A10&ie=UTF-8&sa=%E6%90%9C%E5%B0%8B&siteurl=www",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審計",
+"h": "https://cse.google.com/cse?cx=011342461998102075089:5ovsnhf_tke&q=%E5%AF%A9%E8%A8%88&oq=%E5%AF%A9%E8%A8%88&gs_l=partner.12...2583.2583.0.3357.1.1.0.0.0.0.40.40.1.1.0.gsnos%2Cn%3D13...0.40j1600j2..1ac.1.25.partner..1.0.0.FpmpVUSRe7s#gsc.tab=0&gsc.q=%E5%AF%A9%E8%A8%88&gsc.page=1",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審核",
+"h": "https://www.google.com.tw/search?hl=zh-TW&as_q=%E5%AF%A9%E6%A0%B8&as_epq=&as_oq=&as_eq=&as_nlo=&as_nhi=&lr=&cr=&as_qdr=all&as_sitesearch=*.audit.gov.tw&as_occt=any&safe=images&as_filetype=&tbs=",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "總決算",
+"h": "https://www.google.com.tw/search?hl=zh-TW&as_q=%E7%B8%BD%E6%B1%BA%E7%AE%97&as_epq=&as_oq=&as_eq=&as_nlo=&as_nhi=&lr=&cr=&as_qdr=all&as_sitesearch=*.audit.gov.tw&as_occt=any&safe=images&as_filetype=&tbs=",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "認識審計部",
+"h": "javascript:void(0);",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審計長",
+"h": "http://www.audit.gov.tw/p/412-1000-138.php?Lang=zh-tw",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審計制度簡介",
+"h": "http://www.audit.gov.tw/p/412-1000-139.php?Lang=zh-tw",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "使命及願景",
+"h": "https://www.audit.gov.tw/p/412-1000-140.php?Lang=zh-tw",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審計機關地址電話",
+"h": "http://www.audit.gov.tw/p/412-1000-141.php?Lang=zh-tw",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審計部位置圖",
+"h": "http://www.audit.gov.tw/p/412-1000-168.php?Lang=zh-tw",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "中華民國政府審計史記續編",
+"h": "http://www.audit.gov.tw/p/412-1000-271.php?Lang=zh-tw",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "人才招募",
+"h": "http://www.audit.gov.tw/p/412-1000-272.php?Lang=zh-tw",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "新聞與公告",
+"h": "javascript:void(0);",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "新聞稿",
+"h": "http://www.audit.gov.tw/p/412-1000-104.php?Lang=zh-tw",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "重要政府審計資訊",
+"h": "http://www.audit.gov.tw/p/412-1000-103.php?Lang=zh-tw",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "立法院決議查核案件",
+"h": "https://www.audit.gov.tw/p/412-1000-489.php?Lang=zh-tw",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "政府重大政策重複缺失追蹤",
+"h": "https://www.audit.gov.tw/p/412-1000-558.php?Lang=zh-tw",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "一般公告",
+"h": "https://www.audit.gov.tw/p/412-1000-492.php?Lang=zh-tw",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "徵才訊息",
+"h": "https://www.audit.gov.tw/p/412-1000-347.php?Lang=zh-tw",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審計報告",
+"h": "javascript:void(0);",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "總決算審核報告",
+"h": "https://auditreport.audit.gov.tw/",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "特別決算審核報告",
+"h": "https://auditreport.audit.gov.tw/",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "半年結算查核報告",
+"h": "http://www.audit.gov.tw/p/412-1000-98.php?Lang=zh-tw",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "政府審計年報",
+"h": "http://www.audit.gov.tw/p/412-1000-105.php?Lang=zh-tw",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "財務審核結果年報",
+"h": "http://www.audit.gov.tw/p/412-1000-107.php?Lang=zh-tw",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "鄉鎮市財務之審核",
+"h": "http://www.audit.gov.tw/p/412-1000-106.php?Lang=zh-tw",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "專案審計報告",
+"h": "http://www.audit.gov.tw/p/412-1000-158.php?Lang=zh-tw",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "永續發展審計報告",
+"h": "https://www.audit.gov.tw/p/412-1000-528.php?Lang=zh-tw",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "資訊公開",
+"h": "javascript:void(0);",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "永續發展",
+"h": "https://www.audit.gov.tw/p/412-1000-445.php?Lang=zh-tw",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "檔案下載",
+"h": "http://www.audit.gov.tw/p/412-1000-110.php?Lang=zh-tw",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "政府資訊公開",
+"h": "http://www.audit.gov.tw/p/412-1000-109.php?Lang=zh-tw",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "政府審計季刊",
+"h": "https://press.audit.gov.tw/journal/",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審計機關創新專區",
+"h": "http://www.audit.gov.tw/p/412-1000-274.php?Lang=zh-tw",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "內部控制制度聲明書",
+"h": "http://www.audit.gov.tw/p/412-1000-187.php?Lang=zh-tw",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "數位審計",
+"h": "https://www.audit.gov.tw/p/412-1000-472.php?Lang=zh-tw",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "核心人權公約專區",
+"h": "https://www.audit.gov.tw/p/412-1000-433.php",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "行政機關優良實務案例專區",
+"h": "https://www.audit.gov.tw/p/412-1000-548.php?Lang=zh-tw",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "安全及衛生防護措施年度書面報告專區",
+"h": "https://www.audit.gov.tw/p/412-1000-553.php?Lang=zh-tw",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審計統計",
+"h": "javascript:void(0);",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審計統計資料查詢系統",
+"h": "https://statq.audit.gov.tw/",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "視覺化專區",
+"h": "https://www.audit.gov.tw/p/412-1000-403.php?Lang=zh-tw",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "公務統計",
+"h": "https://www.audit.gov.tw/p/412-1000-455.php?Lang=zh-tw",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "性別統計",
+"h": "https://www.audit.gov.tw/p/412-1000-459.php?Lang=zh-tw",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "預告統計資料發布",
+"h": "https://www.stat.gov.tw/News_NoticeCalendar.aspx?n=3717&IsControl=0&_Hide=1&Dept=701000000A",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "重要統計事項變更",
+"h": "https://www.audit.gov.tw/p/412-1000-418.php?Lang=zh-tw",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "公務統計方案",
+"h": "https://www.audit.gov.tw/p/p/404-1000-11841.php?Lang=zh-tw",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "統計名詞",
+"h": "https://www.audit.gov.tw/var/file/0/1000/img/776511008.odt",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "公民參與",
+"h": "javascript:void(0);",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "公民參與審計",
+"h": "https://www.audit.gov.tw/p/412-1000-467.php?Lang=zh-tw",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審計建言信箱",
+"h": "https://www.audit.gov.tw/p/423-1000-7.php?Lang=zh-tw",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "全民監督信箱",
+"h": "https://www.audit.gov.tw/p/423-1000-6.php?Lang=zh-tw",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審計法規",
+"h": "http://www.audit.gov.tw/p/412-1000-92.php?Lang=zh-tw",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": ":::",
+"h": "https://www.audit.gov.tw/p/405-1000-9377,c107.php?Lang=zh-tw#start-C",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "首頁",
+"h": "https://www.audit.gov.tw/index.php",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審計報告",
+"h": "https://www.audit.gov.tw/p/412-1000-90.php?Lang=zh-tw",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "財務審核結果年報",
+"h": "https://www.audit.gov.tw/p/412-1000-107.php?Lang=zh-tw",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "民國111年度鄉鎮縣轄市財務審核結果年報.pdf",
+"h": "https://www.audit.gov.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelkxTDNCMFlWODBOalkyTlY4eE5UZzFNalEyWHpNNE5EYzFMbkJrWmc9PQ==&fname=WSGGIGGHYW4411HHHCLKOKMO1430TSWW14B040YSQP05LK40FCNKYWB4WWOOB0OKLOTSCDMLDG0454TXFCOKTSHGSTICFHIGUTMPDCTSPOB001UWFHHGCDPKMK44ZT15DGA0NOXTVWKO35WS1434SW10NPGDQPROLKB44554IGDC45US4444ZXXX4410DGGD14JGSWLKIGROB1WWUTMP04QP3430VSQKECKK01SSSSLK41XXEDHGTSMOPK30VXKOKLB0QL14LPZTQP21UWTSVTKLSS54PKSW&cg=107",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "2022_AnnualReport_電子書.zip",
+"h": "https://www.audit.gov.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelkxTDNCMFlWODBOalk0TlY4NE1qa3pNVGsxWHpnNE1ETTJMbnBwY0E9PQ==&fname=0054ROB0RKSSTXHHIG04KKLOPK30TWLKWSUW04HCUTQLXWFCA0QOCDB4ECOKWXOKSSCCGD35HCFG4124MKSWTSIGWXICB1B1ZTVXXWA034MKZS01USOOXSFCYWKKCDLLTSLKQKTXKKHCHGXS14JCNKIC2135A5A4&cg=107",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "友善列印",
+"h": "https://www.audit.gov.tw/p/16-1000-9377.php?Lang=zh-tw",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "分享至社群",
+"h": "mailto:?subject=%E5%AF%A9%E8%A8%88%E9%83%A8%E6%96%87%E7%AB%A0%E5%88%86%E4%BA%AB&body=%E6%82%A8%E7%9A%84%E5%A5%BD%E6%9C%8B%E5%8F%8B%E6%8E%A8%E8%96%A6%E9%80%99%E7%AF%87%E6%96%87%E7%AB%A0%E7%B5%A6%E6%82%A8%EF%BC%8C%E8%AB%8B%E9%80%A3%E7%B5%90%E5%88%B0https%3A%2F%2Fwww.audit.gov.tw%2Fp%2F405-1000-9377%2Cc107.php%3FLang%3Dzh-tw%26ct%3D",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "分享至社群",
+"h": "http://line.naver.jp/R/msg/text/?%E6%B0%91%E5%9C%8B111%E5%B9%B4%E5%BA%A6%E9%84%89%E9%8E%AE%E7%B8%A3%E8%BD%84%E5%B8%82%E8%B2%A1%E5%8B%99%E5%AF%A9%E6%A0%B8%E7%B5%90%E6%9E%9C%E5%B9%B4%E5%A0%B1%20-%20%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B%E5%AF%A9%E8%A8%88%E9%83%A8%E5%85%A8%E7%90%83%E8%B3%87%E8%A8%8A%E7%B6%B2%E3%80%80%20https%3A%2F%2Fwww.audit.gov.tw%2Fp%2F405-1000-9377%2Cc107.php%3FLang%3Dzh-tw%26ct%3D",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "分享至社群",
+"h": "http://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.audit.gov.tw%2Fp%2F405-1000-9377%2Cc107.php%3FLang%3Dzh-tw%26ct%3D&t=%E6%B0%91%E5%9C%8B111%E5%B9%B4%E5%BA%A6%E9%84%89%E9%8E%AE%E7%B8%A3%E8%BD%84%E5%B8%82%E8%B2%A1%E5%8B%99%E5%AF%A9%E6%A0%B8%E7%B5%90%E6%9E%9C%E5%B9%B4%E5%A0%B1%20-%20%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B%E5%AF%A9%E8%A8%88%E9%83%A8%E5%85%A8%E7%90%83%E8%B3%87%E8%A8%8A%E7%B6%B2%E3%80%80",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "分享至社群",
+"h": "http://twitter.com/home?status=%E6%B0%91%E5%9C%8B111%E5%B9%B4%E5%BA%A6%E9%84%89%E9%8E%AE%E7%B8%A3%E8%BD%84%E5%B8%82%E8%B2%A1%E5%8B%99%E5%AF%A9%E6%A0%B8%E7%B5%90%E6%9E%9C%E5%B9%B4%E5%A0%B1%20-%20%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B%E5%AF%A9%E8%A8%88%E9%83%A8%E5%85%A8%E7%90%83%E8%B3%87%E8%A8%8A%E7%B6%B2%E3%80%80%20https%3A%2F%2Fwww.audit.gov.tw%2Fp%2F405-1000-9377%2Cc107.php%3FLang%3Dzh-tw%26ct%3D",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "繁體",
+"h": "",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "English",
+"h": "https://www.audit.gov.tw/p/405-1000-9377,c107.php?Lang=zh-tw#",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": ":::",
+"h": "https://www.audit.gov.tw/p/405-1000-9377,c107.php?Lang=zh-tw#",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "隱私權保護措施",
+"h": "https://www.audit.gov.tw/p/405-1000-893,c166.php",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "網路安全措施",
+"h": "https://www.audit.gov.tw/p/405-1000-894,c166.php",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "網站資料開放宣告",
+"h": "https://www.audit.gov.tw/p/405-1000-895,c166.php",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "地圖",
+"h": "https://www.audit.gov.tw/p/412-1000-168.php",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "無障礙網站",
+"h": "https://accessibility.moda.gov.tw/Applications/Detail?category=20251013091442",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審計部youtube頻道",
+"h": "https://www.youtube.com/channel/UCvcDjpz3sEz4YQQZ5Df-qUg",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審計部網站qrcode",
+"h": "https://www.audit.gov.tw/",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "我的e政府",
+"h": "http://www.gov.tw/",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "top",
+"h": "https://www.audit.gov.tw/p/405-1000-9377,c107.php?Lang=zh-tw#",
+"src": "民國111年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "跳到主要內容區",
+"h": "https://www.audit.gov.tw/p/405-1000-8498,c107.php?Lang=zh-tw#start-C",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "回首頁",
+"h": "http://www.audit.gov.tw/",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": ":::",
+"h": "https://www.audit.gov.tw/p/405-1000-8498,c107.php?Lang=zh-tw#",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "首頁",
+"h": "https://www.audit.gov.tw/",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "網站導覽",
+"h": "https://www.audit.gov.tw/p/17-1000.php?Lang=zh-tw",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "English",
+"h": "https://www.audit.gov.tw/?Lang=en",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "×",
+"h": "javascript:void(0)",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "進階搜尋",
+"h": "https://www.google.com.tw/advanced_search?hl=zh-TW&as_q=&num=100&as_sitesearch=*.audit.gov.tw&cof=FORID%3A10&ie=UTF-8&sa=%E6%90%9C%E5%B0%8B&siteurl=www",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審計",
+"h": "https://cse.google.com/cse?cx=011342461998102075089:5ovsnhf_tke&q=%E5%AF%A9%E8%A8%88&oq=%E5%AF%A9%E8%A8%88&gs_l=partner.12...2583.2583.0.3357.1.1.0.0.0.0.40.40.1.1.0.gsnos%2Cn%3D13...0.40j1600j2..1ac.1.25.partner..1.0.0.FpmpVUSRe7s#gsc.tab=0&gsc.q=%E5%AF%A9%E8%A8%88&gsc.page=1",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審核",
+"h": "https://www.google.com.tw/search?hl=zh-TW&as_q=%E5%AF%A9%E6%A0%B8&as_epq=&as_oq=&as_eq=&as_nlo=&as_nhi=&lr=&cr=&as_qdr=all&as_sitesearch=*.audit.gov.tw&as_occt=any&safe=images&as_filetype=&tbs=",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "總決算",
+"h": "https://www.google.com.tw/search?hl=zh-TW&as_q=%E7%B8%BD%E6%B1%BA%E7%AE%97&as_epq=&as_oq=&as_eq=&as_nlo=&as_nhi=&lr=&cr=&as_qdr=all&as_sitesearch=*.audit.gov.tw&as_occt=any&safe=images&as_filetype=&tbs=",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "認識審計部",
+"h": "javascript:void(0);",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審計長",
+"h": "http://www.audit.gov.tw/p/412-1000-138.php?Lang=zh-tw",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審計制度簡介",
+"h": "http://www.audit.gov.tw/p/412-1000-139.php?Lang=zh-tw",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "使命及願景",
+"h": "https://www.audit.gov.tw/p/412-1000-140.php?Lang=zh-tw",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審計機關地址電話",
+"h": "http://www.audit.gov.tw/p/412-1000-141.php?Lang=zh-tw",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審計部位置圖",
+"h": "http://www.audit.gov.tw/p/412-1000-168.php?Lang=zh-tw",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "中華民國政府審計史記續編",
+"h": "http://www.audit.gov.tw/p/412-1000-271.php?Lang=zh-tw",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "人才招募",
+"h": "http://www.audit.gov.tw/p/412-1000-272.php?Lang=zh-tw",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "新聞與公告",
+"h": "javascript:void(0);",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "新聞稿",
+"h": "http://www.audit.gov.tw/p/412-1000-104.php?Lang=zh-tw",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "重要政府審計資訊",
+"h": "http://www.audit.gov.tw/p/412-1000-103.php?Lang=zh-tw",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "立法院決議查核案件",
+"h": "https://www.audit.gov.tw/p/412-1000-489.php?Lang=zh-tw",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "政府重大政策重複缺失追蹤",
+"h": "https://www.audit.gov.tw/p/412-1000-558.php?Lang=zh-tw",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "一般公告",
+"h": "https://www.audit.gov.tw/p/412-1000-492.php?Lang=zh-tw",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "徵才訊息",
+"h": "https://www.audit.gov.tw/p/412-1000-347.php?Lang=zh-tw",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審計報告",
+"h": "javascript:void(0);",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "總決算審核報告",
+"h": "https://auditreport.audit.gov.tw/",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "特別決算審核報告",
+"h": "https://auditreport.audit.gov.tw/",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "半年結算查核報告",
+"h": "http://www.audit.gov.tw/p/412-1000-98.php?Lang=zh-tw",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "政府審計年報",
+"h": "http://www.audit.gov.tw/p/412-1000-105.php?Lang=zh-tw",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "財務審核結果年報",
+"h": "http://www.audit.gov.tw/p/412-1000-107.php?Lang=zh-tw",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "鄉鎮市財務之審核",
+"h": "http://www.audit.gov.tw/p/412-1000-106.php?Lang=zh-tw",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "專案審計報告",
+"h": "http://www.audit.gov.tw/p/412-1000-158.php?Lang=zh-tw",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "永續發展審計報告",
+"h": "https://www.audit.gov.tw/p/412-1000-528.php?Lang=zh-tw",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "資訊公開",
+"h": "javascript:void(0);",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "永續發展",
+"h": "https://www.audit.gov.tw/p/412-1000-445.php?Lang=zh-tw",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "檔案下載",
+"h": "http://www.audit.gov.tw/p/412-1000-110.php?Lang=zh-tw",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "政府資訊公開",
+"h": "http://www.audit.gov.tw/p/412-1000-109.php?Lang=zh-tw",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "政府審計季刊",
+"h": "https://press.audit.gov.tw/journal/",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審計機關創新專區",
+"h": "http://www.audit.gov.tw/p/412-1000-274.php?Lang=zh-tw",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "內部控制制度聲明書",
+"h": "http://www.audit.gov.tw/p/412-1000-187.php?Lang=zh-tw",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "數位審計",
+"h": "https://www.audit.gov.tw/p/412-1000-472.php?Lang=zh-tw",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "核心人權公約專區",
+"h": "https://www.audit.gov.tw/p/412-1000-433.php",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "行政機關優良實務案例專區",
+"h": "https://www.audit.gov.tw/p/412-1000-548.php?Lang=zh-tw",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "安全及衛生防護措施年度書面報告專區",
+"h": "https://www.audit.gov.tw/p/412-1000-553.php?Lang=zh-tw",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審計統計",
+"h": "javascript:void(0);",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審計統計資料查詢系統",
+"h": "https://statq.audit.gov.tw/",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "視覺化專區",
+"h": "https://www.audit.gov.tw/p/412-1000-403.php?Lang=zh-tw",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "公務統計",
+"h": "https://www.audit.gov.tw/p/412-1000-455.php?Lang=zh-tw",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "性別統計",
+"h": "https://www.audit.gov.tw/p/412-1000-459.php?Lang=zh-tw",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "預告統計資料發布",
+"h": "https://www.stat.gov.tw/News_NoticeCalendar.aspx?n=3717&IsControl=0&_Hide=1&Dept=701000000A",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "重要統計事項變更",
+"h": "https://www.audit.gov.tw/p/412-1000-418.php?Lang=zh-tw",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "公務統計方案",
+"h": "https://www.audit.gov.tw/p/p/404-1000-11841.php?Lang=zh-tw",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "統計名詞",
+"h": "https://www.audit.gov.tw/var/file/0/1000/img/776511008.odt",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "公民參與",
+"h": "javascript:void(0);",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "公民參與審計",
+"h": "https://www.audit.gov.tw/p/412-1000-467.php?Lang=zh-tw",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審計建言信箱",
+"h": "https://www.audit.gov.tw/p/423-1000-7.php?Lang=zh-tw",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "全民監督信箱",
+"h": "https://www.audit.gov.tw/p/423-1000-6.php?Lang=zh-tw",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審計法規",
+"h": "http://www.audit.gov.tw/p/412-1000-92.php?Lang=zh-tw",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": ":::",
+"h": "https://www.audit.gov.tw/p/405-1000-8498,c107.php?Lang=zh-tw#start-C",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "首頁",
+"h": "https://www.audit.gov.tw/index.php",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審計報告",
+"h": "https://www.audit.gov.tw/p/412-1000-90.php?Lang=zh-tw",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "財務審核結果年報",
+"h": "https://www.audit.gov.tw/p/412-1000-107.php?Lang=zh-tw",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "110年度鄉鎮縣轄市財務審核結果年報.pdf",
+"h": "https://www.audit.gov.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelU1TDNCMFlWODBOVFF5TTE4eU5qTXpOVFF6WHpBMU16QXdMbkJrWmc9PQ==&fname=WW54RPOKRK44OOYXHCLKWTJGRK30WT14QO34DCKKQP25OO40YSYWLLB4WS10KLSSRKWWTX35VS04MOKK34PKTS14B0MONOXSA1JDXWTSSWMKCDUWUSGGCDPK4444HHYXDGA041GDTWMOHCNPDGB044NKTXGDQP21LKECYWSWGGOKCDUSYW54TX0544LKYSGDMKOKOO2020RO14WSMLGD04FCXWB4LKDGIGPODGA0WWQOPP1000ZSIGMOIGDGJDLO&cg=107",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "110年度鄉鎮縣轄市財務審核結果年報.docx",
+"h": "https://www.audit.gov.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelU1TDNCMFlWODBOVFF5TkY4ME9UYzFOekV5WHpBMU16QXdMbVJ2WTNnPQ==&fname=WW54RPOKRK44OOYXHCLKWTJGRK30WT14QO34DCKKQP25OO40YSYWLLB4WS10KLSSRKWWTX35VS04MOKK34PKTS14B0MONOXSA1JDXWTSSWMKCDUWUSGGCDPK4444HHYXDGA041GDTWMOHCNPDGB044NKTXGDQP21LKECYWSWGGOKCDUSYW54TX0544LKYSGDMKOKOO2020RO14WSMLGD04FCXWB4LKDGIGPODGA0YWQOLLHHDGPORKYWMKMOJD24&cg=107",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "友善列印",
+"h": "https://www.audit.gov.tw/p/16-1000-8498.php?Lang=zh-tw",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "分享至社群",
+"h": "mailto:?subject=%E5%AF%A9%E8%A8%88%E9%83%A8%E6%96%87%E7%AB%A0%E5%88%86%E4%BA%AB&body=%E6%82%A8%E7%9A%84%E5%A5%BD%E6%9C%8B%E5%8F%8B%E6%8E%A8%E8%96%A6%E9%80%99%E7%AF%87%E6%96%87%E7%AB%A0%E7%B5%A6%E6%82%A8%EF%BC%8C%E8%AB%8B%E9%80%A3%E7%B5%90%E5%88%B0https%3A%2F%2Fwww.audit.gov.tw%2Fp%2F405-1000-8498%2Cc107.php%3FLang%3Dzh-tw%26ct%3D",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "分享至社群",
+"h": "http://line.naver.jp/R/msg/text/?%E6%B0%91%E5%9C%8B110%E5%B9%B4%E5%BA%A6%E9%84%89%E9%8E%AE%E7%B8%A3%E8%BD%84%E5%B8%82%E8%B2%A1%E5%8B%99%E5%AF%A9%E6%A0%B8%E7%B5%90%E6%9E%9C%E5%B9%B4%E5%A0%B1%20-%20%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B%E5%AF%A9%E8%A8%88%E9%83%A8%E5%85%A8%E7%90%83%E8%B3%87%E8%A8%8A%E7%B6%B2%E3%80%80%20https%3A%2F%2Fwww.audit.gov.tw%2Fp%2F405-1000-8498%2Cc107.php%3FLang%3Dzh-tw%26ct%3D",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "分享至社群",
+"h": "http://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.audit.gov.tw%2Fp%2F405-1000-8498%2Cc107.php%3FLang%3Dzh-tw%26ct%3D&t=%E6%B0%91%E5%9C%8B110%E5%B9%B4%E5%BA%A6%E9%84%89%E9%8E%AE%E7%B8%A3%E8%BD%84%E5%B8%82%E8%B2%A1%E5%8B%99%E5%AF%A9%E6%A0%B8%E7%B5%90%E6%9E%9C%E5%B9%B4%E5%A0%B1%20-%20%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B%E5%AF%A9%E8%A8%88%E9%83%A8%E5%85%A8%E7%90%83%E8%B3%87%E8%A8%8A%E7%B6%B2%E3%80%80",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "分享至社群",
+"h": "http://twitter.com/home?status=%E6%B0%91%E5%9C%8B110%E5%B9%B4%E5%BA%A6%E9%84%89%E9%8E%AE%E7%B8%A3%E8%BD%84%E5%B8%82%E8%B2%A1%E5%8B%99%E5%AF%A9%E6%A0%B8%E7%B5%90%E6%9E%9C%E5%B9%B4%E5%A0%B1%20-%20%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B%E5%AF%A9%E8%A8%88%E9%83%A8%E5%85%A8%E7%90%83%E8%B3%87%E8%A8%8A%E7%B6%B2%E3%80%80%20https%3A%2F%2Fwww.audit.gov.tw%2Fp%2F405-1000-8498%2Cc107.php%3FLang%3Dzh-tw%26ct%3D",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "繁體",
+"h": "",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "English",
+"h": "https://www.audit.gov.tw/p/405-1000-8498,c107.php?Lang=zh-tw#",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": ":::",
+"h": "https://www.audit.gov.tw/p/405-1000-8498,c107.php?Lang=zh-tw#",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "隱私權保護措施",
+"h": "https://www.audit.gov.tw/p/405-1000-893,c166.php",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "網路安全措施",
+"h": "https://www.audit.gov.tw/p/405-1000-894,c166.php",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "網站資料開放宣告",
+"h": "https://www.audit.gov.tw/p/405-1000-895,c166.php",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "地圖",
+"h": "https://www.audit.gov.tw/p/412-1000-168.php",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "無障礙網站",
+"h": "https://accessibility.moda.gov.tw/Applications/Detail?category=20251013091442",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審計部youtube頻道",
+"h": "https://www.youtube.com/channel/UCvcDjpz3sEz4YQQZ5Df-qUg",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審計部網站qrcode",
+"h": "https://www.audit.gov.tw/",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "我的e政府",
+"h": "http://www.gov.tw/",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "top",
+"h": "https://www.audit.gov.tw/p/405-1000-8498,c107.php?Lang=zh-tw#",
+"src": "民國110年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "跳到主要內容區",
+"h": "https://www.audit.gov.tw/p/405-1000-7522,c107.php?Lang=zh-tw#start-C",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "回首頁",
+"h": "http://www.audit.gov.tw/",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": ":::",
+"h": "https://www.audit.gov.tw/p/405-1000-7522,c107.php?Lang=zh-tw#",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "首頁",
+"h": "https://www.audit.gov.tw/",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "網站導覽",
+"h": "https://www.audit.gov.tw/p/17-1000.php?Lang=zh-tw",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "English",
+"h": "https://www.audit.gov.tw/?Lang=en",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "×",
+"h": "javascript:void(0)",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "進階搜尋",
+"h": "https://www.google.com.tw/advanced_search?hl=zh-TW&as_q=&num=100&as_sitesearch=*.audit.gov.tw&cof=FORID%3A10&ie=UTF-8&sa=%E6%90%9C%E5%B0%8B&siteurl=www",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審計",
+"h": "https://cse.google.com/cse?cx=011342461998102075089:5ovsnhf_tke&q=%E5%AF%A9%E8%A8%88&oq=%E5%AF%A9%E8%A8%88&gs_l=partner.12...2583.2583.0.3357.1.1.0.0.0.0.40.40.1.1.0.gsnos%2Cn%3D13...0.40j1600j2..1ac.1.25.partner..1.0.0.FpmpVUSRe7s#gsc.tab=0&gsc.q=%E5%AF%A9%E8%A8%88&gsc.page=1",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審核",
+"h": "https://www.google.com.tw/search?hl=zh-TW&as_q=%E5%AF%A9%E6%A0%B8&as_epq=&as_oq=&as_eq=&as_nlo=&as_nhi=&lr=&cr=&as_qdr=all&as_sitesearch=*.audit.gov.tw&as_occt=any&safe=images&as_filetype=&tbs=",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "總決算",
+"h": "https://www.google.com.tw/search?hl=zh-TW&as_q=%E7%B8%BD%E6%B1%BA%E7%AE%97&as_epq=&as_oq=&as_eq=&as_nlo=&as_nhi=&lr=&cr=&as_qdr=all&as_sitesearch=*.audit.gov.tw&as_occt=any&safe=images&as_filetype=&tbs=",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "認識審計部",
+"h": "javascript:void(0);",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審計長",
+"h": "http://www.audit.gov.tw/p/412-1000-138.php?Lang=zh-tw",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審計制度簡介",
+"h": "http://www.audit.gov.tw/p/412-1000-139.php?Lang=zh-tw",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "使命及願景",
+"h": "https://www.audit.gov.tw/p/412-1000-140.php?Lang=zh-tw",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審計機關地址電話",
+"h": "http://www.audit.gov.tw/p/412-1000-141.php?Lang=zh-tw",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審計部位置圖",
+"h": "http://www.audit.gov.tw/p/412-1000-168.php?Lang=zh-tw",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "中華民國政府審計史記續編",
+"h": "http://www.audit.gov.tw/p/412-1000-271.php?Lang=zh-tw",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "人才招募",
+"h": "http://www.audit.gov.tw/p/412-1000-272.php?Lang=zh-tw",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "新聞與公告",
+"h": "javascript:void(0);",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "新聞稿",
+"h": "http://www.audit.gov.tw/p/412-1000-104.php?Lang=zh-tw",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "重要政府審計資訊",
+"h": "http://www.audit.gov.tw/p/412-1000-103.php?Lang=zh-tw",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "立法院決議查核案件",
+"h": "https://www.audit.gov.tw/p/412-1000-489.php?Lang=zh-tw",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "政府重大政策重複缺失追蹤",
+"h": "https://www.audit.gov.tw/p/412-1000-558.php?Lang=zh-tw",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "一般公告",
+"h": "https://www.audit.gov.tw/p/412-1000-492.php?Lang=zh-tw",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "徵才訊息",
+"h": "https://www.audit.gov.tw/p/412-1000-347.php?Lang=zh-tw",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審計報告",
+"h": "javascript:void(0);",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "總決算審核報告",
+"h": "https://auditreport.audit.gov.tw/",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "特別決算審核報告",
+"h": "https://auditreport.audit.gov.tw/",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "半年結算查核報告",
+"h": "http://www.audit.gov.tw/p/412-1000-98.php?Lang=zh-tw",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "政府審計年報",
+"h": "http://www.audit.gov.tw/p/412-1000-105.php?Lang=zh-tw",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "財務審核結果年報",
+"h": "http://www.audit.gov.tw/p/412-1000-107.php?Lang=zh-tw",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "鄉鎮市財務之審核",
+"h": "http://www.audit.gov.tw/p/412-1000-106.php?Lang=zh-tw",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "專案審計報告",
+"h": "http://www.audit.gov.tw/p/412-1000-158.php?Lang=zh-tw",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "永續發展審計報告",
+"h": "https://www.audit.gov.tw/p/412-1000-528.php?Lang=zh-tw",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "資訊公開",
+"h": "javascript:void(0);",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "永續發展",
+"h": "https://www.audit.gov.tw/p/412-1000-445.php?Lang=zh-tw",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "檔案下載",
+"h": "http://www.audit.gov.tw/p/412-1000-110.php?Lang=zh-tw",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "政府資訊公開",
+"h": "http://www.audit.gov.tw/p/412-1000-109.php?Lang=zh-tw",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "政府審計季刊",
+"h": "https://press.audit.gov.tw/journal/",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審計機關創新專區",
+"h": "http://www.audit.gov.tw/p/412-1000-274.php?Lang=zh-tw",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "內部控制制度聲明書",
+"h": "http://www.audit.gov.tw/p/412-1000-187.php?Lang=zh-tw",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "數位審計",
+"h": "https://www.audit.gov.tw/p/412-1000-472.php?Lang=zh-tw",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "核心人權公約專區",
+"h": "https://www.audit.gov.tw/p/412-1000-433.php",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "行政機關優良實務案例專區",
+"h": "https://www.audit.gov.tw/p/412-1000-548.php?Lang=zh-tw",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "安全及衛生防護措施年度書面報告專區",
+"h": "https://www.audit.gov.tw/p/412-1000-553.php?Lang=zh-tw",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審計統計",
+"h": "javascript:void(0);",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審計統計資料查詢系統",
+"h": "https://statq.audit.gov.tw/",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "視覺化專區",
+"h": "https://www.audit.gov.tw/p/412-1000-403.php?Lang=zh-tw",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "公務統計",
+"h": "https://www.audit.gov.tw/p/412-1000-455.php?Lang=zh-tw",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "性別統計",
+"h": "https://www.audit.gov.tw/p/412-1000-459.php?Lang=zh-tw",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "預告統計資料發布",
+"h": "https://www.stat.gov.tw/News_NoticeCalendar.aspx?n=3717&IsControl=0&_Hide=1&Dept=701000000A",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "重要統計事項變更",
+"h": "https://www.audit.gov.tw/p/412-1000-418.php?Lang=zh-tw",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "公務統計方案",
+"h": "https://www.audit.gov.tw/p/p/404-1000-11841.php?Lang=zh-tw",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "統計名詞",
+"h": "https://www.audit.gov.tw/var/file/0/1000/img/776511008.odt",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "公民參與",
+"h": "javascript:void(0);",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "公民參與審計",
+"h": "https://www.audit.gov.tw/p/412-1000-467.php?Lang=zh-tw",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審計建言信箱",
+"h": "https://www.audit.gov.tw/p/423-1000-7.php?Lang=zh-tw",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "全民監督信箱",
+"h": "https://www.audit.gov.tw/p/423-1000-6.php?Lang=zh-tw",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審計法規",
+"h": "http://www.audit.gov.tw/p/412-1000-92.php?Lang=zh-tw",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": ":::",
+"h": "https://www.audit.gov.tw/p/405-1000-7522,c107.php?Lang=zh-tw#start-C",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "首頁",
+"h": "https://www.audit.gov.tw/index.php",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審計報告",
+"h": "https://www.audit.gov.tw/p/412-1000-90.php?Lang=zh-tw",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "財務審核結果年報",
+"h": "https://www.audit.gov.tw/p/412-1000-107.php?Lang=zh-tw",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "109年度鄉鎮縣轄市財務審核結果年報.pdf",
+"h": "https://www.audit.gov.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelV6TDNCMFlWODBNemszTVY4M01qZ3lNVFV5WHpJMU5qQTFMbkJrWmc9PQ==&fname=WW54RPOKNPSS41KKHCLKWTJGRK30WT14QO34DCKKQP25OO40YSYWLLB4WS10KLSSRKWWTX35VS04MOKK34PKTS14B0MONOXSA1JDXWTSSWMKCDUWUSGGCDPK4444HHYXDGA041GDTWMOHCNPDGB044NKTXGDQP21LKECYWSWGGOKCDUSYW54TX0544LKYSGDMKOKOO2020RO14WSMLGD04FCXWB4LKDGIGPODGA0WWQOPP1000ZSIGMOIGDGJDLO&cg=107",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "109年度鄉鎮縣轄市財務審核結果年報.docx",
+"h": "https://www.audit.gov.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelV6TDNCMFlWODBNemszTWw4M05qRTBNelE0WHpJMU5qQTJMbVJ2WTNnPQ==&fname=WW54RPOKNPSS41KKHCLKWTJGRK30WT14QO34DCKKQP25OO40YSYWLLB4WS10KLSSRKWWTX35VS04MOKK34PKTS14B0MONOXSA1JDXWTSSWMKCDUWUSGGCDPK4444HHYXDGA041GDTWMOHCNPDGB044NKTXGDQP21LKECYWSWGGOKCDUSYW54TX0544LKYSGDMKOKOO2020RO14WSMLGD04FCXWB4LKDGIGPODGA0YWQOLLHHDGPORKYWMKMOJD24&cg=107",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "友善列印",
+"h": "https://www.audit.gov.tw/p/16-1000-7522.php?Lang=zh-tw",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "分享至社群",
+"h": "mailto:?subject=%E5%AF%A9%E8%A8%88%E9%83%A8%E6%96%87%E7%AB%A0%E5%88%86%E4%BA%AB&body=%E6%82%A8%E7%9A%84%E5%A5%BD%E6%9C%8B%E5%8F%8B%E6%8E%A8%E8%96%A6%E9%80%99%E7%AF%87%E6%96%87%E7%AB%A0%E7%B5%A6%E6%82%A8%EF%BC%8C%E8%AB%8B%E9%80%A3%E7%B5%90%E5%88%B0https%3A%2F%2Fwww.audit.gov.tw%2Fp%2F405-1000-7522%2Cc107.php%3FLang%3Dzh-tw%26ct%3D",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "分享至社群",
+"h": "http://line.naver.jp/R/msg/text/?%E6%B0%91%E5%9C%8B109%E5%B9%B4%E5%BA%A6%E9%84%89%E9%8E%AE%E7%B8%A3%E8%BD%84%E5%B8%82%E8%B2%A1%E5%8B%99%E5%AF%A9%E6%A0%B8%E7%B5%90%E6%9E%9C%E5%B9%B4%E5%A0%B1%20-%20%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B%E5%AF%A9%E8%A8%88%E9%83%A8%E5%85%A8%E7%90%83%E8%B3%87%E8%A8%8A%E7%B6%B2%E3%80%80%20https%3A%2F%2Fwww.audit.gov.tw%2Fp%2F405-1000-7522%2Cc107.php%3FLang%3Dzh-tw%26ct%3D",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "分享至社群",
+"h": "http://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.audit.gov.tw%2Fp%2F405-1000-7522%2Cc107.php%3FLang%3Dzh-tw%26ct%3D&t=%E6%B0%91%E5%9C%8B109%E5%B9%B4%E5%BA%A6%E9%84%89%E9%8E%AE%E7%B8%A3%E8%BD%84%E5%B8%82%E8%B2%A1%E5%8B%99%E5%AF%A9%E6%A0%B8%E7%B5%90%E6%9E%9C%E5%B9%B4%E5%A0%B1%20-%20%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B%E5%AF%A9%E8%A8%88%E9%83%A8%E5%85%A8%E7%90%83%E8%B3%87%E8%A8%8A%E7%B6%B2%E3%80%80",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "分享至社群",
+"h": "http://twitter.com/home?status=%E6%B0%91%E5%9C%8B109%E5%B9%B4%E5%BA%A6%E9%84%89%E9%8E%AE%E7%B8%A3%E8%BD%84%E5%B8%82%E8%B2%A1%E5%8B%99%E5%AF%A9%E6%A0%B8%E7%B5%90%E6%9E%9C%E5%B9%B4%E5%A0%B1%20-%20%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B%E5%AF%A9%E8%A8%88%E9%83%A8%E5%85%A8%E7%90%83%E8%B3%87%E8%A8%8A%E7%B6%B2%E3%80%80%20https%3A%2F%2Fwww.audit.gov.tw%2Fp%2F405-1000-7522%2Cc107.php%3FLang%3Dzh-tw%26ct%3D",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "繁體",
+"h": "",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "English",
+"h": "https://www.audit.gov.tw/p/405-1000-7522,c107.php?Lang=zh-tw#",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": ":::",
+"h": "https://www.audit.gov.tw/p/405-1000-7522,c107.php?Lang=zh-tw#",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "隱私權保護措施",
+"h": "https://www.audit.gov.tw/p/405-1000-893,c166.php",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "網路安全措施",
+"h": "https://www.audit.gov.tw/p/405-1000-894,c166.php",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "網站資料開放宣告",
+"h": "https://www.audit.gov.tw/p/405-1000-895,c166.php",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "地圖",
+"h": "https://www.audit.gov.tw/p/412-1000-168.php",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "無障礙網站",
+"h": "https://accessibility.moda.gov.tw/Applications/Detail?category=20251013091442",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審計部youtube頻道",
+"h": "https://www.youtube.com/channel/UCvcDjpz3sEz4YQQZ5Df-qUg",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "審計部網站qrcode",
+"h": "https://www.audit.gov.tw/",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "我的e政府",
+"h": "http://www.gov.tw/",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "top",
+"h": "https://www.audit.gov.tw/p/405-1000-7522,c107.php?Lang=zh-tw#",
+"src": "民國109年度鄉鎮縣轄市財務審核結果年報"
+},
+{
+"t": "跳到主要內容區",
+"h": "https://www.audit.gov.tw/p/412-1000-107.php#start-C",
+"src": "財務審核結果年報"
+},
+{
+"t": "回首頁",
+"h": "http://www.audit.gov.tw/",
+"src": "財務審核結果年報"
+},
+{
+"t": ":::",
+"h": "https://www.audit.gov.tw/p/412-1000-107.php#",
+"src": "財務審核結果年報"
+},
+{
+"t": "首頁",
+"h": "https://www.audit.gov.tw/",
+"src": "財務審核結果年報"
+},
+{
+"t": "網站導覽",
+"h": "https://www.audit.gov.tw/p/17-1000.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "English",
+"h": "https://www.audit.gov.tw/?Lang=en",
+"src": "財務審核結果年報"
+},
+{
+"t": "×",
+"h": "javascript:void(0)",
+"src": "財務審核結果年報"
+},
+{
+"t": "進階搜尋",
+"h": "https://www.google.com.tw/advanced_search?hl=zh-TW&as_q=&num=100&as_sitesearch=*.audit.gov.tw&cof=FORID%3A10&ie=UTF-8&sa=%E6%90%9C%E5%B0%8B&siteurl=www",
+"src": "財務審核結果年報"
+},
+{
+"t": "審計",
+"h": "https://cse.google.com/cse?cx=011342461998102075089:5ovsnhf_tke&q=%E5%AF%A9%E8%A8%88&oq=%E5%AF%A9%E8%A8%88&gs_l=partner.12...2583.2583.0.3357.1.1.0.0.0.0.40.40.1.1.0.gsnos%2Cn%3D13...0.40j1600j2..1ac.1.25.partner..1.0.0.FpmpVUSRe7s#gsc.tab=0&gsc.q=%E5%AF%A9%E8%A8%88&gsc.page=1",
+"src": "財務審核結果年報"
+},
+{
+"t": "審核",
+"h": "https://www.google.com.tw/search?hl=zh-TW&as_q=%E5%AF%A9%E6%A0%B8&as_epq=&as_oq=&as_eq=&as_nlo=&as_nhi=&lr=&cr=&as_qdr=all&as_sitesearch=*.audit.gov.tw&as_occt=any&safe=images&as_filetype=&tbs=",
+"src": "財務審核結果年報"
+},
+{
+"t": "總決算",
+"h": "https://www.google.com.tw/search?hl=zh-TW&as_q=%E7%B8%BD%E6%B1%BA%E7%AE%97&as_epq=&as_oq=&as_eq=&as_nlo=&as_nhi=&lr=&cr=&as_qdr=all&as_sitesearch=*.audit.gov.tw&as_occt=any&safe=images&as_filetype=&tbs=",
+"src": "財務審核結果年報"
+},
+{
+"t": "認識審計部",
+"h": "javascript:void(0);",
+"src": "財務審核結果年報"
+},
+{
+"t": "審計長",
+"h": "http://www.audit.gov.tw/p/412-1000-138.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "審計制度簡介",
+"h": "http://www.audit.gov.tw/p/412-1000-139.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "使命及願景",
+"h": "https://www.audit.gov.tw/p/412-1000-140.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "審計機關地址電話",
+"h": "http://www.audit.gov.tw/p/412-1000-141.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "審計部位置圖",
+"h": "http://www.audit.gov.tw/p/412-1000-168.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "中華民國政府審計史記續編",
+"h": "http://www.audit.gov.tw/p/412-1000-271.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "人才招募",
+"h": "http://www.audit.gov.tw/p/412-1000-272.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "新聞與公告",
+"h": "javascript:void(0);",
+"src": "財務審核結果年報"
+},
+{
+"t": "新聞稿",
+"h": "http://www.audit.gov.tw/p/412-1000-104.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "重要政府審計資訊",
+"h": "http://www.audit.gov.tw/p/412-1000-103.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "立法院決議查核案件",
+"h": "https://www.audit.gov.tw/p/412-1000-489.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "政府重大政策重複缺失追蹤",
+"h": "https://www.audit.gov.tw/p/412-1000-558.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "一般公告",
+"h": "https://www.audit.gov.tw/p/412-1000-492.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "徵才訊息",
+"h": "https://www.audit.gov.tw/p/412-1000-347.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "審計報告",
+"h": "javascript:void(0);",
+"src": "財務審核結果年報"
+},
+{
+"t": "總決算審核報告",
+"h": "https://auditreport.audit.gov.tw/",
+"src": "財務審核結果年報"
+},
+{
+"t": "特別決算審核報告",
+"h": "https://auditreport.audit.gov.tw/",
+"src": "財務審核結果年報"
+},
+{
+"t": "半年結算查核報告",
+"h": "http://www.audit.gov.tw/p/412-1000-98.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "政府審計年報",
+"h": "http://www.audit.gov.tw/p/412-1000-105.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "財務審核結果年報",
+"h": "http://www.audit.gov.tw/p/412-1000-107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "鄉鎮市財務之審核",
+"h": "http://www.audit.gov.tw/p/412-1000-106.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "專案審計報告",
+"h": "http://www.audit.gov.tw/p/412-1000-158.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "永續發展審計報告",
+"h": "https://www.audit.gov.tw/p/412-1000-528.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "資訊公開",
+"h": "javascript:void(0);",
+"src": "財務審核結果年報"
+},
+{
+"t": "永續發展",
+"h": "https://www.audit.gov.tw/p/412-1000-445.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "檔案下載",
+"h": "http://www.audit.gov.tw/p/412-1000-110.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "政府資訊公開",
+"h": "http://www.audit.gov.tw/p/412-1000-109.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "政府審計季刊",
+"h": "https://press.audit.gov.tw/journal/",
+"src": "財務審核結果年報"
+},
+{
+"t": "審計機關創新專區",
+"h": "http://www.audit.gov.tw/p/412-1000-274.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "內部控制制度聲明書",
+"h": "http://www.audit.gov.tw/p/412-1000-187.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "數位審計",
+"h": "https://www.audit.gov.tw/p/412-1000-472.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "核心人權公約專區",
+"h": "https://www.audit.gov.tw/p/412-1000-433.php",
+"src": "財務審核結果年報"
+},
+{
+"t": "行政機關優良實務案例專區",
+"h": "https://www.audit.gov.tw/p/412-1000-548.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "安全及衛生防護措施年度書面報告專區",
+"h": "https://www.audit.gov.tw/p/412-1000-553.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "審計統計",
+"h": "javascript:void(0);",
+"src": "財務審核結果年報"
+},
+{
+"t": "審計統計資料查詢系統",
+"h": "https://statq.audit.gov.tw/",
+"src": "財務審核結果年報"
+},
+{
+"t": "視覺化專區",
+"h": "https://www.audit.gov.tw/p/412-1000-403.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "公務統計",
+"h": "https://www.audit.gov.tw/p/412-1000-455.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "性別統計",
+"h": "https://www.audit.gov.tw/p/412-1000-459.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "預告統計資料發布",
+"h": "https://www.stat.gov.tw/News_NoticeCalendar.aspx?n=3717&IsControl=0&_Hide=1&Dept=701000000A",
+"src": "財務審核結果年報"
+},
+{
+"t": "重要統計事項變更",
+"h": "https://www.audit.gov.tw/p/412-1000-418.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "公務統計方案",
+"h": "https://www.audit.gov.tw/p/p/404-1000-11841.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "統計名詞",
+"h": "https://www.audit.gov.tw/var/file/0/1000/img/776511008.odt",
+"src": "財務審核結果年報"
+},
+{
+"t": "公民參與",
+"h": "javascript:void(0);",
+"src": "財務審核結果年報"
+},
+{
+"t": "公民參與審計",
+"h": "https://www.audit.gov.tw/p/412-1000-467.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "審計建言信箱",
+"h": "https://www.audit.gov.tw/p/423-1000-7.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "全民監督信箱",
+"h": "https://www.audit.gov.tw/p/423-1000-6.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "審計法規",
+"h": "http://www.audit.gov.tw/p/412-1000-92.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": ":::",
+"h": "https://www.audit.gov.tw/p/412-1000-107.php#start-C",
+"src": "財務審核結果年報"
+},
+{
+"t": "首頁",
+"h": "https://www.audit.gov.tw/index.php",
+"src": "財務審核結果年報"
+},
+{
+"t": "審計報告",
+"h": "https://www.audit.gov.tw/p/412-1000-90.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "財務審核結果年報",
+"h": "https://www.audit.gov.tw/p/412-1000-107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國111年度直轄市及縣市地方決算審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-9378,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國111年度鄉鎮縣轄市財務審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-9377,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國110年度直轄市及縣市地方決算審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-8499,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國110年度鄉鎮縣轄市財務審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-8498,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國109年度直轄市及縣市地方決算審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-7523,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國109年度鄉鎮縣轄市財務審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-7522,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國108年度直轄市及縣市地方決算審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-6716,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國108年度鄉鎮縣轄市財務審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-6713,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國107年度直轄市及縣市地方決算審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-5919,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國107年度鄉鎮縣轄市財務審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-5918,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國106年度直轄市及縣市地方決算審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-5150,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國106年度鄉鎮縣轄市財務審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-5151,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國105年度直轄市及縣市地方決算審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-3959,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國105年度鄉鎮縣轄市財務審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-3958,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國104年度直轄市及縣市地方決算審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-3104,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國104年度鄉鎮縣轄市財務審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-3103,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國103年度直轄市及縣市地方決算審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-2420,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國103年度鄉鎮縣轄市財務審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-2419,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國102年度直轄市及縣市地方決算審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-1771,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "民國102年度鄉鎮縣轄市財務審核結果年報",
+"h": "https://www.audit.gov.tw/p/405-1000-1770,c107.php?Lang=zh-tw",
+"src": "財務審核結果年報"
+},
+{
+"t": "1",
+"h": "javascript:void(0)",
+"src": "財務審核結果年報"
+},
+{
+"t": "2",
+"h": "javascript:void(0)",
+"src": "財務審核結果年報"
+},
+{
+"t": ">",
+"h": "javascript:void(0)",
+"src": "財務審核結果年報"
+},
+{
+"t": ">>",
+"h": "javascript:void(0)",
+"src": "財務審核結果年報"
+},
+{
+"t": "繁體",
+"h": "",
+"src": "財務審核結果年報"
+},
+{
+"t": "English",
+"h": "https://www.audit.gov.tw/p/412-1000-107.php#",
+"src": "財務審核結果年報"
+},
+{
+"t": ":::",
+"h": "https://www.audit.gov.tw/p/412-1000-107.php#",
+"src": "財務審核結果年報"
+},
+{
+"t": "隱私權保護措施",
+"h": "https://www.audit.gov.tw/p/405-1000-893,c166.php",
+"src": "財務審核結果年報"
+},
+{
+"t": "網路安全措施",
+"h": "https://www.audit.gov.tw/p/405-1000-894,c166.php",
+"src": "財務審核結果年報"
+},
+{
+"t": "網站資料開放宣告",
+"h": "https://www.audit.gov.tw/p/405-1000-895,c166.php",
+"src": "財務審核結果年報"
+},
+{
+"t": "地圖",
+"h": "https://www.audit.gov.tw/p/412-1000-168.php",
+"src": "財務審核結果年報"
+},
+{
+"t": "無障礙網站",
+"h": "https://accessibility.moda.gov.tw/Applications/Detail?category=20251013091442",
+"src": "財務審核結果年報"
+},
+{
+"t": "審計部youtube頻道",
+"h": "https://www.youtube.com/channel/UCvcDjpz3sEz4YQQZ5Df-qUg",
+"src": "財務審核結果年報"
+},
+{
+"t": "審計部網站qrcode",
+"h": "https://www.audit.gov.tw/",
+"src": "財務審核結果年報"
+},
+{
+"t": "我的e政府",
+"h": "http://www.gov.tw/",
+"src": "財務審核結果年報"
+},
+{
+"t": "top",
+"h": "https://www.audit.gov.tw/p/412-1000-107.php#",
+"src": "財務審核結果年報"
+}
+]

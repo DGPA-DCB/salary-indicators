@@ -1,5 +1,5 @@
 {
- "run": "2026-10-29T01:43:35Z",
+ "run": "2026-10-29T01:45:37Z",
  "steps": [
   {
    "robots": "ok",
@@ -8,11 +8,48 @@
   {
    "page": "home",
    "url": "https://www.audit.gov.tw/",
-   "error": "TimeoutError('Page.goto: Timeout 60000ms exceeded.\\nCall log:\\n  - navigating to \"https://www.audit.gov.tw/\", waiting until \"networkidle\"\\n')"
+   "title": "審計部全球資訊網 - 中華民國審計部全球資訊網　",
+   "links": 196
   },
   {
-   "total_links": 0,
-   "report_links": 0
+   "page": "L1:財務審核結果年報",
+   "url": "https://www.audit.gov.tw/p/412-1000-107.php?Lang=zh-tw",
+   "title": "財務審核結果年報 - 中華民國審計部全球資訊網　",
+   "links": 100
+  },
+  {
+   "page": "L2:財務審核結果年報",
+   "url": "https://www.audit.gov.tw/p/412-1000-107.php?Lang=zh-tw",
+   "title": "財務審核結果年報 - 中華民國審計部全球資訊網　",
+   "links": 100
+  },
+  {
+   "page": "L2:民國111年度鄉鎮縣轄市財務審核結果年報",
+   "url": "https://www.audit.gov.tw/p/405-1000-9377,c107.php?Lang=zh-tw",
+   "title": "民國111年度鄉鎮縣轄市財務審核結果年報 - 中華民國審計部全球資訊網　",
+   "links": 83
+  },
+  {
+   "page": "L2:民國110年度鄉鎮縣轄市財務審核結果年報",
+   "url": "https://www.audit.gov.tw/p/405-1000-8498,c107.php?Lang=zh-tw",
+   "title": "民國110年度鄉鎮縣轄市財務審核結果年報 - 中華民國審計部全球資訊網　",
+   "links": 83
+  },
+  {
+   "page": "L2:民國109年度鄉鎮縣轄市財務審核結果年報",
+   "url": "https://www.audit.gov.tw/p/405-1000-7522,c107.php?Lang=zh-tw",
+   "title": "民國109年度鄉鎮縣轄市財務審核結果年報 - 中華民國審計部全球資訊網　",
+   "links": 83
+  },
+  {
+   "page": "L1:財務審核結果年報",
+   "url": "https://www.audit.gov.tw/p/412-1000-107.php",
+   "title": "財務審核結果年報 - 中華民國審計部全球資訊網　",
+   "links": 100
+  },
+  {
+   "total_links": 745,
+   "report_links": 50
   }
  ]
 }
