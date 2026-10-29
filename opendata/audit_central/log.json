@@ -1,25 +1,45 @@
 {
- "run": "2026-10-29T02:22:56Z",
+ "run": "2026-10-29T02:25:33Z",
  "steps": [
   {
-   "page": "platform",
-   "blocked": "bot protection; stop"
+   "target": 114,
+   "chapters": 90,
+   "candidates": [
+    "總決算審定資料",
+    "檢視章節-壹、總決算歲入歲出決算審定數簡明比較表PDF",
+    "檢視章節-貳、總決算審定後收支簡明比較分析表PDF",
+    "檢視章節-參、融資調度決算審定表PDF",
+    "檢視章節-八、特別決算以前年度轉入數決算審定簡表PDF",
+    "檢視章節-（一）特別決算以前年度融資調度轉入數決算審定簡表P",
+    "檢視章節-（二）特別決算以前年度歲入保留轉入數決算審定簡表P",
+    "檢視章節-（三）特別決算以前年度歲出保留轉入數決算審定簡表P"
+   ]
   },
   {
    "target": 114,
-   "error": "book not found"
-  },
-  {
-   "page": "old-list",
-   "blocked": "bot protection; stop"
+   "excerpts": 0
   },
   {
    "target": 102,
-   "found": []
+   "found": [
+    "中華民國102年度中央政府總決算審核報告（含附屬單位決算及綜計表）"
+   ]
   },
   {
    "target": 102,
-   "error": "detail not found"
+   "files": [
+    "102年度中央政府總決算審核報告（含附屬單位決算及綜計表）.pdf"
+   ]
+  },
+  {
+   "target": 102,
+   "file": "102年度中央政府總決算審核報告（含附屬單位決算及綜計表）.pdf",
+   "pages": 884,
+   "hits": 4
+  },
+  {
+   "target": 102,
+   "excerpts": 4
   }
  ]
 }
