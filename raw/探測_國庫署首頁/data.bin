@@ -1,0 +1,2175 @@
+
+
+	
+
+
+
+	
+
+
+
+
+
+
+
+	
+
+
+<!doctype html>
+<html  lang="zh-Hant-TW">
+<head>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+<title>
+    
+    
+	    財政部國庫署全球資訊網
+    
+</title>
+
+	
+	
+
+<link href='/headerImg?type=icon&path=c18ff4c219db40279d1632f1c29ec595' rel='SHORTCUT ICON' />
+
+
+
+<meta name="DC.Title" content=''/>
+<meta name="DC.Creator" content=''/>
+<meta name="DC.Subject" content=''/>
+<meta name="DC.Description" content=''/>
+<meta name="DC.Contributor" content=''/>
+<meta name="DC.Type" content=''/>
+<meta name="DC.Format" content=''/>
+<meta name="DC.Source" content=''/>
+<meta name="DC.Language" content=''/>
+<meta name="DC.coverage.t.min" content=''/>
+<meta name="DC.coverage.t.max" content=''/>
+<meta name="DC.Publisher" content=''/>
+<meta name="DC.Date" content=''/>
+<meta name="DC.Identifier" content=''/>
+<meta name="OID" content=''/>
+<meta name="DC.Relation" content=''/>
+<meta name="DC.Rights" content=''/>
+<meta name="Category.Theme" content=''/>
+<meta name="Category.Cake" content=''/>
+<meta name="Category.Service" content=''/>
+<meta name="Keywords" content=''/>
+
+
+	<link rel="stylesheet" type="text/css" href='/css/jquery/jquery-ui.css'/>
+	<link rel="stylesheet" type="text/css" href='/css/jquery/jqcloud.min.css'/>
+	<link rel="stylesheet" type="text/css" href='/css/jquery/ui/ui.totop.css'/>
+	<link rel="stylesheet" type="text/css" href='/template/bootstrap/bootstrap.min.css'/>
+	<link rel="stylesheet" type="text/css" href='/template/css/notosanstc.css'/>
+	<link rel="stylesheet" type="text/css" href='/template/css/slick/slick.css'/>
+	<link rel="stylesheet" type="text/css" href='/template/css/slick/slick-theme.css'/>
+
+	<link rel="stylesheet" type="text/css" href='/template/style-6/css/shared.css'/>
+	
+	
+
+
+	<style>
+		.function-cabinet .container .accesskey {
+			top: -90px;
+		}
+	</style>
+
+	<script type="text/javascript" src='/js/jquery/jquery-3.6.1.min.js'></script>
+	<script type="text/javascript" src='/js/jquery/jqcloud.min.js'></script>
+	<script type="text/javascript" src='/js/jquery/jquery-ui.min.js'></script>
+	<script type="text/javascript" src='/js/jquery/jquery-ui-timepicker-addon.js'></script>
+	<script type="text/javascript" src='/js/jquery/jquery.validate.js'></script>
+	<script type="text/javascript" src='/js/jquery/jquery.form.js'></script>
+	<script type="text/javascript" src='/js/jquery/jquery.twzipcode.min.js'></script>
+	<script type="text/javascript" src='/js/jquery/jquery.ui.totop.js'></script>
+	
+	<script type="text/javascript" src='/js/highcharts/highmaps.js'></script>
+
+	
+	
+<script type="text/javascript" src='/js/highcharts/exporting.js'></script>
+<script type="text/javascript" src='/js/highcharts/tw-all.js'></script>
+	
+
+
+	<script type="text/javascript" src='/js/datepicker.js'></script>
+	<script type="text/javascript" src='/js/search-google-focus.min.js'></script>
+	
+	<script type="text/javascript" src='/js/xssUtil.js'></script>
+	<script type="text/javascript" src='/template/js/shared.js'></script>
+	<script type="text/javascript" src='/template/js/portal.js'></script>
+	<script type="text/javascript" src='/template/js/moment.min.js'></script>
+	<script type="text/javascript" src='/template/js/slick.min.js'></script>
+	<script type="text/javascript" src='/template/js/validata.js'></script>
+	<script type="text/javascript" src='/template/js/marquee.js'></script>
+	<script type="text/javascript" src='/template/js/img-text-carousel.js'></script>
+	<script type="text/javascript" src='/template/js/convenient-service.js'></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LK5ZMNN2L3"></script>   
+<script>function gtag() { dataLayer.push(arguments) } window.dataLayer = window.dataLayer || [], gtag("js", new Date), gtag("config", "G-LK5ZMNN2L3");</script>
+    
+	<script></script>
+</head>
+<body class="portal template-6  color-style3">
+<noscript><span>您的瀏覽器不支援或未開啟JavaScript功能，將無法正常使用本系統，請開啟瀏覽器JavaScript功能，以利系統順利執行。</span></noscript>
+
+
+
+
+<div class="light-msg-box" style="display: none;">
+	<div class="msg-box">
+	    
+		<div class="close-box">
+			<a href="javascript:void(0)" aria-label="關閉" title="關閉">X</a>
+		</div>
+		
+		<div class="msg-content">
+			<div class="title">訊息</div>
+			<div class="msg-text">
+				<p></p>
+			</div>
+			<div class="butn-box">
+			   
+			       
+			       
+			               <button aria-label="關閉訊息" class="butn-close" title="關閉">關閉</button>
+			       
+			    
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+    $(document).ready(function() {
+    	
+
+        $(".close-box").find("a").click(function(){
+        	lightMsgBoxToggle();
+        });
+        
+        $(".butn-close").click(function(){
+        	lightMsgBoxToggle();
+        });
+    });
+    
+    
+    function lightMsgBoxToggle(){
+    	$(".light-msg-box").toggle();
+    	if($(".light-msg-box").is(":visible")){
+    	    $('.light-msg-box').find('a').focus();
+    	}
+        
+    }
+    function showMessage(message){
+    	$('.light-msg-box .msg-text').text(message);
+    	lightMsgBoxToggle();
+    }
+</script>
+
+<form>
+  <input type="hidden" id="siteDateFormat" value="Minguo" />
+  <input type="hidden" id="language" value="zh-TW" />
+</form>
+
+
+
+
+    
+        
+        
+    
+	
+
+
+<script type="text/javascript">
+var language_accesskey_C = "主要內容區";
+var index = true;
+</script>
+	
+
+
+	
+
+	<header class="header-short" style="background-image: url(/headerImg?type=backGround&path=c18ff4c219db40279d1632f1c29ec595)"><div class="accesskey"><a href="#a_U" id="a_U" accesskey="U" tabindex="2" title="上方功能區塊">:::</a><a href="#a_C" class="to-main" tabindex="1" title="跳到主要內容">跳到主要內容</a></div><div class="second-menu-top">
+    <div>
+        
+            
+        
+        
+        
+            <a href="/" title="回首頁">回首頁</a>   
+        
+        
+            <a href="/sitemap/sitemap" title="網站導覽">網站導覽</a>
+        
+        
+        
+            <a href="/eng" title='English' 
+                >English</a>
+        
+            <a href="/multiplehtml/296" title='常用問答' 
+                >常用問答</a>
+        
+            <a href="/mailbox/47/WebMail/0d1b0f17dfe04ec4b57037f272f67163" title='意見信箱' 
+                >意見信箱</a>
+        
+            <a href="/bilingual/eb95976b3b9b430296e13f146b51f8c0" title='雙語詞彙' 
+                >雙語詞彙</a>
+        
+        
+            <a href="/Rss" title="RSS">RSS</a>
+        
+        
+            
+        
+    </div>
+</div><div class="header-width"><div class="logo-box">                             <h1>         <a href="/" title="財政部國庫署全球資訊網:回首頁" class="logo">             <img src="/headerImg?type=logo&path=c18ff4c219db40279d1632f1c29ec595" alt="財政部國庫署全球資訊網">         </a>     </h1>     <div class="hamburger-box">         <a href="javascript:void(0);" class="hamburger-logo" title="展開Menu">             <img src='/template/img/hamburger.png' alt="menu">         </a>     </div> </div><div class="function-header function-1"><ul><li class="header-function-top"></li><li class="header-function-center"><script type="text/javascript">
+$(window).on('load',function(){
+        $('div.search').show();
+$('.search-google .gsc-control-cse table.gsc-search-box tbody tr td.gsc-search-button .gsc-search-button ').attr('title', '搜尋完成會有彈跳視窗');
+				$('.gsc-input input[name=search]').css('background','');
+        $('.search-text-hide-google a').click(function(){
+            $.ajax({
+                async : false,
+                type: 'POST',
+                url: "/keyword",
+                data : { 
+                    "query" : $(this).text(),
+                    "type" : 'google_keyword',
+                    "csrfToken" : '6e6e2d0d-ef7b-45f2-a46e-34df9a96c7ed'
+                },
+                success : function (result) {
+                    
+                }
+            });
+            $('.gsc-input input[name=search]').val($(this).text());
+        });
+
+
+        if ($('.gsc-input input[name=search]').length > 0) {
+            $('.gsc-input input[name=search]').autocomplete({
+                source: function(request, response) {
+                    var inputText = $('.gsc-input input[name=search]').val();
+
+                    $.ajax({
+                        url: '/keyword',
+                        type:"POST",
+                        data : { 
+                            "query" : inputText,
+                            "type" : 'google_keyword',
+                            "csrfToken" : '6e6e2d0d-ef7b-45f2-a46e-34df9a96c7ed'
+                        },
+                        success: function(data){
+                            $('input.gsc-search-button:button').trigger('click');
+                        }
+                    });
+                },
+            });
+        }
+    });
+</script>
+
+<div class="search-google">
+		<form style="display: flex;">
+		<a href="#a_S" id="a_S" accesskey="S" title="GOOGLE搜尋，會有彈跳視窗"aria-label="GOOGLE搜尋，會有彈跳視窗">::</a>
+			<script async src="https://cse.google.com/cse.js?cx=28704baa1add5f61b"></script>
+<div class="gcse-search"></div>
+			
+							
+							<input class="advanced-button" type="button" onclick="javascript:location.href='https://www.google.com.tw/advanced_search?hl=zh-TW&num=100&as_sitesearch=www.nta.gov.tw&ie=UTF-8'" value="進階搜尋">
+						
+		</form>
+		<div class="hot-search">
+			<span>熱門搜尋：</span>
+			<div class="search-text-hide search-text-hide-google">
+				
+				   <a href="javascript:void(0)" title="搜尋:優質酒類認證">優質酒類認證</a>
+				
+				   <a href="javascript:void(0)" title="搜尋:出納管理手冊">出納管理手冊</a>
+				
+				   <a href="javascript:void(0)" title="搜尋:自購住宅貸款利息補貼">自購住宅貸款利息補貼</a>
+				
+			</div>
+		</div> 
+	</div>
+
+</li><li class="header-function-bottom"><div class="header-text-size">
+    <div class="title">字級大小</div>
+    <div  class="text-button">
+    
+        <a class="chgfontSize small" data-size="small" href="javascript:void(0);" title="字體大小(小)">小</a>
+        <a class="chgfontSize medium selected" data-size="medium" href="javascript:void(0);" title="字體大小(中)">中</a>
+        <a class="chgfontSize large" data-size="large" href="javascript:void(0);" title="字體大小(大)">大</a>
+    
+    
+    </div>
+</div></li></ul></div></div></header>
+
+	<div class="function-cabinet full one-block" style=""><div class="container"><div class="row"><div class="box col-lg-12 col-md-12 col-xs-12 big-content box-receive"><div class="menu-box">
+    <div class="container-hide">
+        <a href="#">x</a>
+    </div>
+    <div class="rwd-header-function"></div>
+    <div class="container-middle">
+        <ul class="menu">
+        
+        
+            
+                
+                <li>
+                    <a class="classification-menu" href="/htmlList/5" title='機關簡介' >機關簡介</a>
+                    <ul class="menu-floor-down
+		                
+		                
+                    ">
+                    
+                        
+                        
+                        <li>
+                            <a href="/singlehtml/12" title='歷史沿革' >歷史沿革</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/singlehtml/13" title='署長簡介' >署長簡介</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/singlehtml/14" title='組織架構及業務職掌' >組織架構及業務職掌</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/singlehtml/16" title='交通資訊' >交通資訊</a>
+                        </li>
+                        
+                        
+                    
+                    </ul>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="classification-menu" href="/htmlList/6" title='公告訊息' >公告訊息</a>
+                    <ul class="menu-floor-down
+		                
+		                
+                    ">
+                    
+                        
+                        
+                        <li>
+                            <a href="/multiplehtml/17" title='最新消息' >最新消息</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/htmlList/18" title='新聞稿' >新聞稿</a>
+                        </li>
+                        
+                        
+                    
+                    </ul>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="classification-menu" href="/htmlList/7" title='業務導覽' >業務導覽</a>
+                    <ul class="menu-floor-down
+		                
+		                
+                    ">
+                    
+                        
+                        
+                        <li>
+                            <a href="/htmlList/386" title='庫政管理及歲入籌編' >庫政管理及歲入籌編</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/link/f489dc16dd4c48fe84b692c3e65c6f3a" title='國庫支付業務' >國庫支付業務</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/htmlList/70" title='公共債務業務' >公共債務業務</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/htmlList/1548" title='財務規劃管理' >財務規劃管理</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/htmlList/1552" title='公股股權、特種基金及規費管理' >公股股權、特種基金及規費管理</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/htmlList/1554" title='菸酒管理' >菸酒管理</a>
+                        </li>
+                        
+                        
+                    
+                    </ul>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="classification-menu" href="/htmlList/9" title='政策績效' >政策績效</a>
+                    <ul class="menu-floor-down
+		                
+		                
+                    ">
+                    
+                        
+                        
+                        <li>
+                            <a href="/singlehtml/28" title='目標方針' >目標方針</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/htmlList/26" title='重大政策' >重大政策</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/multiplehtml/25" title='重要措施' >重要措施</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/multiplehtml/27" title='重大績效' >重大績效</a>
+                        </li>
+                        
+                        
+                    
+                    </ul>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="classification-menu" href="/htmlList/4" title='服務園地' >服務園地</a>
+                    <ul class="menu-floor-down
+		                
+		                 multi-colums
+		                
+		                
+                    ">
+                    
+                        
+                        
+                        <li>
+                            <a href="/link/f15cf7cf1b25450ea45dd54da1f56681" title='署長信箱' >署長信箱</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/htmlList/1605" title='數位資源' >數位資源</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/link/0bd276bf790d4d8a82970da5b061800f" title='檔案應用服務專區' >檔案應用服務專區</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/htmlList/10" title='資訊公開' >資訊公開</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/htmlList/450" title='廉政專區' >廉政專區</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/multiplehtml/292" title='表單下載' >表單下載</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/htmlList/417" title='退休人員專區' >退休人員專區</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/multiplehtml/296" title='常用問答集' >常用問答集</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/video/53" title='影音專區' >影音專區</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/singlehtml/291" title='聯絡資訊' >聯絡資訊</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/multiplehtml/1519" title='性別平等專區' >性別平等專區</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/multiplehtml/11" title='相關連結' >相關連結</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/multiplehtml/dca73aa6fe744908a101d5157d13b189" title='安全及衛生防護專區' >安全及衛生防護專區</a>
+                        </li>
+                        
+                        
+                    
+                    </ul>
+                </li>
+                
+            
+        
+        </ul>
+    </div>
+</div></div>
+</div></div></div><div class="function-cabinet one-block" style=""><div class="container"><div class="row"><div class="box col-lg-12 col-md-12 col-xs-12 big-content box-receive">
+<div class="banner banner-large_carousel1" id="large_carousel1">
+    <div>
+        
+            <div >
+            
+                <a href="https://www.nta.gov.tw/singlehtml/d5b995eccbd3499b97e2dcd6c4b5bcda"  title='財政收支劃分法研討專區'>
+            
+            
+                    <img src="/images/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3GMza%2FlmmkBNePgABefZXE%2Ff%2BlJa16xv35HcuAPflGHs31W%2FWp8N0dJ95qF2sIKm%2FU%3D" alt="財政收支劃分法研討專區">
+                </a>
+        </div>
+        
+            <div >
+            
+                <a href="https://www.nta.gov.tw/BOTAAA/singlehtml/71dfaa303d5446098a2471fee4443900"  title='菸酒減免專區'>
+            
+            
+                    <img src="/images/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3GMza%2FlmmkBNWwX11Qmr8Eh7AKe8lQLZ9f8DZZQ6gTOXFjmJDF7b7N%2F95qF2sIKm%2FU%3D" alt="菸酒減免專區">
+                </a>
+        </div>
+        
+            <div >
+            
+                <a href="https://www.nta.gov.tw/htmlList/cf5a171a489f48198ea9960c75f48a97"  title='國庫防範詐騙及假訊息專區'>
+            
+            
+                    <img src="/images/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3GMza%2FlmmkBNbOWMvuzm479jwCW7EDKkeTPqRIXvkYIXNSYzrIOUvEo95qF2sIKm%2FU%3D" alt="國庫防範詐騙及假訊息專區">
+                </a>
+        </div>
+        
+            <div >
+            
+                <a href="https://www.nta.gov.tw/htmlList/70"  title='強化債務揭露，全民監督債務'>
+            
+            
+                    <img src="/images/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3GMza%2FlmmkBNbrGdxKvk0mrSdcQoIzpFlKRCvZIFAsXWYfDLwcLGxXzBvCYoSL1jrQ%3D" alt="強化債務揭露，全民監督債務">
+                </a>
+        </div>
+        
+            <div >
+            
+                <a href="https://www.mof.gov.tw/debt" target="_blank" title='中央財政專區(另開視窗)'>
+            
+            
+                    <img src="/images/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3GMza%2FlmmkBNS7%2BrE5sw9iIAE31wy3M7ifktCw8R%2FwKTuiUcaWrifYuBvCYoSL1jrQ%3D" alt="中央財政專區">
+                </a>
+        </div>
+        
+            <div >
+            
+                <a href="https://www.nta.gov.tw/AAS"  title='檔案應用服務專區'>
+            
+            
+                    <img src="/images/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3GMza%2FlmmkBNRZ3C85E9Ndv%2Fw3PYNHxDqQquo0P9UDnvxLIyVjx9tKGBvCYoSL1jrQ%3D" alt="檔案應用服務專區">
+                </a>
+        </div>
+        
+            <div >
+            
+                <a href="https://www.nta.gov.tw/AQC" target="_blank" title='優質酒類認證專區(另開視窗)'>
+            
+            
+                    <img src="/images/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3GMza%2FlmmkBNZues%2FdvqoMcio1yOT73rNR5gqSNr4V2mvWPu849JVXuBvCYoSL1jrQ%3D" alt="優質酒類認證專區">
+                </a>
+        </div>
+        
+            <div >
+            
+                <a href="https://www.nta.gov.tw/TDB" target="_blank" title='提升多元優質服務 確保安全便捷支付(另開視窗)'>
+            
+            
+                    <img src="/images/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3GMza%2FlmmkBNY4kVr73SdRMlifBI9e4Hp4tHS47bUbUUDqqI2E38KrxBvCYoSL1jrQ%3D" alt="提升多元優質服務 確保安全便捷支付">
+                </a>
+        </div>
+        
+            <div >
+            
+                <a href="/htmlList/71" target="_blank" title='青年安心成家貸款(另開視窗)'>
+            
+            
+                    <img src="/images/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3GMza%2FlmmkBNS4b82dzIx7Oye4R5hAyQzds11Yq%2Fqpr4fzrpXemOb%2FLBvCYoSL1jrQ%3D" alt="青年安心成家貸款">
+                </a>
+        </div>
+        
+            <div >
+            
+                <a href="/multiplehtml/91" target="_blank" title='增裕社福財源，促進弱勢就業(另開視窗)'>
+            
+            
+                    <img src="/images/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3GMza%2FlmmkBNY4kVr73SdRMQ9t1Jj%2BzXDuZ6biqDBKL0KGIwF57J1W4BvCYoSL1jrQ%3D" alt="增裕社福財源，促進弱勢就業">
+                </a>
+        </div>
+        
+            <div >
+            
+                <a href="/multiplehtml/411" target="_blank" title='增加繳庫管道、縮短入庫時程(另開視窗)'>
+            
+            
+                    <img src="/images/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3GMza%2FlmmkBNS4b82dzIx7OA8ql7li98fIKc2XWZxIz8C8z2o%2BJSNHTBvCYoSL1jrQ%3D" alt="增加繳庫管道、縮短入庫時程">
+                </a>
+        </div>
+        
+            <div >
+            
+                <a href="https://www.nta.gov.tw/BOTAAA" target="_blank" title='私菸入手健康出走 私酒入口生命失守(另開視窗)'>
+            
+            
+                    <img src="/images/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3GMza%2FlmmkBNY4kVr73SdRMNNGVZTm45CWnHJxRFcniELSXmOowdCxyBvCYoSL1jrQ%3D" alt="私菸入手健康出走 私酒入口生命失守">
+                </a>
+        </div>
+        
+            <div >
+            
+                <a href="https://www.nta.gov.tw/IOIA" target="_blank" title='進口酒類查驗把關好、酒品飲用安全才得保(另開視窗)'>
+            
+            
+                    <img src="/images/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3GMza%2FlmmkBNea64duRMYwhDvA9QC4njtd2KnC6AwBCE9AbtEx7gIntBvCYoSL1jrQ%3D" alt="進口酒類查驗把關好、酒品飲用安全才得保">
+                </a>
+        </div>
+        
+    </div>
+</div>
+<script type="text/javascript">
+ImgTextCarouselModule.carousel({
+    idx : 'large_carousel1',
+    slidesToisAuto: true,
+		isBanner: true,
+    autoplaySpeed: 5000
+});
+</script>
+</div>
+</div></div></div><div class="function-cabinet one-block" style=""><div class="container"><div class="row"><div class="box col-lg-12 col-md-12 col-xs-12 big-content box-receive"><div class="tab-function"><a class="tab-select-text" href="#" title="最新消息"><h2>最新消息</h2></a><ul class="tab-title"><li><a class="title-tab tab-select" href="#" title="最新消息"><h2>最新消息</h2></a></li><li><a class="title-tab" href="#" title="新聞稿" ><h2>新聞稿</h2></a></li></ul><div class="tab-inner tab-inner-block"><div id="Tab_tab:large_bulletinList1" class="bulletin-list">
+    
+        <h2 class="h2-title">最新消息</h2>
+    
+
+    
+    
+
+    
+        
+            
+            
+            
+                
+            
+
+            <div class="ALL list   list-single" >
+                <ul>
+                    
+                        <li>
+                        
+                            <a
+                                href="/singlehtml/17?cntId=692d125cd5a84cf4bd559837aeee0fd9"
+                                title='115年度公債發行公告'
+                                
+                                
+                                 title='115年度公債發行公告'>
+                         
+                             
+                            
+                                <h3>
+                                    
+                                    115年度公債發行公告
+                                </h3> 
+                                 
+                                <span class="time">115-10-27</span> 
+                            </a>
+                        </li>
+                    
+                        <li>
+                        
+                            <a
+                                href="/singlehtml/17?cntId=46c30ccc22844fe98ee02123e8f261ad"
+                                title='最新各級政府公共債務統計表'
+                                
+                                
+                                 title='最新各級政府公共債務統計表'>
+                         
+                             
+                            
+                                <h3>
+                                    
+                                    最新各級政府公共債務統計表
+                                </h3> 
+                                 
+                                <span class="time">115-10-27</span> 
+                            </a>
+                        </li>
+                    
+                        <li>
+                        
+                            <a
+                                href="/singlehtml/17?cntId=nta_7906_17"
+                                title='國債鐘資料'
+                                
+                                
+                                 title='國債鐘資料'>
+                         
+                             
+                            
+                                <h3>
+                                    
+                                    國債鐘資料
+                                </h3> 
+                                 
+                                <span class="time">115-10-21</span> 
+                            </a>
+                        </li>
+                    
+                        <li>
+                        
+                            <a
+                                href="/singlehtml/17?cntId=e5b1a05e373b4b3c8c259fa2b69e9c16"
+                                title='115年度公債標售結果(截至115年10月14日標售結果)'
+                                
+                                
+                                 title='115年度公債標售結果(截至115年10月14日標售結果)'>
+                         
+                             
+                            
+                                <h3>
+                                    
+                                    115年度公債標售結果(截至115年10月14日標售結果)
+                                </h3> 
+                                 
+                                <span class="time">115-10-21</span> 
+                            </a>
+                        </li>
+                    
+                        <li>
+                        
+                            <a
+                                href="/singlehtml/17?cntId=871e5c8b8fd94b639141bc74c72d885c"
+                                title='115年9月份健保費、勞保費與新制勞工退休金代繳日期與相關注意事項'
+                                
+                                
+                                 title='115年9月份健保費、勞保費與新制勞工退休金代繳日期與相關注意事項'>
+                         
+                             
+                            
+                                <h3>
+                                    
+                                    115年9月份健保費、勞保費與新制勞工退休金代繳日期與相關注意事項
+                                </h3> 
+                                 
+                                <span class="time">115-10-15</span> 
+                            </a>
+                        </li>
+                    
+                </ul>
+            </div>
+
+            <div class="ALL more " >
+                
+                    
+                
+                
+                
+                    
+                
+                
+                <a href="/multiplehtml/17" title='最新消息'>更多 最新消息 &gt;&gt; </a>
+            </div>
+        
+    
+</div></div><div class="tab-inner"><div id="Tab_tab:large_bulletinList2" class="bulletin-list">
+    
+        <h2 class="h2-title">新聞稿</h2>
+    
+
+    
+    
+
+    
+        
+            
+            
+            
+                
+            
+
+            <div class="ALL list   list-single" >
+                <ul>
+                    
+                        <li>
+                        
+                            <a
+                                href="/singlehtml/238?cntId=3459b098f92e41b7a99c4f488de253fe"
+                                title='財政部首次頒獎鼓勵營銷績效卓越及國際競賽成績優異之優質酒類認證業者'
+                                
+                                
+                                 title='財政部首次頒獎鼓勵營銷績效卓越及國際競賽成績優異之優質酒類認證業者'>
+                         
+                             
+                            
+                                <h3>
+                                    
+                                    財政部首次頒獎鼓勵營銷績效卓越及國際競賽成績優異之優質酒類認證業者
+                                </h3> 
+                                 
+                                <span class="time">115-10-27</span> 
+                            </a>
+                        </li>
+                    
+                        <li>
+                        
+                            <a
+                                href="/singlehtml/238?cntId=44dc8f5b779843849f9ccf76da092e63"
+                                title='財政部原訂115年10月23日發行 「115甲9期」10年期公債，因遇天然災害(薔琵颱風)延後發行'
+                                
+                                
+                                 title='財政部原訂115年10月23日發行 「115甲9期」10年期公債，因遇天然災害(薔琵颱風)延後發行'>
+                         
+                             
+                            
+                                <h3>
+                                    
+                                    財政部原訂115年10月23日發行 「115甲9期」10年期公債，因遇天然災害(薔琵颱風)延後發行
+                                </h3> 
+                                 
+                                <span class="time">115-10-22</span> 
+                            </a>
+                        </li>
+                    
+                        <li>
+                        
+                            <a
+                                href="/singlehtml/238?cntId=e59c3166d91f43a9ab75b77a6d2d7b46"
+                                title='公益彩券發行成果良好，115年截至9月已創造盈餘318億餘元，並助益弱勢就業逾7.5萬人'
+                                
+                                
+                                 title='公益彩券發行成果良好，115年截至9月已創造盈餘318億餘元，並助益弱勢就業逾7.5萬人'>
+                         
+                             
+                            
+                                <h3>
+                                    
+                                    公益彩券發行成果良好，115年截至9月已創造盈餘318億餘元，並助益弱勢就業逾7.5萬人
+                                </h3> 
+                                 
+                                <span class="time">115-10-21</span> 
+                            </a>
+                        </li>
+                    
+                        <li>
+                        
+                            <a
+                                href="/singlehtml/238?cntId=62f548296043490f9468b62890aa68c8"
+                                title='財政部發行「115甲10期」30年期公債'
+                                
+                                
+                                 title='財政部發行「115甲10期」30年期公債'>
+                         
+                             
+                            
+                                <h3>
+                                    
+                                    財政部發行「115甲10期」30年期公債
+                                </h3> 
+                                 
+                                <span class="time">115-10-20</span> 
+                            </a>
+                        </li>
+                    
+                        <li>
+                        
+                            <a
+                                href="/singlehtml/238?cntId=8664ba9a371c4f8f8c8b80e6c84bf724"
+                                title='「AI紅利 全民共享」普發現金1萬元將於116年度中央政府總預算案完成法定程序後儘速發放'
+                                
+                                
+                                 title='「AI紅利 全民共享」普發現金1萬元將於116年度中央政府總預算案完成法定程序後儘速發放'>
+                         
+                             
+                            
+                                <h3>
+                                    
+                                    「AI紅利 全民共享」普發現金1萬元將於116年度中央政府總預算案完成法定程序後儘速發放
+                                </h3> 
+                                 
+                                <span class="time">115-10-08</span> 
+                            </a>
+                        </li>
+                    
+                </ul>
+            </div>
+
+            <div class="ALL more " >
+                
+                    
+                
+                
+                
+                    
+                
+                
+                <a href="/multiplehtml/238" title='新聞稿'>更多 新聞稿 &gt;&gt; </a>
+            </div>
+        
+    
+</div></div></div></div>
+</div></div></div><div class="function-cabinet one-block" style=""><div class="container"><div class="row"><div class="box col-lg-12 col-md-12 col-xs-12 big-content box-receive">
+    <div id="large_imgLink1" class="img-link">
+    
+        <h2 class="h2-title">重要統計</h2>
+    
+        <div class="img-link-container row-quantity block-6" >
+        
+            <div class="img-buttom">
+                <a href="https://www.nta.gov.tw/multiplehtml/1522" title="公益彩券盈餘 (另開視窗) "  target="_blank">
+                        <div class="buttomImg-box">
+                                <img src="/graphicLinkImages/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3FVyG6oJqCIePlPfgu3HUJpx2moPssNYKbtyoo1W9uk4QR6uKckhCg90wobdd%2F9d2A%3D"  alt=''>
+                        </div>
+                        <h3>公益彩券盈餘 </h3>
+                        <p><table border="0" cellpadding="1" cellspacing="1" style="width:100%;">
+	<tbody>
+		<tr>
+			<td>115年8月</td>
+			<td style="text-align: right;"><span style="color:#1e8449;">6,928億元</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p> </p>
+</p>
+                    </a>
+                    <div class="social-icon">
+                        
+                        
+                    </div>
+                </div>
+            
+            <div class="img-buttom">
+                <a href="https://www.nta.gov.tw/TDB/singlehtml/2622?cntId=nta_31052_2622" title="國庫支付電子化作業比率(另開視窗) "  target="_blank">
+                        <div class="buttomImg-box">
+                                <img src="/graphicLinkImages/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3FVyG6oJqCIeOWkIMKfUi3n0ksBL2cBEOBs%2FrEol750ecQWy5i7Fb5P0wobdd%2F9d2A%3D"  alt=''>
+                        </div>
+                        <h3>國庫支付電子化作業比率</h3>
+                        <p><table border="0" cellpadding="1" cellspacing="1" style="width:100%;">
+	<tbody>
+		<tr>
+			<td>115年9月</td>
+			<td style="text-align: right;"><span style="color:#1e8449;">99%</span></td>
+		</tr>
+	</tbody>
+</table>
+</p>
+                    </a>
+                    <div class="social-icon">
+                        
+                        
+                    </div>
+                </div>
+            
+            <div class="img-buttom">
+                <a href="https://www.nta.gov.tw/singlehtml/296?cntId=nta_49_296" title="公益彩券經銷商就業機會.(另開視窗) "  target="_blank">
+                        <div class="buttomImg-box">
+                                <img src="/graphicLinkImages/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3FVyG6oJqCIeLuvLcJa2HmxtOH2AtzJzx09%2Bpjo3C3cLAO9oLje3jOt0wobdd%2F9d2A%3D"  alt=''>
+                        </div>
+                        <h3>公益彩券經銷商就業機會</h3>
+                        <p><table border="0" cellpadding="1" cellspacing="1" style="width:100%;">
+	<tbody>
+		<tr>
+			<td>115年8月</td>
+			<td style="text-align: right;"><span style="color:#1e8449;">74,544個</span></td>
+		</tr>
+	</tbody>
+</table>
+</p>
+                    </a>
+                    <div class="social-icon">
+                        
+                        
+                    </div>
+                </div>
+            
+            <div class="img-buttom">
+                <a href="https://www.nta.gov.tw/singlehtml/111?cntId=4c772290eff34c15888d24ad20d8565f" title="青年安心成家撥貸比(另開視窗) "  target="_blank">
+                        <div class="buttomImg-box">
+                                <img src="/graphicLinkImages/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3FVyG6oJqCIeNzBgNALI6%2BqN6D7uM8RLAy3VYLTJS1gF3XLzQb6peHy0wobdd%2F9d2A%3D"  alt=''>
+                        </div>
+                        <h3>青年安心成家撥貸比率</h3>
+                        <p><table border="0" cellpadding="1" cellspacing="1" style="width:100%;">
+	<tbody>
+		<tr>
+			<td>115年9月</td>
+			<td style="text-align: right;"><span style="color:#1e8449;">96.93%</span></td>
+		</tr>
+	</tbody>
+</table>
+</p>
+                    </a>
+                    <div class="social-icon">
+                        
+                        
+                    </div>
+                </div>
+            
+            <div class="img-buttom">
+                <a href="https://www.nta.gov.tw/BOTAAA/singlehtml/356?cntId=5061eecbad7f4b6eb642f05fccdd924a" title="累計私劣菸酒查獲量.(另開視窗) "  target="_blank">
+                        <div class="buttomImg-box">
+                                <img src="/graphicLinkImages/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3FVyG6oJqCIeLuvLcJa2HmxzAlAubnHjY2MoOTu1GuMh3eJpllzEGl70wobdd%2F9d2A%3D"  alt=''>
+                        </div>
+                        <h3>累計私劣菸酒查獲量</h3>
+                        <p><table border="0" cellpadding="1" cellspacing="1" style="width:100%;">
+	<tbody>
+		<tr>
+			<td>115年9月</td>
+			<td style="text-align: right;"><span style="color:#1e8449;">817.66萬包 / 41.37萬公升</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p> </p>
+</p>
+                    </a>
+                    <div class="social-icon">
+                        
+                        
+                    </div>
+                </div>
+            
+            <div class="img-buttom">
+                <a href="https://www.nta.gov.tw/AQC/singlehtml/1590?cntId=nta_3781_1590" title="財政部優質酒類認證成果." >
+                        <div class="buttomImg-box">
+                                <img src="/graphicLinkImages/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3FVyG6oJqCIeI3kPVeQQdRGJwcux1%2FGiYgtKXkVuMhkWQVnTYCWsGSX0wobdd%2F9d2A%3D"  alt=''>
+                        </div>
+                        <h3>財政部優質酒類認證成果</h3>
+                        <p><table border="0" cellpadding="1" cellspacing="1" style="width:100%;">
+	<tbody>
+		<tr>
+			<td>115年9月</td>
+			<td style="text-align: right;"><span style="color:#1e8449;">296項酒品</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p> </p>
+</p>
+                    </a>
+                    <div class="social-icon">
+                        
+                        
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+</div>
+</div></div></div><div class="function-cabinet one-block" style=""><div class="container"><div class="row"><div class="box col-lg-12 col-md-12 col-xs-12 big-content box-receive">
+    <div class="convenient-service convenient-service-large_convenientService1" id="large_convenientService1">
+        <h2 class="h2-title">業務導覽</h2>
+        <div>
+            
+                <div>
+                    <div class="convenient-service-container">
+                        <div class="service-icon">
+                            <img src="/images/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3GMza%2FlmmkBNcOqpiP74NT7TsyU0TRCohXsLrROJinU1sRtckjYu29k95qF2sIKm%2FU%3D" alt="">
+                        </div>
+                        <h3>庫政管理及歲入籌編</h3>
+                        <ul>
+                            
+                                <li>
+                                    <a href="/multiplehtml/241"  title='業務資料'>業務資料</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/htmlList/2624"  title='歲入籌編'>歲入籌編</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/htmlList/72"  title='出納管理'>出納管理</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/htmlList/1543"  title='匯款繳庫作業'>匯款繳庫作業</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/htmlList/1509"  title='網路繳納國庫款作業機制'>網路繳納國庫款作業機制</a>
+                                </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div>
+                    <div class="convenient-service-container">
+                        <div class="service-icon">
+                            <img src="/images/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3GMza%2FlmmkBNcOqpiP74NT7%2Ft6bSgjV3reHfDbaHGbqtAXeWkvepVJH95qF2sIKm%2FU%3D" alt="">
+                        </div>
+                        <h3>國庫支付業務</h3>
+                        <ul>
+                            
+                                <li>
+                                    <a href="/TDB/htmlList/242"  title='業務資料'>業務資料</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/TDB"  title='支付業務管理'>支付業務管理</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/TDB/htmlList/1619"  title='支付業務專區'>支付業務專區</a>
+                                </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div>
+                    <div class="convenient-service-container">
+                        <div class="service-icon">
+                            <img src="/images/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3GMza%2FlmmkBNVXvS97voS%2FS%2BQnD7xsAN58PGrRj%2FLeVEzzb84jLJByG95qF2sIKm%2FU%3D" alt="">
+                        </div>
+                        <h3>公共債務業務</h3>
+                        <ul>
+                            
+                                <li>
+                                    <a href="/multiplehtml/1617"  title='中央政府債務'>中央政府債務</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/multiplehtml/1618"  title='各級政府債務'>各級政府債務</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://www.nta.gov.tw/htmlList/2f49d20c4ca04bc785ef7b714295f3de" target="_blank" title='業務資料(另開視窗)'>業務資料</a>
+                                </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div>
+                    <div class="convenient-service-container">
+                        <div class="service-icon">
+                            <img src="/images/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3GMza%2FlmmkBNVXvS97voS%2FS1tvL4D%2B9sKHGHTZxKcOx2O3MubsRBGjn95qF2sIKm%2FU%3D" alt="">
+                        </div>
+                        <h3>財務規劃管理</h3>
+                        <ul>
+                            
+                                <li>
+                                    <a href="/multiplehtml/244"  title='業務資料'>業務資料</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/htmlList/1525"  title='公益彩券'>公益彩券</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/htmlList/1524"  title='地方財政'>地方財政</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/multiplehtml/224"  title='財務計畫審議'>財務計畫審議</a>
+                                </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div>
+                    <div class="convenient-service-container">
+                        <div class="service-icon">
+                            <img src="/images/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3GMza%2FlmmkBNVXvS97voS%2FS60D0QYd0%2B6Cp9%2BL9lSJ%2B86Vb4o4jkv4o95qF2sIKm%2FU%3D" alt="">
+                        </div>
+                        <h3>公股股權、特種基金及規費管理</h3>
+                        <ul>
+                            
+                                <li>
+                                    <a href="/multiplehtml/245"  title='業務資料'>業務資料</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/multiplehtml/362"  title='規費管理'>規費管理</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/htmlList/71"  title='青年安心成家貸款'>青年安心成家貸款</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/multiplehtml/1601"  title='財政部與部屬事業'>財政部與部屬事業</a>
+                                </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+                <div>
+                    <div class="convenient-service-container">
+                        <div class="service-icon">
+                            <img src="/images/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3GMza%2FlmmkBNVXvS97voS%2FSqRjMsceTPkaik7k1wM7h9TiqQofTv7Wo95qF2sIKm%2FU%3D" alt="">
+                        </div>
+                        <h3>菸酒管理及查緝業務</h3>
+                        <ul>
+                            
+                                <li>
+                                    <a href="/multiplehtml/246"  title='業務資料'>業務資料</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://www.nta.gov.tw/BOTAAA"  title='菸酒管理業務'>菸酒管理業務</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://www.nta.gov.tw/AQC"  title='優質酒類認證專區'>優質酒類認證專區</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://www.nta.gov.tw/IOIA"  title='進口酒類查驗管理業務'>進口酒類查驗管理業務</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/htmlList/471"  title='菸酒消保資訊'>菸酒消保資訊</a>
+                                </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+
+    <script type="text/javascript">
+    	ConvenientServiceModule.carousel({
+    	   idx: 'large_convenientService1',
+    	   autoplaySpeed : 5000
+    	   ,slidesToisAuto : false
+        
+    	   ,slidesToShow : 2
+        
+    	});
+    </script>
+</div>
+</div></div></div><div class="function-cabinet one-block" style=""><div class="container"><div class="row"><div class="box col-lg-12 col-md-12 col-xs-12 big-content box-receive">
+    <div id="large_imgLink2" class="img-link">
+    
+        <h2 class="h2-title">熱門專區</h2>
+    
+        <div class="img-link-container row-quantity block-5" >
+        
+            <div class="img-buttom">
+                <a href="https://www.nta.gov.tw/TDB" title="支付業務管理.(另開視窗) "  target="_blank">
+                        <div class="buttomImg-box">
+                                <img src="/graphicLinkImages/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3FVyG6oJqCIeBV7zThhRqwl5iRk6eE4Z7hxPEff28Jwk0B4olNnTLLl0wobdd%2F9d2A%3D"  alt=''>
+                        </div>
+                        <h3>支付業務管理</h3>
+                        
+                    </a>
+                    <div class="social-icon">
+                        
+                        
+                    </div>
+                </div>
+            
+            <div class="img-buttom">
+                <a href="/htmlList/471" title="菸酒消費資訊.(另開視窗) "  target="_blank">
+                        <div class="buttomImg-box">
+                                <img src="/graphicLinkImages/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3FVyG6oJqCIeBV7zThhRqwlxDca4hj%2FegCoqIwQyyoZWpDVne2QPnwX0wobdd%2F9d2A%3D"  alt=''>
+                        </div>
+                        <h3>菸酒消保資訊</h3>
+                        
+                    </a>
+                    <div class="social-icon">
+                        
+                        
+                    </div>
+                </div>
+            
+            <div class="img-buttom">
+                <a href="/htmlList/72" title="出納管理.(另開視窗) "  target="_blank">
+                        <div class="buttomImg-box">
+                                <img src="/graphicLinkImages/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3FVyG6oJqCIeBV7zThhRqwl34dMV6jwdWuYps8clW8uSd4EzcJO0mY00wobdd%2F9d2A%3D"  alt=''>
+                        </div>
+                        <h3>出納管理</h3>
+                        
+                    </a>
+                    <div class="social-icon">
+                        
+                        
+                    </div>
+                </div>
+            
+            <div class="img-buttom">
+                <a href="/htmlList/1524" title="財政收支劃分法研討專區 " >
+                        <div class="buttomImg-box">
+                                <img src="/graphicLinkImages/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3FVyG6oJqCIeDjDcWWz86logzZHHQLyl%2BPRJyjQPAUJdb%2BmwUfEwQD70wobdd%2F9d2A%3D"  alt=''>
+                        </div>
+                        <h3>財政收支劃分法研討專區</h3>
+                        
+                    </a>
+                    <div class="social-icon">
+                        
+                        
+                    </div>
+                </div>
+            
+            <div class="img-buttom">
+                <a href="/htmlList/1525" title="公益彩券業務.(另開視窗) "  target="_blank">
+                        <div class="buttomImg-box">
+                                <img src="/graphicLinkImages/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3FVyG6oJqCIeDjDcWWz86loD5UFqoiYZxjT7RcyPNjWq%2F9s7cyVUJes0wobdd%2F9d2A%3D"  alt=''>
+                        </div>
+                        <h3>公益彩券業務</h3>
+                        
+                    </a>
+                    <div class="social-icon">
+                        
+                        
+                    </div>
+                </div>
+            
+            <div class="img-buttom">
+                <a href="/htmlList/71" title="青年安心成家貸款.(另開視窗) "  target="_blank">
+                        <div class="buttomImg-box">
+                                <img src="/graphicLinkImages/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3FVyG6oJqCIeDjDcWWz86lou%2F7slS1DoGp%2FH1jicab6oU48%2B82phL6D0wobdd%2F9d2A%3D"  alt=''>
+                        </div>
+                        <h3>青年安心成家貸款</h3>
+                        
+                    </a>
+                    <div class="social-icon">
+                        
+                        
+                    </div>
+                </div>
+            
+            <div class="img-buttom">
+                <a href="/htmlList/1509" title="網路繳納國庫款作業機制.(另開視窗) "  target="_blank">
+                        <div class="buttomImg-box">
+                                <img src="/graphicLinkImages/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3FVyG6oJqCIeDjDcWWz86loPPS7mwgnI483Y1iBh2SMP18mSEO7mzC50wobdd%2F9d2A%3D"  alt=''>
+                        </div>
+                        <h3>網路繳納國庫款作業機制</h3>
+                        
+                    </a>
+                    <div class="social-icon">
+                        
+                        
+                    </div>
+                </div>
+            
+            <div class="img-buttom">
+                <a href="https://www.nta.gov.tw/AQC" title="優質酒類認證專區.(另開視窗) "  target="_blank">
+                        <div class="buttomImg-box">
+                                <img src="/graphicLinkImages/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3FVyG6oJqCIeDjDcWWz86loGloTJ4yX2WnQSvrsqLyVW50za9uH9MOo0wobdd%2F9d2A%3D"  alt=''>
+                        </div>
+                        <h3>優質酒類認證專區</h3>
+                        
+                    </a>
+                    <div class="social-icon">
+                        
+                        
+                    </div>
+                </div>
+            
+            <div class="img-buttom">
+                <a href="https://www.nta.gov.tw/BOTAAA/singlehtml/119?cntId=nta_3936_119" title="菸酒業者管理書表下載.(另開視窗) "  target="_blank">
+                        <div class="buttomImg-box">
+                                <img src="/graphicLinkImages/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3FVyG6oJqCIeDjDcWWz86lokgUTNXQUYoqkGQGnnsrVPbQ0fIXFIjXC0wobdd%2F9d2A%3D"  alt=''>
+                        </div>
+                        <h3>菸酒業者管理書表下載</h3>
+                        
+                    </a>
+                    <div class="social-icon">
+                        
+                        
+                    </div>
+                </div>
+            
+            <div class="img-buttom">
+                <a href="https://www.nta.gov.tw/singlehtml/501" title="資訊圖像化專區.(另開視窗) "  target="_blank">
+                        <div class="buttomImg-box">
+                                <img src="/graphicLinkImages/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3FVyG6oJqCIeOorq5vve0MUepwK1ikte776usCWglDCc%2Bj%2F9xfqBVyS0wobdd%2F9d2A%3D"  alt=''>
+                        </div>
+                        <h3>資訊圖像化專區</h3>
+                        
+                    </a>
+                    <div class="social-icon">
+                        
+                        
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+</div>
+</div></div></div><div class="function-cabinet one-block" style=""><div class="container"><div class="row"><div class="box col-lg-12 col-md-12 col-xs-12 big-content box-receive">
+    <div  class="img-text-carousel img-text-carousel-large_multiCarousel1">
+        
+        <h2 class="h2-title">署內系統</h2>
+        
+        <div>
+            
+                <div>
+                    
+                        <a href="https://veb.nta.gov.tw/veb/" target="_blank" title='國庫收支應用書表條碼化Web版(另開視窗)'>
+                    
+                    
+                        <div><img src="/images/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3GMza%2FlmmkBNTUu23HWFxFl%2BiEHH%2FfUhKX2tVvY8%2B7KPXaTNuzcwjtm95qF2sIKm%2FU%3D" alt="國庫收支應用書表條碼化Web版"></div>
+                        
+                    </a>
+                </div>
+            
+                <div>
+                    
+                        <a href="/BOTAAA/singlehtml/119?cntId=nta_3936_119" target="_blank" title='菸酒業者管理書表下載(另開視窗)'>
+                    
+                    
+                        <div><img src="/images/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3GMza%2FlmmkBNVbpCV0EF9HKIQhW3kBrzaO4%2F3LY9YCTJRxoRvzZHY0d95qF2sIKm%2FU%3D" alt="菸酒業者管理書表下載"></div>
+                        
+                    </a>
+                </div>
+            
+                <div>
+                    
+                        <a href="https://gaze.nta.gov.tw/dntmb/PayInfoPermit.do" target="_blank" title='菸酒業者繳費專區-繳款單列印(另開視窗)'>
+                    
+                    
+                        <div><img src="/images/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3GMza%2FlmmkBNegPFnHPJK2iiDQd%2Fv9L0JJnwJVCqQjbK72Duo4LXfcaBvCYoSL1jrQ%3D" alt="菸酒業者繳費專區-繳款單列印"></div>
+                        
+                    </a>
+                </div>
+            
+                <div>
+                    
+                        <a href="https://gaze.nta.gov.tw/dntmb/DntPayTrans.do" target="_blank" title='菸酒業者繳費專區-活期帳戶(另開視窗)'>
+                    
+                    
+                        <div><img src="/images/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3GMza%2FlmmkBNegPFnHPJK2iEDIGYEy6jGRWkay2e4BEwjf6btREpJ9VBvCYoSL1jrQ%3D" alt="菸酒業者繳費專區-活期帳戶"></div>
+                        
+                    </a>
+                </div>
+            
+                <div>
+                    
+                        <a href="https://tameser.nta.gov.tw/APILE/index.jsp" target="_blank" title='進口酒類查驗管理系統(另開視窗)'>
+                    
+                    
+                        <div><img src="/images/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3GMza%2FlmmkBNegPFnHPJK2iehYZDog4nUmVRFCqlLBoTE15Ac%2BqOVoYBvCYoSL1jrQ%3D" alt="進口酒類查驗管理系統"></div>
+                        
+                    </a>
+                </div>
+            
+                <div>
+                    
+                        <a href="https://newgovshare.nta.gov.tw/tdqi/" target="_blank" title='公股管理資訊系統(另開視窗)'>
+                    
+                    
+                        <div><img src="/images/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3GMza%2FlmmkBNRjgqmctRR%2BalK4T5AETYLzjAN6LBhvLXXOA3rq1tuAXBvCYoSL1jrQ%3D" alt="公股管理資訊系統"></div>
+                        
+                    </a>
+                </div>
+            
+        </div>
+        
+    </div>
+    <script type="text/javascript">
+		ImgTextCarouselModule.carousel({
+				idx: 'large_multiCarousel1',
+				slidesToShow : 4,
+				autoplaySpeed : 5000,
+				slidesToisAuto : true
+		});
+    </script>
+</div>
+</div><div class="row"><div class="box col-lg-12 col-md-12 col-xs-12 big-content box-receive">
+    <div  class="img-text-carousel img-text-carousel-large_multiCarousel2">
+        
+        <h2 class="h2-title">外部連結</h2>
+        
+        <div>
+            
+                <div>
+                    
+                        <a href="https://www.immigration.gov.tw/5382/5385/7445/250283/" target="_blank" title='內政部移民署ICERD業務專區(另開視窗)'>
+                    
+                    
+                        <div><img src="/images/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3GMza%2FlmmkBNdldiC8Gnnj9x6eiapid%2FX6yle4kEXVZg13FBDtoVhiq95qF2sIKm%2FU%3D" alt="內政部移民署ICERD業務專區"></div>
+                        
+		<!-- p>內政部移民署ICERD業務專區</p -->
+                        
+                    </a>
+                </div>
+            
+                <div>
+                    
+                        <a href="https://168.motc.gov.tw/page/citydd" target="_blank" title='各縣市酒後代駕服務電話及資料(另開視窗)'>
+                    
+                    
+                        <div><img src="/images/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3GMza%2FlmmkBNQl5hzAoMG%2Fe%2Bn0T0Ubw8hPew3VYmzN%2B4UDsG%2FhdcIVYBvCYoSL1jrQ%3D" alt="各縣市酒後代駕服務電話及資料(開新視窗)"></div>
+                        
+                    </a>
+                </div>
+            
+                <div>
+                    
+                        <a href="https://www.gov.tw/" target="_blank" title='前往我的E政府(另開視窗)'>
+                    
+                    
+                        <div><img src="/images/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3GMza%2FlmmkBNbDAe9HY3mvyWsf2MASnywvYo11iEllmpAx85zLlOWwI95qF2sIKm%2FU%3D" alt="「我的E政府」改版上線之活動"></div>
+                        
+                    </a>
+                </div>
+            
+                <div>
+                    
+                        <a href="https://isafeevent.moe.edu.tw/" target="_blank" title='全民資安素養自我評量(另開視窗)'>
+                    
+                    
+                        <div><img src="/images/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3GMza%2FlmmkBNRYiPdrgLFSzXbkQvJvL8zzUaAn72lJgwYlApYxryx77BvCYoSL1jrQ%3D" alt="教育部全民資安素養自我評量"></div>
+                        
+                    </a>
+                </div>
+            
+                <div>
+                    
+                        <a href="https://gazette.nat.gov.tw/egFront/index.do" target="_blank" title='行政院公報資訊網(另開視窗)'>
+                    
+                    
+                        <div><img src="/images/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3GMza%2FlmmkBNegPFnHPJK2inw%2FlBRxNMJeBzG%2FgPuytEom1uMaC%2BiHQ95qF2sIKm%2FU%3D" alt="行政院公報資訊網"></div>
+                        
+                    </a>
+                </div>
+            
+                <div>
+                    
+                        <a href="https://join.gov.tw/policies/index" target="_blank" title='公共政策網路參與平臺(另開視窗)'>
+                    
+                    
+                        <div><img src="/images/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3GMza%2FlmmkBNegPFnHPJK2izKbkB%2BdA%2BN99AE6WoYBF3W0sFIMioVi82GbDhLk0glA%3D" alt="公共政策網路參與平臺"></div>
+                        
+                    </a>
+                </div>
+            
+                <div>
+                    
+                        <a href="https://bilingual.ndc.gov.tw/" target="_blank" title='國家發展委員會雙語資料庫學習資源網(公開測試版)(另開視窗)'>
+                    
+                    
+                        <div><img src="/images/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3GMza%2FlmmkBNegPFnHPJK2iw4sRhEQtReCWT6HSu2Z8DloXH5Zy9UIv95qF2sIKm%2FU%3D" alt="國家發展委員會雙語資料庫學習資源網(公開測試版)"></div>
+                        
+                    </a>
+                </div>
+            
+                <div>
+                    
+                        <a href="https://crpd.sfaa.gov.tw/" target="_blank" title='身心障礙者權利公約資訊網(另開視窗)'>
+                    
+                    
+                        <div><img src="/images/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3GMza%2FlmmkBNegPFnHPJK2iVT8uMTZsdRAyVgTsPIDR%2Fk19HM97HsNl2GbDhLk0glA%3D" alt="身心障礙者權利公約資訊網"></div>
+                        
+                    </a>
+                </div>
+            
+                <div>
+                    
+                        <a href="https://www.mof.gov.tw/" target="_blank" title='財政部 Ministry of Finance, R.O.C.(另開新視窗)(另開視窗)'>
+                    
+                    
+                        <div><img src="/images/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3GMza%2FlmmkBNU%2FHZimcCAeVRTXfXcxTtkwTsTb52TRg51XkptofL70WBvCYoSL1jrQ%3D" alt="財政部 Ministry of Finance, R.O.C.(另開新視窗)"></div>
+                        
+                    </a>
+                </div>
+            
+                <div>
+                    
+                        <a href="https://law.moj.gov.tw/" target="_blank" title='全國法規資料庫入口網站(另開新視窗)(另開視窗)'>
+                    
+                    
+                        <div><img src="/images/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3GMza%2FlmmkBNU%2FHZimcCAeVXJQZVnw05vYhG55EJNUWgNKfkCA37sA%2BCCJqUsavQAM%3D" alt="全國法規資料庫入口網站(另開新視窗)"></div>
+                        
+                    </a>
+                </div>
+            
+                <div>
+                    
+                        <a href="https://adma.mnd.gov.tw/" target="_blank" title='國防部全民防衛動員署(另開視窗)'>
+                    
+                    
+                        <div><img src="/images/c18ff4c219db40279d1632f1c29ec595?imgKey=OzddXOTSs3GMza%2FlmmkBNT2grxkvx3R9YcV5v1%2F%2FHHfeL5d31tuEOqLAkfh%2B0wCg95qF2sIKm%2FU%3D" alt="國防部全民防衛動員署"></div>
+                        
+                    </a>
+                </div>
+            
+        </div>
+        
+    </div>
+    <script type="text/javascript">
+		ImgTextCarouselModule.carousel({
+				idx: 'large_multiCarousel2',
+				slidesToShow : 4,
+				autoplaySpeed : 5000,
+				slidesToisAuto : true
+		});
+    </script>
+</div>
+</div></div></div><div class="function-cabinet full one-block" style=""><div class="container"><div class="row"><div class="box col-lg-12 col-md-12 col-xs-12 big-content box-receive">
+	<div class="large-homeFastTool">
+	    <div class="showRight">
+	        <a class="showRight-switch" href="javascript:void(0);"  title="快捷列">快捷列</a>
+	        <div class="showRight-container" style="">
+	            
+	                <a class="top-click" href="https://www.nta.gov.tw/AQC" 
+	                    target="_blank"   
+	                    title='優質酒類專區(另開視窗)' 
+	                >
+	                    <img src="data:image/png;base64,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0p8zAAA6MGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxMzggNzkuMTU5ODI0LCAyMDE2LzA5LzE0LTAxOjA5OjAxICAgICAgICAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iCiAgICAgICAgICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgICAgICAgICB4bWxuczpzdEV2dD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlRXZlbnQjIgogICAgICAgICAgICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iCiAgICAgICAgICAgIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIKICAgICAgICAgICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iCiAgICAgICAgICAgIHhtbG5zOmV4aWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vZXhpZi8xLjAvIj4KICAgICAgICAgPHhtcDpDcmVhdG9yVG9vbD5BZG9iZSBQaG90b3Nob3AgQ0MgMjAxNyAoV2luZG93cyk8L3htcDpDcmVhdG9yVG9vbD4KICAgICAgICAgPHhtcDpDcmVhdGVEYXRlPjIwMTktMTAtMTZUMTc6MzQ6MjArMDg6MDA8L3htcDpDcmVhdGVEYXRlPgogICAgICAgICA8eG1wOk1ldGFkYXRhRGF0ZT4yMDE5LTEwLTE2VDE3OjM0OjIwKzA4OjAwPC94bXA6TWV0YWRhdGFEYXRlPgogICAgICAgICA8eG1wOk1vZGlmeURhdGU+MjAxOS0xMC0xNlQxNzozNDoyMCswODowMDwveG1wOk1vZGlmeURhdGU+CiAgICAgICAgIDx4bXBNTTpJbnN0YW5jZUlEPnhtcC5paWQ6MzFkNjQwMDYtNWM3OC0yMDQ3LTlkYWMtYzNlYjEwNWExNzNiPC94bXBNTTpJbnN0YW5jZUlEPgogICAgICAgICA8eG1wTU06RG9jdW1lbnRJRD5hZG9iZTpkb2NpZDpwaG90b3Nob3A6MTQwOTg1MjUtZWZmOC0xMWU5LTg3N2ItOWUwNjQwYTQ0MjhlPC94bXBNTTpEb2N1bWVudElEPgogICAgICAgICA8eG1wTU06T3JpZ2luYWxEb2N1bWVudElEPnhtcC5kaWQ6NjVkNjVjZGQtMGEwOC00YjRmLTllNWUtNzE1ZGUyNzJkYjBhPC94bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ+CiAgICAgICAgIDx4bXBNTTpIaXN0b3J5PgogICAgICAgICAgICA8cmRmOlNlcT4KICAgICAgICAgICAgICAgPHJkZjpsaSByZGY6cGFyc2VUeXBlPSJSZXNvdXJjZSI+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDphY3Rpb24+Y3JlYXRlZDwvc3RFdnQ6YWN0aW9uPgogICAgICAgICAgICAgICAgICA8c3RFdnQ6aW5zdGFuY2VJRD54bXAuaWlkOjY1ZDY1Y2RkLTBhMDgtNGI0Zi05ZTVlLTcxNWRlMjcyZGIwYTwvc3RFdnQ6aW5zdGFuY2VJRD4KICAgICAgICAgICAgICAgICAgPHN0RXZ0OndoZW4+MjAxOS0xMC0xNlQxNzozNDoyMCswODowMDwvc3RFdnQ6d2hlbj4KICAgICAgICAgICAgICAgICAgPHN0RXZ0OnNvZnR3YXJlQWdlbnQ+QWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpPC9zdEV2dDpzb2Z0d2FyZUFnZW50PgogICAgICAgICAgICAgICA8L3JkZjpsaT4KICAgICAgICAgICAgICAgPHJkZjpsaSByZGY6cGFyc2VUeXBlPSJSZXNvdXJjZSI+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDphY3Rpb24+c2F2ZWQ8L3N0RXZ0OmFjdGlvbj4KICAgICAgICAgICAgICAgICAgPHN0RXZ0Omluc3RhbmNlSUQ+eG1wLmlpZDozMWQ2NDAwNi01Yzc4LTIwNDctOWRhYy1jM2ViMTA1YTE3M2I8L3N0RXZ0Omluc3RhbmNlSUQ+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDp3aGVuPjIwMTktMTAtMTZUMTc6MzQ6MjArMDg6MDA8L3N0RXZ0OndoZW4+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDpzb2Z0d2FyZUFnZW50PkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE3IChXaW5kb3dzKTwvc3RFdnQ6c29mdHdhcmVBZ2VudD4KICAgICAgICAgICAgICAgICAgPHN0RXZ0OmNoYW5nZWQ+Lzwvc3RFdnQ6Y2hhbmdlZD4KICAgICAgICAgICAgICAgPC9yZGY6bGk+CiAgICAgICAgICAgIDwvcmRmOlNlcT4KICAgICAgICAgPC94bXBNTTpIaXN0b3J5PgogICAgICAgICA8ZGM6Zm9ybWF0PmltYWdlL3BuZzwvZGM6Zm9ybWF0PgogICAgICAgICA8cGhvdG9zaG9wOkNvbG9yTW9kZT4zPC9waG90b3Nob3A6Q29sb3JNb2RlPgogICAgICAgICA8cGhvdG9zaG9wOklDQ1Byb2ZpbGU+c1JHQiBJRUM2MTk2Ni0yLjE8L3Bob3Rvc2hvcDpJQ0NQcm9maWxlPgogICAgICAgICA8dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPgogICAgICAgICA8dGlmZjpYUmVzb2x1dGlvbj43MjAwMDAvMTAwMDA8L3RpZmY6WFJlc29sdXRpb24+CiAgICAgICAgIDx0aWZmOllSZXNvbHV0aW9uPjcyMDAwMC8xMDAwMDwvdGlmZjpZUmVzb2x1dGlvbj4KICAgICAgICAgPHRpZmY6UmVzb2x1dGlvblVuaXQ+MjwvdGlmZjpSZXNvbHV0aW9uVW5pdD4KICAgICAgICAgPGV4aWY6Q29sb3JTcGFjZT4xPC9leGlmOkNvbG9yU3BhY2U+CiAgICAgICAgIDxleGlmOlBpeGVsWERpbWVuc2lvbj43ODwvZXhpZjpQaXhlbFhEaW1lbnNpb24+CiAgICAgICAgIDxleGlmOlBpeGVsWURpbWVuc2lvbj42MzwvZXhpZjpQaXhlbFlEaW1lbnNpb24+CiAgICAgIDwvcmRmOkRlc2NyaXB0aW9uPgogICA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgIAo8P3hwYWNrZXQgZW5kPSJ3Ij8+6hqviwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAbbElEQVR42tScd3hU57Xuf7vNjDTSqHeqEAIJCSSaANGLwAY7TrB9jO0YnASDHdvn3PhcJzm5Po5TfM9NXBLiJGDHDXC3MTHCgGimi45BAoEqRahrJM1o6i73jxEYjMq4xE6+55l/tL/5tPe717fWu961vhEuE803NQxUwIGOIQCZZkgPJyzVktwvtdnnTdYjbdHxqYOjSUwwG45ORdcNJJtVpanZaz9/odVX32iXHM7LqPYqL0aVDmeBMyJoIuGACTC+kWeR/3FLC4COTgcGGjqME2G2LTltgm3GtBxGpA/ojI2iPtxKvSSRNW0aYfGJlF6oovziBUKsYSQmJmFvaUZ1OskZNox4kwV7RQWW1lZi6hoQKmugvLqWoydOOEtPFbfj2KZDsYiISAQg/sOAFL5+ixMw8KDRaZJhYlLm2IUMT5vbkZ6abi6YyaWYKLZXVuCyhFBV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" alt="優質酒類專區">
+
+	                </a>
+	          
+	                <a class="top-click" href="https://www.facebook.com/mofnta" 
+	                    target="_blank"   
+	                    title='財政我最庫(另開視窗)' 
+	                >
+	                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEUAAABKCAYAAADt25n8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUQSURBVHhe7ZxNaBRJGIa/BIOOGk0UExgliYSVrBqDP0GDJBDBv4OihwUFXVH0ICqoRAQRRBBBDJpD1IMi7HpwwYOLHhSFDWsQlbC7bCIadgnGIEIUTfxNJEGtd6xpp2uqe7qnu2ump/uBJl09Q+j37aqvfvqryfvCoBAd+fxvSAKhKRJCUySEpkgITZEQmiJBWZfcNzBMD3oHqfP5O+ruf09PXg1R/9tPNDg0QsOjn2PfGTcmn4oiBVQ6aSzNnBqhqtKJNC9aSIsriqiseFzsOyrw1JT2ntd0resF3Xz0kh73f+BX0+PH0gm0avY0WltdQvWVU/hVb3DdlDfsyZ+/94x+uf/MsRFGwKAtS2bQjroZNJnVLLdxzRSY0fxHL7W0PaGhkW/NwWsiBfm0t3EmNS2rcNUcV0xpvdNHR2/8TwMfR/gVtRSPL6Ajq3+g3Q1l/IozHJnSxYLm/qvd1PbfK34lszTOmkqn1ldRNQvOTkjblAssbuz87SG5GpBcII8d5zbMpe0s3qRLWqYc+L2bTrf18lJ2sq+xgk6uq+Ile9g2ZfOvnXT5r+e8lN1sXBilSz/P4yXr2DLlp4v/0NV/+3nJH6yvKaUr2+bzkjUsD/NRQ/xmCMA9497tYMkUxBC/NBkZuHdosEpKU9DLZHtQtQI0QIsVTGMKxiELTtzNum43XdBd/31wacpxjKkpy890KBuY1UwvpE2LotTAJns4F2lt76MmG03ACAzwbu+q5SU5hs0HQ3cVhhRFxtB5Nth6sL+O9jSUSw0BNQ5HqXGgCdrMkJqCyR3mMiq4snU+ba6N8pIaoA0ajZCagtmuiskdakZ9ZTEvqQPaoNGIJFPgIKb/KthjY1aLFTo3gUaj2pJkChaIVKyHIHaUFUd4KRksW7b3DMQOnB+71cM/cQdohFYZSb1P9fF2z1bMEjm8spIOr6jkJT072Oz7Uof3g0Ws4HUdquel7+hqCtZUVRhiBmqFCkMAtEKziM4ULDJnmjusuahEpllnClbdM43bATUVMs2aKXgvk+mmkwmgGdoT0UzBi6qgImrXTEGA8xIM5zFQw7G7vowd5fwTPWvmlMQ+38RGufHvo5cqn2LcfTtF1K51yV6vql1g8xsITReMV5af7eAldxFX57Sagne7XuLlk3aKqF0zBS+7g4qoXTNFdVeYTYjaNVPi6RDZyp+SkadbiNq1QFuw9yYZr8E5BxPANXNLvp1Hv5+LvBkepetslDmZ9VbIVQF4kpgPDQ6Nxspuk5dHNNKyipcSTClsuqUsWwA0r6uKdb0ibi072gHZC++aV/BSQvOJPxVVGMWwTMQ2UbtmClKqgoqoXTMFOWZBRdSumYKku6AiatdMQRZiUBG1a6YgLTOoiNo1U5CnijXLoAHNYo6uZgpAnmrQkGnWmYLE3aAh06wzBZnMQWpC0CrL3taZApDJHBSMtCaZgtRuzAVyHWiEVhlJ6pHOjdTuXAcajVLXpVUCue5I7c5VoA0ajZCaAgeR6+4lT1/L14SNrrsJtJltcEh6wZ6IyvQuVThK7wJI/kfyXK4ALdCUClNTkEWI5P9cAVqs7PAwNQVgNwSS//0ONFjd2WEaUxLx00YFEbsbF1LWlDj4p3i96Ddwz3Z3clg2BeB9K1z3C7hXuzs4gC1TAFz3Q4zBPaaz1wdYjiki4XY5A8KNlSaEW3ANCDdrmwBzwm39JoQ/AJGC8KdCfI7twVsQCE1JgugrMHhnFl45JlUAAAAASUVORK5CYII=" alt="財政我最庫">
+
+	                </a>
+	          
+	                <a class="top-click" href="https://www.youtube.com/channel/UCUoU5UE04vBe_ev63WR7f7w?disable_polymer=true" 
+	                    target="_blank"   
+	                    title='國庫影音專區(另開視窗)' 
+	                >
+	                    <img src="data:image/png;base64,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" alt="國庫影音專區">
+
+	                </a>
+	          
+	        </div>
+	    </div>
+	</div>
+</div>
+</div><div class="row"><div class="box col-lg-12 col-md-12 col-xs-12 big-content box-receive"><div class="web-map">
+    
+        
+            <a class='ctrl close' href="javascript:void()" title="關閉[網站地圖]" role='button'>關閉</a>
+            <ul class="open">
+        
+        
+    
+    
+    <ul class="open">
+    
+    
+    
+        
+            
+            
+            <li>
+                <h3>機關簡介</h3>
+                
+                    
+                    
+                    
+                        <a href="/singlehtml/12" title='歷史沿革' >
+                           歷史沿革
+                        </a>
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                        <a href="/singlehtml/13" title='署長簡介' >
+                           署長簡介
+                        </a>
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                        <a href="/singlehtml/14" title='組織架構及業務職掌' >
+                           組織架構及業務職掌
+                        </a>
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                        <a href="/singlehtml/16" title='交通資訊' >
+                           交通資訊
+                        </a>
+                    
+                    
+                    
+                
+            </li>            
+            
+            
+        
+            
+            
+            <li>
+                <h3>公告訊息</h3>
+                
+                    
+                    
+                    
+                        <a href="/multiplehtml/17" title='最新消息' >
+                           最新消息
+                        </a>
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                        <a href="/htmlList/18" title='新聞稿' >
+                           新聞稿
+                        </a>
+                    
+                    
+                    
+                
+            </li>            
+            
+            
+        
+            
+            
+            <li>
+                <h3>業務導覽</h3>
+                
+                    
+                    
+                    
+                        <a href="/htmlList/386" title='庫政管理及歲入籌編' >
+                           庫政管理及歲入籌編
+                        </a>
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                        <a href="/link/f489dc16dd4c48fe84b692c3e65c6f3a" title='國庫支付業務' >
+                           國庫支付業務
+                        </a>
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                        <a href="/htmlList/70" title='公共債務業務' >
+                           公共債務業務
+                        </a>
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                        <a href="/htmlList/1548" title='財務規劃管理' >
+                           財務規劃管理
+                        </a>
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                        <a href="/htmlList/1552" title='公股股權、特種基金及規費管理' >
+                           公股股權、特種基金及規費管理
+                        </a>
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                        <a href="/htmlList/1554" title='菸酒管理' >
+                           菸酒管理
+                        </a>
+                    
+                    
+                    
+                
+            </li>            
+            
+            
+        
+            
+            
+            <li>
+                <h3>政策績效</h3>
+                
+                    
+                    
+                    
+                        <a href="/singlehtml/28" title='目標方針' >
+                           目標方針
+                        </a>
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                        <a href="/htmlList/26" title='重大政策' >
+                           重大政策
+                        </a>
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                        <a href="/multiplehtml/25" title='重要措施' >
+                           重要措施
+                        </a>
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                        <a href="/multiplehtml/27" title='重大績效' >
+                           重大績效
+                        </a>
+                    
+                    
+                    
+                
+            </li>            
+            
+            
+        
+            
+            
+            <li>
+                <h3>服務園地</h3>
+                
+                    
+                    
+                    
+                        <a href="/link/f15cf7cf1b25450ea45dd54da1f56681" title='署長信箱' >
+                           署長信箱
+                        </a>
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                        <a href="/htmlList/1605" title='數位資源' >
+                           數位資源
+                        </a>
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                        <a href="/link/0bd276bf790d4d8a82970da5b061800f" title='檔案應用服務專區' >
+                           檔案應用服務專區
+                        </a>
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                        <a href="/htmlList/10" title='資訊公開' >
+                           資訊公開
+                        </a>
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                        <a href="/htmlList/450" title='廉政專區' >
+                           廉政專區
+                        </a>
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                        <a href="/multiplehtml/292" title='表單下載' >
+                           表單下載
+                        </a>
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                        <a href="/htmlList/417" title='退休人員專區' >
+                           退休人員專區
+                        </a>
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                        <a href="/multiplehtml/296" title='常用問答集' >
+                           常用問答集
+                        </a>
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                        <a href="/video/53" title='影音專區' >
+                           影音專區
+                        </a>
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                        <a href="/singlehtml/291" title='聯絡資訊' >
+                           聯絡資訊
+                        </a>
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                        <a href="/multiplehtml/1519" title='性別平等專區' >
+                           性別平等專區
+                        </a>
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                        <a href="/multiplehtml/11" title='相關連結' >
+                           相關連結
+                        </a>
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                        <a href="/multiplehtml/dca73aa6fe744908a101d5157d13b189" title='安全及衛生防護專區' >
+                           安全及衛生防護專區
+                        </a>
+                    
+                    
+                    
+                
+            </li>            
+            
+            
+        
+             
+             
+    </ul>
+</div>
+
+<script>
+    language_web_map_1 = "開啟";
+    language_web_map_2 = "關閉";
+    language_web_map_3 = "開啟[網站地圖]";
+    language_web_map_4 = "關閉[網站地圖]";
+</script>
+</div>
+</div><div class="row"><div class="box col-lg-12 col-md-12 col-xs-12 big-content box-receive"></div>
+</div></div></div>
+	
+	<footer>
+      <div class='accesskey  no-second'>
+          <a href="#a_Z" id="a_Z" accesskey="Z" title="頁尾網站資訊區">:::</a>
+      </div>
+      
+      <div class="container-background">
+          <div class="container-middle">
+              <div class="footer-info">
+                  <article><p><a href="https://www.nta.gov.tw/singlehtml/16" title="如何到國庫署">如何到國庫署</a>   |   <a href="https://www.nta.gov.tw/singlehtml/56" title="網站安全政策">網站安全政策</a>   |   <a href="https://www.nta.gov.tw/singlehtml/57" title="網站隱私權政策">網站隱私權政策</a>   |   <a href="https://www.nta.gov.tw/singlehtml/232" title="資料開放宣告">資料開放宣告</a></p>
+
+<p> </p>
+
+<p>● 服務時間：星期一至星期五 08:30 ~ 12:30 & 13:30 ~ 17:30</p>
+
+<p>● 機關地址：116055 臺北市文山區羅斯福路六段142巷1號</p>
+
+<p>● 機關總機：(02)2322-8000 / 機關傳真：(02)2392-9209</p>
+
+<p> </p>
+
+<p>版權所有：財政部國庫署</p>
+
+<p>為提供更為穩定的瀏覽品質與使用體驗，建議使用：最新版本Edge、最新版本Chrome、最新版本Firefox<br />
+最佳解析度1024*768 以上</p>
+
+<p> </p>
+
+<p> </p>
+
+<p style="text-align: center;">    <span style="color:#2980b9;"> </span><a href="https://twitter.com/nta_web" target="_blank" title="連接至Twitter「另開新視窗」"><img alt="連接至Twitter" src="data:image/png;base64,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" /></a><span style="color:#2980b9;">          </span><a href="https://www.facebook.com/mofnta" target="_blank" title="連接至Facebook「另開新視窗」"><span style="color:#2980b9;"><img alt="連接至Facebook" src="data:image/png;base64,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" /></span></a>          <a href="https://www.youtube.com/channel/UCUoU5UE04vBe_ev63WR7f7w?disable_polymer=true" target="_blank" title="連接至Youtube「另開新視窗」"><img alt="連接至Youtube" src="data:image/png;base64,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" /></a>          <a href="https://www.nta.gov.tw/mailbox/47/WebMail/0d1b0f17dfe04ec4b57037f272f67163" target="_blank" title="連接至署長信箱「另開新視窗」"><img alt="連接至署長信箱「另開新視窗」" src="data:image/png;base64,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" title="連接至署長信箱「另開新視窗」" /></a>     </p>
+</article>
+  
+                  <div class="other">
+                      
+                          <span>更新日期:115-10-28</span>
+                      
+                      
+                          <span>瀏覽次數:5931368</span>
+                      
+                  </div>
+              </div>
+              
+              <div class="footer-icon">
+              	
+                  
+  	                <div>
+  	                    <a href="https://accessibility.moda.gov.tw/Applications/Detail?category=20231123172127" title='通過AA無障礙網頁檢測' target="_blank">
+  	                        <img src="data:image/png;base64,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" border="0" height="31" alt='通過AA無障礙網頁檢測' />
+  	                    </a>
+  	                </div>
+                  
+              	
+                  
+ 				 
+ 				   
+   				 
+ 				   
+              </div>
+          </div>    
+      </div>
+  </footer>
+</body>
+</html>

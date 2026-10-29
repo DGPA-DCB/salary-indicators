@@ -626,5 +626,391 @@
     "encoding": "UTF-8"
    }
   ]
+ },
+ "176908": {
+  "title": "財政部115年度會計報表",
+  "agency": null,
+  "description": "財政部115年度各月份歲入累計表、經費累計表、平衡表等",
+  "updated": "2026-10-15 18:29:26",
+  "files": [
+   {
+    "desc": "財政部115年度1月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/cea25a50d1c74f378022680076c44db0",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "財政部115年度2月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/a21891b438b14791983f941030146681",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "財政部115年度3月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/9f2a7835d9a8400589de733c1648bf1b",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "財政部115年度4月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/e710f3627272423a81e824d79c723fd2",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "財政部115年度5月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/e6cd447244684dd4b9277cd52bad7db4",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "財政部115年度6月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/3a0c8d7f023a4a9bae1eef56deaba07b",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "財政部115年度7月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/02aa8d9966694c7789dc087a2c58de41",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "財政部115年度8月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/36b6ce4fb8254a4caa95cc6ab06ef19c",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "財政部115年度9月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/7ca662d639c04021944e84154019c97e",
+    "encoding": "UTF-8"
+   }
+  ]
+ },
+ "160926": {
+  "title": "財政部112年度會計報表",
+  "agency": null,
+  "description": "財政部112年度各月份歲入累計表、經費累計表、平衡表等",
+  "updated": "2024-12-26 16:37:18",
+  "files": [
+   {
+    "desc": "財政部112年度1月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/d777e8a9d4bc44dea6ceb19c1f4512a6",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "財政部112年度2月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/8112b00ff77d4f9e9acd336e99ef91ea",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "財政部112年度3月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/465f20652c354149851c5705a3ed928f",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "財政部112年度4月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/4d3591153e2041cdb378eb3aeaebb93f",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "財政部112年度5月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/170ef11e1f27467f911bb1aa693978de",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "財政部112年度6月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/bcf16159388e4863b92be703c5ba1133",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "財政部112年度7月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/a67860fba9af497cbf5173811f4a5562",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "財政部112年度8月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/415652ba00ae4be898406f18ef2e7420",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "財政部112年度9月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/61e7e8f8333c4768bbdbf24847eb0456",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "財政部112年度10月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/ccf04d6a966c4fe889ad2de817a4061a",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "財政部112年度11月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/dd3f5e271042414596a2f2604eb539c5",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "財政部112年度12月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/aa948614274e46b1a9d574eb5b4b8f05",
+    "encoding": "UTF-8"
+   }
+  ]
+ },
+ "120975": {
+  "title": "財政部109年度會計報表",
+  "agency": null,
+  "description": "財政部109年度各月份歲入累計表、經費累計表、平衡表等",
+  "updated": "2024-12-26 17:06:16",
+  "files": [
+   {
+    "desc": "財政部109年度1月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/ffc70e9b10534bd69f6a8b157396a432",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "財政部109年度2月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/167ddb6a1d784101b93015640ee3294e",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "財政部109年度3月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/a5c3bee1912f4696a64e969bc4448632",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "財政部109年度4月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/6476bec27e0c43a2a1bbd8d43109e889",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "財政部109年度5月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/c30a285ba4b6492cb407e3cf81fe2a03",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "財政部109年度6月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/92c5e1ae1fc94bb8b23c2f102c321b30",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "財政部109年度7月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/39b78992f1944f18a2c5836181dbb9d2",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "財政部109年度8月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/45a1d74aa2bb4ccfa61c2a026b255f53",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "財政部109年度9月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/d7f4ffae597342fc9610b503f84294f0",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "財政部109年度10月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/abc8b48faec04be4bc8080f517490aed",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "財政部109年度11月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/f8155ac2bc9f41d8bc98511b0bd7c999",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "財政部109年度12月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/20a6edaa04f94ded98b6a2616721a866",
+    "encoding": "UTF-8"
+   }
+  ]
+ },
+ "148746": {
+  "title": "財政部111年度會計報表",
+  "agency": null,
+  "description": "財政部111年度各月份歲入累計表、經費累計表、平衡表等",
+  "updated": "2024-12-26 16:38:49",
+  "files": [
+   {
+    "desc": "財政部111年度1月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/efe4c7f9d51b43d08a5fadc4feec109c",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "財政部111年度2月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/5b7e4b7fff844100bf8b7a5e360d86fb",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "財政部111年度3月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/43a24c16e38c435caa9c2fbeeb137850",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "財政部111年度4月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/d4d0f12b89334f20ad1e6481c4f43ad4",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "財政部111年度5月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/f7e2455fd1194e0395a1732f8b2a9b48",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "財政部111年度6月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/01c50c07ca3d4cb9977d081e68620bf1",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "財政部111年度7月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/33e445cef62e4feebcfc696df0bf1e1a",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "財政部111年度8月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/9b46bca76fae40cfb4c56bd5e1ab7460",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "財政部111年度9月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/9594cad8453c4ebcbeaf871c61521a90",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "財政部111年度10月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/97dadd7224514e209159483421a5a24a",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "財政部111年度11月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/60d5e49ec4f24c61ab61ddff51979a16",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "財政部111年度12月會計月報",
+    "format": "ZIP",
+    "url": "https://www.mof.gov.tw/download/50d84877235a4fa59e2717167376d647",
+    "encoding": "UTF-8"
+   }
+  ]
+ },
+ "30954": {
+  "title": "各級政府舉債額度及債務未償餘額情形表",
+  "agency": null,
+  "description": "每月份中央及地方政府舉債額度及債務未償餘額相關資料",
+  "updated": "2026-10-05 14:52:28",
+  "files": [
+   {
+    "desc": "各級政府舉債額度及債務未償餘額情形表",
+    "format": "CSV",
+    "url": "https://lgd.nta.gov.tw/newlgd/opendata/D3-15F.csv",
+    "encoding": "UTF-8"
+   }
+  ]
+ },
+ "25300": {
+  "title": "各級政府公共債務統計表",
+  "agency": null,
+  "description": "提供每月各級政府1年以上及未滿1年公共債務統計表",
+  "updated": "2026-10-05 14:49:48",
+  "files": [
+   {
+    "desc": "各級政府公共債務統計表",
+    "format": "CSV",
+    "url": "https://lgd.nta.gov.tw/newlgd/opendata/D3-10.csv",
+    "encoding": "UTF-8"
+   }
+  ]
+ },
+ "177589": {
+  "title": "114年度中央政府總決算",
+  "agency": null,
+  "description": "收支簡明、歲入歲出簡明、歲入總表、政事總表、機關總表、歲入來源分析表、歲出政分析表、歲出用途別表",
+  "updated": "2026-05-13 09:56:08",
+  "files": [
+   {
+    "desc": "",
+    "format": "XML",
+    "url": "https://ws.dgbas.gov.tw/001/Upload/461/relfile/11525/236254/114%E6%AD%B2%E5%85%A5%E6%AD%B2%E5%87%BA%E7%B0%A1%E6%98%8E.xml",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "",
+    "format": "XML",
+    "url": "https://ws.dgbas.gov.tw/001/Upload/461/relfile/11525/236254/114%E6%94%B6%E6%94%AF%E7%B0%A1%E6%98%8E.xml",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "",
+    "format": "XML",
+    "url": "https://ws.dgbas.gov.tw/001/Upload/461/relfile/11525/236254/114%E6%AD%B2%E5%85%A5%E4%BE%86%E6%BA%90.xml",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "",
+    "format": "XML",
+    "url": "https://ws.dgbas.gov.tw/001/Upload/461/relfile/11525/236254/114%E6%AD%B2%E5%85%A5%E5%88%86%E6%9E%90.xml",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "",
+    "format": "XML",
+    "url": "https://ws.dgbas.gov.tw/001/Upload/461/relfile/11525/236254/114%E6%AD%B2%E5%87%BA%E6%94%BF%E4%BA%8B.xml",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "",
+    "format": "XML",
+    "url": "https://ws.dgbas.gov.tw/001/Upload/461/relfile/11525/236254/114%E6%AD%B2%E5%87%BA%E5%88%86%E6%9E%90.xml",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "",
+    "format": "XML",
+    "url": "https://ws.dgbas.gov.tw/001/Upload/461/relfile/11525/236254/114%E6%AD%B2%E5%87%BA%E6%A9%9F%E9%97%9C.xml",
+    "encoding": "UTF-8"
+   },
+   {
+    "desc": "",
+    "format": "XML",
+    "url": "https://ws.dgbas.gov.tw/001/Upload/461/relfile/11525/236254/114%E6%AD%B2%E5%87%BA%E7%94%A8%E9%80%94.xml",
+    "encoding": "UTF-8"
+   }
+  ]
  }
 }

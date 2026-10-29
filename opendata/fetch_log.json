@@ -1,5 +1,5 @@
 {
- "run": "2026-10-29T02:21:27.825951Z",
+ "run": "2026-10-29T03:00:51.458791Z",
  "catalog": [
   {
    "id": "175201",
@@ -128,7 +128,62 @@
   {
    "id": "13976",
    "ok": true
+  },
+  {
+   "id": "176908",
+   "ok": true
+  },
+  {
+   "id": "160926",
+   "ok": true
+  },
+  {
+   "id": "120975",
+   "ok": true
+  },
+  {
+   "id": "148746",
+   "ok": true
+  },
+  {
+   "id": "30954",
+   "ok": true
+  },
+  {
+   "id": "25300",
+   "ok": true
+  },
+  {
+   "id": "177589",
+   "ok": true
   }
  ],
- "download": []
+ "download": [
+  {
+   "name": "探測_財政統計年報目錄",
+   "ok": false,
+   "error": "<HTTPError 403: 'Forbidden'>"
+  },
+  {
+   "name": "探測_財政部統計資料庫",
+   "ok": true,
+   "changed": true,
+   "bytes": 1181,
+   "type": "text/html; charset=utf-8"
+  },
+  {
+   "name": "探測_國庫署債務統計",
+   "ok": true,
+   "changed": true,
+   "bytes": 79857,
+   "type": "text/html;charset=UTF-8"
+  },
+  {
+   "name": "探測_國庫署首頁",
+   "ok": true,
+   "changed": true,
+   "bytes": 145886,
+   "type": "text/html;charset=UTF-8"
+  }
+ ]
 }
