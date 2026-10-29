@@ -1,9 +1,11 @@
-name: 主計總處探勘
+name: 主計總處新聞稿附表下載
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "15 2 12,16,20,26 * *"   # 每月12/16/20/26日 臺北時間10:15（薪資約每月中、國民所得約季末）
   push:
     branches: [main]
-    paths: ["scripts/dgbas_probe.py"]
+    paths: ["scripts/dgbas_probe.py", "scripts/dgbas_fetch.py"]
 permissions: { contents: write }
 jobs:
   probe:
@@ -14,7 +16,7 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: pip install cryptography && sudo apt-get install -y poppler-utils >/dev/null
-      - run: python scripts/dgbas_probe.py
+      - run: python scripts/dgbas_fetch.py
         continue-on-error: true
       - run: |
           git config user.name "DGPA 給與福利處（自動下載）"
