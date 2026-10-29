@@ -1,19 +1,18 @@
-import re,json,traceback,os,html
+import re,json,traceback,os
 os.makedirs('opendata/probe',exist_ok=True)
 out={"err":[]}
 try:
     src=open('scripts/dgbas_fetch.py').read().split('log={"run"')[0]; exec(src)
 except Exception: out['err'].append(['exec',traceback.format_exc()[-800:]])
-B="https://ws.dgbas.gov.tw/001/Upload/461/relfile/10748/"
-for k,u in {"前5_114_收支":B+"236210/2收支簡明.ods","前5_114_融資":B+"236210/6融資調度.ods","前4_112-113_收支":B+"234785/4-1收支.ods","前4_融資":B+"234785/4-5融資.ods"}.items():
+for ds in list(range(30948,30962))+[13761,13760,13762,13763,13764]:
     try:
-        rows=ods_rows(get(u)); out[k]=[[c for c in r if c][:12] for r in rows if any(r)][:40]
-    except Exception: out["err"].append([k,traceback.format_exc()[-200:]])
-try:
-    p=get("https://www.dgbas.gov.tw/News_Content.aspx?n=1751&s=236126").decode("utf-8","replace")
-    out["疫後_files"]=[html.unescape(h) for h in re.findall(r'href="([^"]+\.ods)"',p)][:20]
-    for h in out["疫後_files"]:
-        if "收支" in urllib.parse.unquote(h):
-            rows=ods_rows(get(h)); out["疫後_收支"]=[[c for c in r if c][:12] for r in rows if any(r)][:40]; break
-except Exception: out["err"].append(["疫後",traceback.format_exc()[-200:]])
+        j=json.loads(get(f"https://data.gov.tw/api/v2/rest/dataset/{ds}").decode("utf-8")); r=j.get("result",j)
+        if not r.get("title"): continue
+        out[str(ds)]={"title":r.get("title"),"desc":(r.get("description") or "")[:200],"f":[(d.get("resourceDescription"),d.get("resourceFormat"),d.get("resourceDownloadUrl")) for d in (r.get("distribution") or [])][:6]}
+        if "債務" in (r.get("title") or ""):
+            for d in (r.get("distribution") or [])[:2]:
+                try:
+                    b=get(d.get("resourceDownloadUrl")); out[str(ds)].setdefault("samples",[]).append([len(b),b[:3000].decode("utf-8","replace")])
+                except Exception as e: out[str(ds)].setdefault("samples",[]).append([repr(e)[:120]])
+    except Exception as e: out["err"].append([ds,repr(e)[:100]])
 json.dump(out,open("opendata/probe/out.json","w"),ensure_ascii=False,indent=1)
