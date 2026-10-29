@@ -1,0 +1,30 @@
+[
+ {
+  "robots": "https://www.stat.gov.tw/",
+  "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: un"
+ },
+ {
+  "url": "https://www.stat.gov.tw/cl.aspx?n=3680",
+  "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)'))"
+ },
+ {
+  "url": "https://www.stat.gov.tw/cp.aspx?n=2679",
+  "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)'))"
+ },
+ {
+  "url": "https://www.stat.gov.tw/News.aspx?n=3602",
+  "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)'))"
+ },
+ {
+  "robots": "https://www.dgbas.gov.tw/",
+  "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: un"
+ },
+ {
+  "url": "https://www.dgbas.gov.tw/News.aspx?n=3602",
+  "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)'))"
+ },
+ {
+  "url": "https://www.dgbas.gov.tw/cl.aspx?n=3680",
+  "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)'))"
+ }
+]
