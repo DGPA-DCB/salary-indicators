@@ -1,5 +1,5 @@
 {
- "run": "2026-10-29T02:25:33Z",
+ "run": "2026-10-29T02:29:49Z",
  "steps": [
   {
    "target": 114,
@@ -17,29 +17,24 @@
   },
   {
    "target": 114,
-   "excerpts": 0
-  },
-  {
-   "target": 102,
-   "found": [
-    "中華民國102年度中央政府總決算審核報告（含附屬單位決算及綜計表）"
+   "chapter": "檢視章節-壹、總決算歲入歲出決算審定數簡明比較表PDF",
+   "pdf_candidates": [
+    "https://auditreport.audit.gov.tw/ServerFile/Download/6392143478331552704b80c96036e74adab067889ef3bd9efc?isPaging=False",
+    "https://auditreport.audit.gov.tw/ServerFile/Download/63921434728685180210166b72153541b9a93d1c53165e53f3?isPaging=True"
    ]
   },
   {
-   "target": 102,
-   "files": [
-    "102年度中央政府總決算審核報告（含附屬單位決算及綜計表）.pdf"
-   ]
+   "target": 114,
+   "got_pdf": "https://auditreport.audit.gov.tw/ServerFile/Download/63921434728685180210166b72153541b9a93d1c53165e53f3?isPaging=True",
+   "bytes": 19599482
+  },
+  {
+   "target": 114,
+   "excerpts": 1
   },
   {
    "target": 102,
-   "file": "102年度中央政府總決算審核報告（含附屬單位決算及綜計表）.pdf",
-   "pages": 884,
-   "hits": 4
-  },
-  {
-   "target": 102,
-   "excerpts": 4
+   "skipped": "done"
   }
  ]
 }
