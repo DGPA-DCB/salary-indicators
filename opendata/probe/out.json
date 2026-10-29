@@ -1,88 +1,327 @@
 {
  "err": [],
- "13973": {
-  "title": "中央政府總決算歲入歲出決算審定資料",
-  "desc": "中央政府-總決算歲入歲出決算審定資料",
-  "dist": [
+ "166502": {
+  "title": "113年度中央政府總預算案－預算表",
+  "n": 1,
+  "f": [
    [
-    "中央政府總決算歲入歲出決算審定資料",
-    "https://odap.audit.gov.tw/api/AuditedItem_N/FiscalYear=105/Government=中央政府",
-    "JSON"
-   ],
-   [
-    "機關",
-    "https://odap.audit.gov.tw/api/AuditedItem_N/AuditedItemOrgan/FiscalYear=105",
-    "JSON"
-   ],
-   [
-    "政府別",
-    "https://odap.audit.gov.tw/api/AuditedItem_N/AuditedItemGovernment",
-    "JSON"
-   ],
-   [
-    "來源別及政事別大分類代碼",
-    "https://odap.audit.gov.tw/api/AuditedItem_N/FundCode/FiscalYear=105",
-    "JSON"
-   ]
-  ],
-  "samples": [
-   [
-    "https://odap.audit.gov.tw/api/AuditedItem_N/FiscalYear=105/Government=中央政府",
-    60793,
-    "<!DOCTYPE html>\n<html lang=\"zh-Hant-TW\">\n<head>\n\n<meta name=\"google-site-verification\" content=\"mNmls5mLdNVvNj8obl0swHxON31zv9EOMQwRBfm9R7k\" />\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\" />\n<meta name=\"viewport\" content=\"initial-scale=1.0, user-scalable=1, minimum-scale=1.0, maximum-scale=3.0\">\n<meta name=\"mobile-web-app-capable\" content=\"yes\">\n<meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black\">\n<meta name=\"keywords\" content=\"審計部新聞,審計部,app,審計部APP\" />\n<meta name=\"description\" content=\"審計部是中華民國有關政府審計事務的最高主管機關，也是唯一隸屬於監察院的中央政府部門，主要職責為審核各級政府機關之財務收支、考核財務效能、審定決算、稽察財務上之違失、核定財務責任等。\" />\n<meta name=\"DC.Title\" content=\"審計部全球資訊網\" />\n<meta name=\"DC.Creator\" content=\"\" />\n<meta name=\"DC.Subject\" content=\"審計部全球資訊網\" />\n<meta name=\"DC.Description\" content=\"\" />\n<meta name=\"DC.Contributor\" content=\"\" />\n<meta name=\"DC.Type\" content=\"\" />\n<meta name=\"DC.Format\" content=\"html\" />\n<meta name=\"DC.Source\" content=\"\" />\n<meta name=\"DC.Language\" content=\"\" />\n<meta name=\"DC.Coverage\" content=\"\" />\n<meta name=\"DC.Publisher\" content=\"\" />\n<meta name=\"DC.Date\" content=\"2026-10-27\" />\n<meta name=\"DC.Identifier\" content=\"\"/>\n<meta name=\"DC.Relation\" content=\"\" />\n<meta name=\"DC.Rights\" content=\"\" />\n<meta name=\"Category.Theme\" content=\"\"/>\n<meta name=\"Category.Cake\" content=\"\"/>\n<meta name=\"Category.Service\" content=\"\"/>\n\n<meta content=\"index,follow\" name=\"robots\">\n<!-- Open Graph data -->\n\n<meta property=\"og:title\" content=\"中華民國審計部全球資訊網\">\n<meta property=\"og:description\" content=\"審計部是中華民國有關政府審計事務的最高主管機關，也是唯一隸屬於監察院的中央政府部門，主要職責為審核各級政府機關之財務收支、考核財務效能、審定決算、稽察財務上之違失、核定財務責任等。\" >\n<meta property=\"og:url\" content=\"https://www.audit.gov.tw\">\n<meta property=\"og:site_name\" content=\"中華民國審計部全球資訊網\">\n<meta property=\"og:image\" content=\"https://www.audit.gov.tw/var/file/0/1000/img/26/audit.png\">\n<meta property=\"og:type\" content=\"audit\">\n\n<meta property=\"og:image\"  content=\"https://www.audit.gov.tw/var/file/0/1000/msys_1000_3618412_56410.ico\" />\n\n<title>審計部全球資訊網  - 中華民國審計部全球資訊網　</title>\n\n<link rel=\"shortcut icon\" href=\"/var/file/0/1000/msys_1000_3618412_56410.ico\" type=\"image/x-icon\" />\n<link rel=\"icon\" href=\"/var/file/0/1000/msys_1000_3618412_56410.ico\" type=\"image/x-icon\" />\n<link rel=\"bookmark\" href=\"/var/file/0/1000/msys_1000_3618412_56410.ico\" type=\"image/x-icon\" />\n\n<link rel=\"apple-touch-icon-precomposed\" href=\"/var/file/0/1000/msys_1000_3618412_56410.ico\">\n<link rel=\"apple-touch-icon\" href=\"/var/f"
-   ],
-   [
-    "https://odap.audit.gov.tw/api/AuditedItem_N/AuditedItemOrgan/FiscalYear=105",
-    60792,
-    "<!DOCTYPE html>\n<html lang=\"zh-Hant-TW\">\n<head>\n\n<meta name=\"google-site-verification\" content=\"mNmls5mLdNVvNj8obl0swHxON31zv9EOMQwRBfm9R7k\" />\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\" />\n<meta name=\"viewport\" content=\"initial-scale=1.0, user-scalable=1, minimum-scale=1.0, maximum-scale=3.0\">\n<meta name=\"mobile-web-app-capable\" content=\"yes\">\n<meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black\">\n<meta name=\"keywords\" content=\"審計部新聞,審計部,app,審計部APP\" />\n<meta name=\"description\" content=\"審計部是中華民國有關政府審計事務的最高主管機關，也是唯一隸屬於監察院的中央政府部門，主要職責為審核各級政府機關之財務收支、考核財務效能、審定決算、稽察財務上之違失、核定財務責任等。\" />\n<meta name=\"DC.Title\" content=\"審計部全球資訊網\" />\n<meta name=\"DC.Creator\" content=\"\" />\n<meta name=\"DC.Subject\" content=\"審計部全球資訊網\" />\n<meta name=\"DC.Description\" content=\"\" />\n<meta name=\"DC.Contributor\" content=\"\" />\n<meta name=\"DC.Type\" content=\"\" />\n<meta name=\"DC.Format\" content=\"html\" />\n<meta name=\"DC.Source\" content=\"\" />\n<meta name=\"DC.Language\" content=\"\" />\n<meta name=\"DC.Coverage\" content=\"\" />\n<meta name=\"DC.Publisher\" content=\"\" />\n<meta name=\"DC.Date\" content=\"2026-10-27\" />\n<meta name=\"DC.Identifier\" content=\"\"/>\n<meta name=\"DC.Relation\" content=\"\" />\n<meta name=\"DC.Rights\" content=\"\" />\n<meta name=\"Category.Theme\" content=\"\"/>\n<meta name=\"Category.Cake\" content=\"\"/>\n<meta name=\"Category.Service\" content=\"\"/>\n\n<meta content=\"index,follow\" name=\"robots\">\n<!-- Open Graph data -->\n\n<meta property=\"og:title\" content=\"中華民國審計部全球資訊網\">\n<meta property=\"og:description\" content=\"審計部是中華民國有關政府審計事務的最高主管機關，也是唯一隸屬於監察院的中央政府部門，主要職責為審核各級政府機關之財務收支、考核財務效能、審定決算、稽察財務上之違失、核定財務責任等。\" >\n<meta property=\"og:url\" content=\"https://www.audit.gov.tw\">\n<meta property=\"og:site_name\" content=\"中華民國審計部全球資訊網\">\n<meta property=\"og:image\" content=\"https://www.audit.gov.tw/var/file/0/1000/img/26/audit.png\">\n<meta property=\"og:type\" content=\"audit\">\n\n<meta property=\"og:image\"  content=\"https://www.audit.gov.tw/var/file/0/1000/msys_1000_3618412_56410.ico\" />\n\n<title>審計部全球資訊網  - 中華民國審計部全球資訊網　</title>\n\n<link rel=\"shortcut icon\" href=\"/var/file/0/1000/msys_1000_3618412_56410.ico\" type=\"image/x-icon\" />\n<link rel=\"icon\" href=\"/var/file/0/1000/msys_1000_3618412_56410.ico\" type=\"image/x-icon\" />\n<link rel=\"bookmark\" href=\"/var/file/0/1000/msys_1000_3618412_56410.ico\" type=\"image/x-icon\" />\n\n<link rel=\"apple-touch-icon-precomposed\" href=\"/var/file/0/1000/msys_1000_3618412_56410.ico\">\n<link rel=\"apple-touch-icon\" href=\"/var/f"
-   ],
-   [
-    "https://odap.audit.gov.tw/api/AuditedItem_N/AuditedItemGovernment",
-    60794,
-    "<!DOCTYPE html>\n<html lang=\"zh-Hant-TW\">\n<head>\n\n<meta name=\"google-site-verification\" content=\"mNmls5mLdNVvNj8obl0swHxON31zv9EOMQwRBfm9R7k\" />\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\" />\n<meta name=\"viewport\" content=\"initial-scale=1.0, user-scalable=1, minimum-scale=1.0, maximum-scale=3.0\">\n<meta name=\"mobile-web-app-capable\" content=\"yes\">\n<meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black\">\n<meta name=\"keywords\" content=\"審計部新聞,審計部,app,審計部APP\" />\n<meta name=\"description\" content=\"審計部是中華民國有關政府審計事務的最高主管機關，也是唯一隸屬於監察院的中央政府部門，主要職責為審核各級政府機關之財務收支、考核財務效能、審定決算、稽察財務上之違失、核定財務責任等。\" />\n<meta name=\"DC.Title\" content=\"審計部全球資訊網\" />\n<meta name=\"DC.Creator\" content=\"\" />\n<meta name=\"DC.Subject\" content=\"審計部全球資訊網\" />\n<meta name=\"DC.Description\" content=\"\" />\n<meta name=\"DC.Contributor\" content=\"\" />\n<meta name=\"DC.Type\" content=\"\" />\n<meta name=\"DC.Format\" content=\"html\" />\n<meta name=\"DC.Source\" content=\"\" />\n<meta name=\"DC.Language\" content=\"\" />\n<meta name=\"DC.Coverage\" content=\"\" />\n<meta name=\"DC.Publisher\" content=\"\" />\n<meta name=\"DC.Date\" content=\"2026-10-27\" />\n<meta name=\"DC.Identifier\" content=\"\"/>\n<meta name=\"DC.Relation\" content=\"\" />\n<meta name=\"DC.Rights\" content=\"\" />\n<meta name=\"Category.Theme\" content=\"\"/>\n<meta name=\"Category.Cake\" content=\"\"/>\n<meta name=\"Category.Service\" content=\"\"/>\n\n<meta content=\"index,follow\" name=\"robots\">\n<!-- Open Graph data -->\n\n<meta property=\"og:title\" content=\"中華民國審計部全球資訊網\">\n<meta property=\"og:description\" content=\"審計部是中華民國有關政府審計事務的最高主管機關，也是唯一隸屬於監察院的中央政府部門，主要職責為審核各級政府機關之財務收支、考核財務效能、審定決算、稽察財務上之違失、核定財務責任等。\" >\n<meta property=\"og:url\" content=\"https://www.audit.gov.tw\">\n<meta property=\"og:site_name\" content=\"中華民國審計部全球資訊網\">\n<meta property=\"og:image\" content=\"https://www.audit.gov.tw/var/file/0/1000/img/26/audit.png\">\n<meta property=\"og:type\" content=\"audit\">\n\n<meta property=\"og:image\"  content=\"https://www.audit.gov.tw/var/file/0/1000/msys_1000_3618412_56410.ico\" />\n\n<title>審計部全球資訊網  - 中華民國審計部全球資訊網　</title>\n\n<link rel=\"shortcut icon\" href=\"/var/file/0/1000/msys_1000_3618412_56410.ico\" type=\"image/x-icon\" />\n<link rel=\"icon\" href=\"/var/file/0/1000/msys_1000_3618412_56410.ico\" type=\"image/x-icon\" />\n<link rel=\"bookmark\" href=\"/var/file/0/1000/msys_1000_3618412_56410.ico\" type=\"image/x-icon\" />\n\n<link rel=\"apple-touch-icon-precomposed\" href=\"/var/file/0/1000/msys_1000_3618412_56410.ico\">\n<link rel=\"apple-touch-icon\" href=\"/var/f"
+    "",
+    ".dgbas.gov.tw/001/Upload/461/relfile/11525/232508/113b-4.zip"
    ]
   ]
  },
- "13976": {
-  "title": "中央政府以前年度總決算歲入歲出決算審定資料",
-  "desc": "中央政府-以前年度總決算歲入歲出決算審定資料",
-  "dist": [
+ "173426": {
+  "title": "113年度中央政府總決算附屬單位決算及綜計表(非營業部分)",
+  "n": 16,
+  "f": [
    [
-    "中央政府以前年度總決算歲入歲出決算審定資料",
-    "https://odap.audit.gov.tw/api/AuditedItem_O/FiscalYear=105/Government=中央政府",
-    "JSON"
+    "113-中央政府債務基金-平衡綜計表",
+    "A%E9%87%91-%E5%B9%B3%E8%A1%A1%E7%B6%9C%E8%A8%88%E8%A1%A8.xml"
    ],
    [
-    "機關",
-    "https://odap.audit.gov.tw/api/AuditedItem_O/AuditedItemOrgan/FiscalYear=105",
-    "JSON"
+    "113-中央政府債務基金-基金來源、用途及餘絀綜計表",
+    "94%E5%8F%8A%E9%A4%98%E7%B5%80%E7%B6%9C%E8%A8%88%E8%A1%A8.xml"
    ],
    [
-    "政府別",
-    "https://odap.audit.gov.tw/api/AuditedItem_O/AuditedItemGovernment",
-    "JSON"
+    "113-中央政府債務基金-現金流量綜計表",
+    "BE%E9%87%91%E6%B5%81%E9%87%8F%E7%B6%9C%E8%A8%88%E8%A1%A8.xml"
    ],
    [
-    "來源別及政事別大分類代碼",
-    "https://odap.audit.gov.tw/api/AuditedItem_O/FundCode/FiscalYear=105",
-    "JSON"
+    "113-中央政府債務基金-收入支出綜計表",
+    "B6%E5%85%A5%E6%94%AF%E5%87%BA%E7%B6%9C%E8%A8%88%E8%A1%A8.xml"
+   ],
+   [
+    "113-作業基金-平衡綜計表",
+    "A%E9%87%91-%E5%B9%B3%E8%A1%A1%E7%B6%9C%E8%A8%88%E8%A1%A8.xml"
+   ],
+   [
+    "113-作業基金-收支餘絀綜計表",
+    "B6%E6%94%AF%E9%A4%98%E7%B5%80%E7%B6%9C%E8%A8%88%E8%A1%A8.xml"
    ]
-  ],
-  "samples": [
+  ]
+ },
+ "170600": {
+  "title": "113年度中央政府總預算附屬單位預算半年結算報告及綜計表(非營業部分)",
+  "n": 8,
+  "f": [
    [
-    "https://odap.audit.gov.tw/api/AuditedItem_O/FiscalYear=105/Government=中央政府",
-    60793,
-    "<!DOCTYPE html>\n<html lang=\"zh-Hant-TW\">\n<head>\n\n<meta name=\"google-site-verification\" content=\"mNmls5mLdNVvNj8obl0swHxON31zv9EOMQwRBfm9R7k\" />\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\" />\n<meta name=\"viewport\" content=\"initial-scale=1.0, user-scalable=1, minimum-scale=1.0, maximum-scale=3.0\">\n<meta name=\"mobile-web-app-capable\" content=\"yes\">\n<meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black\">\n<meta name=\"keywords\" content=\"審計部新聞,審計部,app,審計部APP\" />\n<meta name=\"description\" content=\"審計部是中華民國有關政府審計事務的最高主管機關，也是唯一隸屬於監察院的中央政府部門，主要職責為審核各級政府機關之財務收支、考核財務效能、審定決算、稽察財務上之違失、核定財務責任等。\" />\n<meta name=\"DC.Title\" content=\"審計部全球資訊網\" />\n<meta name=\"DC.Creator\" content=\"\" />\n<meta name=\"DC.Subject\" content=\"審計部全球資訊網\" />\n<meta name=\"DC.Description\" content=\"\" />\n<meta name=\"DC.Contributor\" content=\"\" />\n<meta name=\"DC.Type\" content=\"\" />\n<meta name=\"DC.Format\" content=\"html\" />\n<meta name=\"DC.Source\" content=\"\" />\n<meta name=\"DC.Language\" content=\"\" />\n<meta name=\"DC.Coverage\" content=\"\" />\n<meta name=\"DC.Publisher\" content=\"\" />\n<meta name=\"DC.Date\" content=\"2026-10-27\" />\n<meta name=\"DC.Identifier\" content=\"\"/>\n<meta name=\"DC.Relation\" content=\"\" />\n<meta name=\"DC.Rights\" content=\"\" />\n<meta name=\"Category.Theme\" content=\"\"/>\n<meta name=\"Category.Cake\" content=\"\"/>\n<meta name=\"Category.Service\" content=\"\"/>\n\n<meta content=\"index,follow\" name=\"robots\">\n<!-- Open Graph data -->\n\n<meta property=\"og:title\" content=\"中華民國審計部全球資訊網\">\n<meta property=\"og:description\" content=\"審計部是中華民國有關政府審計事務的最高主管機關，也是唯一隸屬於監察院的中央政府部門，主要職責為審核各級政府機關之財務收支、考核財務效能、審定決算、稽察財務上之違失、核定財務責任等。\" >\n<meta property=\"og:url\" content=\"https://www.audit.gov.tw\">\n<meta property=\"og:site_name\" content=\"中華民國審計部全球資訊網\">\n<meta property=\"og:image\" content=\"https://www.audit.gov.tw/var/file/0/1000/img/26/audit.png\">\n<meta property=\"og:type\" content=\"audit\">\n\n<meta property=\"og:image\"  content=\"https://www.audit.gov.tw/var/file/0/1000/msys_1000_3618412_56410.ico\" />\n\n<title>審計部全球資訊網  - 中華民國審計部全球資訊網　</title>\n\n<link rel=\"shortcut icon\" href=\"/var/file/0/1000/msys_1000_3618412_56410.ico\" type=\"image/x-icon\" />\n<link rel=\"icon\" href=\"/var/file/0/1000/msys_1000_3618412_56410.ico\" type=\"image/x-icon\" />\n<link rel=\"bookmark\" href=\"/var/file/0/1000/msys_1000_3618412_56410.ico\" type=\"image/x-icon\" />\n\n<link rel=\"apple-touch-icon-precomposed\" href=\"/var/file/0/1000/msys_1000_3618412_56410.ico\">\n<link rel=\"apple-touch-icon\" href=\"/var/f"
+    "",
+    "A%E9%87%91-%E5%B9%B3%E8%A1%A1%E7%B6%9C%E8%A8%88%E8%A1%A8.xml"
    ],
    [
-    "https://odap.audit.gov.tw/api/AuditedItem_O/AuditedItemOrgan/FiscalYear=105",
-    60793,
-    "<!DOCTYPE html>\n<html lang=\"zh-Hant-TW\">\n<head>\n\n<meta name=\"google-site-verification\" content=\"mNmls5mLdNVvNj8obl0swHxON31zv9EOMQwRBfm9R7k\" />\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\" />\n<meta name=\"viewport\" content=\"initial-scale=1.0, user-scalable=1, minimum-scale=1.0, maximum-scale=3.0\">\n<meta name=\"mobile-web-app-capable\" content=\"yes\">\n<meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black\">\n<meta name=\"keywords\" content=\"審計部新聞,審計部,app,審計部APP\" />\n<meta name=\"description\" content=\"審計部是中華民國有關政府審計事務的最高主管機關，也是唯一隸屬於監察院的中央政府部門，主要職責為審核各級政府機關之財務收支、考核財務效能、審定決算、稽察財務上之違失、核定財務責任等。\" />\n<meta name=\"DC.Title\" content=\"審計部全球資訊網\" />\n<meta name=\"DC.Creator\" content=\"\" />\n<meta name=\"DC.Subject\" content=\"審計部全球資訊網\" />\n<meta name=\"DC.Description\" content=\"\" />\n<meta name=\"DC.Contributor\" content=\"\" />\n<meta name=\"DC.Type\" content=\"\" />\n<meta name=\"DC.Format\" content=\"html\" />\n<meta name=\"DC.Source\" content=\"\" />\n<meta name=\"DC.Language\" content=\"\" />\n<meta name=\"DC.Coverage\" content=\"\" />\n<meta name=\"DC.Publisher\" content=\"\" />\n<meta name=\"DC.Date\" content=\"2026-10-27\" />\n<meta name=\"DC.Identifier\" content=\"\"/>\n<meta name=\"DC.Relation\" content=\"\" />\n<meta name=\"DC.Rights\" content=\"\" />\n<meta name=\"Category.Theme\" content=\"\"/>\n<meta name=\"Category.Cake\" content=\"\"/>\n<meta name=\"Category.Service\" content=\"\"/>\n\n<meta content=\"index,follow\" name=\"robots\">\n<!-- Open Graph data -->\n\n<meta property=\"og:title\" content=\"中華民國審計部全球資訊網\">\n<meta property=\"og:description\" content=\"審計部是中華民國有關政府審計事務的最高主管機關，也是唯一隸屬於監察院的中央政府部門，主要職責為審核各級政府機關之財務收支、考核財務效能、審定決算、稽察財務上之違失、核定財務責任等。\" >\n<meta property=\"og:url\" content=\"https://www.audit.gov.tw\">\n<meta property=\"og:site_name\" content=\"中華民國審計部全球資訊網\">\n<meta property=\"og:image\" content=\"https://www.audit.gov.tw/var/file/0/1000/img/26/audit.png\">\n<meta property=\"og:type\" content=\"audit\">\n\n<meta property=\"og:image\"  content=\"https://www.audit.gov.tw/var/file/0/1000/msys_1000_3618412_56410.ico\" />\n\n<title>審計部全球資訊網  - 中華民國審計部全球資訊網　</title>\n\n<link rel=\"shortcut icon\" href=\"/var/file/0/1000/msys_1000_3618412_56410.ico\" type=\"image/x-icon\" />\n<link rel=\"icon\" href=\"/var/file/0/1000/msys_1000_3618412_56410.ico\" type=\"image/x-icon\" />\n<link rel=\"bookmark\" href=\"/var/file/0/1000/msys_1000_3618412_56410.ico\" type=\"image/x-icon\" />\n\n<link rel=\"apple-touch-icon-precomposed\" href=\"/var/file/0/1000/msys_1000_3618412_56410.ico\">\n<link rel=\"apple-touch-icon\" href=\"/var/f"
+    "",
+    "94%E5%8F%8A%E9%A4%98%E7%B5%80%E7%B6%9C%E8%A8%88%E8%A1%A8.xml"
    ],
    [
-    "https://odap.audit.gov.tw/api/AuditedItem_O/AuditedItemGovernment",
-    60793,
-    "<!DOCTYPE html>\n<html lang=\"zh-Hant-TW\">\n<head>\n\n<meta name=\"google-site-verification\" content=\"mNmls5mLdNVvNj8obl0swHxON31zv9EOMQwRBfm9R7k\" />\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\" />\n<meta name=\"viewport\" content=\"initial-scale=1.0, user-scalable=1, minimum-scale=1.0, maximum-scale=3.0\">\n<meta name=\"mobile-web-app-capable\" content=\"yes\">\n<meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black\">\n<meta name=\"keywords\" content=\"審計部新聞,審計部,app,審計部APP\" />\n<meta name=\"description\" content=\"審計部是中華民國有關政府審計事務的最高主管機關，也是唯一隸屬於監察院的中央政府部門，主要職責為審核各級政府機關之財務收支、考核財務效能、審定決算、稽察財務上之違失、核定財務責任等。\" />\n<meta name=\"DC.Title\" content=\"審計部全球資訊網\" />\n<meta name=\"DC.Creator\" content=\"\" />\n<meta name=\"DC.Subject\" content=\"審計部全球資訊網\" />\n<meta name=\"DC.Description\" content=\"\" />\n<meta name=\"DC.Contributor\" content=\"\" />\n<meta name=\"DC.Type\" content=\"\" />\n<meta name=\"DC.Format\" content=\"html\" />\n<meta name=\"DC.Source\" content=\"\" />\n<meta name=\"DC.Language\" content=\"\" />\n<meta name=\"DC.Coverage\" content=\"\" />\n<meta name=\"DC.Publisher\" content=\"\" />\n<meta name=\"DC.Date\" content=\"2026-10-27\" />\n<meta name=\"DC.Identifier\" content=\"\"/>\n<meta name=\"DC.Relation\" content=\"\" />\n<meta name=\"DC.Rights\" content=\"\" />\n<meta name=\"Category.Theme\" content=\"\"/>\n<meta name=\"Category.Cake\" content=\"\"/>\n<meta name=\"Category.Service\" content=\"\"/>\n\n<meta content=\"index,follow\" name=\"robots\">\n<!-- Open Graph data -->\n\n<meta property=\"og:title\" content=\"中華民國審計部全球資訊網\">\n<meta property=\"og:description\" content=\"審計部是中華民國有關政府審計事務的最高主管機關，也是唯一隸屬於監察院的中央政府部門，主要職責為審核各級政府機關之財務收支、考核財務效能、審定決算、稽察財務上之違失、核定財務責任等。\" >\n<meta property=\"og:url\" content=\"https://www.audit.gov.tw\">\n<meta property=\"og:site_name\" content=\"中華民國審計部全球資訊網\">\n<meta property=\"og:image\" content=\"https://www.audit.gov.tw/var/file/0/1000/img/26/audit.png\">\n<meta property=\"og:type\" content=\"audit\">\n\n<meta property=\"og:image\"  content=\"https://www.audit.gov.tw/var/file/0/1000/msys_1000_3618412_56410.ico\" />\n\n<title>審計部全球資訊網  - 中華民國審計部全球資訊網　</title>\n\n<link rel=\"shortcut icon\" href=\"/var/file/0/1000/msys_1000_3618412_56410.ico\" type=\"image/x-icon\" />\n<link rel=\"icon\" href=\"/var/file/0/1000/msys_1000_3618412_56410.ico\" type=\"image/x-icon\" />\n<link rel=\"bookmark\" href=\"/var/file/0/1000/msys_1000_3618412_56410.ico\" type=\"image/x-icon\" />\n\n<link rel=\"apple-touch-icon-precomposed\" href=\"/var/file/0/1000/msys_1000_3618412_56410.ico\">\n<link rel=\"apple-touch-icon\" href=\"/var/f"
+    "",
+    "5%E5%8B%99%E5%9F%BA%E9%87%91-%E5%B9%B3%E8%A1%A1%E8%A1%A8.xml"
+   ],
+   [
+    "",
+    "81%E7%94%A8%E9%80%94%E5%8F%8A%E9%A4%98%E7%B5%80%E8%A1%A8.xml"
+   ],
+   [
+    "",
+    "8%E7%95%AB%E5%9F%BA%E9%87%91-%E5%B9%B3%E8%A1%A1%E8%A1%A8.xml"
+   ],
+   [
+    "",
+    "81%E7%94%A8%E9%80%94%E5%8F%8A%E9%A4%98%E7%B5%80%E8%A1%A8.xml"
+   ]
+  ]
+ },
+ "170599": {
+  "title": "113年度中央政府總預算附屬單位預算半年結算報告及綜計表(營業部分)",
+  "n": 2,
+  "f": [
+   [
+    "",
+    "0%E7%AE%97-%E6%90%8D%E7%9B%8A%E7%B6%9C%E8%A8%88%E8%A1%A8.xml"
+   ],
+   [
+    "",
+    "87%E7%94%A2%E8%B2%A0%E5%82%B5%E7%B6%9C%E8%A8%88%E8%A1%A8.xml"
+   ]
+  ]
+ },
+ "172964": {
+  "title": "113年度中央政府總預算附屬單位預算及綜計表(營業部分)",
+  "n": 3,
+  "f": [
+   [
+    "",
+    "B6%E6%94%AF%E7%A7%91%E7%9B%AE%E5%88%86%E5%88%97%EF%BC%89.xml"
+   ],
+   [
+    "",
+    "A5%E8%A3%9C%E9%A0%85%E7%9B%AE%E5%88%86%E5%88%97%EF%BC%89.xml"
+   ],
+   [
+    "",
+    "81%E9%87%8F%E9%A0%85%E7%9B%AE%E5%88%86%E5%88%97%EF%BC%89.xml"
+   ]
+  ]
+ },
+ "173425": {
+  "title": "臺北市預售屋推案量及推案總戶數",
+  "n": 1,
+  "f": [
+   [
+    "預售屋推案量案件數及推案總戶數",
+    "58291/resource/01ebd186-2e5e-49dd-b46d-4e25bedd6540/download"
+   ]
+  ]
+ },
+ "173427": {
+  "title": "國軍可提供氣象情資資訊",
+  "n": 1,
+  "f": [
+   [
+    "",
+    "tps://www.mnd.gov.tw/NewUpload/202511/國軍可提供氣象情資資訊_551454.csv"
+   ]
+  ]
+ },
+ "173428": {
+  "title": null,
+  "n": 0,
+  "f": []
+ },
+ "173429": {
+  "title": null,
+  "n": 0,
+  "f": []
+ },
+ "173430": {
+  "title": "國防部通過TAF認證「實驗室」清單",
+  "n": 1,
+  "f": [
+   [
+    "",
+    "ps://www.mnd.gov.tw/NewUpload/202511/通過TAF認證實驗室清單_513486.csv"
+   ]
+  ]
+ },
+ "170601": {
+  "title": "全國原住民保留地所有權人分佈統計表",
+  "n": 3,
+  "f": [
+   [
+    "全國原住民保留地所有權人分佈統計表 JSON",
+    "/data.cip.gov.tw/API/v1/dump/datastore/A53000000A-113003-001"
+   ],
+   [
+    "全國原住民保留地所有權人分佈統計表 XML",
+    "/data.cip.gov.tw/API/v1/dump/datastore/A53000000A-113003-002"
+   ],
+   [
+    "全國原住民保留地所有權人分佈統計表 CSV",
+    "/data.cip.gov.tw/API/v1/dump/datastore/A53000000A-113003-003"
+   ]
+  ]
+ },
+ "170602": {
+  "title": "臺中市玩具銀行",
+  "n": 3,
+  "f": [
+   [
+    "臺中市玩具銀行.CSV",
+    "h/resource.download?rid=b9b6d8fa-8a52-48d1-9713-c40d98f422df"
+   ],
+   [
+    "臺中市玩具銀行.XML",
+    "h/resource.download?rid=35f5b657-026c-482b-9a9f-575a52ec0e7c"
+   ],
+   [
+    "臺中市玩具銀行.JSON",
+    "h/resource.download?rid=d11e626c-3141-4947-baee-e5f224531f29"
+   ]
+  ]
+ },
+ "170603": {
+  "title": null,
+  "n": 0,
+  "f": []
+ },
+ "166501": {
+  "title": "113年度中央政府總預算案－參考表",
+  "n": 1,
+  "f": [
+   [
+    "",
+    ".dgbas.gov.tw/001/Upload/461/relfile/11525/232508/113b-3.zip"
+   ]
+  ]
+ },
+ "166503": {
+  "title": "113年度中央政府總預算案－簡明表",
+  "n": 1,
+  "f": [
+   [
+    "",
+    ".dgbas.gov.tw/001/Upload/461/relfile/11525/232508/113b-5.zip"
+   ]
+  ]
+ },
+ "166504": {
+  "title": "區域全面經濟夥伴協定(RCEP)成員國",
+  "n": 1,
+  "f": [
+   [
+    "",
+    ".trade.gov.tw/OpenData/getOpenData.aspx?oid=0A4848283DFE9C40"
+   ]
+  ]
+ },
+ "166505": {
+  "title": "跨太平洋夥伴全面進步協定(CPTPP)會員國",
+  "n": 1,
+  "f": [
+   [
+    "",
+    ".trade.gov.tw/OpenData/getOpenData.aspx?oid=DFB7B6E643B8B703"
+   ]
+  ]
+ },
+ "166506": {
+  "title": null,
+  "n": 0,
+  "f": []
+ },
+ "166507": {
+  "title": null,
+  "n": 0,
+  "f": []
+ },
+ "166508": {
+  "title": null,
+  "n": 0,
+  "f": []
+ },
+ "172960": {
+  "title": null,
+  "n": 0,
+  "f": []
+ },
+ "172961": {
+  "title": null,
+  "n": 0,
+  "f": []
+ },
+ "172962": {
+  "title": "數位發展部會計月報",
+  "n": 117,
+  "f": [
+   [
+    "數位發展部113年1月會計月報（單位預算）",
+    "https://www-api.moda.gov.tw/OpenData/Files/15484"
+   ],
+   [
+    "數位發展部113年2月會計月報（單位預算）",
+    "https://www-api.moda.gov.tw/OpenData/Files/15486"
+   ],
+   [
+    "數位發展部113年3月會計月報（單位預算）",
+    "https://www-api.moda.gov.tw/OpenData/Files/15488"
+   ],
+   [
+    "數位發展部113年4月會計月報（單位預算）",
+    "https://www-api.moda.gov.tw/OpenData/Files/15490"
+   ],
+   [
+    "數位發展部113年5月會計月報（單位預算）",
+    "https://www-api.moda.gov.tw/OpenData/Files/15492"
+   ],
+   [
+    "數位發展部113年6月會計月報（單位預算）",
+    "https://www-api.moda.gov.tw/OpenData/Files/15494"
+   ]
+  ]
+ },
+ "172963": {
+  "title": null,
+  "n": 0,
+  "f": []
+ },
+ "172965": {
+  "title": "2017到2022年曲狀桿菌臨床菌株對應重要抗生素抗藥性監測資料",
+  "n": 1,
+  "f": [
+   [
+    " ",
+    "ps://od.cdc.gov.tw/rdvd/2017到2022年曲狀桿菌臨床菌株對應重要抗生素抗藥性監測資料.csv"
+   ]
+  ]
+ },
+ "172966": {
+  "title": "竹風藝文饗宴",
+  "n": 4,
+  "f": [
+   [
+    "竹風藝文饗宴",
+    "databack/9059/1784/cf39be4c-ff47-4a08-9f31-cfefbb074b42.xlsx"
+   ],
+   [
+    "竹風藝文饗宴",
+    "ndataback/9059/1784/cf39be4c-ff47-4a08-9f31-cfefbb074b42.csv"
+   ],
+   [
+    "竹風藝文饗宴",
+    "ndataback/9059/1784/cf39be4c-ff47-4a08-9f31-cfefbb074b42.xml"
+   ],
+   [
+    "竹風藝文饗宴",
+    "databack/9059/1784/cf39be4c-ff47-4a08-9f31-cfefbb074b42.json"
+   ]
+  ]
+ },
+ "172967": {
+  "title": "114年度退撫基金每月經營概況",
+  "n": 1,
+  "f": [
+   [
+    "退撫基金每月經營概況",
+    "d&n=6YCA5pKr5Z%2b66YeR5q%2bP5pyI57aT54ef5qaC5rOBLmNzdg%3d%3d"
    ]
   ]
  }
