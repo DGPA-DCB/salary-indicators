@@ -1,5 +1,5 @@
 {
- "run": "2026-10-29T01:47:54Z",
+ "run": "2026-10-29T01:54:54Z",
  "steps": [
   {
    "robots": "ok",
@@ -9,7 +9,7 @@
    "page": "home",
    "url": "https://www.audit.gov.tw/",
    "title": "審計部全球資訊網 - 中華民國審計部全球資訊網　",
-   "links": 188
+   "links": 196
   },
   {
    "page": "L1:財務審核結果年報",
@@ -48,122 +48,52 @@
    "links": 100
   },
   {
-   "page": "detail:103",
-   "url": "https://www.audit.gov.tw/p/405-1000-2420,c107.php?Lang=zh-tw",
-   "title": "民國103年度直轄市及縣市地方決算審核結果年報 - 中華民國審計部全球資訊網　",
-   "links": 82
-  },
-  {
    "target": 103,
-   "detail": "https://www.audit.gov.tw/p/405-1000-2420,c107.php?Lang=zh-tw",
-   "files": [
-    "民國103年度直轄市及縣市地方決算審核結果年報.pdf"
-   ]
-  },
-  {
-   "target": 103,
-   "pdf": "民國103年度直轄市及縣市地方決算審核結果年報.pdf",
-   "bytes": 11211369,
-   "status": 200
-  },
-  {
-   "target": 103,
-   "keyword_pages": [
-    10,
-    88,
-    89,
-    172
-   ]
-  },
-  {
-   "page": "detail:104",
-   "url": "https://www.audit.gov.tw/p/405-1000-3104,c107.php?Lang=zh-tw",
-   "title": "民國104年度直轄市及縣市地方決算審核結果年報 - 中華民國審計部全球資訊網　",
-   "links": 82
+   "skipped": "already done"
   },
   {
    "target": 104,
-   "detail": "https://www.audit.gov.tw/p/405-1000-3104,c107.php?Lang=zh-tw",
-   "files": [
-    "民國104年度直轄市及縣市地方決算審核結果年報 .pdf"
-   ]
-  },
-  {
-   "target": 104,
-   "pdf": "民國104年度直轄市及縣市地方決算審核結果年報 .pdf",
-   "bytes": 9732536,
-   "status": 200
-  },
-  {
-   "target": 104,
-   "keyword_pages": [
-    11,
-    90,
-    91,
-    163
-   ]
-  },
-  {
-   "page": "detail:105",
-   "url": "https://www.audit.gov.tw/p/405-1000-3959,c107.php?Lang=zh-tw",
-   "title": "民國105年度直轄市及縣市地方決算審核結果年報 - 中華民國審計部全球資訊網　",
-   "links": 82
+   "skipped": "already done"
   },
   {
    "target": 105,
-   "detail": "https://www.audit.gov.tw/p/405-1000-3959,c107.php?Lang=zh-tw",
+   "skipped": "already done"
+  },
+  {
+   "target": 106,
+   "skipped": "already done"
+  },
+  {
+   "page": "detail:111",
+   "url": "https://www.audit.gov.tw/p/405-1000-9378,c107.php?Lang=zh-tw",
+   "title": "民國111年度直轄市及縣市地方決算審核結果年報 - 中華民國審計部全球資訊網　",
+   "links": 83
+  },
+  {
+   "target": 111,
+   "detail": "https://www.audit.gov.tw/p/405-1000-9378,c107.php?Lang=zh-tw",
    "files": [
-    "105年度直轄市及縣市地方決算審核結果年報.pdf"
-   ]
-  },
-  {
-   "target": 105,
-   "pdf": "105年度直轄市及縣市地方決算審核結果年報.pdf",
-   "bytes": 8765150,
-   "status": 200
-  },
-  {
-   "target": 105,
-   "keyword_pages": [
-    11,
-    89,
-    90
-   ]
-  },
-  {
-   "page": "detail:106",
-   "url": "https://www.audit.gov.tw/p/405-1000-5150,c107.php?Lang=zh-tw",
-   "title": "民國106年度直轄市及縣市地方決算審核結果年報 - 中華民國審計部全球資訊網　",
-   "links": 82
-  },
-  {
-   "target": 106,
-   "detail": "https://www.audit.gov.tw/p/405-1000-5150,c107.php?Lang=zh-tw",
-   "files": [
-    "民國106年度直轄市及縣市地方決算審核結果年報.pdf"
-   ]
-  },
-  {
-   "target": 106,
-   "pdf": "民國106年度直轄市及縣市地方決算審核結果年報.pdf",
-   "bytes": 7421376,
-   "status": 200
-  },
-  {
-   "target": 106,
-   "keyword_pages": [
-    11,
-    89,
-    90
+    "民國111年度直轄市及縣市地方決算審核結果年報.pdf",
+    "2022_AnnualReport_電子書.zip"
    ]
   },
   {
    "target": 111,
-   "error": "detail page not found"
+   "pdf": "民國111年度直轄市及縣市地方決算審核結果年報.pdf",
+   "bytes": 7023387,
+   "status": 200
   },
   {
-   "total_links": 737,
-   "report_links": 50
+   "target": 111,
+   "keyword_pages": [
+    9,
+    84,
+    85
+   ]
+  },
+  {
+   "total_links": 745,
+   "report_links": 65
   }
  ]
 }
