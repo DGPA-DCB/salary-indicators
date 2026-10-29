@@ -16,7 +16,7 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: sudo apt-get install -y poppler-utils >/dev/null
-      - run: python scripts/fiscal_fetch.py 2>&1 | tee opendata/fiscal/run.log
+      - run: python scripts/fiscal_fetch.py && python scripts/fiscal_hist.py 2>&1 | tee opendata/fiscal/run.log
         continue-on-error: true
       - run: python scripts/opendata_discover.py 2>&1 | tee opendata/discover.log
         continue-on-error: true

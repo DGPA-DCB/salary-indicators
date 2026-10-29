@@ -49,6 +49,11 @@ for d in sorted(glob.glob("opendata/audit_central/*")):
 # ---- T/V：財政統計年報（若已下載並解析）----
 for f in glob.glob("opendata/fiscal/yearbook_table1-1*.json"):
     R.update(json.load(open(f, encoding="utf-8")))
+# 歷年年報之決算審定舉借數（101–107 年）優先於預算數
+if os.path.exists("opendata/fiscal/debt_final.json"):
+    DF = json.load(open("opendata/fiscal/debt_final.json", encoding="utf-8"))
+    for k in "WXZ":
+        for y, v in DF.get(k, {}).items(): R.setdefault(k, {})[int(y)] = v
 # ---- W–Z 決算：總預算「債務之舉借」「歲出」決算數（主計總處總決算收支簡明表 XML）＋國庫署年底實際舉債數 ----
 # 規則：列入債限舉借(X)之預算數若等於總預算舉借預算數（即列入債限之特別預算無舉借），X 決算＝總預算舉借決算數；
 #       歲出(Y)之預算數若等於總預算歲出預算數（無列入債限之特別預算歲出），Y 決算＝總預算歲出決算數；Z＝X/Y（X 決算為 0 時 Z＝0，不需 Y）。
