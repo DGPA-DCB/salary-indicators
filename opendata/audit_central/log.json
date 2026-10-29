@@ -1,87 +1,25 @@
 {
- "run": "2026-10-29T02:15:06Z",
+ "run": "2026-10-29T02:22:56Z",
  "steps": [
   {
-   "robots": "error",
-   "error": "<HTTPError 404: 'Not Found'>"
+   "page": "platform",
+   "blocked": "bot protection; stop"
   },
   {
-   "page": "home",
-   "url": "https://auditreport.audit.gov.tw/",
-   "title": "總決算審核報告查詢平臺",
-   "n": 136
+   "target": 114,
+   "error": "book not found"
   },
   {
-   "page": "L1:總決算審定資料",
-   "url": "https://auditreport.audit.gov.tw/#",
-   "title": "總決算審核報告查詢平臺",
-   "n": 136
+   "page": "old-list",
+   "blocked": "bot protection; stop"
   },
   {
-   "page": "L1:總決算審核報告",
-   "url": "https://auditreport.audit.gov.tw/#auditreport",
-   "title": "總決算審核報告查詢平臺",
-   "n": 136
+   "target": 102,
+   "found": []
   },
   {
-   "page": "L1:特別決算審核報告",
-   "url": "https://auditreport.audit.gov.tw/#auditSpeacialreport",
-   "title": "總決算審核報告查詢平臺",
-   "n": 136
-  },
-  {
-   "page": "L1:發布日期|2026.07.24",
-   "url": "https://auditreport.audit.gov.tw/Book/Chapter/6392026019653671629f5c7ba0a923458a9247a8a7c848f12b",
-   "title": "總決算審核報告查詢平臺 | 章節列表",
-   "n": 93
-  },
-  {
-   "page": "L1:發布日期|2026.07.24",
-   "url": "https://auditreport.audit.gov.tw/Book/Chapter/639202598816990462c48dfd17b3e94c0992b6b9c7c0ce2f21",
-   "title": "總決算審核報告查詢平臺 | 章節列表",
-   "n": 86
-  },
-  {
-   "page": "L1:發布日期|2026.07.24",
-   "url": "https://auditreport.audit.gov.tw/Book/Chapter/639203950904162473489634371a404e6aaa6229334a9ab601",
-   "title": "總決算審核報告查詢平臺 | 章節列表",
-   "n": 91
-  },
-  {
-   "page": "L1:發布日期|2026.07.24",
-   "url": "https://auditreport.audit.gov.tw/Book/Chapter/639203965334207754b466d443e52d4c0c900473c9f1c0c6e2",
-   "title": "總決算審核報告查詢平臺 | 章節列表",
-   "n": 123
-  },
-  {
-   "page": "L1:發布日期|2026.07.24",
-   "url": "https://auditreport.audit.gov.tw/Book/Chapter/6392221665492267438964da3cc0c2439eb938ab8a7e34c2ce",
-   "title": "總決算審核報告查詢平臺 | 章節列表",
-   "n": 216
-  },
-  {
-   "page": "L1:發布日期|2026.09.11",
-   "url": "https://auditreport.audit.gov.tw/Book/Chapter/6392473363942007843adffa85a63e44ffa656f6fe3c3b2aac",
-   "title": "總決算審核報告查詢平臺 | 章節列表",
-   "n": 156
-  },
-  {
-   "page": "L1:發布日期|2026.07.30",
-   "url": "https://auditreport.audit.gov.tw/Book/Chapter/639209108565979742db74646f73194c05bc8e7bd47d540d49",
-   "title": "總決算審核報告查詢平臺 | 章節列表",
-   "n": 149
-  },
-  {
-   "page": "L1:發布日期|2026.07.30",
-   "url": "https://auditreport.audit.gov.tw/Book/Chapter/639208261934379910804796d692eb4889919eb4bd163bb43b",
-   "title": "總決算審核報告查詢平臺 | 章節列表",
-   "n": 75
-  },
-  {
-   "page": "L1:發布日期|2026.07.30",
-   "url": "https://auditreport.audit.gov.tw/Book/Chapter/639208445139488811ffc32672a7734b97ab653a6c38a6b0a8",
-   "title": "總決算審核報告查詢平臺 | 章節列表",
-   "n": 85
+   "target": 102,
+   "error": "detail not found"
   }
  ]
 }
