@@ -24,6 +24,7 @@ for ed in range(103,112):
     sec=t[i:i+3000]
     m=re.search(r"(\d{3})\s*年\s*\(含\)\s*以前為決算審定數",sec)
     cutoff=int(m.group(1)) if m else None
+    if re.search(r"說\s*明：\s*1\.\s*舉借數?為預算數",sec): cutoff=None   # 110 年版起舉借改為預算數
     rows={}
     for mm in re.finditer(r"\n\s*(\d{3})年\s+([\d,]+)\s+([\d,－-]+)\s+([\d.－-]+)\s+([\d,－-]+)\s+([\d,]+)\s+([\d,]+)\s+([\d.]+)\s+([\d,]+)",sec):
         n=lambda s: 0.0 if s.strip("－-")=="" else float(s.replace(",",""))
