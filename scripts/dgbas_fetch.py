@@ -114,10 +114,11 @@ try:
             if pdfu:
                 fn=tempfile.mktemp(suffix=".pdf"); open(fn,"wb").write(get(pdfu[0]))
                 t=subprocess.run(["pdftotext","-layout",fn,"-"],capture_output=True,text=True).stdout.replace("\n","").replace(" ","")
-                mm=re.search(rf"1[至-]{m}月[^。]{{0,150}}?總薪資平均(?:數)?(?:為)?([\d,]+)元[^。]{{0,60}}?(?:年增|增加|成長|上升)([\d.]+)[％%]",t)
+                i=t.find("全體受僱員工"); t=t[i:] if i>=0 else t   # 表用全體受僱員工（非僅本國籍全時）
+                mm=re.search(rf"1[至-]{m}月[^。]{{0,150}}?總薪資平均(?:數)?(?:為)?([\d,]+)元[^。；]{{0,40}}?(?:年增|增加|成長|上升)([\d.]+)[％%]",t)
                 if mm:
                     log["wages"]["ytd_total"]={"year":y,"to_month":m,"cum":cum[y],"avg":int(mm.group(1).replace(",","")),"yoy":float(mm.group(2)),"prev_cum":None,"from":"pdf:"+pdfu[0],"text":mm.group(0)[:120]}
-                else: log["wages"]["ytd_total_text_miss"]=[t[i.start()-20:i.start()+160] for i in re.finditer(rf"1[至-]{m}月",t)][:6]
+                else: log["wages"]["ytd_total_text_miss"]=[t[i.start()-80:i.start()+100] for i in re.finditer(r"總薪資平均",t)][:8]
         if cum.get(y) and all(prev):
             log["wages"]["ytd_total"]={"year":y,"to_month":m,"cum":cum[y],"avg":round(cum[y]/m),"yoy":round((cum[y]/sum(prev)-1)*100,2),"prev_cum":sum(prev)}
         log["wages"]["annual_total"]={yy:round(v/12) for yy,v in cum.items() if yy<y}
