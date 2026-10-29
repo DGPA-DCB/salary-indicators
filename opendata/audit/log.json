@@ -1,0 +1,18 @@
+{
+ "run": "2026-10-29T01:43:35Z",
+ "steps": [
+  {
+   "robots": "ok",
+   "length": 23
+  },
+  {
+   "page": "home",
+   "url": "https://www.audit.gov.tw/",
+   "error": "TimeoutError('Page.goto: Timeout 60000ms exceeded.\\nCall log:\\n  - navigating to \"https://www.audit.gov.tw/\", waiting until \"networkidle\"\\n')"
+  },
+  {
+   "total_links": 0,
+   "report_links": 0
+  }
+ ]
+}
