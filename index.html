@@ -568,6 +568,12 @@ tr:last-child td{border-bottom:0}
       rw.eachCell((c,ci)=>{c.font={name:FONT,size:10,bold:inP&&ci<=7,color:{argb:ci===7&&kc?kc:"FF000000"}};c.alignment={wrapText:true,vertical:"top"};c.border=box;});
     });
     s3.views=[{state:"frozen",ySplit:2}];
+    const s4=wb.addWorksheet("儲存格說明");
+    s4.columns=[{width:7},{width:9},{width:22},{width:18},{width:110}];
+    const h4=s4.addRow(["各儲存格之查證依據與資料來源（同彙整表儲存格附註，依年度由新到舊）。彙整表內亦可將滑鼠移至儲存格右上角紅色三角形，或於 Excel「校閱」→「顯示所有註解」檢視。"]); h4.font={name:FONT,size:13,bold:true};
+    const hd4=s4.addRow(["年度","儲存格","欄位","儲存格值","說明及來源"]); hd4.eachCell(c=>{c.font={name:FONT,size:11,bold:true,color:{argb:"FFFFFFFF"}};c.fill={type:"pattern",pattern:"solid",fgColor:{argb:"FF1F4E79"}};c.border=box;});
+    [...rows].reverse().forEach(d=>{ colLetters.forEach(c=>{ const cm=(d.comments||{})[c]; if(!cm) return; const v=(d.cells||{})[c]; const rw=s4.addRow([d.year, OUT(c)+(d.year-69), COLNAME[c]||c, v&&typeof v==="object"?v.v:(v??""), cm]); rw.eachCell(cell=>{cell.font={name:FONT,size:10};cell.alignment={wrapText:true,vertical:"top"};cell.border=box;}); }); });
+    s4.views=[{state:"frozen",ySplit:2}];
     return {buf:await wb.xlsx.writeBuffer(), changes:changes.length, rows:rows.length};
   }
   const LASTDL=()=>{ try{ return localStorage.getItem("dgpa-xls-since")||""; }catch(_){ return ""; } };
