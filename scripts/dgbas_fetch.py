@@ -101,10 +101,11 @@ try:
         for r in rows:
             c=[x for x in r if x!=""]
             if not c: continue
-            mm=re.match(r"(\d{3})年累計",c[0].replace(" ",""))
+            mm=re.match(r"(\d{3})年(?:1至\d{1,2}月)?累計",c[0].replace(" ",""))
             if mm: cur=int(mm.group(1)); cum[cur]=num(c[1]); continue
             mm=re.match(r"(\d{1,2})月$",c[0].replace(" ",""))
             if mm and cur: months[(cur,int(mm.group(1)))]=num(c[1])
+        log["wages"]["t2_labels"]=[k for k in cum]+[f"{a}-{b}" for a,b in list(months)[-14:]]
         prev=[months.get((y-1,i)) for i in range(1,m+1)]
         if cum.get(y) and all(prev):
             log["wages"]["ytd_total"]={"year":y,"to_month":m,"cum":cum[y],"avg":round(cum[y]/m),"yoy":round((cum[y]/sum(prev)-1)*100,2),"prev_cum":sum(prev)}
@@ -156,6 +157,14 @@ try:
         seg=t[t.find("重要經濟指標表"):] if "重要經濟指標表" in t else ""
         F["table_lines"]=[l.strip() for l in seg.splitlines() if re.search(r"\d{3}\s*年?\s*\(?[fprFPR]\)?",l) and re.search(r"\d",l)][:30]
         F["table_head"]=[l.strip() for l in seg.splitlines()[:25] if l.strip()]
+        seg1=seg.split("重要經濟指標表(2/2)")[0]
+        F["annual"]={}
+        for l in seg1.splitlines():
+            mm=re.match(r"\s*(\d{3})年(\(f\)|\(p\)|\(r\))?\s+(.*)",l)
+            if not mm: continue
+            toks=[x for x in mm.group(3).split() if x!="－"]; vals=[num(x) for x in toks]
+            if len(vals)>=6 and all(v is not None for v in vals[:6]):
+                F["annual"][int(mm.group(1))]={"flag":(mm.group(2) or "").strip("()"),"growth":vals[0],"gdp_twd":vals[1],"gdp_usd":vals[2],"gni_twd":vals[3],"gni_usd":vals[4],"cpi":vals[5]}
     log["forecast"]=F
 except Exception as e: log["forecast"]={"error":repr(e)[:300]}
 json.dump(log,open(f"{OUT}/latest.json","w"),ensure_ascii=False,indent=1)

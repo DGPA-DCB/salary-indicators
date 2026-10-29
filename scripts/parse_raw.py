@@ -49,5 +49,29 @@ for d in sorted(glob.glob("opendata/audit_central/*")):
 # ---- T/V：財政統計年報（若已下載並解析）----
 for f in glob.glob("opendata/fiscal/yearbook_table1-1*.json"):
     R.update(json.load(open(f, encoding="utf-8")))
+# ---- 主計總處新聞稿附表：D/E/F/H（年資料＋預測）、J/L（年平均）、J/K/L/M（本年累計）----
+f = "opendata/dgbas/latest.json"
+if os.path.exists(f):
+    G = json.load(open(f, encoding="utf-8")); fc = G.get("forecast", {}); wg = G.get("wages", {})
+    src = fc.get("pdf") or fc.get("source", "")
+    for ys, a in (fc.get("annual") or {}).items():
+        y = int(ys); flag = a.get("flag", "")
+        basis = "預測值" if flag == "f" else ("初步統計" if flag == "p" else "主計總處統計")
+        for col, k in (("D", "growth"), ("E", "cpi"), ("F", "gdp_usd"), ("H", "gdp_twd")):
+            R.setdefault("DG_" + col, {})[y] = {"value": a[k], "basis": basis, "source": src, "detail": f"重要經濟指標表 {y}年{'('+flag+')' if flag else ''}"}
+    wsrc = wg.get("source", "")
+    for ys, a in (wg.get("annual") or {}).items():
+        R.setdefault("DG_L", {})[int(ys)] = {"value": a["regular"], "basis": "年平均", "source": wsrc, "detail": "薪資新聞稿表1"}
+    for ys, v in (wg.get("annual_total") or {}).items():
+        R.setdefault("DG_J", {})[int(ys)] = {"value": v, "basis": "年平均", "source": wsrc, "detail": "薪資新聞稿表2 年累計÷12"}
+    yt = wg.get("ytd"); tt = wg.get("ytd_total")
+    if yt:
+        y, m = yt["year"], yt["to_month"]
+        R.setdefault("DG_L", {})[y] = {"value": yt["regular"], "basis": "累計平均", "ym": [y, m], "source": wsrc, "detail": f"表1 {y}年1至{m}月"}
+        R.setdefault("DG_M", {})[y] = {"value": yt["regular_yoy"], "basis": "累計年增率", "ym": [y, m], "source": wsrc, "detail": f"表1 {y}年1至{m}月"}
+    if tt:
+        y, m = tt["year"], tt["to_month"]
+        R.setdefault("DG_J", {})[y] = {"value": tt["avg"], "basis": "累計平均", "ym": [y, m], "source": wsrc, "detail": f"表2 {y}年累計{tt['cum']:,}÷{m}"}
+        R.setdefault("DG_K", {})[y] = {"value": tt["yoy"], "basis": "累計年增率", "ym": [y, m], "source": wsrc, "detail": f"表2 {y}年累計{tt['cum']:,}／{y-1}年同期{tt['prev_cum']:,}"}
 json.dump(R, open(sys.argv[1], "w"), ensure_ascii=False, indent=1)
 print({k: (len(v) if isinstance(v, dict) else v) for k, v in R.items()})

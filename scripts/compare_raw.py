@@ -53,6 +53,47 @@ for key, col in COLS.items():
         d.setdefault("hist", []).append({"d": today, "col": col, "old": cur, "new": newcell, "kind": kind, "note": note})
         d["_changed"] = True
         diffs.append({"year": y, "col": col, "table": cur, "new": newcell, "basis": basis, "result": "更新"})
+# ---- 主計總處：D/E/F/H/J/K/L/M ----
+DGN = {"D": "經濟成長率", "E": "CPI年增率", "F": "每人GDP(美元)", "H": "每人GDP(元)", "J": "總薪資", "K": "總薪資年增率", "L": "經常性薪資", "M": "經常性薪資年增率"}
+def fmt(col, v):
+    return f"{int(v):,}" if col in "FHJL" else f"{v:.2f}"
+for col in "DEFHJKLM":
+    for ys, e in (P.get("DG_" + col) or {}).items():
+        y = int(ys)
+        if y not in docs: continue
+        d, ver, f = docs[y]; cur = d["cells"].get(col); new = e["value"]; basis = e["basis"]
+        if isinstance(cur, dict): continue  # 自動計算欄（K/M 年增率）不覆蓋
+        txt = str(cur) if cur is not None else ""; curv = tv(cur)
+        if basis in ("累計平均", "累計年增率"):
+            yy, m = e["ym"]
+            newcell = f"{fmt(col,new)}\n({yy}年1月-{m}月平均)" if basis == "累計平均" else f"{fmt(col,new)}\n({yy}年1-{m}月與上年同期比較)"
+            if re.search(r"年平均|預測", txt) and not re.search(r"1月-|1-\d+月", txt): 
+                diffs.append({"year": y, "col": col, "table": cur, "new": newcell, "basis": basis, "result": "表為年值，累計數不覆蓋"}); continue
+            kind = "ver"
+        elif basis == "預測值":
+            if cur is not None and not re.search(r"預測", txt):
+                diffs.append({"year": y, "col": col, "table": cur, "new": new, "basis": basis, "result": "表非預測值，不以預測覆蓋"}); continue
+            rest = txt.split("\n", 1)[1] if "\n" in txt else "(預測值)"
+            newcell = f"{fmt(col,new)}\n{rest}"; kind = "fc"
+        else:  # 年資料（統計值）
+            newcell = int(new) if col in "FHJL" else new; kind = "rev" if cur is not None and not re.search(r"預測|未查證|預估", txt) else "ver"
+        if same(curv, new):
+            if (basis in ("累計平均", "累計年增率")) and not re.search(rf"1月-{e['ym'][1]}月|1-{e['ym'][1]}月", txt):
+                pass  # 同值但期間不同（罕見），照常更新
+            else:
+                note = f"已核對（自動）：主計總處{basis}{fmt(col,new)}，與表值相符。{e.get('detail','')} 來源：{e.get('source','')}"
+                d.setdefault("comments", {}).setdefault(col, "")
+                if "已核對（自動）" not in d["comments"][col]:
+                    d["comments"][col] = (d["comments"][col] + "\n" if d["comments"][col] else "") + note; d["_changed"] = True
+                diffs.append({"year": y, "col": col, "table": cur, "new": new, "basis": basis, "result": "相符"}); continue
+        note = f"依主計總處新聞稿附表更新：{DGN[col]} {y}年 {basis} {fmt(col,new)}。{e.get('detail','')} 來源：{e.get('source','')}"
+        d["cells"][col] = newcell
+        if kind == "rev": d.setdefault("red", {})[col] = today
+        else: d.setdefault("red", {}).pop(col, None)
+        d.setdefault("comments", {})[col] = f"原值：{cur}\n" + note
+        d.setdefault("hist", []).append({"d": today, "col": col, "old": cur, "new": newcell, "kind": kind, "note": note})
+        d["_changed"] = True
+        diffs.append({"year": y, "col": col, "table": cur, "new": newcell, "basis": basis, "result": "更新"})
 for y, (d, ver, f) in docs.items():
     if d.pop("_changed", False):
         p = os.path.join(out, f"y{y:03d}.json"); json.dump(d, open(p, "w", encoding="utf-8"), ensure_ascii=False)
