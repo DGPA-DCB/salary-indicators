@@ -1,50 +1,56 @@
-"""財政部來源探勘（GitHub Actions）：
-A. 財政統計年報（service.mof.gov.tw）各級政府歲入歲出餘絀（T、V欄）
-B. 國庫署債務統計（www.nta.gov.tw）中央政府債務舉借（W–Z欄）
-C. 政府資料開放平臺搜尋 API：各年度「中央政府總決算 歲出用途別」資料集（P欄）、財政部債務相關資料集
-遵守 robots.txt；遇阻擋即停。輸出 opendata/fiscal/probe.json。"""
-import json, os, re, time, urllib.request, urllib.parse, urllib.robotparser, ssl, unicodedata
+"""財政部來源第二階段探勘（GitHub Actions）。輸出 opendata/fiscal/。"""
+import json, os, re, time, urllib.request, urllib.robotparser, subprocess
 OUT="opendata/fiscal"; os.makedirs(OUT, exist_ok=True)
 UA="DGPA-salary-indicators/1.0 (+https://github.com/DGPA-DCB/salary-indicators)"
 log={"run":time.strftime("%Y-%m-%dT%H:%M:%SZ",time.gmtime()),"steps":[]}
-def step(**k): log["steps"].append(k); print(json.dumps(k,ensure_ascii=False)[:600])
+def step(**k): log["steps"].append(k); print(json.dumps(k,ensure_ascii=False)[:700])
 rps={}
 def allowed(u):
     host=re.match(r"https?://[^/]+/",u).group(0)
     if host not in rps:
         rp=urllib.robotparser.RobotFileParser()
-        try:
-            t=urllib.request.urlopen(urllib.request.Request(host+"robots.txt",headers={"User-Agent":UA}),timeout=30).read().decode("utf-8","replace"); rp.parse(t.splitlines()); step(robots=host,text=t[:200])
-        except Exception as e: rp=None; step(robots=host,error=repr(e)[:100])
+        try: t=urllib.request.urlopen(urllib.request.Request(host+"robots.txt",headers={"User-Agent":UA}),timeout=30).read().decode("utf-8","replace"); rp.parse(t.splitlines())
+        except Exception: rp=None
         rps[host]=rp
     return True if rps[host] is None else rps[host].can_fetch(UA,u)
-def get(u,timeout=60):
-    if not allowed(u): step(url=u,skipped="robots"); return None,None
-    req=urllib.request.Request(u,headers={"User-Agent":UA,"Accept":"*/*"})
+def get(u,timeout=120):
+    if not allowed(u): step(url=u,skipped="robots"); return None
     try:
-        with urllib.request.urlopen(req,timeout=timeout) as r: return r.status, r.read()
-    except Exception as e:
-        step(url=u[:120],error=repr(e)[:200]); return None,None
-# C. data.gov.tw search API
-res={"datasets":{}}
-for q in ["中央政府總決算 歲出用途別","中央政府總決算表","中央政府總決算","債務 中央政府 舉借","財政統計年報","各級政府 歲入歲出 餘絀","公共債務 未償餘額"]:
-    st,b=get("https://data.gov.tw/api/v2/rest/dataset?q="+urllib.parse.quote(q)+"&limit=50")
-    if not b: continue
-    try:
-        d=json.loads(b.decode("utf-8")); items=d.get("result",d) if isinstance(d,dict) else d
-        if isinstance(items,dict): items=items.get("results") or items.get("data") or []
-        lst=[{"id":x.get("id"),"title":x.get("title"),"org":x.get("publisher") or x.get("organization"),"updated":x.get("modifiedDate")} for x in items]
-        res["datasets"][q]=lst; step(search=q,n=len(lst),sample=[x["title"] for x in lst[:8]])
-    except Exception as e: step(search=q,error=repr(e)[:200],head=b[:200].decode("utf-8","replace"))
-# A. 財政統計年報
-for u in ["https://service.mof.gov.tw/public/Data/statistic/Year_Fin/","https://www.mof.gov.tw/singlehtml/285?cntId=mof_285_1","https://service.mof.gov.tw/public/Data/statistic/Year_Fin/114%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf"]:
-    st,b=get(u,120)
-    if b: step(url=u[:120],status=st,bytes=len(b),head=b[:120].decode("utf-8","replace") if b[:4]!=b"%PDF" else "PDF")
-# B. 國庫署
-for u in ["https://www.nta.gov.tw/singlehtml/67?cntId=nta_840_67","https://www.nta.gov.tw/","https://www.nta.gov.tw/multiplehtml/238"]:
-    st,b=get(u,120)
+        with urllib.request.urlopen(urllib.request.Request(u,headers={"User-Agent":UA,"Accept":"*/*"}),timeout=timeout) as r: return r.read()
+    except Exception as e: step(url=u[:120],error=repr(e)[:200]); return None
+def pdf_pages(b, pat, maxp=400):
+    open("/tmp/x.pdf","wb").write(b)
+    n=int(re.search(r"Pages:\s+(\d+)",subprocess.run(["pdfinfo","/tmp/x.pdf"],capture_output=True,text=True).stdout).group(1))
+    hits=[]
+    for i in range(1,min(n,maxp)+1):
+        tx=subprocess.run(["pdftotext","-layout","-f",str(i),"-l",str(i),"/tmp/x.pdf","-"],capture_output=True,text=True).stdout
+        if re.search(pat,tx): hits.append((i,tx))
+    return n,hits
+# A. 財政統計年報 114 電子書：目錄與各級政府餘絀表、中央債務表
+base="https://service.mof.gov.tw/public/Data/statistic/Year_Fin/114%E9%9B%BB%E5%AD%90%E6%9B%B8/htm/"
+b=get(base+"%E6%8F%90%E8%A6%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%B0%88%E8%BC%89.pdf")
+if b:
+    n,h=pdf_pages(b,r"(各級政府歲入歲出|歲入歲出餘絀|公共債務|債務舉借|1年以上)",120)
+    step(yearbook="提要分析及專載",pages=n,hits=[i for i,_ in h])
+    with open(f"{OUT}/yearbook114_excerpt.txt","w",encoding="utf-8") as f:
+        for i,tx in h[:12]: f.write(f"\n===== 第{i}頁 =====\n{tx}")
+# 年報章節表 PDF 清單（嘗試常見檔名）
+for name in ["1-1.pdf","1-2.pdf","1-3.pdf","1-4.pdf","%E7%9B%AE%E9%8C%84.pdf","index.htm","index.html",""]:
+    r=get(base+name,60)
+    if r: step(try_=base+name, bytes=len(r), kind="PDF" if r[:4]==b"%PDF" else r[:80].decode("utf-8","replace"))
+# B. 國庫署中央政府債務頁
+for u in ["https://www.nta.gov.tw/multiplehtml/1617","https://www.nta.gov.tw/htmlList/70"]:
+    b=get(u)
     if b:
-        txt=b.decode("utf-8","replace"); links=re.findall(r'href="([^"]+)"[^>]*>([^<]{2,60})<',txt)
-        step(url=u,status=st,bytes=len(b),links=[(t.strip(),h[:80]) for h,t in links if re.search(r"債務|舉借|歲入歲出|決算|統計",t)][:25])
-json.dump(res,open(f"{OUT}/datasets.json","w"),ensure_ascii=False,indent=1)
-json.dump(log,open(f"{OUT}/probe.json","w"),ensure_ascii=False,indent=1)
+        txt=b.decode("utf-8","replace")
+        links=re.findall(r'href="([^"]+)"[^>]*>\s*([^<]{2,80})\s*<',txt)
+        sel=[(t.strip(),h) for h,t in links if re.search(r"債務|舉借|未償|統計|年度",t)][:40]
+        step(url=u,links=sel)
+        open(f"{OUT}/nta_{u.rsplit('/',1)[1]}.html","w").write(txt[:200000])
+# C. 開放平臺：用網頁搜尋頁（非API）
+for q in ["中央政府總決算","中央政府債務","各級政府歲入歲出"]:
+    b=get("https://data.gov.tw/datasets/search?p=1&size=50&s=_score_desc&qs="+urllib.parse.quote(q) if False else "https://data.gov.tw/datasets/search?qs="+urllib.request.quote(q))
+    if b:
+        txt=b.decode("utf-8","replace"); ids=re.findall(r'/dataset/(\d+)"[^>]*>([^<]{3,80})<',txt)
+        step(search=q,bytes=len(b),found=ids[:30])
+json.dump(log,open(f"{OUT}/probe2.json","w"),ensure_ascii=False,indent=1)
