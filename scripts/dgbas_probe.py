@@ -15,7 +15,7 @@ def _aia_context(host):
             break
         urls = [d.access_location.value for d in aia if d.access_method == A.CA_ISSUERS]
         if not urls: break
-        with urllib.request.urlopen(urllib.request.Request(urls[0], headers=UA), timeout=30) as r:
+        with urllib.request.urlopen(urllib.request.Request(urls[0], headers={"User-Agent": UA}), timeout=30) as r:
             b = r.read()
         try: cert = x509.load_der_x509_certificate(b)
         except Exception: cert = x509.load_pem_x509_certificate(b)
