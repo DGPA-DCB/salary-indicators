@@ -633,7 +633,7 @@ tr:last-child td{border-bottom:0}
     let v=(row.cells||{})[col]; const red=!!(row.red||{})[col];
     if(v===undefined||v===null||v==="") return null;
     if(typeof v==="object"&&v.auto) v=v.v;
-    if(typeof v==="number"){ let n=v; if(col==="R"&&row.year<100) n=v/100000; return {n, text:fmtN(n,col), fc:false, part:false, bud:false, red}; }
+    if(typeof v==="number"){ let n=v; if(col==="R"&&row.year<100&&Math.abs(v)>1e7) n=v/100000; return {n, text:fmtN(n,col), fc:false, part:false, bud:false, red}; }
     const s=String(v).trim();
     if(/^[－\-—]$/.test(s)) return col==="C"?{n:0,text:"－",fc:false,part:false,bud:false,red,none:true}:null;
     if(/未查證/.test(s)&&!/\d/.test(s.split("\n")[0])) return {n:null,text:s.replace(/\n/g," "),fc:false,part:false,bud:false,red,unv:true};
