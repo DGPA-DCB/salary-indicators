@@ -1,0 +1,31 @@
+name: 審計部年報下載
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "37 1 5 * *"   # 每月5日 臺北時間09:37
+  push:
+    branches: [main]
+    paths: ["scripts/audit_fetch.py", "opendata/audit/targets.json"]
+permissions:
+  contents: write
+concurrency: { group: audit-reports, cancel-in-progress: false }
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: |
+          pip install playwright cryptography
+          python -m playwright install --with-deps chromium
+          sudo apt-get install -y poppler-utils >/dev/null
+      - run: python scripts/audit_fetch.py
+      - name: 存回儲存庫
+        run: |
+          git config user.name "DGPA 給與福利處（自動下載）"
+          git config user.email "drw@dgpa.gov.tw"
+          git add opendata/audit
+          git diff --cached --quiet || git commit -m "審計部年報探勘 $(TZ=Asia/Taipei date +%F)"
+          git pull --rebase origin main && git push origin main
