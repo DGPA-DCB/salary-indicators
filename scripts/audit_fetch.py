@@ -3,7 +3,7 @@
 3) 找出「直轄市及縣市地方決算審核結果年報」「鄉鎮縣轄市財務審核結果年報」各年度 PDF 連結；
 4) 下載尚未處理之年度，以 pdftotext 擷取含「人事費負擔」的頁面文字存檔（不存整份 PDF）。
 所有紀錄寫入 opendata/audit/。"""
-import json, os, re, sys, time, subprocess, urllib.parse, urllib.robotparser
+import json, os, re, sys, time, subprocess, urllib.parse, urllib.robotparser, unicodedata
 from playwright.sync_api import sync_playwright
 BASE = "https://www.audit.gov.tw/"
 OUT = "opendata/audit"; os.makedirs(OUT, exist_ok=True)
@@ -50,7 +50,7 @@ with sync_playwright() as p:
     for t in targets:
         y, kind = t["year"], t["kind"]; d = f"{OUT}/{y}_{kind[:6]}"; os.makedirs(d, exist_ok=True)
         if os.path.exists(f"{d}/excerpt.txt"): step(target=y, skipped="already done"); continue
-        det = [x for x in allL if re.search(rf"民國{y}年度{kind}", x["t"])]
+        det = [x for x in allL if re.search(rf"{y}年度{kind}", unicodedata.normalize("NFKC", x["t"]))]
         if not det: step(target=y, error="detail page not found"); continue
         items = grab(det[0]["h"], f"detail:{y}")
         pdfs = [x for x in items if x["t"].lower().endswith(".pdf") or ".pdf" in x["t"].lower()]
@@ -81,7 +81,7 @@ with sync_playwright() as p:
             step(target=y, error=repr(e)[:300])
     b.close()
 json.dump(links, open(f"{OUT}/links.json", "w"), ensure_ascii=False, indent=0)
-hits = [x for x in links if re.search(r"(地方決算審核結果年報|鄉鎮縣轄市財務審核結果年報)", x["t"])]
+hits = [x for x in links if re.search(r"(地方決算審核結果年報|鄉鎮縣轄市財務審核結果年報)", unicodedata.normalize("NFKC", x["t"]))]
 json.dump(hits, open(f"{OUT}/report_links.json", "w"), ensure_ascii=False, indent=1)
 step(total_links=len(links), report_links=len(hits))
 json.dump(log, open(f"{OUT}/log.json", "w"), ensure_ascii=False, indent=1)
