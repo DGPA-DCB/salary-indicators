@@ -42,8 +42,23 @@ with sync_playwright() as p:
             json.dump(ch, open(f"{d}/chapters.json", "w"), ensure_ascii=False, indent=0)
             cand = [x for x in ch if "/Book/" in x["h"] and re.search(r"(總說明|歲入歲出|審核概述|決算審定|綜合意見|收支)", N(x["t"]))][:12]
             step(target=y, chapters=len(ch), candidates=[x["t"][:30] for x in cand])
+            cand = [x for x in cand if "簡明比較表" in x["t"]][:2] + [x for x in cand if "簡明比較表" not in x["t"]]
             for c in cand:
-                if go(c["h"], "chap") is None: continue
+                items = go(c["h"], "chap")
+                if items is None: continue
+                srcs = pg.eval_on_selector_all("iframe,embed,object,a", "els=>els.map(e=>e.src||e.data||e.href||'')")
+                pdfl = [u for u in srcs if u and re.search(r"(\.pdf|pdf|Download|File)", u, re.I) and "auditreport" in u][:6]
+                step(target=y, chapter=c["t"][:30], pdf_candidates=pdfl)
+                for u in pdfl:
+                    try:
+                        r = pg.request.get(u, timeout=120000); body = r.body()
+                    except Exception as e:
+                        step(target=y, url=u, error=repr(e)[:150]); continue
+                    if body[:4] == b"%PDF":
+                        open("/tmp/p.pdf", "wb").write(body)
+                        tx = subprocess.run(["pdftotext", "-layout", "/tmp/p.pdf", "-"], capture_output=True, text=True).stdout
+                        out.append(f"===== {c['t'][:40]} | {u} =====\n{tx[:20000]}"); step(target=y, got_pdf=u, bytes=len(body)); break
+                if out: break
                 txt = pg.inner_text("body")
                 paras = [s for s in re.split(r"\n+", txt) if KEY.search(s) and re.search(r"\d", s)]
                 if paras: out.append(f"===== {c['t'][:40]} | {c['h']} =====\n" + "\n".join(paras[:30]))
