@@ -1,40 +1,26 @@
-"""政府資料開放平臺：自動找出主計總處各年度「中央政府總決算（表）」「總預算（案）－預算表」資料集編號。
-搜尋 API 不接受 GET，改讀平臺 sitemap 與資料集頁標題。輸出 opendata/discover.json。"""
-import json, os, re, time, urllib.request, urllib.robotparser, gzip, io
+"""政府資料開放平臺：以資料集詳情 API（GET 可用）掃描編號區間，找出主計總處「中央政府總決算（表）」
+與「總預算（案）－預算表／簡明表」新年度資料集，寫入 opendata/discover.json 並自動加入 catalog_ids.txt。
+每月執行；掃描上限 600 筆，間隔 0.5 秒。"""
+import json, os, re, time, urllib.request
 UA="DGPA-salary-indicators/1.0 (+https://github.com/DGPA-DCB/salary-indicators)"
-log=[]
-def step(**k): log.append(k); print(json.dumps(k,ensure_ascii=False)[:500])
-def get(u,timeout=120):
-    with urllib.request.urlopen(urllib.request.Request(u,headers={"User-Agent":UA,"Accept":"*/*"}),timeout=timeout) as r:
-        b=r.read()
-        if r.headers.get("Content-Encoding")=="gzip" or u.endswith(".gz"): 
-            try: b=gzip.decompress(b)
-            except Exception: pass
-        return b
-rp=urllib.robotparser.RobotFileParser()
-try: rp.parse(get("https://data.gov.tw/robots.txt").decode("utf-8","replace").splitlines()); step(robots="ok")
-except Exception as e: rp=None; step(robots="error",error=repr(e)[:100])
-can=lambda u: True if rp is None else rp.can_fetch(UA,u)
-urls=[]
-for sm in ["https://data.gov.tw/sitemap.xml","https://data.gov.tw/sitemap_index.xml","https://data.gov.tw/sitemaps.xml"]:
-    if not can(sm): step(url=sm,skipped="robots"); continue
+API="https://data.gov.tw/api/v2/rest/dataset/{}"
+PAT=re.compile(r"(\d{3})年度中央政府(總決算表?$|總決算$|總預算案?[－-](預算表|簡明表|參考表))")
+try: st=json.load(open("opendata/discover.json",encoding="utf-8"))
+except Exception: st={"found":{},"scanned_to":175205}
+known=[int(l.strip()) for l in open("opendata/catalog_ids.txt",encoding="utf-8") if l.strip().isdigit()]
+start=max(st.get("scanned_to",0),max(known)); end=start+600; n=0
+for i in range(start+1,end+1):
     try:
-        b=get(sm); t=b.decode("utf-8","replace"); locs=re.findall(r"<loc>([^<]+)</loc>",t); step(url=sm,locs=len(locs),sample=locs[:3])
-        for l in locs:
-            if "sitemap" in l and l.endswith((".xml",".xml.gz")):
-                try: tt=get(l).decode("utf-8","replace"); urls+=re.findall(r"<loc>([^<]+)</loc>",tt)
-                except Exception as e: step(url=l,error=repr(e)[:100])
-            else: urls.append(l)
-        if locs: break
-    except Exception as e: step(url=sm,error=repr(e)[:150])
-ds=sorted({u for u in urls if "/dataset/" in u}); step(dataset_urls=len(ds))
-# API detail for candidate ids via existing v2 dataset endpoint (works for GET)
-out={}
-# Use known DGBAS organization listing if sitemap empty
-if not ds:
-    for page in range(1,4):
-        u=f"https://data.gov.tw/datasets/search?p={page}&size=100&s=_score_desc&qs=%E4%B8%AD%E5%A4%AE%E6%94%BF%E5%BA%9C%E7%B8%BD%E6%B1%BA%E7%AE%97"
-        if not can(u): step(url=u,skipped="robots"); break
-        try: t=get(u).decode("utf-8","replace"); ids=re.findall(r'/dataset/(\d+)',t); step(url=u,ids=len(set(ids))); ds+=["https://data.gov.tw/dataset/"+i for i in set(ids)]
-        except Exception as e: step(url=u,error=repr(e)[:100])
-json.dump({"log":log,"dataset_urls":ds[:5000]},open("opendata/discover.json","w"),ensure_ascii=False,indent=0)
+        with urllib.request.urlopen(urllib.request.Request(API.format(i),headers={"User-Agent":UA}),timeout=30) as r: d=json.loads(r.read().decode("utf-8"))
+        rr=d.get("result",d); t=(rr.get("title") or "").strip()
+        if t and PAT.search(t): st["found"][str(i)]={"title":t,"updated":rr.get("modifiedDate")}; print(i,t)
+        n+=1
+    except Exception as e:
+        pass
+    time.sleep(0.5)
+st["scanned_to"]=end; st["last_run"]=time.strftime("%Y-%m-%d")
+json.dump(st,open("opendata/discover.json","w"),ensure_ascii=False,indent=1)
+new=[k for k in st["found"] if int(k) not in known]
+if new:
+    with open("opendata/catalog_ids.txt","a",encoding="utf-8") as f: f.write("\n"+"\n".join(new)+"\n")
+print({"scanned":n,"range":[start+1,end],"found_total":len(st["found"]),"new":new})
