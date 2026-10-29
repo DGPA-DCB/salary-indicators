@@ -1,248 +1,173 @@
 [
  {
-  "robots": "https://www.stat.gov.tw/",
+  "robots": "https://www.dgbas.gov.tw/",
   "text": "User-agent: Baiduspider\r\nUser-agent: MJ12bot\r\nUser-agent: dotbot\r\nDisallow: /\r\nUser-agent: *\r\nDisallow:*Create=1*\r\nDisallow:*state=1327FD6AD8DCDA52*"
  },
  {
-  "url": "https://www.stat.gov.tw/cl.aspx?n=3680",
-  "bytes": 79287,
-  "links": [
+  "page": "薪資新聞稿115年7月",
+  "bytes": 82885,
+  "attachments": [
    [
-    "工業及服務業每人每月經常性薪資",
-    "Point.aspx?sid=t.4&n=3583&sms=11480"
+    "(PDF)",
+    "https://ws.dgbas.gov.tw/001/Upload/463/relfile/10980/236702/薪資及生產力統計新聞稿11507.pdf"
    ],
    [
-    "薪資及生產力統計",
-    "cl.aspx?n=2712"
+    "(ODS)",
+    "https://ws.dgbas.gov.tw/001/Upload/463/relfile/10980/236702/表1.ods"
    ],
    [
-    "工業及服務業每人每月經常性薪資",
-    "Point.aspx?sid=t.4&n=3583&sms=11480"
+    "(ODS)",
+    "https://ws.dgbas.gov.tw/001/Upload/463/relfile/10980/236702/表2.ods"
    ],
    [
-    "薪資及生產力統計",
-    "cl.aspx?n=2712"
+    "(ODS)",
+    "https://ws.dgbas.gov.tw/001/Upload/463/relfile/10980/236702/表3.ods"
    ],
    [
-    "工業及服務業每人每月經常性薪資",
-    "Point.aspx?sid=t.4&n=3583&sms=11480"
+    "(ODS)",
+    "https://ws.dgbas.gov.tw/001/Upload/463/relfile/10980/236702/表4.ods"
    ],
    [
-    "薪資及生產力統計",
-    "cl.aspx?n=2712"
+    "(ODS)",
+    "https://ws.dgbas.gov.tw/001/Upload/463/relfile/10980/236702/表5.ods"
    ],
    [
-    "薪資及生產力統計",
-    "cl.aspx?n=3954"
+    "(ODS)",
+    "https://ws.dgbas.gov.tw/001/Upload/463/relfile/10980/236702/表6.ods"
+   ],
+   [
+    "(ODS)",
+    "https://ws.dgbas.gov.tw/001/Upload/463/relfile/10980/236702/表7.ods"
+   ],
+   [
+    "(ODS)",
+    "https://ws.dgbas.gov.tw/001/Upload/463/relfile/10980/236702/表8.ods"
+   ],
+   [
+    "(ODS)",
+    "https://ws.dgbas.gov.tw/001/Upload/463/relfile/10980/236702/表9.ods"
+   ],
+   [
+    "(ODS)",
+    "https://ws.dgbas.gov.tw/001/Upload/463/relfile/10980/236702/表10.ods"
+   ],
+   [
+    "(ODS)",
+    "https://ws.dgbas.gov.tw/001/Upload/463/relfile/10980/236702/表11.ods"
+   ],
+   [
+    "(ODS)",
+    "https://ws.dgbas.gov.tw/001/Upload/463/relfile/10980/236702/表12.ods"
+   ],
+   [
+    "(ODS)",
+    "https://ws.dgbas.gov.tw/001/Upload/463/relfile/10980/236702/表13.ods"
+   ],
+   [
+    "ContentPDF",
+    "content.pdf"
    ]
   ]
  },
  {
-  "url": "https://www.stat.gov.tw/cp.aspx?n=2679",
-  "bytes": 72981,
+  "page": "薪資新聞稿累計句",
+  "sentences": []
+ },
+ {
+  "robots": "https://ws.dgbas.gov.tw/",
+  "error": "<HTTPError 404: 'Not Found'>"
+ },
+ {
+  "url": "https://ws.dgbas.gov.tw/001/Upload/463/relfile/10980/236702/薪資及生產力統計新聞稿11507.pdf",
+  "error": "UnicodeEncodeError('ascii', 'GET /001/Upload/463/relfile/10980/236702/薪資及生產力統計新聞稿11507.pdf HTTP/1.1', 41, 52, 'ordinal not in range(128)')"
+ },
+ {
+  "url": "https://ws.dgbas.gov.tw/001/Upload/463/relfile/10980/236702/表1.ods",
+  "error": "UnicodeEncodeError('ascii', 'GET /001/Upload/463/relfile/10980/236702/表1.ods HTTP/1.1', 41, 42, 'ordinal not in range(128)')"
+ },
+ {
+  "url": "https://ws.dgbas.gov.tw/001/Upload/463/relfile/10980/236702/表2.ods",
+  "error": "UnicodeEncodeError('ascii', 'GET /001/Upload/463/relfile/10980/236702/表2.ods HTTP/1.1', 41, 42, 'ordinal not in range(128)')"
+ },
+ {
+  "url": "https://ws.dgbas.gov.tw/001/Upload/463/relfile/10980/236702/表3.ods",
+  "error": "UnicodeEncodeError('ascii', 'GET /001/Upload/463/relfile/10980/236702/表3.ods HTTP/1.1', 41, 42, 'ordinal not in range(128)')"
+ },
+ {
+  "url": "https://ws.dgbas.gov.tw/001/Upload/463/relfile/10980/236702/表4.ods",
+  "error": "UnicodeEncodeError('ascii', 'GET /001/Upload/463/relfile/10980/236702/表4.ods HTTP/1.1', 41, 42, 'ordinal not in range(128)')"
+ },
+ {
+  "url": "https://ws.dgbas.gov.tw/001/Upload/463/relfile/10980/236702/表5.ods",
+  "error": "UnicodeEncodeError('ascii', 'GET /001/Upload/463/relfile/10980/236702/表5.ods HTTP/1.1', 41, 42, 'ordinal not in range(128)')"
+ },
+ {
+  "robots": "https://www.stat.gov.tw/",
+  "text": "User-agent: Baiduspider\r\nUser-agent: MJ12bot\r\nUser-agent: dotbot\r\nDisallow: /\r\nUser-agent: *\r\nDisallow:*Create=1*\r\nDisallow:*state=1327FD6AD8DCDA52*"
+ },
+ {
+  "page": "經濟預測",
   "links": [
    [
-    "工業及服務業每人每月經常性薪資",
-    "Point.aspx?sid=t.4&n=3583&sms=11480"
+    "國民所得及經濟成長",
+    "cl.aspx?n=2672"
    ],
    [
-    "薪資及生產力統計",
-    "cl.aspx?n=2712"
+    "綠色國民所得(環境與經濟帳)",
+    "https://www.stat.gov.tw/cp.aspx?n=4660"
    ],
    [
-    "工業及服務業每人每月經常性薪資",
-    "Point.aspx?sid=t.4&n=3583&sms=11480"
+    "國民所得及經濟成長",
+    "cl.aspx?n=2672"
    ],
    [
-    "薪資及生產力統計",
-    "cl.aspx?n=2712"
+    "綠色國民所得(環境與經濟帳)",
+    "https://www.stat.gov.tw/cp.aspx?n=4660"
+   ],
+   [
+    "國民所得統計",
+    "News.aspx?n=2679&sms=11024"
    ],
    [
     "經濟預測",
     "News.aspx?n=2680&sms=11024"
    ],
    [
-    "工業及服務業每人每月經常性薪資",
-    "Point.aspx?sid=t.4&n=3583&sms=11480"
+    "國民所得及經濟成長",
+    "cl.aspx?n=2672"
    ],
    [
-    "薪資及生產力統計",
-    "cl.aspx?n=2712"
+    "經濟預測",
+    "News.aspx?n=2680&sms=11024"
    ],
    [
-    "薪資及生產力統計",
-    "cl.aspx?n=3954"
+    "主計總處預測之經濟成長率與國發會所訂之經建目標有何差異？",
+    "News_Content.aspx?n=2680&s=102961"
+   ],
+   [
+    "經濟預測與統計差異之說明",
+    "https://ws.dgbas.gov.tw/Download.ashx?u=LzAwMS9VcGxvYWQvNDYzL3JlbGZpbGUvMTEwMjQvMTAzMTAzL%2be2k%2ba%2fn%2bmgkO"
+   ],
+   [
+    "國民所得及經濟成長",
+    "cl.aspx?n=2672"
+   ],
+   [
+    "綠色國民所得(環境與經濟帳)",
+    "https://www.stat.gov.tw/cp.aspx?n=4660"
+   ],
+   [
+    "國民所得及經濟成長",
+    "cl.aspx?n=3933"
+   ],
+   [
+    "綠色國民所得(環境與經濟帳)",
+    "cl.aspx?n=3934"
    ]
   ]
  },
  {
-  "url": "https://www.stat.gov.tw/News.aspx?n=3602",
-  "bytes": 147247,
-  "links": [
-   [
-    "工業及服務業每人每月經常性薪資",
-    "Point.aspx?sid=t.4&n=3583&sms=11480"
-   ],
-   [
-    "薪資及生產力統計",
-    "cl.aspx?n=2712"
-   ],
-   [
-    "工業及服務業每人每月經常性薪資",
-    "Point.aspx?sid=t.4&n=3583&sms=11480"
-   ],
-   [
-    "薪資及生產力統計",
-    "cl.aspx?n=2712"
-   ],
-   [
-    "新聞稿",
-    "#Group_28884_dNscerjBBb"
-   ],
-   [
-    "薪資與生產力統計",
-    "News.aspx?n=3703&sms=10980&_CSN=135"
-   ],
-   [
-    "更多新聞稿",
-    "News.aspx?n=3703&sms=10980"
-   ],
-   [
-    "新聞稿",
-    "News.aspx?n=2668&sms=10980"
-   ],
-   [
-    "新聞稿",
-    "News.aspx?n=2677&sms=10980"
-   ],
-   [
-    "新聞稿",
-    "News.aspx?n=2697&sms=10980"
-   ],
-   [
-    "新聞稿",
-    "News.aspx?n=2706&sms=10980"
-   ],
-   [
-    "薪資及生產力統計",
-    "cl.aspx?n=2712"
-   ],
-   [
-    "薪資中位數及分布統計",
-    "cl.aspx?n=2715"
-   ],
-   [
-    "新聞稿",
-    "News.aspx?n=2724&sms=10980"
-   ],
-   [
-    "更多薪資及生產力統計",
-    "cl.aspx?n=3562"
-   ],
-   [
-    "新聞稿",
-    "News.aspx?n=2734&sms=10980"
-   ],
-   [
-    "新聞稿",
-    "News.aspx?n=2777&sms=10980"
-   ],
-   [
-    "工業及服務業每人每月經常性薪資",
-    "Point.aspx?sid=t.4&n=3583&sms=11480"
-   ],
-   [
-    "薪資及生產力統計",
-    "cl.aspx?n=2712"
-   ],
-   [
-    "薪資及生產力統計",
-    "cl.aspx?n=3954"
-   ]
-  ]
- },
- {
-  "robots": "https://www.dgbas.gov.tw/",
-  "text": "User-agent: Baiduspider\r\nUser-agent: MJ12bot\r\nUser-agent: dotbot\r\nDisallow: /\r\nUser-agent: *\r\nDisallow:*Create=1*\r\nDisallow:*state=1327FD6AD8DCDA52*"
- },
- {
-  "url": "https://www.dgbas.gov.tw/News.aspx?n=3602",
-  "bytes": 99242,
-  "links": [
-   [
-    "薪資",
-    "#"
-   ],
-   [
-    "薪資",
-    "Advanced_Search.aspx?q=薪資"
-   ],
-   [
-    "薪資",
-    "Advanced_Search.aspx?q=薪資"
-   ],
-   [
-    "薪資",
-    "#"
-   ],
-   [
-    "新聞稿及即時新聞澄清專區",
-    "News.aspx?n=3602&sms=10980"
-   ],
-   [
-    "新聞稿及即時新聞澄清專區",
-    "News.aspx?n=3602&sms=10980"
-   ],
-   [
-    "115年8月工業及服務業本國籍全時員工人數為753萬5千人，經常性薪資中位數為41,353元，平均數為52,523元，分別年增3.46%及3.28%",
-    "News_Content.aspx?n=3602&s=236785"
-   ],
-   [
-    "115年7月底工業及服務業受僱員工人數為862萬7千人，本月總薪資平均為71,165元",
-    "News_Content.aspx?n=3602&s=236702"
-   ],
-   [
-    "115年6月底工業及服務業受僱員工人數為858萬4千人，本月總薪資平均為60,267元",
-    "News_Content.aspx?n=3602&s=236558"
-   ],
-   [
-    "115年5月底工業及服務業受僱員工人數為857萬3千人，本月總薪資平均為62,579元",
-    "News_Content.aspx?n=3602&s=236448"
-   ]
-  ]
- },
- {
-  "url": "https://www.dgbas.gov.tw/cl.aspx?n=3680",
-  "bytes": 119675,
-  "links": [
-   [
-    "薪資",
-    "#"
-   ],
-   [
-    "薪資",
-    "Advanced_Search.aspx?q=薪資"
-   ],
-   [
-    "薪資",
-    "Advanced_Search.aspx?q=薪資"
-   ],
-   [
-    "薪資",
-    "#"
-   ],
-   [
-    "新聞稿",
-    "#Group_29978_CWxtNSdoPV"
-   ],
-   [
-    "薪資與生產力統計",
-    "News.aspx?n=3602&sms=10980&_CSN=135"
-   ],
-   [
-    "更多新聞稿及即時新聞澄清專區",
-    "News.aspx?n=3602&sms=10980"
-   ]
-  ]
+  "page": "新聞稿列表",
+  "links": []
  }
 ]
