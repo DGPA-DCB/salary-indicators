@@ -1,9 +1,11 @@
 """財政部來源第二階段探勘（GitHub Actions）。輸出 opendata/fiscal/。"""
-import json, os, re, time, urllib.request, urllib.robotparser, subprocess
+import json, os, re, time, urllib.request, urllib.parse, urllib.robotparser, subprocess
 OUT="opendata/fiscal"; os.makedirs(OUT, exist_ok=True)
 UA="DGPA-salary-indicators/1.0 (+https://github.com/DGPA-DCB/salary-indicators)"
 log={"run":time.strftime("%Y-%m-%dT%H:%M:%SZ",time.gmtime()),"steps":[]}
-def step(**k): log["steps"].append(k); print(json.dumps(k,ensure_ascii=False)[:700])
+def step(**k):
+    log["steps"].append(k); print(json.dumps(k,ensure_ascii=False)[:700])
+    json.dump(log,open(f"{OUT}/probe2.json","w"),ensure_ascii=False,indent=1)
 rps={}
 def allowed(u):
     host=re.match(r"https?://[^/]+/",u).group(0)
@@ -49,8 +51,8 @@ for u in ["https://www.nta.gov.tw/multiplehtml/1617","https://www.nta.gov.tw/htm
         open(f"{OUT}/nta_{u.rsplit('/',1)[1]}.html","w").write(txt[:200000])
 # C. 開放平臺：用網頁搜尋頁（非API）
 for q in ["中央政府總決算","中央政府債務","各級政府歲入歲出"]:
-    b=get("https://data.gov.tw/datasets/search?p=1&size=50&s=_score_desc&qs="+urllib.parse.quote(q) if False else "https://data.gov.tw/datasets/search?qs="+urllib.request.quote(q))
+    b=get("https://data.gov.tw/datasets/search?p=1&size=50&s=_score_desc&qs="+urllib.parse.quote(q) if False else "https://data.gov.tw/datasets/search?qs="+urllib.parse.quote(q))
     if b:
         txt=b.decode("utf-8","replace"); ids=re.findall(r'/dataset/(\d+)"[^>]*>([^<]{3,80})<',txt)
         step(search=q,bytes=len(b),found=ids[:30])
-json.dump(log,open(f"{OUT}/probe2.json","w"),ensure_ascii=False,indent=1)
+
