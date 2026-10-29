@@ -2,7 +2,7 @@
  "err": [
   [
    "gdp",
-   "Traceback (most recent call last):\n  File \"/home/runner/work/salary-indicators/salary-indicators/scripts/dgbas_probe.py\", line 4, in sec\n    try: fn()\n         ^^^^\n  File \"/home/runner/work/salary-indicators/salary-indicators/scripts/dgbas_probe.py\", line 19, in s1\n    b=get(u); open(\"/tmp/p/x.pdf\",\"wb\").write(b)\n      ^^^^^^\n  File \"<string>\", line 47, in get\n  File \"<string>\", line 39, in allowed\nAttributeError: 'NoneType' object has no attribute 'group'\n"
+   "Traceback (most recent call last):\n  File \"/home/runner/work/salary-indicators/salary-indicators/scripts/dgbas_probe.py\", line 4, in sec\n    try: fn()\n         ^^^^\n  File \"/home/runner/work/salary-indicators/salary-indicators/scripts/dgbas_probe.py\", line 19, in s1\n    b=get(u); open(\"/tmp/p/x.pdf\",\"wb\").write(b)\n      ^^^^^^\n  File \"<string>\", line 49, in get\n  File \"<string>\", line 40, in allowed\nRuntimeError: not absolute url: content.pdf\n"
   ]
  ],
  "titles": {
