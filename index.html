@@ -471,11 +471,12 @@ tr:last-child td{border-bottom:0}
     }
   });
   // ---------- Excel 彙整表 ----------
-  const SPEC={"cells": {"B1": "軍公教員工待遇調整審議時參酌及相關參考指標彙整表", "B2": "年度", "C2": "通案待遇調整比率(%)", "D2": "各項財經指標", "P2": "政府財政狀況", "D3": "經濟成長率(%)", "E3": "消費者物價指數年增率(%)", "F3": "平均國民所得(GDP)及增加率(%)", "J3": "民間企業薪資水準(工業及服務業)平均薪資(元)及增加率(％)", "N3": "景氣對策信號\n(年平均)", "O3": "消費者\n信心指數\n(年平均)", "P3": "人事費占歲出比率(%)", "R3": "全國各類賦稅實徵淨額(億元)", "S3": "歲入歲出餘絀\n(億元)", "W3": "中央政府債務舉借概況(含不列債限)\n(億元)", "X3": "中央政府債務舉借概況(億元)", "F5": "美元", "H5": "新臺幣(元)", "J5": "總薪資", "L5": "經常性薪資", "P5": "中央政府", "Q5": "地方政府", "F6": "統計值", "G6": "年增率", "H6": "統計值", "I6": "年增率", "J6": "統計值", "K6": "年增率", "L6": "統計值", "M6": "年增率", "S6": "中央政府總預算", "T6": "各級政府", "U6": "餘絀", "V6": "餘絀占GDP比率(%)", "X6": "列入債限", "Y6": "歲出\n(列入債限補分)", "Z6": "列入債限占歲出之比率(%)"}, "merges": ["C2:C6", "Q5:Q6", "D2:O2", "J5:K5", "O3:O6", "F3:I4", "X3:Z5", "P3:Q4", "N3:N6", "F5:G5", "L5:M5", "P2:W2", "S3:V5", "W3:W6", "D3:D6", "J3:M4", "R3:R6", "B2:B6", "P5:P6", "B1:Z1", "E3:E6", "H5:I5"], "widths": {"A": 5.44, "B": 7.44, "C": 7.78, "D": 8.89, "E": 9.33, "F": 11.78, "G": 9.33, "H": 15.0, "I": 9.33, "J": 11.78, "K": 12.33, "L": 12.0, "M": 11.89, "N": 12.33, "O": 12.66, "P": 13.22, "R": 14.0, "S": 12.33, "U": 9.89, "V": 9.66, "W": 12.44, "X": 10.44, "Z": 9.66, "Q": 13.22, "T": 12.33, "Y": 10.44}, "heights": {"1": 42.6, "2": 24.0, "3": 33.75, "4": 14.25, "5": 22.95, "6": 40.2}, "numFmt": {"B": "_-* #,##0_-;\\-* #,##0_-;_-* \"-\"??_-;_-@_-", "C": "0_);\\(0\\)", "D": "0.00_ ;\\-0.00\\ ", "E": "0.00_ ;\\-0.00\\ ", "F": "_-* #,##0_-;\\-* #,##0_-;_-* \"-\"??_-;_-@_-", "G": "0.00", "H": "_-* #,##0_-;\\-* #,##0_-;_-* \"-\"??_-;_-@_-", "I": "0.00", "J": "#,##0_ ;\\-#,##0\\ ", "K": "0.00", "L": "#,##0_ ;\\-#,##0\\ ", "M": "0.00", "N": "#,##0.00_ ;\\-#,##0.00\\ ", "O": "#,##0.00_ ;\\-#,##0.00\\ ", "P": "#,##0.00_ ;\\-#,##0.00\\ ", "Q": "#,##0.00_ ;\\-#,##0.00\\ ", "R": "#,##0", "S": "#,##0_ ;\\-#,##0\\ ", "T": "#,##0_ ;\\-#,##0\\ ", "U": "#,##0_ ;\\-#,##0\\ ", "V": "#,##0.0_ ;\\-#,##0.0\\ ", "W": "#,##0_ ;\\-#,##0\\ ", "X": "#,##0_ ;\\-#,##0\\ ", "Y": "#,##0_ ;\\-#,##0\\ ", "Z": "0.00_);\\(0.00\\)"}, "hiddenCols": ["U", "V", "X", "Y", "Z"]};
-  const COLNAME={C:"通案待遇調整比率",D:"經濟成長率",E:"CPI年增率",F:"平均國民所得(美元)",G:"美元年增率",H:"平均國民所得(新臺幣)",I:"新臺幣年增率",J:"總薪資",K:"總薪資年增率",L:"經常性薪資",M:"經常性薪資年增率",N:"景氣對策信號",O:"消費者信心指數",P:"人事費占歲出比率-中央",Q:"人事費占歲出比率-地方",R:"全國賦稅實徵淨額",S:"餘絀-中央政府總預算",T:"餘絀-各級政府",U:"餘絀(舊欄)",V:"餘絀占GDP比率",W:"中央政府債務舉借(含不列債限)",X:"列入債限",Y:"歲出(列入債限部分)",Z:"列入債限占歲出比率"};
+  const SPEC={"cells": {"B1": "軍公教員工待遇調整審議時參酌及相關參考指標彙整表", "B2": "年度", "C2": "通案待遇調整比率(%)", "D2": "各項財經指標", "P2": "政府財政狀況", "D3": "經濟成長率(%)", "E3": "消費者物價指數年增率(%)", "F3": "平均國民所得(GDP)及增加率(%)", "J3": "民間企業薪資水準(工業及服務業)平均薪資(元)及增加率(％)", "N3": "景氣對策信號\n(年平均)", "O3": "消費者\n信心指數\n(年平均)", "P3": "人事費占歲出比率(%)", "R3": "全國各類賦稅實徵淨額(億元)", "S3": "歲入歲出餘絀\n(億元)", "V3": "中央政府債務舉借概況(含不列債限)\n(億元)", "W3": "中央政府債務舉借概況(億元)", "F5": "美元", "H5": "新臺幣(元)", "J5": "總薪資", "L5": "經常性薪資", "P5": "中央政府", "Q5": "地方政府", "F6": "統計值", "G6": "年增率", "H6": "統計值", "I6": "年增率", "J6": "統計值", "K6": "年增率", "L6": "統計值", "M6": "年增率", "S6": "中央政府總預算", "T6": "各級政府", "U6": "餘絀占GDP比率(%)", "W6": "列入債限", "X6": "歲出\n(列入債限補分)", "Y6": "列入債限占歲出之比率(%)"}, "merges": ["C2:C6", "Q5:Q6", "D2:O2", "J5:K5", "O3:O6", "F3:I4", "W3:Y5", "P3:Q4", "N3:N6", "F5:G5", "L5:M5", "P2:V2", "V3:V6", "D3:D6", "J3:M4", "R3:R6", "B2:B6", "P5:P6", "B1:Y1", "E3:E6", "H5:I5", "S3:U5"], "widths": {"A": 5.44, "B": 7.44, "C": 7.78, "D": 8.89, "E": 9.33, "F": 11.78, "G": 9.33, "H": 15.0, "I": 9.33, "J": 11.78, "K": 12.33, "L": 12.0, "M": 11.89, "N": 12.33, "O": 12.66, "P": 13.22, "R": 14.0, "S": 12.33, "U": 9.66, "V": 12.44, "W": 10.44, "Y": 9.66, "Q": 13.22, "T": 12.33, "X": 10.44}, "heights": {"1": 42.6, "2": 24.0, "3": 33.75, "4": 14.25, "5": 22.95, "6": 40.2}, "numFmt": {"B": "_-* #,##0_-;\\-* #,##0_-;_-* \"-\"??_-;_-@_-", "C": "0_);\\(0\\)", "D": "0.00_ ;\\-0.00\\ ", "E": "0.00_ ;\\-0.00\\ ", "F": "_-* #,##0_-;\\-* #,##0_-;_-* \"-\"??_-;_-@_-", "G": "0.00", "H": "_-* #,##0_-;\\-* #,##0_-;_-* \"-\"??_-;_-@_-", "I": "0.00", "J": "#,##0_ ;\\-#,##0\\ ", "K": "0.00", "L": "#,##0_ ;\\-#,##0\\ ", "M": "0.00", "N": "#,##0.00_ ;\\-#,##0.00\\ ", "O": "#,##0.00_ ;\\-#,##0.00\\ ", "P": "#,##0.00_ ;\\-#,##0.00\\ ", "Q": "#,##0.00_ ;\\-#,##0.00\\ ", "R": "#,##0", "S": "#,##0_ ;\\-#,##0\\ ", "T": "#,##0_ ;\\-#,##0\\ ", "U": "#,##0.0_ ;\\-#,##0.0\\ ", "V": "#,##0_ ;\\-#,##0\\ ", "W": "#,##0_ ;\\-#,##0\\ ", "X": "#,##0_ ;\\-#,##0\\ ", "Y": "0.00_);\\(0.00\\)"}, "hiddenCols": ["U", "W", "X", "Y"]};
+  const COLNAME={C:"通案待遇調整比率",D:"經濟成長率",E:"CPI年增率",F:"平均國民所得(美元)",G:"美元年增率",H:"平均國民所得(新臺幣)",I:"新臺幣年增率",J:"總薪資",K:"總薪資年增率",L:"經常性薪資",M:"經常性薪資年增率",N:"景氣對策信號",O:"消費者信心指數",P:"人事費占歲出比率-中央",Q:"人事費占歲出比率-地方",R:"全國賦稅實徵淨額",S:"餘絀-中央政府總預算",T:"餘絀-各級政府",V:"餘絀占GDP比率",W:"中央政府債務舉借(含不列債限)",X:"列入債限",Y:"歲出(列入債限部分)",Z:"列入債限占歲出比率"};
   const AUTO={G:"F",I:"H",K:"J",M:"L"};
   let tableRows=[], tableNotes=null, downloads=null, xlsLib=null;
-  const colLetters=[]; for(let c=67;c<=90;c++) colLetters.push(String.fromCharCode(c));
+  const colLetters=[]; for(let c=67;c<=90;c++){ if(c!==85) colLetters.push(String.fromCharCode(c)); }
+  const OUT=c=>c<="T"?c:String.fromCharCode(c.charCodeAt(0)-1);  // 匯出時略去舊U欄，V–Z左移一欄
   function loadExcelJS(){
     if(window.ExcelJS) return Promise.resolve(window.ExcelJS);
     if(xlsLib) return xlsLib;
@@ -504,7 +505,7 @@ tr:last-child td{border-bottom:0}
     const FONT="微軟正黑體", thin={style:"thin",color:{argb:"FF000000"}}, box={top:thin,left:thin,bottom:thin,right:thin};
     Object.entries(SPEC.widths).forEach(([c,w])=>{ws.getColumn(c).width=w;});
     SPEC.hiddenCols.forEach(c=>{ws.getColumn(c).hidden=true;});
-    for(let r=2;r<=6;r++) for(let ci=2;ci<=26;ci++){const cell=ws.getCell(r,ci); cell.border=box; cell.fill={type:"pattern",pattern:"solid",fgColor:{argb:"FFF2F2F2"}}; cell.font={name:FONT,size:14,bold:true}; cell.alignment={horizontal:"center",vertical:"middle",wrapText:true};}
+    for(let r=2;r<=6;r++) for(let ci=2;ci<=25;ci++){const cell=ws.getCell(r,ci); cell.border=box; cell.fill={type:"pattern",pattern:"solid",fgColor:{argb:"FFF2F2F2"}}; cell.font={name:FONT,size:14,bold:true}; cell.alignment={horizontal:"center",vertical:"middle",wrapText:true};}
     SPEC.merges.forEach(m=>ws.mergeCells(m));
     Object.entries(SPEC.cells).forEach(([a,v])=>{ws.getCell(a).value=v;});
     const t=ws.getCell("B1"); t.font={name:FONT,size:20,bold:true}; t.alignment={horizontal:"center",vertical:"middle"};
@@ -516,21 +517,21 @@ tr:last-child td{border-bottom:0}
       const yc=ws.getCell(r,2); yc.value=d.year; yc.font={name:FONT,size:14}; yc.alignment={horizontal:"center",vertical:"middle",wrapText:true}; yc.border=box;
       let lines=1;
       colLetters.forEach(c=>{
-        const cell=ws.getCell(c+r); let v=(d.cells||{})[c];
+        const cell=ws.getCell(OUT(c)+r); let v=(d.cells||{})[c];
         const redDate=(d.red||{})[c]; const isRed=!!(redDate&&redDate>=since); const raw=typeof v==="string"?v:""; const kind=!isRed?"":/預測/.test(raw)?"fc":/未查證|資料不足/.test(raw)?"unv":"rev"; const KCOL={rev:"FFFF0000",fc:"FF0070C0",unv:"FFC65911"}, KNAME={rev:"以前年度數據修正",fc:"預測值新增或變更",unv:"未查證／資料不足"};
         if(v&&typeof v==="object"&&v.auto){
           const base=AUTO[c], prev=rows[i-1];
           const cur=(d.cells||{})[base], pv=prev&&(prev.cells||{})[base];
           if(typeof cur==="number"&&typeof pv==="number"){ cell.value={formula:`(${base}${r}-${base}${r-1})/${base}${r-1}*100`,result:+((cur-pv)/pv*100).toFixed(4)}; }
           else cell.value=v.v;
-        } else if(v!==undefined&&v!==null){ cell.value=v; if(typeof v==="string"){ const w=(SPEC.widths[c]||9)-1; lines=Math.max(lines,v.split("\n").reduce((n,seg)=>n+Math.max(1,Math.ceil([...seg].reduce((k,ch)=>k+(/[\x00-\x7f]/.test(ch)?1.3:2.6),0)/w)),0)); } }
+        } else if(v!==undefined&&v!==null){ cell.value=v; if(typeof v==="string"){ const w=(SPEC.widths[OUT(c)]||9)-1; lines=Math.max(lines,v.split("\n").reduce((n,seg)=>n+Math.max(1,Math.ceil([...seg].reduce((k,ch)=>k+(/[\x00-\x7f]/.test(ch)?1.3:2.6),0)/w)),0)); } }
         cell.font={name:FONT,size:14,color:{argb:isRed?KCOL[kind]:"FF000000"}};
         cell.alignment={horizontal:"right",vertical:"middle",wrapText:true};
-        if(typeof v==="number"||(v&&v.auto)) cell.numFmt=SPEC.numFmt[c]||"General";
+        if(typeof v==="number"||(v&&v.auto)) cell.numFmt=SPEC.numFmt[OUT(c)]||"General";
         cell.border=box;
         const cm=(d.comments||{})[c];
         if(cm) cell.note={texts:[{text:cm}]};
-        if(isRed){ changes.push([c+r,d.year,COLNAME[c]||c,KNAME[kind],typeof cell.value==="object"&&cell.value?cell.value.result:cell.value,cm||""]); }
+        if(isRed){ changes.push([OUT(c)+r,d.year,COLNAME[c]||c,KNAME[kind],typeof cell.value==="object"&&cell.value?cell.value.result:cell.value,cm||""]); }
       });
       row.height=Math.max(23.25,lines*19+6);
       if(hideOld&&d.year<100) row.hidden=true;
@@ -542,7 +543,7 @@ tr:last-child td{border-bottom:0}
       `${notes.length+1}.更新日期：${rocToday()}（依據行政院主計總處、國家發展委員會、財政部、台灣經濟發展研究中心等機關最新公布資料${rels.length?"，最近公布日"+roc(rels[rels.length-1]):""}更新）`,
       `${notes.length+2}.字體顏色（${sinceTxt}以後之異動）：紅色為以前年度數據經官方修正；藍色為預測值或依預測值計算之數據新增或變更；橘色為未查證或資料不足之數據；黑色為已查證之官方數據。原值及來源載於儲存格註解及「更新說明」工作表；各次更新之完整歷程載於「異動紀錄」工作表。`];
     ws.getCell("B"+r).value="註："; ws.getCell("B"+r).font={name:FONT,size:12}; ws.getCell("B"+r).alignment={horizontal:"right",vertical:"top"};
-    allLines.forEach((ln,k)=>{const rr=r+k; ws.mergeCells(`C${rr}:Z${rr}`); const c=ws.getCell("C"+rr); c.value=ln; c.font={name:FONT,size:12}; c.alignment={horizontal:"left",vertical:"middle",wrapText:true}; ws.getRow(rr).height=ln.length>110?36:19.5;});
+    allLines.forEach((ln,k)=>{const rr=r+k; ws.mergeCells(`C${rr}:Y${rr}`); const c=ws.getCell("C"+rr); c.value=ln; c.font={name:FONT,size:12}; c.alignment={horizontal:"left",vertical:"middle",wrapText:true}; ws.getRow(rr).height=ln.length>110?36:19.5;});
     // 更新說明
     const s2=wb.addWorksheet("更新說明");
     s2.columns=[{width:10},{width:8},{width:24},{width:18},{width:26},{width:90}];
@@ -562,7 +563,7 @@ tr:last-child td{border-bottom:0}
     const HL=allHist();
     (HL.length?HL:[{d:"",col:"",year:"",old:"",new:"",kind:"",note:"尚無異動紀錄"}]).forEach(h=>{
       const inP=!!(h.d&&!h.est&&h.d>=since);
-      const rw=s3.addRow([h.d?(h.est?roc(h.d)+"以前":roc(h.d)):"—", h.col?h.col+(h.year-69):"", h.year, COLNAME[h.col]||h.col||"", histVal(h.old), histVal(h.new), KINDNAME[h.kind]||h.kind||"", h.note||"", inP?"✓":""]);
+      const rw=s3.addRow([h.d?(h.est?roc(h.d)+"以前":roc(h.d)):"—", h.col&&h.col!=="U"?OUT(h.col)+(h.year-69):"", h.year, h.col==="U"?"各級政府餘絀（原U欄，已併入T欄）":(COLNAME[h.col]||h.col||""), histVal(h.old), histVal(h.new), KINDNAME[h.kind]||h.kind||"", h.note||"", inP?"✓":""]);
       const kc={rev:"FFFF0000",fc:"FF0070C0",unv:"FFC65911"}[h.kind];
       rw.eachCell((c,ci)=>{c.font={name:FONT,size:10,bold:inP&&ci<=7,color:{argb:ci===7&&kc?kc:"FF000000"}};c.alignment={wrapText:true,vertical:"top"};c.border=box;});
     });
