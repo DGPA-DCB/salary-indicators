@@ -39,6 +39,16 @@ for key, col in COLS.items():
             diffs.append({"year": y, "col": col, "table": cur, "new": new, "basis": basis, "result": "相符"}); continue
         if e.get("truncated"):  # 報告以「億餘元」表述，尾數捨去；差1以內視為相符
             if curv is not None and abs(curv - new) <= 1: diffs.append({"year": y, "col": col, "table": cur, "new": new, "basis": basis, "result": "相符（億餘元）"}); continue
+        if col in "WXYZ":
+            # 115.10.30 決定：W–Z 一律預算數（國庫署），表頭註明，不於儲存格加註；數字不同即更新（黑字）
+            newcell = int(new) if col != "Z" else new
+            if same(curv, new, col):
+                diffs.append({"year": y, "col": col, "table": cur, "new": new, "basis": basis, "result": "相符"}); continue
+            note = f"依國庫署「中央政府各年度債務舉借概況」預算數更新：{NAME[col]} {y}年 {new}。{e.get('detail','')} 來源：{e.get('source','')}"
+            d["cells"][col] = newcell; d.setdefault("red", {}).pop(col, None)
+            d.setdefault("comments", {})[col] = f"原值：{cur}\n" + note
+            d.setdefault("hist", []).append({"d": today, "col": col, "old": cur, "new": newcell, "kind": "ver", "note": note}); d["_changed"] = True
+            diffs.append({"year": y, "col": col, "table": cur, "new": newcell, "basis": basis, "result": "更新"}); continue
         if not is_final:
             if col in "WXYZ" and y >= 115:
                 diffs.append({"year": y, "col": col, "table": cur, "new": new, "basis": basis, "result": "當年度以後之預算數（可能含追加預算案），待承辦人確認後再寫入"}); continue
@@ -58,23 +68,6 @@ for key, col in COLS.items():
         d.setdefault("hist", []).append({"d": today, "col": col, "old": cur, "new": newcell, "kind": kind, "note": note})
         d["_changed"] = True
         diffs.append({"year": y, "col": col, "table": cur, "new": newcell, "basis": basis, "result": "更新"})
-# ---- W–Z：有決算者，W 仍為預算數時加註「(預算數)」----
-for y, (d, ver, f) in docs.items():
-    if str(y) in (P.get("X") or {}) and (P["X"][str(y)].get("basis") == "決算"):
-        for col in "WY":
-            cur = d["cells"].get(col); e = (P.get(col) or {}).get(str(y))
-            if cur is None or isinstance(cur, dict) or (e and e.get("basis", "").startswith("決算")): continue
-            txt = str(cur)
-            if re.search(r"預算|決算|預測|未查證", txt): continue
-            v = tv(cur)
-            if v is None: continue
-            newcell = f"{int(v):,}\n(預算數)"
-            note = f"{NAME[col]} {y}年尚無逐年決算數（特別決算為跨年度合併決算），維持預算數並加註。"
-            d["cells"][col] = newcell
-            d.setdefault("comments", {})[col] = (d.get("comments", {}).get(col, "") + "\n" if d.get("comments", {}).get(col) else "") + note
-            d.setdefault("hist", []).append({"d": today, "col": col, "old": cur, "new": newcell, "kind": "ver", "note": note})
-            d["_changed"] = True
-            diffs.append({"year": y, "col": col, "table": cur, "new": newcell, "basis": "預算數", "result": "加註預算數"})
 # ---- 主計總處：D/E/F/H/J/K/L/M ----
 DGN = {"D": "經濟成長率", "E": "CPI年增率", "F": "每人GDP(美元)", "H": "每人GDP(元)", "J": "總薪資", "K": "總薪資年增率", "L": "經常性薪資", "M": "經常性薪資年增率"}
 def fmt(col, v):

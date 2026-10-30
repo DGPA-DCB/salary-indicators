@@ -62,11 +62,12 @@ for f in glob.glob("raw/國庫署_債務舉借概況/*.csv"):
         R.setdefault("X", {})[y] = {"value": round(inc), "basis": "預算數", "unit": "億元", "source": src, "detail": "國庫署：當年度舉借債務數列入債限"}
         R.setdefault("Y", {})[y] = {"value": round(exp), "basis": "預算數", "unit": "億元", "source": src, "detail": "國庫署：支歲出預算數"}
         R.setdefault("Z", {})[y] = {"value": round(inc / exp * 100, 2), "basis": "預算數", "unit": "%", "source": src, "detail": f"{inc:,.1f}÷{exp:,.1f}"}
-# 歷年年報之決算審定舉借數（101–107 年）優先於預算數
+# 歷年年報之決算審定舉借數（101–107 年）僅供參考（ref_final），不覆蓋預算數
 if os.path.exists("opendata/fiscal/debt_final.json"):
     DF = json.load(open("opendata/fiscal/debt_final.json", encoding="utf-8"))
     for k in "WXZ":
-        for y, v in DF.get(k, {}).items(): R.setdefault(k, {})[int(y)] = v
+        for y, v in DF.get(k, {}).items(): R.setdefault("ref_final", {}).setdefault(int(y), {})[k + "_audited"] = v["value"]
+# ---- 【115.10.30 承辦人決定：W–Z 一律採國庫署預算數，決算僅供參考（寫入 ref 欄，不比對）】
 # ---- W–Z 決算：總預算「債務之舉借」「歲出」決算數（主計總處總決算收支簡明表 XML）＋國庫署年底實際舉債數 ----
 # 規則：列入債限舉借(X)之預算數若等於總預算舉借預算數（即列入債限之特別預算無舉借），X 決算＝總預算舉借決算數；
 #       歲出(Y)之預算數若等於總預算歲出預算數（無列入債限之特別預算歲出），Y 決算＝總預算歲出決算數；Z＝X/Y（X 決算為 0 時 Z＝0，不需 Y）。
@@ -82,8 +83,9 @@ for d in sorted(glob.glob("raw/*_總決算_*收支簡明*")):
         jb, jf = rows["債務之舉借"]; ob, of = rows["歲出"]
         jb, jf, ob, of = [None if v is None else v / 1e8 for v in (jb, jf, ob, of)]
         xb = (yb.get("X") or {}).get(str(y), {}).get("value"); ybud = (yb.get("Y") or {}).get(str(y), {}).get("value")
-        R.setdefault("X", {}); R.setdefault("Y", {}); R.setdefault("Z", {})
-        if xb is None or abs(xb - jb) <= 1:
+        R.setdefault("X", {}); R.setdefault("Y", {}); R.setdefault("Z", {}); R.setdefault("ref_final", {})
+        R["ref_final"][y] = {"X_final": round(jf), "Y_final": round(of), "note": "總預算舉借／歲出決算數，僅供參考"}
+        if False:
             R["X"][y] = {"value": round(jf), "basis": "決算", "unit": "億元", "source": f, "detail": f"總預算債務之舉借決算數{jf:,.1f}億元（預算數{jb:,.1f}；列入債限之特別預算無舉借）"}
             if ybud is None or abs(ybud - ob) <= 1:
                 R["Y"][y] = {"value": round(of), "basis": "決算", "unit": "億元", "source": f, "detail": f"總預算歲出決算數{of:,.1f}億元（無列入債限之特別預算歲出）"}
@@ -99,6 +101,7 @@ for f in sorted(glob.glob("opendata/nta/D3-16F_*.csv")):
     for line in open(f, encoding="utf-8-sig").read().splitlines()[1:]:
         c = line.split(",")
         if len(c) > 3 and c[2] == "中央":
+            R.setdefault("ref_final", {}).setdefault(y, {})["W_actual"] = round(float(c[3])); continue
             R.setdefault("W", {})[y] = {"value": round(float(c[3])), "basis": "決算（國庫署年底實際數）", "unit": "億元", "source": "https://data.gov.tw/dataset/30955", "detail": f"{y}年12月底中央當年度實際舉債數{float(c[3]):,.1f}億元"}
 # ---- 主計總處新聞稿附表：D/E/F/H（年資料＋預測）、J/L（年平均）、J/K/L/M（本年累計）----
 f = "opendata/dgbas/latest.json"
