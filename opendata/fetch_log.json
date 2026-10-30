@@ -1,5 +1,5 @@
 {
- "run": "2026-10-29T07:44:34.564251Z",
+ "run": "2026-10-30T09:07:40.705868Z",
  "catalog": [
   {
    "id": "175201",
@@ -160,6 +160,10 @@
   {
    "id": "130489",
    "ok": true
+  },
+  {
+   "id": "12131",
+   "ok": true
   }
  ],
  "download": [
@@ -184,15 +188,13 @@
    "name": "探測_國庫署首頁",
    "ok": true,
    "changed": true,
-   "bytes": 145775,
+   "bytes": 145776,
    "type": "text/html;charset=UTF-8"
   },
   {
    "name": "114_總預算案_預算表",
    "ok": true,
-   "changed": true,
-   "bytes": 432619,
-   "type": "application/x-zip-compressed"
+   "changed": false
   },
   {
    "name": "112_總預算案_簡明表",
@@ -227,23 +229,24 @@
   {
    "name": "114_總決算_114歲入歲出簡明",
    "ok": true,
-   "changed": true,
-   "bytes": 7858,
-   "type": "text/xml"
+   "changed": false
   },
   {
    "name": "114_總決算_114收支簡明",
    "ok": true,
-   "changed": true,
-   "bytes": 2577,
-   "type": "text/xml"
+   "changed": false
   },
   {
    "name": "114_總決算_114歲出用途",
    "ok": true,
+   "changed": false
+  },
+  {
+   "name": "國庫署_債務舉借概況",
+   "ok": true,
    "changed": true,
-   "bytes": 24193,
-   "type": "text/xml"
+   "bytes": 727,
+   "type": "text/csv;charset=UTF-8"
   },
   {
    "name": "nta/D3-16F",

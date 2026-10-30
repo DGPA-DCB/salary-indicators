@@ -237,7 +237,7 @@ $('.search-google .gsc-control-cse table.gsc-search-box tbody tr td.gsc-search-b
                 data : { 
                     "query" : $(this).text(),
                     "type" : 'google_keyword',
-                    "csrfToken" : '1aeb189d-da53-4219-85f2-e5a260f12d54'
+                    "csrfToken" : 'fc15a112-e317-40b9-ad99-cd6865c807cb'
                 },
                 success : function (result) {
                     
@@ -258,7 +258,7 @@ $('.search-google .gsc-control-cse table.gsc-search-box tbody tr td.gsc-search-b
                         data : { 
                             "query" : inputText,
                             "type" : 'google_keyword',
-                            "csrfToken" : '1aeb189d-da53-4219-85f2-e5a260f12d54'
+                            "csrfToken" : 'fc15a112-e317-40b9-ad99-cd6865c807cb'
                         },
                         success: function(data){
                             $('input.gsc-search-button:button').trigger('click');
@@ -768,6 +768,26 @@ ImgTextCarouselModule.carousel({
                         <li>
                         
                             <a
+                                href="/singlehtml/17?cntId=nta_7906_17"
+                                title='國債鐘資料'
+                                
+                                
+                                 title='國債鐘資料'>
+                         
+                             
+                            
+                                <h3>
+                                    
+                                    國債鐘資料
+                                </h3> 
+                                 
+                                <span class="time">115-10-29</span> 
+                            </a>
+                        </li>
+                    
+                        <li>
+                        
+                            <a
                                 href="/singlehtml/17?cntId=692d125cd5a84cf4bd559837aeee0fd9"
                                 title='115年度公債發行公告'
                                 
@@ -802,26 +822,6 @@ ImgTextCarouselModule.carousel({
                                 </h3> 
                                  
                                 <span class="time">115-10-27</span> 
-                            </a>
-                        </li>
-                    
-                        <li>
-                        
-                            <a
-                                href="/singlehtml/17?cntId=nta_7906_17"
-                                title='國債鐘資料'
-                                
-                                
-                                 title='國債鐘資料'>
-                         
-                             
-                            
-                                <h3>
-                                    
-                                    國債鐘資料
-                                </h3> 
-                                 
-                                <span class="time">115-10-21</span> 
                             </a>
                         </li>
                     
@@ -1033,8 +1033,8 @@ ImgTextCarouselModule.carousel({
                         <p><table border="0" cellpadding="1" cellspacing="1" style="width:100%;">
 	<tbody>
 		<tr>
-			<td>115年8月</td>
-			<td style="text-align: right;"><span style="color:#1e8449;">6,928億元</span></td>
+			<td>115年9月</td>
+			<td style="text-align: right;"><span style="color:#1e8449;">6,954億元</span></td>
 		</tr>
 	</tbody>
 </table>
@@ -1079,8 +1079,8 @@ ImgTextCarouselModule.carousel({
                         <p><table border="0" cellpadding="1" cellspacing="1" style="width:100%;">
 	<tbody>
 		<tr>
-			<td>115年8月</td>
-			<td style="text-align: right;"><span style="color:#1e8449;">74,544個</span></td>
+			<td>115年9月</td>
+			<td style="text-align: right;"><span style="color:#1e8449;">75,338個</span></td>
 		</tr>
 	</tbody>
 </table>
@@ -1147,7 +1147,7 @@ ImgTextCarouselModule.carousel({
                         <p><table border="0" cellpadding="1" cellspacing="1" style="width:100%;">
 	<tbody>
 		<tr>
-			<td>115年9月</td>
+			<td>115年10月</td>
 			<td style="text-align: right;"><span style="color:#1e8449;">296項酒品</span></td>
 		</tr>
 	</tbody>
@@ -2144,10 +2144,10 @@ ImgTextCarouselModule.carousel({
   
                   <div class="other">
                       
-                          <span>更新日期:115-10-29</span>
+                          <span>更新日期:115-10-30</span>
                       
                       
-                          <span>瀏覽次數:5931506</span>
+                          <span>瀏覽次數:5932280</span>
                       
                   </div>
               </div>

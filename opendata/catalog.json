@@ -1038,5 +1038,19 @@
     "encoding": "UTF-8"
    }
   ]
+ },
+ "12131": {
+  "title": "中央政府各年度債務舉借概況",
+  "agency": null,
+  "description": "提供中央政府、當年度舉借債務數等欄位資料",
+  "updated": "2024-07-29 22:02:36",
+  "files": [
+   {
+    "desc": "中央政府各年度債務舉借概況",
+    "format": "CSV",
+    "url": "https://nss.nta.gov.tw/nss/files/opendata/D3-05.csv",
+    "encoding": "UTF-8"
+   }
+  ]
  }
 }
