@@ -37,6 +37,8 @@ for key, col in COLS.items():
         if e.get("truncated"):  # 報告以「億餘元」表述，尾數捨去；差1以內視為相符
             if curv is not None and abs(curv - new) <= 1: diffs.append({"year": y, "col": col, "table": cur, "new": new, "basis": basis, "result": "相符（億餘元）"}); continue
         if not is_final:
+            if col in "WXYZ" and y >= 115:
+                diffs.append({"year": y, "col": col, "table": cur, "new": new, "basis": basis, "result": "當年度以後之預算數（可能含追加預算案），待承辦人確認後再寫入"}); continue
             # 預算案數不覆蓋法定預算；預算數僅在表值為空、預測、未查證或同為預算數時更新
             if "預算案" in basis and "法定" in txt:
                 diffs.append({"year": y, "col": col, "table": cur, "new": new, "basis": basis, "result": "表為法定預算，預算案數不覆蓋"}); continue

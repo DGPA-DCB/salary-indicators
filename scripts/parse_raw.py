@@ -49,6 +49,19 @@ for d in sorted(glob.glob("opendata/audit_central/*")):
 # ---- T/V：財政統計年報（若已下載並解析）----
 for f in glob.glob("opendata/fiscal/yearbook_table1-1*.json"):
     R.update(json.load(open(f, encoding="utf-8")))
+# 國庫署開放資料「中央政府各年度債務舉借概況」（預算數：列入債限、不列入債限、歲出；99年起，逐年更新）→ 取代年報提要之預算數
+for f in glob.glob("raw/國庫署_債務舉借概況/*.csv"):
+    for line in open(f, encoding="utf-8-sig").read().splitlines()[1:]:
+        c = line.split(",")
+        if len(c) < 5 or not c[0].strip().isdigit(): continue
+        y = int(c[0]); inc, exc, exp = (float(c[1]) / 100, float(c[2]) / 100, float(c[3]) / 100)
+        src = "https://data.gov.tw/dataset/12131"
+        if (R.get("X", {}).get(y) or {}).get("basis") == "決算": 
+            R.setdefault("W", {})[y] = {"value": round(inc + exc), "basis": "預算數", "unit": "億元", "source": src, "detail": f"國庫署：列入債限{inc:,.1f}＋不列入債限{exc:,.1f}"}; continue
+        R.setdefault("W", {})[y] = {"value": round(inc + exc), "basis": "預算數", "unit": "億元", "source": src, "detail": f"國庫署：列入債限{inc:,.1f}＋不列入債限{exc:,.1f}"}
+        R.setdefault("X", {})[y] = {"value": round(inc), "basis": "預算數", "unit": "億元", "source": src, "detail": "國庫署：當年度舉借債務數列入債限"}
+        R.setdefault("Y", {})[y] = {"value": round(exp), "basis": "預算數", "unit": "億元", "source": src, "detail": "國庫署：支歲出預算數"}
+        R.setdefault("Z", {})[y] = {"value": round(inc / exp * 100, 2), "basis": "預算數", "unit": "%", "source": src, "detail": f"{inc:,.1f}÷{exp:,.1f}"}
 # 歷年年報之決算審定舉借數（101–107 年）優先於預算數
 if os.path.exists("opendata/fiscal/debt_final.json"):
     DF = json.load(open("opendata/fiscal/debt_final.json", encoding="utf-8"))

@@ -79,6 +79,10 @@ def auto_resources():
     try: cat = json.load(open("opendata/catalog.json", encoding="utf-8"))
     except Exception: return out
     for i, v in cat.items():
+        if (v.get("title") or "") == "中央政府各年度債務舉借概況":   # 國庫署 D3-05：列入／不列入債限舉借預算數、歲出預算數（99年起）
+            for f in v.get("files") or []:
+                if f.get("url"): out.append({"name": "國庫署_債務舉借概況", "url": f["url"]})
+            continue
         m = PAT_AUTO.match((v.get("title") or "").replace("　", "").strip())
         if not m: continue
         y, kind, sub = m.group(1), m.group(2), m.group(3)
