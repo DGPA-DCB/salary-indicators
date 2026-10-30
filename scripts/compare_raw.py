@@ -16,7 +16,10 @@ def tv(v):
     s = str(v).replace(",", "").split("\n")[0].strip()
     try: return float(s)
     except: return None
-def same(a, b): return a is not None and b is not None and abs(a - b) <= (0.005 if abs(b) < 100 else 1.0)
+def same(a, b, col=None):
+    if a is None or b is None: return False
+    if col == "Z" and abs(round(a, 1) - round(b, 1)) <= 0.051 and abs(a - b) < 0.1: return True  # 比率欄原表取1位小數
+    return abs(a - b) <= (0.005 if abs(b) < 100 else 1.0)
 writes, diffs = [], []
 docs = {}
 for f in glob.glob(os.path.join(exp, "table", "y*.json")):
@@ -28,7 +31,7 @@ for key, col in COLS.items():
         d, ver, f = docs[y]; cur = d["cells"].get(col); curv = tv(cur); new = e["value"]; basis = e.get("basis", "")
         is_final = "決算" in basis
         txt = str(cur) if cur is not None else ""
-        if same(curv, new):
+        if same(curv, new, col):
             note = f"已核對（自動）：{basis}{new}，與表值相符。{e.get('detail','')} 來源：{e.get('source','')}"
             d.setdefault("comments", {}).setdefault(col, "")
             if "已核對（自動）" not in d["comments"][col]:
