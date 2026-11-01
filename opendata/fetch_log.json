@@ -1,5 +1,5 @@
 {
- "run": "2026-10-30T09:07:40.705868Z",
+ "run": "2026-11-01T02:11:48.357441Z",
  "catalog": [
   {
    "id": "175201",
@@ -188,7 +188,7 @@
    "name": "探測_國庫署首頁",
    "ok": true,
    "changed": true,
-   "bytes": 145776,
+   "bytes": 145674,
    "type": "text/html;charset=UTF-8"
   },
   {
@@ -244,9 +244,7 @@
   {
    "name": "國庫署_債務舉借概況",
    "ok": true,
-   "changed": true,
-   "bytes": 727,
-   "type": "text/csv;charset=UTF-8"
+   "changed": false
   },
   {
    "name": "nta/D3-16F",

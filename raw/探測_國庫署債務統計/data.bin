@@ -262,7 +262,7 @@ $('.search-google .gsc-control-cse table.gsc-search-box tbody tr td.gsc-search-b
                 data : { 
                     "query" : $(this).text(),
                     "type" : 'google_keyword',
-                    "csrfToken" : '334ca840-40f9-471d-85b7-2e2d27f8dd4c'
+                    "csrfToken" : 'd0680860-97a8-470c-9555-c6614f532ee1'
                 },
                 success : function (result) {
                     
@@ -283,7 +283,7 @@ $('.search-google .gsc-control-cse table.gsc-search-box tbody tr td.gsc-search-b
                         data : { 
                             "query" : inputText,
                             "type" : 'google_keyword',
-                            "csrfToken" : '334ca840-40f9-471d-85b7-2e2d27f8dd4c'
+                            "csrfToken" : 'd0680860-97a8-470c-9555-c6614f532ee1'
                         },
                         success: function(data){
                             $('input.gsc-search-button:button').trigger('click');
@@ -948,7 +948,7 @@ text-indent : 2em ;
 		<span>更新日期：114-12-23</span>
 	
 	
-		<span>點閱次數：97863</span>
+		<span>點閱次數：97882</span>
 	
 </div>
 

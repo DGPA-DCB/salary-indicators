@@ -237,7 +237,7 @@ $('.search-google .gsc-control-cse table.gsc-search-box tbody tr td.gsc-search-b
                 data : { 
                     "query" : $(this).text(),
                     "type" : 'google_keyword',
-                    "csrfToken" : 'fc15a112-e317-40b9-ad99-cd6865c807cb'
+                    "csrfToken" : '845bd5bb-078c-43fd-9f8b-224ab7e9249f'
                 },
                 success : function (result) {
                     
@@ -258,7 +258,7 @@ $('.search-google .gsc-control-cse table.gsc-search-box tbody tr td.gsc-search-b
                         data : { 
                             "query" : inputText,
                             "type" : 'google_keyword',
-                            "csrfToken" : 'fc15a112-e317-40b9-ad99-cd6865c807cb'
+                            "csrfToken" : '845bd5bb-078c-43fd-9f8b-224ab7e9249f'
                         },
                         success: function(data){
                             $('input.gsc-search-button:button').trigger('click');
@@ -768,6 +768,46 @@ ImgTextCarouselModule.carousel({
                         <li>
                         
                             <a
+                                href="/singlehtml/17?cntId=d710324bb0b4404b857a18ad0ec85f80"
+                                title='115年度第9次直轄市及縣(市)獲配菸酒稅撥付'
+                                
+                                
+                                 title='115年度第9次直轄市及縣(市)獲配菸酒稅撥付'>
+                         
+                             
+                            
+                                <h3>
+                                    
+                                    115年度第9次直轄市及縣(市)獲配菸酒稅撥付
+                                </h3> 
+                                 
+                                <span class="time">115-10-30</span> 
+                            </a>
+                        </li>
+                    
+                        <li>
+                        
+                            <a
+                                href="/singlehtml/17?cntId=e5b1a05e373b4b3c8c259fa2b69e9c16"
+                                title='115年度公債標售結果(截至115年10月20日標售結果)'
+                                
+                                
+                                 title='115年度公債標售結果(截至115年10月20日標售結果)'>
+                         
+                             
+                            
+                                <h3>
+                                    
+                                    115年度公債標售結果(截至115年10月20日標售結果)
+                                </h3> 
+                                 
+                                <span class="time">115-10-30</span> 
+                            </a>
+                        </li>
+                    
+                        <li>
+                        
+                            <a
                                 href="/singlehtml/17?cntId=nta_7906_17"
                                 title='國債鐘資料'
                                 
@@ -822,46 +862,6 @@ ImgTextCarouselModule.carousel({
                                 </h3> 
                                  
                                 <span class="time">115-10-27</span> 
-                            </a>
-                        </li>
-                    
-                        <li>
-                        
-                            <a
-                                href="/singlehtml/17?cntId=e5b1a05e373b4b3c8c259fa2b69e9c16"
-                                title='115年度公債標售結果(截至115年10月14日標售結果)'
-                                
-                                
-                                 title='115年度公債標售結果(截至115年10月14日標售結果)'>
-                         
-                             
-                            
-                                <h3>
-                                    
-                                    115年度公債標售結果(截至115年10月14日標售結果)
-                                </h3> 
-                                 
-                                <span class="time">115-10-21</span> 
-                            </a>
-                        </li>
-                    
-                        <li>
-                        
-                            <a
-                                href="/singlehtml/17?cntId=871e5c8b8fd94b639141bc74c72d885c"
-                                title='115年9月份健保費、勞保費與新制勞工退休金代繳日期與相關注意事項'
-                                
-                                
-                                 title='115年9月份健保費、勞保費與新制勞工退休金代繳日期與相關注意事項'>
-                         
-                             
-                            
-                                <h3>
-                                    
-                                    115年9月份健保費、勞保費與新制勞工退休金代繳日期與相關注意事項
-                                </h3> 
-                                 
-                                <span class="time">115-10-15</span> 
                             </a>
                         </li>
                     
@@ -2147,7 +2147,7 @@ ImgTextCarouselModule.carousel({
                           <span>更新日期:115-10-30</span>
                       
                       
-                          <span>瀏覽次數:5932280</span>
+                          <span>瀏覽次數:5933484</span>
                       
                   </div>
               </div>
