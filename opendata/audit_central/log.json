@@ -1,36 +1,9 @@
 {
- "run": "2026-10-29T02:29:49Z",
+ "run": "2026-11-05T02:33:34Z",
  "steps": [
   {
    "target": 114,
-   "chapters": 90,
-   "candidates": [
-    "總決算審定資料",
-    "檢視章節-壹、總決算歲入歲出決算審定數簡明比較表PDF",
-    "檢視章節-貳、總決算審定後收支簡明比較分析表PDF",
-    "檢視章節-參、融資調度決算審定表PDF",
-    "檢視章節-八、特別決算以前年度轉入數決算審定簡表PDF",
-    "檢視章節-（一）特別決算以前年度融資調度轉入數決算審定簡表P",
-    "檢視章節-（二）特別決算以前年度歲入保留轉入數決算審定簡表P",
-    "檢視章節-（三）特別決算以前年度歲出保留轉入數決算審定簡表P"
-   ]
-  },
-  {
-   "target": 114,
-   "chapter": "檢視章節-壹、總決算歲入歲出決算審定數簡明比較表PDF",
-   "pdf_candidates": [
-    "https://auditreport.audit.gov.tw/ServerFile/Download/6392143478331552704b80c96036e74adab067889ef3bd9efc?isPaging=False",
-    "https://auditreport.audit.gov.tw/ServerFile/Download/63921434728685180210166b72153541b9a93d1c53165e53f3?isPaging=True"
-   ]
-  },
-  {
-   "target": 114,
-   "got_pdf": "https://auditreport.audit.gov.tw/ServerFile/Download/63921434728685180210166b72153541b9a93d1c53165e53f3?isPaging=True",
-   "bytes": 19599482
-  },
-  {
-   "target": 114,
-   "excerpts": 1
+   "skipped": "done"
   },
   {
    "target": 102,
