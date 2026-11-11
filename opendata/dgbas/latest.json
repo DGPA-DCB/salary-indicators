@@ -1,9 +1,9 @@
 {
- "run": "2026-11-10",
+ "run": "2026-11-11",
  "wages": {
-  "source": "https://www.dgbas.gov.tw/News_Content.aspx?n=3602&s=236785",
-  "title": "115年8月工業及服務業本國籍全時員工人數為753萬5千人，經常性薪資中位數為41,353元，平均數為52,523元，分別年增3.46%及3.28%",
-  "ods": "https://ws.dgbas.gov.tw/001/Upload/463/relfile/10980/236785/表1.ods",
+  "source": "https://www.dgbas.gov.tw/News_Content.aspx?n=3602&s=236856",
+  "title": "115年9月工業及服務業本國籍全時員工人數為753萬9千人，經常性薪資中位數為41,356元，平均數為52,522元，分別年增3.22%及3.14%",
+  "ods": "https://ws.dgbas.gov.tw/001/Upload/463/relfile/10980/236856/表1.ods",
   "annual": {
    "106": {
     "regular": 39937.0,
@@ -44,12 +44,11 @@
   },
   "ytd": {
    "year": 115,
-   "to_month": 8,
-   "regular": 49110.0,
-   "regular_yoy": 2.94
+   "to_month": 9,
+   "regular": 49152.0,
+   "regular_yoy": 2.93
   },
   "t2_labels": [
-   "114-7",
    "114-8",
    "114-9",
    "114-10",
@@ -62,17 +61,18 @@
    "115-5",
    "115-6",
    "115-7",
-   "115-8"
+   "115-8",
+   "115-9"
   ],
   "ytd_total": {
    "year": 115,
-   "to_month": 8,
-   "cum": 549200.0,
-   "avg": 68650,
-   "yoy": 4.55,
+   "to_month": 9,
+   "cum": 609498.0,
+   "avg": 67722,
+   "yoy": 4.59,
    "prev_cum": null,
-   "from": "pdf:https://ws.dgbas.gov.tw/001/Upload/463/relfile/10980/236785/薪資及生產力統計新聞稿11508.pdf",
-   "text": "前8個月累計總薪資平均數較上年同期增加4.55%"
+   "from": "pdf:https://ws.dgbas.gov.tw/001/Upload/463/relfile/10980/236856/薪資及生產力統計新聞稿11509.pdf",
+   "text": "前9個月累計總薪資平均數較上年同期增加4.59%"
   },
   "annual_total": {
    "110": 56127,
